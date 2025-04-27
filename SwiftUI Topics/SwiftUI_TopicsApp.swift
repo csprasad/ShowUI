@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_TopicsApp: App {
     var body: some Scene {
         WindowGroup {
-            BlendModeUIView()
+            ContentView()
         }
     }
 }

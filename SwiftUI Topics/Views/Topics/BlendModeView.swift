@@ -20,7 +20,7 @@ private func blendModeName(_ blendMode: BlendMode) -> String {
     return blendModeNames[blendMode] ?? "Unknown"
 }
 
-struct BlendModeUIView: View {
+struct BlendModeView: View {
     @State private var selectedColor: Color = .red
     @State private var selectedImage: UIImage? = UIImage(named: "TajMahal")
     @State private var isImagePickerPresented = false
@@ -45,12 +45,12 @@ struct BlendModeUIView: View {
                 selectedColor: selectedColor,
                 currentBlendMode: blendModes[currentBlendModeIndex]
             )
-            
+            Divider()
             ColorPickerAndButton(
                 selectedColor: $selectedColor,
                 isImagePickerPresented: $isImagePickerPresented
             )
-            
+            Divider()
             BottomSheetView(currentBlendModeIndex: $currentBlendModeIndex, blendModes: blendModes, blendModeName: blendModeName)
         }
         .edgesIgnoringSafeArea(.bottom)
@@ -127,8 +127,8 @@ struct BottomSheetView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("Blend Modes")
-                    .font(.custom("Futura", size: 25))
+                Text("select blend modes")
+                    .font(.system(.headline))
 
                 List {
                     ForEach(blendModes.indices, id: \.self) { index in
@@ -139,7 +139,7 @@ struct BottomSheetView: View {
                             HStack {
                                 VStack(alignment: .leading) {
                                     Text(self.blendModeName(blendModes[index]))
-                                        .font(.custom("Futura", size: 20))
+//                                        .font(.custom("Futura", size: 20))
                                 }
                                 Spacer()
                             }
@@ -189,6 +189,6 @@ struct ImagePicker: UIViewControllerRepresentable {
 
 struct BlendModeUIView_Previews: PreviewProvider {
     static var previews: some View {
-        BlendModeUIView()
+        BlendModeView()
     }
 }
