@@ -1,64 +1,47 @@
-# SwiftUI-Topics
+# **ShowUI – SwiftUI Topics & Interactive Examples**
 
-Welcome to the **SwiftUI Topics** repository! This project provides practical examples and explanations of various SwiftUI concepts. It’s designed to help developers understand and apply different SwiftUI features and techniques.
+<img src="images/showUI_banner.png"/>
 
-## 📚 Overview
+A curated collection of **interactive SwiftUI examples** designed to visually demonstrate how common SwiftUI components, modifiers, and UI effects work.
+Each topic includes **real, runnable UI previews** so you can see how SwiftUI behaves in action.
 
-This repository contains SwiftUI projects that cover a range of topics, each demonstrating specific SwiftUI features and how they can be used in application development. The goal is to offer a clear understanding of different aspects of SwiftUI through hands-on examples.
+---
 
-## 🚀 Getting Started
+## 📚 **Overview**
 
-To get started with the examples in this repository, follow these steps:
+ShowUI is built for developers who learn best by **seeing** and **interacting** with SwiftUI concepts.
+Instead of static explanations, each topic includes:
 
-1. **Clone the Repository**
+* A **clean example view**
+* **Interactive controls** where applicable (e.g., selecting blend modes)
+* **Live previews**
+<!-- * Straightforward code that’s easy to read and customize -->
 
-   ```bash
-   git clone https://github.com/csprasad/SwiftUI-Topics
+Whether you're learning SwiftUI or exploring specific UI behaviors, this repository acts as a **visual reference library**.
 
-2. **Run the Examples**
+---
 
-   Build and run the examples to explore different SwiftUI features and see how they work.
+## 📝 **How to Use ShowUI**
 
-## 📂 Repository Structure
+* **Browse Topics**
+  Navigate through folders or use the in-app navigation to select a SwiftUI concept.
 
-- **`BlendModes/`**: Examples showcasing image blend modes and their effects.
-- **`TextStyling/`**: Demonstrations of various text styles, including font choices, weights, and sizes.
-- **`LayoutAlignment/`**: Examples illustrating different layout techniques and alignment options.
-- **`Animations/`**: Projects showing various animation techniques for enhancing UI interactivity.
-- **`ControlsInteractions/`**: Demonstrations of different controls and how to handle user interactions.
+* **Open Example Views**
+  Run the app and interact with UI components to see how each concept behaves.
 
-## 📝 How to Use
+* **Experiment & Learn**
+  Modify the code to test variations — this is the fastest way to understand SwiftUI.
 
-- **Explore Topics**: Browse through the folders to find topics of interest.
-- **View Examples**: Open and run the projects in Xcode to see the practical implementations of each topic.
-- **Experiment**: Modify the examples to understand how different changes affect the UI and behavior.
+---
 
-<!-- ## 💡 Contributing
+## 📞 **Contact**
 
-Contributions are welcome! To contribute:
+For questions, suggestions, or feature requests, feel free to open an issue or reach out:
 
-1. Fork the repository and clone it to your local machine.
-2. Create a new branch for your changes.
-3. Implement your changes and test thoroughly.
-4. Submit a pull request with a description of your modifications.
+📧 **[codealligator.csprasad@gmail.com](mailto:codealligator.csprasad@gmail.com)**
 
-For detailed contributing guidelines, please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) file. -->
+---
 
-## 📚 Resources
+## 📄 **License**
 
-Here are some additional resources to help you learn more about SwiftUI:
-
-- [SwiftUI Official Documentation](https://developer.apple.com/documentation/swiftui)
-- [SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui)
-- [SwiftUI by Example](https://www.hackingwithswift.com/quick-start/swiftui)
-
-<!-- ## 🧩 License
-
-This repository is licensed under the [MIT License](LICENSE). See the LICENSE file for details. -->
-
-## 📞 Contact
-
-For questions, feedback, or suggestions, feel free to open an issue or contact the repository maintainer at [codealligator.csprasad@gmail.com](mailto:codealligator.csprasad@gmail.com).
-
-## License
-This project is licensed under the **MIT License**.
+**This project is licensed under the Apache License 2.0.**
