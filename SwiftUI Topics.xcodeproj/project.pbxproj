@@ -13,6 +13,7 @@
 		051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696052EE0A7BA0017DCC8 /* MapView.swift */; };
 		051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */; };
 		0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696092EE195590017DCC8 /* FriendAvatar.swift */; };
+		05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */; };
 		C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */; };
 		C80B1C382C6646FA002ED295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C372C6646FA002ED295 /* ContentView.swift */; };
 		C80B1C3A2C6646FE002ED295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C392C6646FE002ED295 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 		051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCard.swift; sourceTree = "<group>"; };
 		051696092EE195590017DCC8 /* FriendAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatar.swift; sourceTree = "<group>"; };
 		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
+		05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		C80B1C322C6646FA002ED295 /* SwiftUI Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Topics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TopicsApp.swift; sourceTree = "<group>"; };
 		C80B1C372C6646FA002ED295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -64,12 +66,12 @@
 		051695FD2EE0A61C0017DCC8 /* Maps */ = {
 			isa = PBXGroup;
 			children = (
+				051696052EE0A7BA0017DCC8 /* MapView.swift */,
+				051695FF2EE0A72E0017DCC8 /* Friend.swift */,
 				051696092EE195590017DCC8 /* FriendAvatar.swift */,
 				051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */,
-				051696052EE0A7BA0017DCC8 /* MapView.swift */,
 				051696032EE0A7940017DCC8 /* FriendMarkerView.swift */,
 				051696012EE0A7660017DCC8 /* LocationManager.swift */,
-				051695FF2EE0A72E0017DCC8 /* Friend.swift */,
 			);
 			path = Maps;
 			sourceTree = "<group>";
@@ -125,8 +127,9 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				051695FD2EE0A61C0017DCC8 /* Maps */,
+				05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */,
 				C80B1C442C66474B002ED295 /* BlendModeView.swift */,
+				051695FD2EE0A61C0017DCC8 /* Maps */,
 			);
 			path = Topics;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				C80B1C452C66474B002ED295 /* BlendModeView.swift in Sources */,
 				051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */,
 				C8B046AE2DBE38E50088D969 /* GridView.swift in Sources */,
+				05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */,
 				C8808DC22C669DD3003641DF /* ExperimentUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

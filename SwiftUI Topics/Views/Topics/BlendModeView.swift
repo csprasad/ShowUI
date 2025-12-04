@@ -24,7 +24,7 @@ struct BlendModeView: View {
     @State private var selectedColor: Color = .red
     @State private var selectedImage: UIImage? = UIImage(named: "TajMahal")
     @State private var isImagePickerPresented = false
-    @State private var currentBlendModeIndex = 0
+    @State private var currentBlendModeIndex = 1
     
     @State private var showBottomSheet = false
     @State private var selectedValue: String?
@@ -32,13 +32,15 @@ struct BlendModeView: View {
     @State private var showingCredits = false
 
     let blendModes: [BlendMode] = [
-        .normal, .multiply, .screen, .overlay, .darken, .lighten, .colorDodge, .colorBurn,
-        .softLight, .hardLight, .difference, .exclusion, .hue, .saturation, .color, .luminosity,
-        .sourceAtop, .destinationOver, .destinationOut, .plusDarker, .plusLighter
+        .normal, .multiply, .screen, .overlay,
+        .darken, .lighten,
+        .colorDodge, .colorBurn,
+        .softLight, .hardLight,
+        .difference, .exclusion,
+        .hue, .saturation, .color, .luminosity
     ]
 
     var body: some View {
-        
         VStack {
             ImageWithOverlay(
                 selectedImage: selectedImage,
@@ -51,15 +53,14 @@ struct BlendModeView: View {
                 isImagePickerPresented: $isImagePickerPresented
             )
             Divider()
-            BottomSheetView(currentBlendModeIndex: $currentBlendModeIndex, blendModes: blendModes, blendModeName: blendModeName)
+            ListView(currentBlendModeIndex: $currentBlendModeIndex, blendModes: blendModes, blendModeName: blendModeName)
         }
         .edgesIgnoringSafeArea(.bottom)
         .sheet(isPresented: $isImagePickerPresented) {
             ImagePicker(selectedImage: $selectedImage)
         }
-        
+        .background(.thinMaterial)
     }
-    
 }
 
 // MARK: - Image Integration
@@ -73,17 +74,17 @@ struct ImageWithOverlay: View {
             Image(uiImage: selectedImage ?? UIImage())
                 .resizable()
                 .scaledToFill()
-                .frame(maxWidth: .infinity, maxHeight: 300)
+                .frame(maxWidth: .infinity)
             
             Rectangle()
                 .fill(selectedColor)
-                .frame(width: 600, height: 150)
+                .frame(width: 600, height: 250)
                 .rotationEffect(.degrees(-20))
                 .offset(x: 0, y: 0)
                 .blendMode(currentBlendMode)
         }
         .clipped()
-        .frame(height: 300)
+        .ignoresSafeArea()
     }
 }
 
@@ -94,7 +95,11 @@ struct ColorPickerAndButton: View {
 
     var body: some View {
         HStack {
-            Spacer()
+            Text("Select blend modes")
+                .font(.system(.title3))
+                .foregroundColor(.primary)
+                .padding()
+            
             ColorPicker("", selection: $selectedColor)
                 .cornerRadius(8)
                 .padding()
@@ -107,8 +112,8 @@ struct ColorPickerAndButton: View {
                 Image(systemName: "photo.on.rectangle")
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.black).opacity(0.6)
-                    .frame(width: 50, height: 50)
+                    .foregroundColor(.secondary).opacity(0.6)
+                    .frame(width: 40, height: 40)
             }
             .padding()
         }
@@ -117,7 +122,7 @@ struct ColorPickerAndButton: View {
 }
 
 // MARK: - Pop up sheet Integration
-struct BottomSheetView: View {
+struct ListView: View {
     @Environment(\.dismiss) var dismiss
     @Binding var currentBlendModeIndex: Int
     
@@ -127,29 +132,27 @@ struct BottomSheetView: View {
     var body: some View {
         ZStack {
             VStack {
-                Text("select blend modes")
-                    .font(.system(.headline))
+                List(blendModes.indices, id: \.self) { index in
+                    HStack {
+                        Text(blendModeName(blendModes[index]))
+                        Spacer()
 
-                List {
-                    ForEach(blendModes.indices, id: \.self) { index in
-                        Button(action: {
-                            currentBlendModeIndex = index
-                            dismiss()
-                        }) {
-                            HStack {
-                                VStack(alignment: .leading) {
-                                    Text(self.blendModeName(blendModes[index]))
-//                                        .font(.custom("Futura", size: 20))
-                                }
-                                Spacer()
-                            }
-                            .padding(8)
-                            .contentShape(Rectangle())
+                        if currentBlendModeIndex == index {
+                            Image(systemName: "checkmark")
+                                .foregroundColor(.red)
                         }
-                        .buttonStyle(PlainButtonStyle())
                     }
+                    .contentShape(Rectangle())
+                    .onTapGesture {
+                        currentBlendModeIndex = index
+                    }
+                    .listRowBackground(Color.clear)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 29)
                 }
-                .listStyle(PlainListStyle())
+                .listStyle(.inset)
+                .scrollContentBackground(.hidden)
+                .background(Color.clear)
             }
         }
     }

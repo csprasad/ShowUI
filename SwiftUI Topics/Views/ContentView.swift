@@ -12,7 +12,7 @@ struct ContentView: View {
     var list: some View {
         List {
             Grouping(title: "Blend Modes", content: { BlendModeView() })
-            Grouping(title: "Experiment") { ExperimentUIView()}
+            Grouping(title: "Bottom Sheet") { BottomSheetUIView()}
             Grouping(title: "Apple Maps") { MapView() }
         }
     }

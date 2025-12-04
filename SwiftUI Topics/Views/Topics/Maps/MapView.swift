@@ -98,11 +98,11 @@ struct MapView: View {
         ) { friend in
             MapAnnotation(coordinate: friend.coordinate) {
                 FriendMarkerView(friend: friend)
-                    .onTapGesture {
-                        withAnimation(.spring()) {
-                            selectedFriend = friend
-                        }
+                .onTapGesture {
+                    withAnimation(.spring()) {
+                        selectedFriend = friend
                     }
+                }
             }
         }
     }
