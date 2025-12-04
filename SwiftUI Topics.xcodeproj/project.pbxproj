@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051696002EE0A7330017DCC8 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051695FF2EE0A72E0017DCC8 /* Friend.swift */; };
+		051696022EE0A7680017DCC8 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696012EE0A7660017DCC8 /* LocationManager.swift */; };
+		051696042EE0A7960017DCC8 /* FriendMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696032EE0A7940017DCC8 /* FriendMarkerView.swift */; };
+		051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696052EE0A7BA0017DCC8 /* MapView.swift */; };
+		051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */; };
+		0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696092EE195590017DCC8 /* FriendAvatar.swift */; };
 		C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */; };
 		C80B1C382C6646FA002ED295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C372C6646FA002ED295 /* ContentView.swift */; };
 		C80B1C3A2C6646FE002ED295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C392C6646FE002ED295 /* Assets.xcassets */; };
@@ -18,6 +24,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051695FF2EE0A72E0017DCC8 /* Friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		051696012EE0A7660017DCC8 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		051696032EE0A7940017DCC8 /* FriendMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendMarkerView.swift; sourceTree = "<group>"; };
+		051696052EE0A7BA0017DCC8 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCard.swift; sourceTree = "<group>"; };
+		051696092EE195590017DCC8 /* FriendAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatar.swift; sourceTree = "<group>"; };
+		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
 		C80B1C322C6646FA002ED295 /* SwiftUI Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Topics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TopicsApp.swift; sourceTree = "<group>"; };
 		C80B1C372C6646FA002ED295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -40,9 +53,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051695FC2EE0A5A50017DCC8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		051695FD2EE0A61C0017DCC8 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				051696092EE195590017DCC8 /* FriendAvatar.swift */,
+				051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */,
+				051696052EE0A7BA0017DCC8 /* MapView.swift */,
+				051696032EE0A7940017DCC8 /* FriendMarkerView.swift */,
+				051696012EE0A7660017DCC8 /* LocationManager.swift */,
+				051695FF2EE0A72E0017DCC8 /* Friend.swift */,
+			);
+			path = Maps;
+			sourceTree = "<group>";
+		};
 		C80B1C292C6646FA002ED295 = {
 			isa = PBXGroup;
 			children = (
+				0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */,
 				C80B1C342C6646FA002ED295 /* SwiftUI Topics */,
 				C80B1C332C6646FA002ED295 /* Products */,
 			);
@@ -59,8 +94,8 @@
 		C80B1C342C6646FA002ED295 /* SwiftUI Topics */ = {
 			isa = PBXGroup;
 			children = (
+				051695FC2EE0A5A50017DCC8 /* App */,
 				C80B1C432C664725002ED295 /* Views */,
-				C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */,
 				C8B046B22DBE3A330088D969 /* Resource */,
 				C80B1C3B2C6646FE002ED295 /* Preview Content */,
 				C8808DC12C669DD3003641DF /* ExperimentUIView.swift */,
@@ -90,6 +125,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				051695FD2EE0A61C0017DCC8 /* Maps */,
 				C80B1C442C66474B002ED295 /* BlendModeView.swift */,
 			);
 			path = Topics;
@@ -173,10 +209,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */,
+				051696042EE0A7960017DCC8 /* FriendMarkerView.swift in Sources */,
+				051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */,
 				C80B1C382C6646FA002ED295 /* ContentView.swift in Sources */,
+				051696002EE0A7330017DCC8 /* Friend.swift in Sources */,
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
 				C8B046B02DBE38F70088D969 /* GroupView.swift in Sources */,
+				051696022EE0A7680017DCC8 /* LocationManager.swift in Sources */,
 				C80B1C452C66474B002ED295 /* BlendModeView.swift in Sources */,
+				051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */,
 				C8B046AE2DBE38E50088D969 /* GridView.swift in Sources */,
 				C8808DC22C669DD3003641DF /* ExperimentUIView.swift in Sources */,
 			);
@@ -315,7 +357,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Topics/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Topics-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShowUI;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you and your friends on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -344,7 +389,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Topics/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Topics-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShowUI;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you and your friends on the map.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
