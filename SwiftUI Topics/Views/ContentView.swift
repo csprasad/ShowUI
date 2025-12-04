@@ -13,12 +13,13 @@ struct ContentView: View {
         List {
             Grouping(title: "Blend Modes", content: { BlendModeView() })
             Grouping(title: "Experiment") { ExperimentUIView()}
+            Grouping(title: "Apple Maps") { MapView() }
         }
     }
     
     var body: some View {
         NavigationView {
-            list.navigationBarTitle("SwiftUI - Topics")
+            list.navigationBarTitle("Topics")
             Text("Select a group")
         }
         .accentColor(.accentColor)
