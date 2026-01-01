@@ -14,6 +14,7 @@ struct ContentView: View {
             Grouping(title: "Blend Modes", content: { BlendModeView() })
             Grouping(title: "Bottom Sheet") { BottomSheetUIView()}
             Grouping(title: "Apple Maps") { MapView() }
+            Grouping(title: "Buttons") { ButtonStyles() }
         }
     }
     
