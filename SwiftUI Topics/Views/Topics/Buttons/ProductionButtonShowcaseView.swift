@@ -74,8 +74,8 @@ struct ProductionButtonShowcaseView: View {
                 section("Disabled State")
                 row {
                     Button("Disabled") {}
-                        .buttonStyle(.bordered)
-                        .disabled(true)
+                        .buttonStyle(.borderedProminent)
+                        .disabled(isEnabled)
                     
                     Toggle("Enabled", isOn: $isEnabled)
                         .labelsHidden()

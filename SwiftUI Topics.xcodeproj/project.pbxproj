@@ -13,6 +13,7 @@
 		051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696052EE0A7BA0017DCC8 /* MapView.swift */; };
 		051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */; };
 		0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696092EE195590017DCC8 /* FriendAvatar.swift */; };
+		056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D91152F1E0C230005D7DC /* LikeButtons.swift */; };
 		059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */; };
 		05979A002F065A5200905892 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FF2F065A4D00905892 /* ButtonStyles.swift */; };
 		05979A022F065DD100905892 /* ButtonShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05979A012F065DAE00905892 /* ButtonShowcaseView.swift */; };
@@ -35,6 +36,7 @@
 		051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCard.swift; sourceTree = "<group>"; };
 		051696092EE195590017DCC8 /* FriendAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatar.swift; sourceTree = "<group>"; };
 		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
+		056D91152F1E0C230005D7DC /* LikeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtons.swift; sourceTree = "<group>"; };
 		059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionButtonShowcaseView.swift; sourceTree = "<group>"; };
 		059799FF2F065A4D00905892 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		05979A012F065DAE00905892 /* ButtonShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShowcaseView.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		059799FC2F06585800905892 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				056D91152F1E0C230005D7DC /* LikeButtons.swift */,
 				05979A012F065DAE00905892 /* ButtonShowcaseView.swift */,
 				059799FF2F065A4D00905892 /* ButtonStyles.swift */,
 				059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */,
@@ -235,6 +238,7 @@
 				C80B1C382C6646FA002ED295 /* ContentView.swift in Sources */,
 				05979A022F065DD100905892 /* ButtonShowcaseView.swift in Sources */,
 				059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */,
+				056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */,
 				051696002EE0A7330017DCC8 /* Friend.swift in Sources */,
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
 				C8B046B02DBE38F70088D969 /* GroupView.swift in Sources */,

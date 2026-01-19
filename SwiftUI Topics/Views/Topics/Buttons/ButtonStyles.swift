@@ -18,6 +18,10 @@ struct ButtonStyles: View {
             NavigationLink("Common in Practice") {
                 ProductionButtonShowcaseView()
             }
+            
+            NavigationLink("Like Buttons") {
+                LikeButtons()
+            }
         }
         .navigationTitle("Button Styles")
     }
