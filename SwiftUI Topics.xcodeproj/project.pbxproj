@@ -13,6 +13,7 @@
 		051696062EE0A7BF0017DCC8 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696052EE0A7BA0017DCC8 /* MapView.swift */; };
 		051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */; };
 		0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051696092EE195590017DCC8 /* FriendAvatar.swift */; };
+		0533ED0C2F2A126700732511 /* MaskingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533ED0B2F2A126400732511 /* MaskingView.swift */; };
 		056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D91152F1E0C230005D7DC /* LikeButtons.swift */; };
 		059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */; };
 		05979A002F065A5200905892 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FF2F065A4D00905892 /* ButtonStyles.swift */; };
@@ -36,6 +37,7 @@
 		051696072EE0ACE20017DCC8 /* FriendDetailCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendDetailCard.swift; sourceTree = "<group>"; };
 		051696092EE195590017DCC8 /* FriendAvatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatar.swift; sourceTree = "<group>"; };
 		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
+		0533ED0B2F2A126400732511 /* MaskingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingView.swift; sourceTree = "<group>"; };
 		056D91152F1E0C230005D7DC /* LikeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtons.swift; sourceTree = "<group>"; };
 		059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionButtonShowcaseView.swift; sourceTree = "<group>"; };
 		059799FF2F065A4D00905892 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				0533ED0B2F2A126400732511 /* MaskingView.swift */,
 				059799FC2F06585800905892 /* Buttons */,
 				05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */,
 				C80B1C442C66474B002ED295 /* BlendModeView.swift */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0533ED0C2F2A126700732511 /* MaskingView.swift in Sources */,
 				0516960A2EE195660017DCC8 /* FriendAvatar.swift in Sources */,
 				051696042EE0A7960017DCC8 /* FriendMarkerView.swift in Sources */,
 				051696082EE0ACE20017DCC8 /* FriendDetailCard.swift in Sources */,
