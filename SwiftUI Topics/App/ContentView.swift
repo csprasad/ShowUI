@@ -11,9 +11,9 @@ struct ContentView: View {
     
     var list: some View {
         List {
-            Grouping(title: "Blend Modes", content: { BlendModeView() })
+            Grouping(title: "Keyboard Types") { KeyboardTypeView() }
+            Grouping(title: "Blend Modes") { BlendModeView() }
             Grouping(title: "Bottom Sheet") { BottomSheetUIView()}
-            Grouping(title: "Apple Maps") { MapView() }
             Grouping(title: "Buttons") { ButtonStyles() }
             Grouping(title: "Masking") { MaskingView() }
         }

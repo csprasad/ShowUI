@@ -7,6 +7,19 @@ Each topic includes **real, runnable UI previews** so you can see how SwiftUI be
 
 ---
 
+## Screenshots(gifs)
+
+<table>
+  <tr>
+    <td width="25%"><img src="gifs/collections.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/keyboardType.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/blendModes.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/buttons.gif" width="100%"/></td>
+  </tr>
+</table>
+
+---
+
 ## 📚 **Overview**
 
 ShowUI is built for developers who learn best by **seeing** and **interacting** with SwiftUI concepts.
