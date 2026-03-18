@@ -24,19 +24,6 @@ struct ButtonsTopic: TopicProtocol {
     var lessons: [AnyLesson] { [] }   // Add ButtonsLesson entries here
 }
 
-// MARK: - Masking Topic
-struct MaskingTopic: TopicProtocol {
-    let id          = UUID()
-    let title       = "Masking"
-    let subtitle    = "Clip shapes, masks and reveal animations"
-    let icon        = "theatermask.and.paintbrush.fill"
-    let color       = Color(hex: "#FAECE7")
-    let accentColor = Color(hex: "#993C1D")
-    let tag         = "Visual"
-
-    var lessons: [AnyLesson] { [] }
-}
-
 // MARK: - Bottom Sheets Topic
 struct BottomSheetsTopic: TopicProtocol {
     let id          = UUID()
