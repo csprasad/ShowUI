@@ -1,6 +1,6 @@
 //
 //
-//  Lesson5_AsyncLet.swift
+//  Lesson2_Concurrent.swift
 //  SwiftUI Topics
 //
 /// Created by `C S Prasad` on `18/03/26`
@@ -10,10 +10,9 @@
 ///
 
 import SwiftUI
-
-// MARK: - LESSON 5: async let
  
-struct AsyncLetVisual: View {
+// MARK: - Visual
+struct ConcurrentVisual: View {
     private let totalSeconds: CGFloat = 2.2
     private let labelWidth:   CGFloat = 96
     private let barHeight:    CGFloat = 28
@@ -24,34 +23,31 @@ struct AsyncLetVisual: View {
         ("fetchFollowers", 1.5, Color(hex: "#FAC775"), Color(hex: "#633806"), "1.5s"),
     ]
  
-    @State private var animatedWidths: [CGFloat] = [0, 0, 0]
-    @State private var done:           [Bool]    = [false, false, false]
-    @State private var showTotal                 = false
-    @State private var trackW: CGFloat           = 0
-    @State private var replayTask: Task<Void, Never>? = nil
+    @State private var animatedWidths: [CGFloat]          = [0, 0, 0]
+    @State private var done:           [Bool]             = [false, false, false]
+    @State private var showTotal                          = false
+    @State private var trackW: CGFloat                    = 0
+    @State private var replayTask: Task<Void, Never>?     = nil
  
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 14) {
                 HStack {
-                    Label("async let", systemImage: "bolt.horizontal.fill")
+                    Label("Concurrent", systemImage: "arrow.triangle.branch")
                         .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(Color(hex: "#3B6D11"))
+                        .foregroundStyle(Color(hex: "#0F6E56"))
                     Spacer()
                     Button("Replay") { replay() }
                         .font(.system(size: 13, weight: .medium))
-                        .foregroundStyle(Color(hex: "#3B6D11"))
+                        .foregroundStyle(Color(hex: "#0F6E56"))
                 }
  
-                Text("All three tasks fire at t = 0")
-                    .font(.system(size: 12))
-                    .foregroundStyle(.secondary)
- 
                 GeometryReader { geo in
-                    let tw       = geo.size.width - labelWidth - 10
+                    let tw = max(0, geo.size.width - labelWidth - 10)
                     let pxPerSec = tw / totalSeconds
  
                     VStack(spacing: 8) {
+ 
                         ForEach(rows.indices, id: \.self) { i in
                             let row = rows[i]
                             HStack(spacing: 10) {
@@ -106,7 +102,7 @@ struct AsyncLetVisual: View {
  
                                 if showTotal {
                                     RoundedRectangle(cornerRadius: 6)
-                                        .fill(Color(hex: "#1D9E75").opacity(0.8))
+                                        .fill(Color(hex: "#1D9E75").opacity(0.7))
                                         .frame(width: 2.0 * pxPerSec, height: 22)
                                         .transition(.opacity)
  
@@ -120,16 +116,16 @@ struct AsyncLetVisual: View {
                             .frame(width: tw)
                         }
  
-                        // Tick marks — pixel-exact at 0, 1, 2s
+                        // Tick marks — hardcoded, pixel-exact
                         HStack(spacing: 0) {
                             Spacer().frame(width: labelWidth + 10)
                             ZStack(alignment: .leading) {
-                                ForEach([0, 1, 2], id: \.self) { sec in
-                                    Text("\(Int(sec))s")
-                                        .font(.system(size: 10))
-                                        .foregroundStyle(.tertiary)
-                                        .offset(x: sec * pxPerSec - 6)
-                                }
+                                Text("0s").font(.system(size: 10)).foregroundStyle(.tertiary)
+                                    .offset(x: 0)
+                                Text("1s").font(.system(size: 10)).foregroundStyle(.tertiary)
+                                    .offset(x: 1.0 * pxPerSec - 6)
+                                Text("2s").font(.system(size: 10)).foregroundStyle(.tertiary)
+                                    .offset(x: 2.0 * pxPerSec - 6)
                             }
                             .frame(width: tw, height: 16, alignment: .leading)
                         }
@@ -147,24 +143,24 @@ struct AsyncLetVisual: View {
     func replay() {
         replayTask?.cancel()
         replayTask = Task {
+            guard trackW > 0 else { return }
             animatedWidths = [0, 0, 0]
             done           = [false, false, false]
             showTotal      = false
             let pxPerSec   = trackW / totalSeconds
-
-            // All bars fire simultaneously
+ 
             withAnimation(.linear(duration: 1.2).delay(0.2)) { animatedWidths[0] = 1.0 * pxPerSec }
             withAnimation(.linear(duration: 1.8).delay(0.2)) { animatedWidths[2] = 1.5 * pxPerSec }
             withAnimation(.linear(duration: 2.4).delay(0.2)) { animatedWidths[1] = 2.0 * pxPerSec }
-
+ 
             try? await Task.sleep(for: .seconds(1.4))
             guard !Task.isCancelled else { return }
             withAnimation(.spring()) { done[0] = true }
-
+ 
             try? await Task.sleep(for: .seconds(0.6))
             guard !Task.isCancelled else { return }
             withAnimation(.spring()) { done[2] = true }
-
+ 
             try? await Task.sleep(for: .seconds(0.6))
             guard !Task.isCancelled else { return }
             withAnimation(.spring()) { done[1] = true }
@@ -172,31 +168,39 @@ struct AsyncLetVisual: View {
         }
     }
 }
-
-struct AsyncLetExplanation: View {
+// MARK: - Explanation
+struct ConcurrentExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "How async let works")
-            Text("async let declares a child task immediately without waiting. The task starts running in the background. When you await the result, Swift waits only at that point, by which time the task may already be finished.")
-                .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
+            SectionHeader(text: "How it works")
+            Text("Concurrent tasks all start at the same moment. They overlap in time, so the total wait is only as long as the slowest single task, not the sum of all of them.")
+                .font(.system(size: 15))
+                .foregroundStyle(.secondary)
+                .lineSpacing(4)
+
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "All three async let lines execute instantly, with no waiting.", color: Color(hex: "#3B6D11"))
-                StepRow(number: 2, text: "The await line is where execution pauses until all three are done.", color: Color(hex: "#3B6D11"))
-                StepRow(number: 3, text: "Note the tuple destructuring on the left, this is the correct Swift syntax.", color: Color(hex: "#3B6D11"))
+                StepRow(number: 1, text: "All three requests fire simultaneously at t=0.", color: Color(hex: "#0F6E56"))
+                StepRow(number: 2, text: "fetchProfile finishes first at 1s.", color: Color(hex: "#185FA5"))
+                StepRow(number: 3, text: "fetchFollowers finishes at 1.5s.", color: Color(hex: "#854F0B"))
+                StepRow(number: 4, text: "fetchPosts is the slowest, at 2s everything is done.", color: Color(hex: "#0F6E56"))
             }
-            CalloutBox(style: .success, title: "Use async let when", content: "You have a fixed, known set of independent async tasks. If the count is dynamic, use a TaskGroup instead.")
+
+            CalloutBox(style: .success, title: "Total: 2 seconds", contentBody: "2s instead of 4.5s; a 55% reduction. None of the requests depended on each other, so there was no reason to wait.")
+
             CodeBlock(code: """
+// async let — all three start immediately
 async let profile   = fetchProfile()
 async let posts     = fetchPosts()
 async let followers = fetchFollowers()
 
-// Destructure — this is the correct syntax
+// Await all three at once
 let (p, po, f) = try await (profile, posts, followers)
 """)
         }
     }
 }
 
+
 #Preview {
-    AsyncLetVisual()
+    ConcurrentVisual()
 }

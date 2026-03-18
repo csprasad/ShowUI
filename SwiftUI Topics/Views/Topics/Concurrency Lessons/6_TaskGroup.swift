@@ -140,8 +140,8 @@ struct TaskGroupExplanation: View {
             SectionHeader(text: "How Task Groups work")
             Text("Task Groups let you spawn a dynamic number of concurrent tasks, and wait for all of them to complete. Useful when you don't know the count at compile time. Results arrive as tasks complete, not in the order they were added.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
-            CalloutBox(style: .warning, title: "Completion order, not submission order", content: "The #1 Task Group mistake. If your UI needs ordered results? Like a photo grid or a feed then carry the original index with each result and sort before returning.")
-            CalloutBox(style: .success, title: "Use Task Groups when", content: "The number of tasks is determined at runtime. e.g., downloading every image in a list whose size you only know after a network call.")
+            CalloutBox(style: .warning, title: "Completion order, not submission order", contentBody: "The #1 Task Group mistake. If your UI needs ordered results? Like a photo grid or a feed then carry the original index with each result and sort before returning.")
+            CalloutBox(style: .success, title: "Use Task Groups when", contentBody: "The number of tasks is determined at runtime. e.g., downloading every image in a list whose size you only know after a network call.")
             CodeBlock(code: """
 func downloadImages(urls: [URL]) async throws -> [UIImage] {
     try await withThrowingTaskGroup(of: (Int, UIImage?).self) { group in

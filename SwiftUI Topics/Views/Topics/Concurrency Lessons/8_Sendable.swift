@@ -124,7 +124,7 @@ struct SendableExplanation: View {
                 StepRow(number: 3, text: "Actors are inherently Sendable — their isolation protects their mutable state.", color: Color(hex: "#993556"))
                 StepRow(number: 4, text: "A standard mutable class is not automatically Sendable, because its mutable state can be shared between tasks. Attempting to do so will cause the compiler rejects it at a task boundary.", color: Color(hex: "#993556"))
             }
-            CalloutBox(style: .success, title: "Caught at compile time", content: "This is how Swift 6 eliminates the race condition ghost bug, before your code ever runs.")
+            CalloutBox(style: .success, title: "Caught at compile time", contentBody: "This is how Swift 6 eliminates the race condition ghost bug, before your code ever runs.")
             CodeBlock(code: """
 // Automatically Sendable — struct, immutable
 struct UserProfile: Sendable {
