@@ -12,7 +12,8 @@
 import SwiftUI
 
 struct LessonDetailView: View {
-    let lesson: Lesson
+    let lesson: AnyLesson
+    let topic: any TopicProtocol
     @Environment(\.dismiss) private var dismiss
 
     var body: some View {
@@ -23,10 +24,10 @@ struct LessonDetailView: View {
                     .padding(.top, 20)
                     .padding(.bottom, 24)
 
-                lessonVisual
+                lesson.visual
                     .padding(.bottom, 32)
 
-                lessonExplanation
+                lesson.explanation
                     .padding(.horizontal, 20)
                     .padding(.bottom, 60)
             }
@@ -39,68 +40,40 @@ struct LessonDetailView: View {
                     HStack(spacing: 4) {
                         Image(systemName: "chevron.left")
                             .font(.system(size: 14, weight: .semibold))
-                        Text("Lessons")
+                        Text(topic.title)
                             .font(.system(size: 16))
                     }
-                    .foregroundStyle(lesson.accentColor)
+                    .foregroundStyle(topic.accentColor)
                 }
             }
         }
     }
 
+    // MARK: - Lesson Header
     private var lessonHeader: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 10) {
+            HStack(spacing: 12) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
-                        .fill(lesson.color)
+                        .fill(topic.color)
                         .frame(width: 44, height: 44)
                     Image(systemName: lesson.icon)
                         .font(.system(size: 20))
-                        .foregroundStyle(lesson.accentColor)
+                        .foregroundStyle(topic.accentColor)
                 }
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Lesson \(lesson.number) · \(lesson.tag)")
+                    Text("Lesson \(lesson.number) · \(topic.tag)")
                         .font(.system(size: 12, weight: .medium))
                         .foregroundStyle(.secondary)
                     Text(lesson.title)
                         .font(.system(size: 22, weight: .bold, design: .rounded))
+                        .foregroundStyle(.primary)
                 }
             }
             Text(lesson.subtitle)
                 .font(.system(size: 15))
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
-        }
-    }
-
-    @ViewBuilder
-    private var lessonVisual: some View {
-        switch lesson.number {
-        case 1: SequentialVisual()
-        case 2: ConcurrentVisual()
-        case 3: RaceConditionVisual()
-        case 4: ActorVisual()
-        case 5: AsyncLetVisual()
-        case 6: TaskGroupVisual()
-        case 7: CancellationVisual()
-        case 8: SendableVisual()
-        default: EmptyView()
-        }
-    }
-
-    @ViewBuilder
-    private var lessonExplanation: some View {
-        switch lesson.number {
-        case 1: SequentialExplanation()
-        case 2: ConcurrentExplanation()
-        case 3: RaceConditionExplanation()
-        case 4: ActorExplanation()
-        case 5: AsyncLetExplanation()
-        case 6: TaskGroupExplanation()
-        case 7: CancellationExplanation()
-        case 8: SendableExplanation()
-        default: EmptyView()
         }
     }
 }

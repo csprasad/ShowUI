@@ -193,9 +193,9 @@ struct RaceConditionExplanation: View {
                 StepRow(number: 4, text: "Task A writes 50 (100 − 50) — silently overwrites Task B", color: Color(hex: "#A32D2D"))
             }
 
-            CalloutBox(style: .danger, title: "Silent data loss", content: "The user withdrew $80 total. The balance should be $20. But it shows $50. No error was thrown. No crash. The bug is invisible.")
+            CalloutBox(style: .danger, title: "Silent data loss", contentBody: "The user withdrew $80 total. The balance should be $20. But it shows $50. No error was thrown. No crash. The bug is invisible.")
 
-            CalloutBox(style: .info, title: "Why it's hard to catch", content: "This only happens when the timing lines up exactly. It works perfectly in development and fails unpredictably in production, which is why it's called a ghost bug.")
+            CalloutBox(style: .info, title: "Why it's hard to catch", contentBody: "This only happens when the timing lines up exactly. It works perfectly in development and fails unpredictably in production, which is why it's called a ghost bug.")
 
             CodeBlock(code: """
 // Dangerous — class is not protected

@@ -1,9 +1,13 @@
 //
+//
 //  SwiftUI_TopicsApp.swift
 //  SwiftUI Topics
 //
-//  Created by CS Prasad on 09/08/24.
-//
+/// Created by `C S Prasad` on `09/08/24`
+///
+/// ### Social
+/// `Instagram` : ``@csprasad.ios`` • `X` : ``@csprasad_ios`` • `Github` : ``@csprasad``
+///
 
 import SwiftUI
 
@@ -11,7 +15,7 @@ import SwiftUI
 struct SwiftUI_TopicsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
         }
     }
 }

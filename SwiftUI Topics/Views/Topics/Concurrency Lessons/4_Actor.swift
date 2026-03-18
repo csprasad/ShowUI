@@ -185,9 +185,9 @@ struct ActorExplanation: View {
                 StepRow(number: 4, text: "Task A exits. The gate unlocks. Task B enters and does the same.", color: Color(hex: "#534AB7"))
             }
 
-            CalloutBox(style: .success, title: "Always correct", content: "The final balance is always $20, no matter how many tasks try to access it simultaneously. The actor guarantees it.")
+            CalloutBox(style: .success, title: "Always correct", contentBody: "The final balance is always $20, no matter how many tasks try to access it simultaneously. The actor guarantees it.")
 
-            CalloutBox(style: .warning, title: "Actor reentrancy", content: "If your actor method contains an await, another task can enter while the first is suspended. Always complete your read + write in a single non-suspending step.")
+            CalloutBox(style: .warning, title: "Actor reentrancy", contentBody: "If your actor method contains an await, another task can enter while the first is suspended. Always complete your read + write in a single non-suspending step.")
 
             CodeBlock(code: """
 actor BankAccount {
