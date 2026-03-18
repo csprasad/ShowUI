@@ -37,19 +37,6 @@ struct MaskingTopic: TopicProtocol {
     var lessons: [AnyLesson] { [] }
 }
 
-// MARK: - Blend Modes Topic
-struct BlendModesTopic: TopicProtocol {
-    let id          = UUID()
-    let title       = "Blend Modes"
-    let subtitle    = "Multiply, screen, overlay and all compositing modes"
-    let icon        = "circle.lefthalf.filled.righthalf.striped.horizontal.inverse"
-    let color       = Color(hex: "#FBEAF0")
-    let accentColor = Color(hex: "#993556")
-    let tag         = "Visual"
-
-    var lessons: [AnyLesson] { [] }
-}
-
 // MARK: - Bottom Sheets Topic
 struct BottomSheetsTopic: TopicProtocol {
     let id          = UUID()

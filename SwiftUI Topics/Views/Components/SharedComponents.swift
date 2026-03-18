@@ -77,22 +77,6 @@ struct CalloutBox: View {
     }
 }
 
-// MARK: - Code Block
-struct CodeBlock: View {
-    let code: String
-
-    var body: some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            Text(code)
-                .font(.system(size: 12, design: .monospaced))
-                .foregroundStyle(.primary)
-                .padding(14)
-        }
-        .background(Color(.secondarySystemBackground))
-        .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
-    }
-}
-
 // MARK: - Step Row
 struct StepRow: View {
     let number: Int

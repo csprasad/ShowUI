@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE22F6B1C2600BA2F73 /* BlendmodesTopic.swift */; };
+		0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE42F6B1D1D00BA2F73 /* 1_blendintro.swift */; };
+		0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE62F6B1D4200BA2F73 /* Blendcategoryvisual.swift */; };
+		0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADEA2F6B2A6700BA2F73 /* CodeBlock.swift */; };
 		051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051FDFB92F47323B0013F19E /* Color+Hex.swift */; };
 		0533ED0C2F2A126700732511 /* MaskingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0533ED0B2F2A126400732511 /* MaskingView.swift */; };
 		05685B772F6A74B5004643FF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685B752F6A74B4004643FF /* Lesson.swift */; };
@@ -42,11 +46,14 @@
 		C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */; };
 		C80B1C3A2C6646FE002ED295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C392C6646FE002ED295 /* Assets.xcassets */; };
 		C80B1C3D2C6646FE002ED295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C3C2C6646FE002ED295 /* Preview Assets.xcassets */; };
-		C80B1C452C66474B002ED295 /* BlendModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C442C66474B002ED295 /* BlendModeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
+		0518ADE22F6B1C2600BA2F73 /* BlendmodesTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendmodesTopic.swift; sourceTree = "<group>"; };
+		0518ADE42F6B1D1D00BA2F73 /* 1_blendintro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_blendintro.swift; sourceTree = "<group>"; };
+		0518ADE62F6B1D4200BA2F73 /* Blendcategoryvisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blendcategoryvisual.swift; sourceTree = "<group>"; };
+		0518ADEA2F6B2A6700BA2F73 /* CodeBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBlock.swift; sourceTree = "<group>"; };
 		051FDFB92F47323B0013F19E /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		0533ED0B2F2A126400732511 /* MaskingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingView.swift; sourceTree = "<group>"; };
 		05685B752F6A74B4004643FF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
@@ -83,7 +90,6 @@
 		C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TopicsApp.swift; sourceTree = "<group>"; };
 		C80B1C392C6646FE002ED295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C80B1C3C2C6646FE002ED295 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		C80B1C442C66474B002ED295 /* BlendModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendModeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,16 @@
 				C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				0518ADE22F6B1C2600BA2F73 /* BlendmodesTopic.swift */,
+				0518ADE62F6B1D4200BA2F73 /* Blendcategoryvisual.swift */,
+				0518ADE42F6B1D1D00BA2F73 /* 1_blendintro.swift */,
+			);
+			path = "BlendModes Lessons";
 			sourceTree = "<group>";
 		};
 		051FDFB82F4732330013F19E /* Extensions */ = {
@@ -127,6 +143,7 @@
 		05685B9B2F6A8F9D004643FF /* Concurrency Lessons */ = {
 			isa = PBXGroup;
 			children = (
+				05685BB82F6AB050004643FF /* ConcurrencyTopic.swift */,
 				05685B902F6A8F9D004643FF /* 1_Sequential.swift */,
 				05685B912F6A8F9D004643FF /* 2_Concurrent.swift */,
 				05685B922F6A8F9D004643FF /* 3_RaceCondition.swift */,
@@ -150,6 +167,7 @@
 		05685BAD2F6AACE6004643FF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				0518ADEA2F6B2A6700BA2F73 /* CodeBlock.swift */,
 				05685B962F6A8F9D004643FF /* SharedComponents.swift */,
 			);
 			path = Components;
@@ -158,6 +176,7 @@
 		05685BBC2F6AB66A004643FF /* Keyboard Lessons */ = {
 			isa = PBXGroup;
 			children = (
+				05685BBD2F6AB688004643FF /* KeyboardTopic.swift */,
 				05685BC92F6AB846004643FF /* 6_ReturnKey.swift */,
 				05685BC72F6AB76B004643FF /* 5_KeyboardToolbar.swift */,
 				05685BC52F6AB740004643FF /* 4_InputValidation.swift */,
@@ -230,17 +249,15 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				05685BBD2F6AB688004643FF /* KeyboardTopic.swift */,
+				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
+				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 				05685BBC2F6AB66A004643FF /* Keyboard Lessons */,
 				05685BBA2F6AB0A8004643FF /* PlaceHolderTopic.swift */,
-				05685BB82F6AB050004643FF /* ConcurrencyTopic.swift */,
 				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
 				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
 				0533ED0B2F2A126400732511 /* MaskingView.swift */,
 				059799FC2F06585800905892 /* Buttons */,
 				05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */,
-				C80B1C442C66474B002ED295 /* BlendModeView.swift */,
-				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 			);
 			path = Topics;
 			sourceTree = "<group>";
@@ -325,6 +342,7 @@
 			files = (
 				05685B772F6A74B5004643FF /* Lesson.swift in Sources */,
 				0533ED0C2F2A126700732511 /* MaskingView.swift in Sources */,
+				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				05685BB52F6AAF9C004643FF /* HomeView.swift in Sources */,
 				05685BB32F6AAF3D004643FF /* View+extensions.swift in Sources */,
@@ -332,13 +350,14 @@
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
 				05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */,
+				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
+				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
 				059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */,
 				056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */,
 				05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */,
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
-				C80B1C452C66474B002ED295 /* BlendModeView.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
 				05685BA52F6A9518004643FF /* 5_AsyncLet.swift in Sources */,
@@ -356,6 +375,7 @@
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05685BBB2F6AB0AD004643FF /* PlaceHolderTopic.swift in Sources */,
+				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
