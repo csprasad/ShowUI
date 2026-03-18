@@ -11,6 +11,7 @@ struct ContentView: View {
     
     var list: some View {
         List {
+            Grouping(title: "Concurrency") { ConcurrencyView() }
             Grouping(title: "Keyboard Types") { KeyboardTypeView() }
             Grouping(title: "Blend Modes") { BlendModeView() }
             Grouping(title: "Bottom Sheet") { BottomSheetUIView()}
