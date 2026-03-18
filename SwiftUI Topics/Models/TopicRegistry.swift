@@ -18,9 +18,9 @@ struct TopicRegistry {
     static let all: [any TopicProtocol] = [
         ConcurrencyTopic(),
         KeyboardTopic(),
+        BlendModesTopic(),
         ButtonsTopic(),
         MaskingTopic(),
-        BlendModesTopic(),
         BottomSheetsTopic(),
     ]
 }
