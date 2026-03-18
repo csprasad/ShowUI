@@ -19,8 +19,8 @@ struct TopicRegistry {
         ConcurrencyTopic(),
         KeyboardTopic(),
         BlendModesTopic(),
-        ButtonsTopic(),
         MaskingTopic(),
+        ButtonsTopic(),
         BottomSheetsTopic(),
     ]
 }
