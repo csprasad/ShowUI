@@ -8,10 +8,13 @@
 
 <table>
   <tr>
-    <td width="25%"><img src="gifs/collections.gif" width="100%"/></td>
-    <td width="25%"><img src="gifs/keyboardType.gif" width="100%"/></td>
-    <td width="25%"><img src="gifs/blendModes.gif" width="100%"/></td>
-    <td width="25%"><img src="gifs/buttons.gif" width="100%"/></td>
+    <td width="25%"><img src="images/collections.png" width="100%"/></td>
+    <td width="25%"><img src="gifs/concurrency.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/keyboard.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/blendMode.gif" width="100%"/></td>
+  </tr>
+  <tr>
+    <td width="25%"><img src="gifs/masking.gif" width="100%"/></td>
   </tr>
 </table>
 
