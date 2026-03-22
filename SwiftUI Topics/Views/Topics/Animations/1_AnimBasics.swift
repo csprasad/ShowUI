@@ -45,18 +45,20 @@ struct AnimBasicsVisual: View {
                 .frame(height: 160)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
-                // Trigger button
-                Button(isOn ? "Reverse" : "Animate") {
+                // Reverse & Animate button
+                Button {
                     withAnimation(
                         curves[selectedCurve].anim(duration).delay(delay)
                     ) { isOn.toggle() }
+                } label: {
+                    Text(isOn ? "Reverse" : "Animate")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animPurple)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animPurple)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .buttonStyle(PressableButtonStyle())
 
                 // Duration slider

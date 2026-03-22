@@ -51,15 +51,17 @@ struct PhaseAnimatorVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Trigger button
-                Button("Trigger animation") {
+                Button {
                     trigger += 1
+                } label: {
+                    Text("Trigger animation")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animPurple)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animPurple)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .buttonStyle(PressableButtonStyle())
 
                 // Effect selector

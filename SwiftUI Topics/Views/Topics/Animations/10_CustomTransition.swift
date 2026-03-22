@@ -65,18 +65,19 @@ struct CustomTransitionVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Toggle button
-                Button(isVisible ? "Remove" : "Insert") {
+                Button {
                     withAnimation(.spring(duration: 0.5, bounce: 0.3)) {
                         isVisible.toggle()
                     }
-                }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animAmber)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .buttonStyle(PressableButtonStyle())
+                } label: {
+                    Text(isVisible ? "Remove" : "Insert")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animAmber)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }.buttonStyle(PressableButtonStyle())
 
                 // Description
                 HStack(spacing: 8) {

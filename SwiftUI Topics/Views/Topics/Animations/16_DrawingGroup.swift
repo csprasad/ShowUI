@@ -54,14 +54,15 @@ struct DrawingGroupVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 if isAnimating {
-                    Button("Stop") { isAnimating = false }
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 9)
-                        .background(Color.animPink)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .buttonStyle(PressableButtonStyle())
+                    Button { isAnimating = false } label: {
+                        Text("Stop")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 9)
+                            .background(Color.animPink)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }.buttonStyle(PressableButtonStyle())
                 }
 
                 // Particle count slider

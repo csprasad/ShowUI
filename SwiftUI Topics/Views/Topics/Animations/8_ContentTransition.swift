@@ -39,25 +39,28 @@ struct ContentTransitionVisual: View {
 
                 // Mode toggle
                 HStack(spacing: 8) {
-                    Button("Numbers") {
+                    Button {
                         withAnimation(.spring(response: 0.3)) { useNumeric = true }
-                    }
-                    .font(.system(size: 12, weight: useNumeric ? .semibold : .regular))
-                    .foregroundStyle(useNumeric ? Color.animBlue : .secondary)
-                    .padding(.horizontal, 12).padding(.vertical, 6)
-                    .background(useNumeric ? Color(hex: "#E6F1FB") : Color(.systemFill))
-                    .clipShape(Capsule())
-                    .buttonStyle(PressableButtonStyle())
+                    } label: {
+                     Text("Numbers")
+                        .font(.system(size: 12, weight: useNumeric ? .semibold : .regular))
+                        .foregroundStyle(useNumeric ? Color.animBlue : .secondary)
+                        .padding(.horizontal, 12).padding(.vertical, 6)
+                        .background(useNumeric ? Color(hex: "#E6F1FB") : Color(.systemFill))
+                        .clipShape(Capsule())
+                    }.buttonStyle(PressableButtonStyle())
 
-                    Button("Text") {
+                    Button {
                         withAnimation(.spring(response: 0.3)) { useNumeric = false }
-                    }
-                    .font(.system(size: 12, weight: !useNumeric ? .semibold : .regular))
-                    .foregroundStyle(!useNumeric ? Color.animBlue : .secondary)
-                    .padding(.horizontal, 12).padding(.vertical, 6)
-                    .background(!useNumeric ? Color(hex: "#E6F1FB") : Color(.systemFill))
-                    .clipShape(Capsule())
-                    .buttonStyle(PressableButtonStyle())
+                    } label : {
+                        Text("Text")
+                            .font(.system(size: 12, weight: !useNumeric ? .semibold : .regular))
+                            .foregroundStyle(!useNumeric ? Color.animBlue : .secondary)
+                            .padding(.horizontal, 12).padding(.vertical, 6)
+                            .background(!useNumeric ? Color(hex: "#E6F1FB") : Color(.systemFill))
+                            .clipShape(Capsule())
+                    }.buttonStyle(PressableButtonStyle())
+
                     Spacer()
                 }
 

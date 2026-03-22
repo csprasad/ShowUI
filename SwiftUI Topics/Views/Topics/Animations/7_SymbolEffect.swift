@@ -61,25 +61,25 @@ struct SymbolEffectVisual: View {
 
                 // Trigger buttons
                 HStack(spacing: 10) {
-                    Button("Trigger once") { trigger += 1 }
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 9)
-                        .background(Color.animPurple)
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .buttonStyle(PressableButtonStyle())
+                    Button { trigger += 1 } label: {
+                        Text("Trigger once")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(.white)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 9)
+                            .background(Color.animPurple)
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }.buttonStyle(PressableButtonStyle())
 
-                    Button(isActive ? "Stop loop" : "Loop") {
-                        isActive.toggle()
-                    }
-                        .font(.system(size: 13, weight: .semibold))
-                        .foregroundStyle(Color.animPurple)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 9)
-                        .background(Color(hex: "#EEEDFE"))
-                        .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .buttonStyle(PressableButtonStyle())
+                    Button { isActive.toggle() } label: {
+                        Text(isActive ? "Stop loop" : "Loop")
+                            .font(.system(size: 13, weight: .semibold))
+                            .foregroundStyle(Color.animPurple)
+                            .frame(maxWidth: .infinity)
+                            .padding(.vertical, 9)
+                            .background(Color(hex: "#EEEDFE"))
+                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }.buttonStyle(PressableButtonStyle())
                 }
 
                 // Effect grid

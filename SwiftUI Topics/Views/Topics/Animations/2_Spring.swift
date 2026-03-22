@@ -62,19 +62,21 @@ struct SpringVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Trigger
-                Button(isOn ? "Return" : "Launch") {
+                Button {
                     withAnimation(
                         selectedPreset < presets.count
                             ? presets[selectedPreset].anim
                             : customSpring
                     ) { isOn.toggle() }
+                } label: {
+                    Text(isOn ? "Return" : "Launch")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animTeal)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animTeal)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .buttonStyle(PressableButtonStyle())
 
                 // Preset chips

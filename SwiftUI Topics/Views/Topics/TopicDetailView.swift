@@ -21,7 +21,7 @@ struct TopicDetailView: View {
                 topicHeader
                     .padding(.horizontal, 20)
                     .padding(.top, 20)
-                    .padding(.bottom, 28)
+                    .padding(.bottom, 18)
 
                 if topic.lessons.isEmpty {
                     EmptyLessonsView()
@@ -145,5 +145,11 @@ struct TopicDetailView: View {
             dict[key, default: []].append(lesson)
         }
         return seen.map { LessonGroup(section: $0, lessons: dict[$0] ?? []) }
+    }
+}
+
+#Preview {
+    NavigationStack {
+        TopicDetailView(topic: AnimationsTopic())
     }
 }

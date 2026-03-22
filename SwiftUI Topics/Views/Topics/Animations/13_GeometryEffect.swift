@@ -36,14 +36,15 @@ struct GeometryEffectVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Trigger
-                Button("Trigger") { fire() }
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
-                    .background(Color.animAmber)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .buttonStyle(PressableButtonStyle())
+                Button{ fire() } label: {
+                    Text("Trigger")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animAmber)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }.buttonStyle(PressableButtonStyle())
 
                 // Intensity slider
                 HStack(spacing: 10) {

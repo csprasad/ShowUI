@@ -77,15 +77,17 @@ struct RepeatVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Play / Stop
-                Button(isRunning ? "Stop" : "Start") {
+                Button {
                     isRunning ? stopAll() : startAll()
+                } label: {
+                    Text(isRunning ? "Stop" : "Start")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(isRunning ? Color(.systemFill) : Color.animCoral)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(isRunning ? Color(.systemFill) : Color.animCoral)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .buttonStyle(PressableButtonStyle())
 
                 // Mode selector

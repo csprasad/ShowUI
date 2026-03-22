@@ -25,11 +25,31 @@ struct TimingCurveVisual: View {
     }
 
     let options: [CurveOption] = [
-        CurveOption(name: "linear",     code: ".linear",              anim: .linear(duration: 1.0),            description: "Constant speed throughout",       curvePoints: (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 1.0, y: 1.0))),
-        CurveOption(name: "easeIn",     code: ".easeIn",              anim: .easeIn(duration: 1.0),             description: "Starts slow, ends fast",          curvePoints: (CGPoint(x: 0.42, y: 0), CGPoint(x: 1.0, y: 1.0))),
-        CurveOption(name: "easeOut",    code: ".easeOut",             anim: .easeOut(duration: 1.0),            description: "Starts fast, decelerates to stop", curvePoints: (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 0.58, y: 1.0))),
-        CurveOption(name: "easeInOut",  code: ".easeInOut",           anim: .easeInOut(duration: 1.0),          description: "Slow start and end, fast middle",  curvePoints: (CGPoint(x: 0.42, y: 0), CGPoint(x: 0.58, y: 1.0))),
-        CurveOption(name: "custom",     code: ".timingCurve(0.2,0.8,0.9,0.1)", anim: .timingCurve(0.2, 0.8, 0.9, 0.1, duration: 1.0), description: "Custom bezier — dramatic snap", curvePoints: (CGPoint(x: 0.2, y: 0.8), CGPoint(x: 0.9, y: 0.1))),
+        CurveOption(name: "linear",
+                    code: ".linear",
+                    anim: .linear(duration: 1.0),
+                    description: "Constant speed throughout",
+                    curvePoints: (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 1.0, y: 1.0))),
+        CurveOption(name: "easeIn",
+                    code: ".easeIn",
+                    anim: .easeIn(duration: 1.0),
+                    description: "Starts slow, ends fast",
+                    curvePoints: (CGPoint(x: 0.42, y: 0), CGPoint(x: 1.0, y: 1.0))),
+        CurveOption(name: "easeOut",
+                    code: ".easeOut",
+                    anim: .easeOut(duration: 1.0),
+                    description: "Starts fast, decelerates to stop",
+                    curvePoints: (CGPoint(x: 0.0, y: 0.0), CGPoint(x: 0.58, y: 1.0))),
+        CurveOption(name: "easeInOut",
+                    code: ".easeInOut",
+                    anim: .easeInOut(duration: 1.0),
+                    description: "Slow start and end, fast middle",
+                    curvePoints: (CGPoint(x: 0.42, y: 0), CGPoint(x: 0.58, y: 1.0))),
+        CurveOption(name: "custom",
+                    code: ".timingCurve(0.2,0.8,0.9,0.1)",
+                    anim: .timingCurve(0.2, 0.8, 0.9, 0.1, duration: 1.0),
+                    description: "Custom bezier — dramatic snap",
+                    curvePoints: (CGPoint(x: 0.2, y: 0.8), CGPoint(x: 0.9, y: 0.1))),
     ]
 
     var body: some View {
@@ -73,8 +93,8 @@ struct TimingCurveVisual: View {
                             .clipShape(RoundedRectangle(cornerRadius: 6))
                     }
                 }
-
-                Button(isOn ? "Reset" : "Play") {
+                
+                Button {
                     if isOn {
                         isOn = false
                     } else {
@@ -83,14 +103,17 @@ struct TimingCurveVisual: View {
                             withAnimation { isOn = false }
                         }
                     }
+                } label: {
+                    Text(isOn ? "Reset" : "Play")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animAmber)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
                 }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animAmber)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
                 .buttonStyle(PressableButtonStyle())
+                
 
                 // Curve selector
                 ScrollView(.horizontal, showsIndicators: false) {

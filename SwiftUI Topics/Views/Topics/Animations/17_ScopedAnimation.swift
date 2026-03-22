@@ -51,16 +51,17 @@ struct ScopedAnimationVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Toggle button
-                Button(isOn ? "Reverse" : "Trigger") {
+                Button{
                     isOn.toggle()
-                }
-                .font(.system(size: 14, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(maxWidth: .infinity)
-                .padding(.vertical, 10)
-                .background(Color.animCoral)
-                .clipShape(RoundedRectangle(cornerRadius: 12))
-                .buttonStyle(PressableButtonStyle())
+                } label: {
+                    Text(isOn ? "Reverse" : "Trigger")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animCoral)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }.buttonStyle(PressableButtonStyle())
 
                 // Description
                 let descriptions = [

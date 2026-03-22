@@ -48,14 +48,18 @@ struct KeyframeAnimatorVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Trigger
-                Button("Trigger") { trigger += 1 }
-                    .font(.system(size: 14, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
-                    .background(Color.animTeal)
-                    .clipShape(RoundedRectangle(cornerRadius: 12))
-                    .buttonStyle(PressableButtonStyle())
+                Button {
+                    trigger += 1
+                } label: {
+                    Text("Trigger")
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .frame(maxWidth: .infinity)
+                        .padding(.vertical, 10)
+                        .background(Color.animTeal)
+                        .clipShape(RoundedRectangle(cornerRadius: 12))
+                }
+                .buttonStyle(PressableButtonStyle())
 
                 // Demo selector
                 HStack(spacing: 8) {
