@@ -86,15 +86,64 @@ struct TopicDetailView: View {
 
     // MARK: - Lesson List
     private var lessonList: some View {
-        LazyVStack(spacing: 10) {
-            ForEach(topic.lessons) { lesson in
-                NavigationLink(destination: LessonDetailView(lesson: lesson, topic: topic)) {
-                    LessonRowCard(lesson: lesson, accentColor: topic.accentColor)
+        LazyVStack(spacing: 0, pinnedViews: []) {
+            if topic.lessons.first?.section != nil {
+                // Grouped by section
+                ForEach(groupedLessons, id: \.section) { group in
+                    sectionHeader(group.section)
+                    ForEach(group.lessons) { lesson in
+                        NavigationLink(destination: LessonDetailView(lesson: lesson, topic: topic)) {
+                            LessonRowCard(lesson: lesson, accentColor: topic.accentColor)
+                        }
+                        .buttonStyle(.plain)
+                        .padding(.bottom, 8)
+                    }
+                    .padding(.bottom, 4)
                 }
-                .buttonStyle(.plain)
+            } else {
+                // Flat list — no sections
+                ForEach(topic.lessons) { lesson in
+                    NavigationLink(destination: LessonDetailView(lesson: lesson, topic: topic)) {
+                        LessonRowCard(lesson: lesson, accentColor: topic.accentColor)
+                    }
+                    .buttonStyle(.plain)
+                    .padding(.bottom, 8)
+                }
             }
         }
         .padding(.horizontal, 20)
         .padding(.bottom, 40)
+    }
+
+    private func sectionHeader(_ title: String) -> some View {
+        HStack(spacing: 8) {
+            Rectangle()
+                .fill(topic.accentColor.opacity(0.3))
+                .frame(width: 3, height: 14)
+                .clipShape(Capsule())
+            Text(title)
+                .font(.system(size: 12, weight: .semibold))
+                .foregroundStyle(topic.accentColor)
+                .kerning(0.3)
+            Spacer()
+        }
+        .padding(.top, 20)
+        .padding(.bottom, 10)
+    }
+
+    private struct LessonGroup {
+        let section: String
+        let lessons: [AnyLesson]
+    }
+
+    private var groupedLessons: [LessonGroup] {
+        var seen = [String]()
+        var dict = [String: [AnyLesson]]()
+        for lesson in topic.lessons {
+            let key = lesson.section ?? ""
+            if !seen.contains(key) { seen.append(key) }
+            dict[key, default: []].append(lesson)
+        }
+        return seen.map { LessonGroup(section: $0, lessons: dict[$0] ?? []) }
     }
 }
