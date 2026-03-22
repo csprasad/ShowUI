@@ -13,7 +13,7 @@ import SwiftUI
 
 // MARK: - LESSON 13: GeometryEffect
 struct GeometryEffectVisual: View {
-    @State private var trigger = 0
+    @State private var trigger: CGFloat = 0
     @State private var amount: CGFloat = 10
     @State private var selectedEffect = 0
 
@@ -36,7 +36,7 @@ struct GeometryEffectVisual: View {
                 .clipShape(RoundedRectangle(cornerRadius: 14))
 
                 // Trigger
-                Button("Trigger") { trigger += 1 }
+                Button("Trigger") { fire() }
                     .font(.system(size: 14, weight: .semibold))
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)
@@ -74,22 +74,33 @@ struct GeometryEffectVisual: View {
         }
     }
 
+    // Animate trigger 0 > 1 so sin() oscillates through a full cycle,
+    // then snap back to 0 so it's ready for the next tap.
+    func fire() {
+        trigger = 0
+        withAnimation(.linear(duration: 0.5)) { trigger = 1 }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.52) { trigger = 0 }
+    }
+
     @ViewBuilder
     private var previewView: some View {
         let card = RoundedRectangle(cornerRadius: 16)
-            .fill(LinearGradient(colors: [Color.animAmber, Color(hex: "#633806")], startPoint: .topLeading, endPoint: .bottomTrailing))
+            .fill(LinearGradient(colors: [Color.animAmber, Color(hex: "#633806")],
+                                 startPoint: .topLeading, endPoint: .bottomTrailing))
             .frame(width: 90, height: 90)
-            .overlay(Image(systemName: "star.fill").font(.system(size: 28)).foregroundStyle(.white.opacity(0.8)))
+            .overlay(Image(systemName: "star.fill")
+                .font(.system(size: 28))
+                .foregroundStyle(.white.opacity(0.8)))
 
         switch selectedEffect {
         case 0:
-            card.modifier(WaveEffect(amplitude: amount, trigger: CGFloat(trigger)))
+            card.modifier(WaveEffect(amplitude: amount, trigger: trigger))
         case 1:
-            card.modifier(SkewEffect(amount: amount, trigger: CGFloat(trigger)))
+            card.modifier(SkewEffect(amount: amount, trigger: trigger))
         case 2:
-            card.modifier(ShakeEffect(shakes: Int(amount / 2), trigger: CGFloat(trigger)))
+            card.modifier(ShakeEffect(shakes: max(1, Int(amount / 2)), trigger: trigger))
         default:
-            card.modifier(FlipEffect(trigger: CGFloat(trigger)))
+            card.modifier(FlipEffect(trigger: trigger))
         }
     }
 }
@@ -118,8 +129,7 @@ struct SkewEffect: GeometryEffect {
     }
     func effectValue(size: CGSize) -> ProjectionTransform {
         let skew = sin(trigger * .pi * 2) * (amount / 100)
-        let transform = ProjectionTransform(CGAffineTransform(a: 1, b: 0, c: skew, d: 1, tx: 0, ty: 0))
-        return transform
+        return ProjectionTransform(CGAffineTransform(a: 1, b: 0, c: skew, d: 1, tx: 0, ty: 0))
     }
 }
 
