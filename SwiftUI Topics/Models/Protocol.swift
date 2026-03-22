@@ -20,12 +20,14 @@ protocol LessonProtocol: Identifiable, Hashable {
     var title: String { get }
     var subtitle: String { get }
     var icon: String { get }
+    var section: String? { get }
     var visual: AnyView { get }
     var explanation: AnyView { get }
 }
 
 // Default Hashable + Equatable based on id so conforming types don't need to implement it
 extension LessonProtocol {
+    var section: String? { nil }   // default — no section
     static func == (lhs: Self, rhs: Self) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }
@@ -53,9 +55,10 @@ struct AnyLesson: Identifiable, Hashable {
     let title: String
     let subtitle: String
     let icon: String
+    let section: String?       // optional — nil means no grouping
     let visual: AnyView
     let explanation: AnyView
-
+ 
     @MainActor
     init<L: LessonProtocol>(_ lesson: L) {
         id          = lesson.id
@@ -63,10 +66,11 @@ struct AnyLesson: Identifiable, Hashable {
         title       = lesson.title
         subtitle    = lesson.subtitle
         icon        = lesson.icon
+        section     = lesson.section
         visual      = lesson.visual
         explanation = lesson.explanation
     }
-
+ 
     static func == (lhs: AnyLesson, rhs: AnyLesson) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }

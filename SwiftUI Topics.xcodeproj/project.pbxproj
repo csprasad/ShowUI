@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191872F6FE22C0089F2FF /* AnimationsTopic.swift */; };
+		0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191892F6FE2490089F2FF /* 2_Spring.swift */; };
+		0511918C2F6FE2620089F2FF /* 4_Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511918B2F6FE2610089F2FF /* 4_Repeat.swift */; };
+		0511918E2F6FE2710089F2FF /* 6_KeyframeAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511918D2F6FE2700089F2FF /* 6_KeyframeAnimator.swift */; };
+		051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511918F2F6FE27F0089F2FF /* 8_ContentTransition.swift */; };
+		051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191912F6FE9D00089F2FF /* 11_ scrollanim.swift */; };
+		051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191932F6FEA870089F2FF /* 13_GeometryEffect.swift */; };
+		051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191952F6FEA950089F2FF /* 15_Transaction.swift */; };
+		051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191972F6FEAB20089F2FF /* 17_ScopedAnimation.swift */; };
+		0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511919C2F6FEAE10089F2FF /* 10_CustomTransition.swift */; };
+		0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511919E2F6FFB050089F2FF /* 1_AnimBasics.swift */; };
+		051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A02F6FFB610089F2FF /* 3_TimingCurve.swift */; };
+		051191A32F6FFB990089F2FF /* 5_PhaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A22F6FFB970089F2FF /* 5_PhaseAnimator.swift */; };
+		051191A52F6FFBD80089F2FF /* 7_SymbolEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A42F6FFBCF0089F2FF /* 7_SymbolEffect.swift */; };
+		051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A62F6FFC230089F2FF /* 9_MatchedGeometry.swift */; };
+		051191A92F6FFC730089F2FF /* 12_AnimatableShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A82F6FFC6E0089F2FF /* 12_AnimatableShapes.swift */; };
+		051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191AA2F6FFCC60089F2FF /* 14_TimelineView.swift */; };
+		051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191AC2F6FFCF10089F2FF /* 16_DrawingGroup.swift */; };
 		0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE22F6B1C2600BA2F73 /* BlendmodesTopic.swift */; };
 		0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE42F6B1D1D00BA2F73 /* 1_blendintro.swift */; };
 		0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0518ADE62F6B1D4200BA2F73 /* Blendcategoryvisual.swift */; };
@@ -59,6 +77,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		051191872F6FE22C0089F2FF /* AnimationsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTopic.swift; sourceTree = "<group>"; };
+		051191892F6FE2490089F2FF /* 2_Spring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Spring.swift; sourceTree = "<group>"; };
+		0511918B2F6FE2610089F2FF /* 4_Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Repeat.swift; sourceTree = "<group>"; };
+		0511918D2F6FE2700089F2FF /* 6_KeyframeAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_KeyframeAnimator.swift; sourceTree = "<group>"; };
+		0511918F2F6FE27F0089F2FF /* 8_ContentTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ContentTransition.swift; sourceTree = "<group>"; };
+		051191912F6FE9D00089F2FF /* 11_ scrollanim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "11_ scrollanim.swift"; sourceTree = "<group>"; };
+		051191932F6FEA870089F2FF /* 13_GeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 13_GeometryEffect.swift; sourceTree = "<group>"; };
+		051191952F6FEA950089F2FF /* 15_Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15_Transaction.swift; sourceTree = "<group>"; };
+		051191972F6FEAB20089F2FF /* 17_ScopedAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 17_ScopedAnimation.swift; sourceTree = "<group>"; };
+		0511919C2F6FEAE10089F2FF /* 10_CustomTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10_CustomTransition.swift; sourceTree = "<group>"; };
+		0511919E2F6FFB050089F2FF /* 1_AnimBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_AnimBasics.swift; sourceTree = "<group>"; };
+		051191A02F6FFB610089F2FF /* 3_TimingCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_TimingCurve.swift; sourceTree = "<group>"; };
+		051191A22F6FFB970089F2FF /* 5_PhaseAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_PhaseAnimator.swift; sourceTree = "<group>"; };
+		051191A42F6FFBCF0089F2FF /* 7_SymbolEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_SymbolEffect.swift; sourceTree = "<group>"; };
+		051191A62F6FFC230089F2FF /* 9_MatchedGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_MatchedGeometry.swift; sourceTree = "<group>"; };
+		051191A82F6FFC6E0089F2FF /* 12_AnimatableShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12_AnimatableShapes.swift; sourceTree = "<group>"; };
+		051191AA2F6FFCC60089F2FF /* 14_TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14_TimelineView.swift; sourceTree = "<group>"; };
+		051191AC2F6FFCF10089F2FF /* 16_DrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16_DrawingGroup.swift; sourceTree = "<group>"; };
 		0516960B2EE1B1F60017DCC8 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SwiftUI-Topics-Info.plist"; sourceTree = "<group>"; };
 		0518ADE22F6B1C2600BA2F73 /* BlendmodesTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendmodesTopic.swift; sourceTree = "<group>"; };
 		0518ADE42F6B1D1D00BA2F73 /* 1_blendintro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_blendintro.swift; sourceTree = "<group>"; };
@@ -123,6 +159,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		051191862F6FE2220089F2FF /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				0511919E2F6FFB050089F2FF /* 1_AnimBasics.swift */,
+				051191892F6FE2490089F2FF /* 2_Spring.swift */,
+				051191A02F6FFB610089F2FF /* 3_TimingCurve.swift */,
+				0511918B2F6FE2610089F2FF /* 4_Repeat.swift */,
+				051191A22F6FFB970089F2FF /* 5_PhaseAnimator.swift */,
+				0511918D2F6FE2700089F2FF /* 6_KeyframeAnimator.swift */,
+				051191A42F6FFBCF0089F2FF /* 7_SymbolEffect.swift */,
+				0511918F2F6FE27F0089F2FF /* 8_ContentTransition.swift */,
+				051191A62F6FFC230089F2FF /* 9_MatchedGeometry.swift */,
+				0511919C2F6FEAE10089F2FF /* 10_CustomTransition.swift */,
+				051191912F6FE9D00089F2FF /* 11_ scrollanim.swift */,
+				051191A82F6FFC6E0089F2FF /* 12_AnimatableShapes.swift */,
+				051191932F6FEA870089F2FF /* 13_GeometryEffect.swift */,
+				051191AA2F6FFCC60089F2FF /* 14_TimelineView.swift */,
+				051191952F6FEA950089F2FF /* 15_Transaction.swift */,
+				051191AC2F6FFCF10089F2FF /* 16_DrawingGroup.swift */,
+				051191972F6FEAB20089F2FF /* 17_ScopedAnimation.swift */,
+				051191872F6FE22C0089F2FF /* AnimationsTopic.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		051695FC2EE0A5A50017DCC8 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +347,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				051191862F6FE2220089F2FF /* Animations */,
 				05D8242B2F6B30E700A81A2F /* Masking Lessons */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
@@ -380,29 +442,45 @@
 			files = (
 				05685B772F6A74B5004643FF /* Lesson.swift in Sources */,
 				0533ED0C2F2A126700732511 /* MaskingView.swift in Sources */,
+				051191A52F6FFBD80089F2FF /* 7_SymbolEffect.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				05685BB52F6AAF9C004643FF /* HomeView.swift in Sources */,
+				051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */,
+				051191A92F6FFC730089F2FF /* 12_AnimatableShapes.swift in Sources */,
+				0511918C2F6FE2620089F2FF /* 4_Repeat.swift in Sources */,
 				05685BB32F6AAF3D004643FF /* View+extensions.swift in Sources */,
 				05979A022F065DD100905892 /* ButtonShowcaseView.swift in Sources */,
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
+				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
 				05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */,
 				05D824412F6B3C9100A81A2F /* 8_AnimatedReveal.swift in Sources */,
 				05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */,
+				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
+				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
+				051191A32F6FFB990089F2FF /* 5_PhaseAnimator.swift in Sources */,
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
+				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
+				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
+				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
 				059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */,
 				056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */,
+				0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */,
+				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
+				051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */,
 				05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */,
 				05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */,
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
+				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
 				05D824392F6B3BEA00A81A2F /* 4_gradientMask.swift in Sources */,
+				0511918E2F6FE2710089F2FF /* 6_KeyframeAnimator.swift in Sources */,
 				05685BA52F6A9518004643FF /* 5_AsyncLet.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
 				05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */,
@@ -418,10 +496,12 @@
 				05685B9F2F6A8F9D004643FF /* 4_Actor.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
+				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
 				05685BA12F6A8F9D004643FF /* SharedComponents.swift in Sources */,
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
+				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
 				05685BBB2F6AB0AD004643FF /* PlaceHolderTopic.swift in Sources */,
 				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
@@ -569,7 +649,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -601,7 +681,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

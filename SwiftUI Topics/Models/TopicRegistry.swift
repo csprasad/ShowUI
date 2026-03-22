@@ -17,6 +17,7 @@ import SwiftUI
 struct TopicRegistry {
     static let all: [any TopicProtocol] = [
         ConcurrencyTopic(),
+        AnimationsTopic(),
         KeyboardTopic(),
         BlendModesTopic(),
         MaskingTopic(),

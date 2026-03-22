@@ -102,7 +102,7 @@ struct FocusManagementVisual: View {
                 }
             }
         }
-        .onChange(of: focusedField) { field in
+        .onChange(of: focusedField) { field, _ in
             if let field { log("Focused: \(field.label)") }
         }
     }
