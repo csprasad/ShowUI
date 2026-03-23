@@ -41,6 +41,17 @@
 		054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D72F711A24003BA047 /* 6_alignment.swift */; };
 		054ED8DA2F711A63003BA047 /* 7_effectsReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D92F711A5F003BA047 /* 7_effectsReference.swift */; };
 		054ED8DC2F71229C003BA047 /* 0_symbolbrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8DB2F712297003BA047 /* 0_symbolbrowser.swift */; };
+		0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563753D2F71C08E001E7148 /* ButtonsTopic.swift */; };
+		056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563753F2F71C0E5001E7148 /* 1_buttonBasics.swift */; };
+		056375422F71C12C001E7148 /* 2_buttonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375412F71C120001E7148 /* 2_buttonStyles.swift */; };
+		056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375432F71C16D001E7148 /* 3_customButtonStyle.swift */; };
+		056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375452F71C1BC001E7148 /* 4_buttonLoadingState.swift */; };
+		056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375472F71C20A001E7148 /* 5_toggleButton.swift */; };
+		0563754A2F71C261001E7148 /* 6_buttonConfirmation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375492F71C25A001E7148 /* 6_buttonConfirmation.swift */; };
+		0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563754B2F71C297001E7148 /* 7_buttonMenu.swift */; };
+		0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563754D2F71C2D9001E7148 /* 8_buttonTappableAreas.swift */; };
+		056375502F71C323001E7148 /* 9_buttonLongPress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563754F2F71C31D001E7148 /* 9_buttonLongPress.swift */; };
+		056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375512F71C353001E7148 /* 10_buttonHaptic.swift */; };
 		05685B772F6A74B5004643FF /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685B752F6A74B4004643FF /* Lesson.swift */; };
 		05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685B902F6A8F9D004643FF /* 1_Sequential.swift */; };
 		05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685B912F6A8F9D004643FF /* 2_Concurrent.swift */; };
@@ -66,10 +77,6 @@
 		05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC52F6AB740004643FF /* 4_InputValidation.swift */; };
 		05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC72F6AB76B004643FF /* 5_KeyboardToolbar.swift */; };
 		05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC92F6AB846004643FF /* 6_ReturnKey.swift */; };
-		056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056D91152F1E0C230005D7DC /* LikeButtons.swift */; };
-		059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */; };
-		05979A002F065A5200905892 /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059799FF2F065A4D00905892 /* ButtonStyles.swift */; };
-		05979A022F065DD100905892 /* ButtonShowcaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05979A012F065DAE00905892 /* ButtonShowcaseView.swift */; };
 		05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242C2F6B310300A81A2F /* MaskingTopic.swift */; };
 		05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */; };
 		05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824342F6B3BB000A81A2F /* 2_basicMask.swift */; };
@@ -122,6 +129,17 @@
 		054ED8D72F711A24003BA047 /* 6_alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_alignment.swift; sourceTree = "<group>"; };
 		054ED8D92F711A5F003BA047 /* 7_effectsReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_effectsReference.swift; sourceTree = "<group>"; };
 		054ED8DB2F712297003BA047 /* 0_symbolbrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0_symbolbrowser.swift; sourceTree = "<group>"; };
+		0563753D2F71C08E001E7148 /* ButtonsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsTopic.swift; sourceTree = "<group>"; };
+		0563753F2F71C0E5001E7148 /* 1_buttonBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_buttonBasics.swift; sourceTree = "<group>"; };
+		056375412F71C120001E7148 /* 2_buttonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_buttonStyles.swift; sourceTree = "<group>"; };
+		056375432F71C16D001E7148 /* 3_customButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_customButtonStyle.swift; sourceTree = "<group>"; };
+		056375452F71C1BC001E7148 /* 4_buttonLoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_buttonLoadingState.swift; sourceTree = "<group>"; };
+		056375472F71C20A001E7148 /* 5_toggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_toggleButton.swift; sourceTree = "<group>"; };
+		056375492F71C25A001E7148 /* 6_buttonConfirmation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_buttonConfirmation.swift; sourceTree = "<group>"; };
+		0563754B2F71C297001E7148 /* 7_buttonMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_buttonMenu.swift; sourceTree = "<group>"; };
+		0563754D2F71C2D9001E7148 /* 8_buttonTappableAreas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_buttonTappableAreas.swift; sourceTree = "<group>"; };
+		0563754F2F71C31D001E7148 /* 9_buttonLongPress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_buttonLongPress.swift; sourceTree = "<group>"; };
+		056375512F71C353001E7148 /* 10_buttonHaptic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10_buttonHaptic.swift; sourceTree = "<group>"; };
 		05685B752F6A74B4004643FF /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		05685B902F6A8F9D004643FF /* 1_Sequential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_Sequential.swift; sourceTree = "<group>"; };
 		05685B912F6A8F9D004643FF /* 2_Concurrent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Concurrent.swift; sourceTree = "<group>"; };
@@ -147,10 +165,6 @@
 		05685BC52F6AB740004643FF /* 4_InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_InputValidation.swift; sourceTree = "<group>"; };
 		05685BC72F6AB76B004643FF /* 5_KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_KeyboardToolbar.swift; sourceTree = "<group>"; };
 		05685BC92F6AB846004643FF /* 6_ReturnKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_ReturnKey.swift; sourceTree = "<group>"; };
-		056D91152F1E0C230005D7DC /* LikeButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeButtons.swift; sourceTree = "<group>"; };
-		059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductionButtonShowcaseView.swift; sourceTree = "<group>"; };
-		059799FF2F065A4D00905892 /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
-		05979A012F065DAE00905892 /* ButtonShowcaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonShowcaseView.swift; sourceTree = "<group>"; };
 		05D8242C2F6B310300A81A2F /* MaskingTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingTopic.swift; sourceTree = "<group>"; };
 		05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_maskIntro.swift; sourceTree = "<group>"; };
 		05D824342F6B3BB000A81A2F /* 2_basicMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_basicMask.swift; sourceTree = "<group>"; };
@@ -309,10 +323,17 @@
 		059799FC2F06585800905892 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
-				056D91152F1E0C230005D7DC /* LikeButtons.swift */,
-				05979A012F065DAE00905892 /* ButtonShowcaseView.swift */,
-				059799FF2F065A4D00905892 /* ButtonStyles.swift */,
-				059799FD2F06586000905892 /* ProductionButtonShowcaseView.swift */,
+				0563753D2F71C08E001E7148 /* ButtonsTopic.swift */,
+				0563753F2F71C0E5001E7148 /* 1_buttonBasics.swift */,
+				056375412F71C120001E7148 /* 2_buttonStyles.swift */,
+				056375432F71C16D001E7148 /* 3_customButtonStyle.swift */,
+				056375452F71C1BC001E7148 /* 4_buttonLoadingState.swift */,
+				056375472F71C20A001E7148 /* 5_toggleButton.swift */,
+				056375492F71C25A001E7148 /* 6_buttonConfirmation.swift */,
+				0563754B2F71C297001E7148 /* 7_buttonMenu.swift */,
+				0563754D2F71C2D9001E7148 /* 8_buttonTappableAreas.swift */,
+				0563754F2F71C31D001E7148 /* 9_buttonLongPress.swift */,
+				056375512F71C353001E7148 /* 10_buttonHaptic.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -481,15 +502,17 @@
 				05685B772F6A74B5004643FF /* Lesson.swift in Sources */,
 				051191A52F6FFBD80089F2FF /* 7_SymbolEffect.swift in Sources */,
 				051499B02F715CFF00EE4E83 /* 5_variants.swift in Sources */,
+				056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
+				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
+				056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */,
 				05685BB52F6AAF9C004643FF /* HomeView.swift in Sources */,
 				051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */,
 				051191A92F6FFC730089F2FF /* 12_AnimatableShapes.swift in Sources */,
 				0511918C2F6FE2620089F2FF /* 4_Repeat.swift in Sources */,
 				05685BB32F6AAF3D004643FF /* View+extensions.swift in Sources */,
 				051499B22F715E8200EE4E83 /* 9_customSymbol.swift in Sources */,
-				05979A022F065DD100905892 /* ButtonShowcaseView.swift in Sources */,
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
@@ -501,27 +524,31 @@
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
 				054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */,
+				056375502F71C323001E7148 /* 9_buttonLongPress.swift in Sources */,
 				051191A32F6FFB990089F2FF /* 5_PhaseAnimator.swift in Sources */,
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
+				0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */,
 				054ED8D42F7119B0003BA047 /* 3_variablecolor.swift in Sources */,
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
+				0563754A2F71C261001E7148 /* 6_buttonConfirmation.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
-				059799FE2F06587500905892 /* ProductionButtonShowcaseView.swift in Sources */,
-				056D91162F1E0C290005D7DC /* LikeButtons.swift in Sources */,
 				0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */,
 				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
 				051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */,
 				05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */,
 				05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */,
+				056375422F71C12C001E7148 /* 2_buttonStyles.swift in Sources */,
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
+				056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
+				0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
 				05D824392F6B3BEA00A81A2F /* 4_gradientMask.swift in Sources */,
 				0511918E2F6FE2710089F2FF /* 6_KeyframeAnimator.swift in Sources */,
@@ -529,7 +556,6 @@
 				054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
 				05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */,
-				05979A002F065A5200905892 /* ButtonStyles.swift in Sources */,
 				054ED8DC2F71229C003BA047 /* 0_symbolbrowser.swift in Sources */,
 				05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */,
 				05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */,
@@ -540,6 +566,7 @@
 				05D824372F6B3BD100A81A2F /* 3_clipShapes.swift in Sources */,
 				05685B9E2F6A8F9D004643FF /* 3_RaceCondition.swift in Sources */,
 				05685BBE2F6AB68A004643FF /* KeyboardTopic.swift in Sources */,
+				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
 				054ED8D62F7119D4003BA047 /* 4_weightscale.swift in Sources */,
 				05685B9F2F6A8F9D004643FF /* 4_Actor.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
@@ -547,6 +574,7 @@
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
 				05685BA12F6A8F9D004643FF /* SharedComponents.swift in Sources */,
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
+				056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
 				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
