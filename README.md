@@ -1,53 +1,76 @@
 <img src="images/showUI_banner.png"/>
 
-# ShowUI
+<br/>
 
-**ShowUI** is an iOS app for developers who learn by doing. Every concept gets its own interactive lesson — not a static explanation, but a live visual you can tap, trigger, and watch unfold.
+> **iOS development, Shown - not told.**
 
-## Screenshots(gifs)
+ShowUI is an interactive learning app for iOS developers. Every concept has its own lesson. Every lesson has a live, tappable visual at the top. No slides. No passive reading. You tap, drag, toggle, and watch it happen in real time.
+
+## Screenshots
 
 <table>
   <tr>
     <td width="25%"><img src="images/collections.png" width="100%"/></td>
     <td width="25%"><img src="gifs/concurrency.gif" width="100%"/></td>
-    <td width="25%"><img src="gifs/keyboard.gif" width="100%"/></td>
-    <td width="25%"><img src="gifs/blendMode.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/animation.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/sfSymbol.gif" width="100%"/></td>
   </tr>
   <tr>
+    <td width="25%"><img src="gifs/buttons.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/blendMode.gif" width="100%"/></td>
     <td width="25%"><img src="gifs/masking.gif" width="100%"/></td>
+    <td width="25%"><img src="gifs/keyboard.gif" width="100%"/></td>
   </tr>
 </table>
 
 ## What's inside
 
-ShowUI covers iOS and Swift concepts across UI, concurrency, input, and visual effects. Each topic is broken into focused lessons with an interactive visual at the top and a plain-language explanation below.
+57 lessons across 7 topics. Every one built to be felt, not just read.
 
-| Topic | What you'll learn |
-|---|---|
-| **Concurrency** | Sequential vs concurrent execution, race conditions, actors, async let, task groups, cancellation, Sendable |
-| **Keyboard** | All keyboard types, focus management, avoidance, input validation, toolbar, return key |
-| **Buttons** | Default styles, custom styles, roles, loading states |
-| **Blend Modes** | Every compositing mode shown side by side with live controls |
-| **Masking** | Clip shapes, masks, reveal animations |
-| **Bottom Sheets** | Detents, drag indicators, custom presentations |
+| Topic | Lessons | Highlights |
+|---|:---:|---|
+| 🔀 **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
+| ✨ **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
+| ⭐️ **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
+| ⌨️ **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
+| 🎭 **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
+| 🎨 **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |
+| 🖱 **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
 
-More topics added regularly.
 
-## How it works
-Every lesson follows the same structure:
+## Lesson Structure
 
-- **Visual first**: an animated, interactive demo you can control
-- **Explanation below**: plain-language breakdown of what's happening and why
-- **Code at the bottom**: the actual Swift you'd write, no boilerplate
+```
+┌─────────────────────────────────┐
+│                                 │
+│   Interactive visual            │  ← tap it, drag it, trigger it
+│   (always at the top)           │
+│                                 │
+├─────────────────────────────────┤
+│                                 │
+│   Plain-language explanation    │  ← what's happening and why
+│                                 │
+├─────────────────────────────────┤
+│                                 │
+│   func path(in rect: CGRect)    │  ← the actual Swift, no boilerplate
+│       → Path { ... }            │
+│                                 │
+└─────────────────────────────────┘
+```
 
-The architecture is protocol-driven. Adding a new topic means creating one folder and one registration line. Nothing else changes.
+> Every lesson follows this structure. The visual comes first you form an intuition before you read the explanation. The code at the bottom is copy paste ready.
+
+
+## Built for all levels
+
+ShowUI isn't just for beginners. The Animations topic covers `KeyframeAnimator`, `GeometryEffect`, `TimelineView`, `DrawingGroup`, and `Transaction`. APIs that most experienced developers haven't fully explored. The SF Symbols topic has a full searchable browser and covers `variableValue:`, layered rendering modes, and custom symbol import.
+
+If you already know SwiftUI, you'll still find something new.
 
 ## Contributing
 
-Found a bug or want to add a topic? Open an issue or submit a pull request. New topics follow the existing pattern — each lesson needs a visual view, an explanation view, and a registration entry in `TopicRegistry`.
-
-For questions, suggestions, or feature requests, open an issue or reach out directly.
+Found a bug? Have a topic idea? Open an issue or submit a pull request. If you can write a SwiftUI view, you can add a lesson.
 
 ## License
 
-This project is licensed under the Apache License 2.0.
+This project is source available. See the LICENSE file for full details.
