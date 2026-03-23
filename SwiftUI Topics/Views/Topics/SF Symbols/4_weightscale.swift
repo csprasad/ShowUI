@@ -121,17 +121,17 @@ struct WeightScaleExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "Weight and scale")
-            Text("SF Symbols inherit their weight from the surrounding font — they're designed to match text optically. imageScale adjusts the symbol's size relative to the surrounding text without changing the font size.")
+            Text("SF Symbols inherit their weight from the surrounding font, they're designed to match text optically. imageScale adjusts the symbol's size relative to the surrounding text without changing the font size.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Font weight — use .font(.system(size:weight:)) to set the symbol's stroke weight. It matches the same weight as text.", color: .sfGreen)
-                StepRow(number: 2, text: ".imageScale(.small / .medium / .large) — sizes the symbol at 75%, 100%, or 125% of the surrounding text size.", color: .sfGreen)
+                StepRow(number: 2, text: ".imageScale(.small / .medium / .large) sizes the symbol at 75%, 100%, or 125% of the surrounding text size.", color: .sfGreen)
                 StepRow(number: 3, text: "Symbols in a Label or HStack alongside Text automatically inherit the text font and align optically.", color: .sfGreen)
-                StepRow(number: 4, text: ".fontWeight() alone works too — symbols inherit it from the text environment.", color: .sfGreen)
+                StepRow(number: 4, text: ".fontWeight() alone works too, symbols inherit it from the text environment.", color: .sfGreen)
             }
 
-            CalloutBox(style: .success, title: "Optical sizing", contentBody: "SF Symbols are designed at each weight so they look proportionally correct alongside same-weight text. Don't manually adjust symbol size to match text — let the font system do it.")
+            CalloutBox(style: .success, title: "Optical sizing", contentBody: "SF Symbols are designed at each weight so they look proportionally correct alongside same-weight text. Don't manually adjust symbol size to match text let the font system do it.")
 
             CalloutBox(style: .info, title: "imageScale vs font size", contentBody: ".imageScale changes the symbol's size relative to the text context. Setting an explicit font size directly on the Image overrides this and removes the optical alignment benefit.")
 

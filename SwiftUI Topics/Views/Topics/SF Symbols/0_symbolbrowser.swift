@@ -23,12 +23,21 @@ struct SymbolBrowserVisual: View {
 
     var filteredSymbols: [String] {
         let pool: [String]
-        if selectedCategory == "All" {
-            pool = SymbolLibrary.all.flatMap { $0.symbols }
+
+        if !searchText.isEmpty {
+            let allSymbols = SymbolLibrary.all.flatMap { $0.symbols }
+            pool = Array(Set(allSymbols)).sorted()
         } else {
-            pool = SymbolLibrary.all.first { $0.name == selectedCategory }?.symbols ?? []
+            if selectedCategory == "All" {
+                let allSymbols = SymbolLibrary.all.flatMap { $0.symbols }
+                pool = Array(Set(allSymbols)).sorted()
+            } else {
+                pool = SymbolLibrary.all.first { $0.name == selectedCategory }?.symbols ?? []
+            }
         }
+
         if searchText.isEmpty { return pool }
+        
         return pool.filter { $0.localizedCaseInsensitiveContains(searchText) }
     }
 
@@ -58,6 +67,8 @@ struct SymbolBrowserVisual: View {
                 .padding(.vertical, 8)
                 .background(Color(.systemFill))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
+                
+                searchInfoNote
 
                 // Category pills
                 ScrollView(.horizontal, showsIndicators: false) {
@@ -165,6 +176,20 @@ struct SymbolBrowserVisual: View {
                 .font(.system(size: 20))
                 .symbolRenderingMode(.monochrome)
                 .foregroundStyle(Color.sfGreen)
+        }
+    }
+    
+    @ViewBuilder
+    private var searchInfoNote: some View {
+        if !searchText.isEmpty {
+            HStack(spacing: 5) {
+                Image(systemName: "info.circle")
+                    .font(.system(size: 11))
+                    .foregroundStyle(Color.sfGreen)
+                Text("Searching across all categories")
+                    .font(.system(size: 11))
+                    .foregroundStyle(.secondary)
+            }
         }
     }
 

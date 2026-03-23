@@ -107,19 +107,19 @@ struct LayeredSymbolsExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "How layers work")
-            Text("Every SF Symbol is a vector image composed of up to three named layers — primary, secondary, and tertiary. Each layer is a separate shape. Rendering modes and palette colors are applied per layer, not to the symbol as a whole.")
+            Text("Every SF Symbol is a vector image composed of up to three named layers, labeled primary, secondary, and tertiary. Each layer is a separate shape. Rendering modes and palette colors are applied per layer, not to the symbol as a whole.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Primary — the most prominent element. Always receives the first foregroundStyle color.", color: .sfGreen)
                 StepRow(number: 2, text: "Secondary — supporting elements. Receives the second color, or 60% opacity in hierarchical mode.", color: .sfGreen)
                 StepRow(number: 3, text: "Tertiary — background fill or decoration. Receives the third color, or 30% opacity in hierarchical mode.", color: .sfGreen)
-                StepRow(number: 4, text: "Not every symbol uses all three layers — check the SF Symbols app to see the layer structure for a specific symbol.", color: .sfGreen)
+                StepRow(number: 4, text: "Not every symbol uses all three layers, and not every symbol has layers at all. Always check the SF Symbols app to see the layer structure for a specific symbol.", color: .sfGreen)
             }
 
             CalloutBox(style: .info, title: "SF Symbols app", contentBody: "Download the free SF Symbols app from Apple. Select any symbol and switch to the Layers inspector to see exactly how many layers it has and what each one contains.")
 
-            CalloutBox(style: .warning, title: "Layer assignment varies by symbol", contentBody: "There's no universal rule for which part of a symbol is primary vs secondary. A cloud symbol might have the lightning as primary and the cloud as secondary — or the reverse. Always check.")
+            CalloutBox(style: .warning, title: "Layer assignment varies by symbol", contentBody: "There's no universal rule for which part of a symbol is primary vs secondary. A cloud symbol might have the lightning as primary and the cloud as secondary or the reverse. Always check.")
 
             CodeBlock(code: """
 // Palette mode — one color per layer
