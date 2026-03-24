@@ -23,11 +23,14 @@ struct CustomBackgroundVisual: View {
     }
  
     let options: [BGOption] = [
-        BGOption(name: ".regularMaterial",  preview: Color(.systemBackground).opacity(0.8), description: "Frosted glass — standard blur"),
-        BGOption(name: ".thickMaterial",    preview: Color(.systemBackground).opacity(0.95), description: "Heavier blur — more opaque"),
-        BGOption(name: ".ultraThinMaterial",preview: Color(.systemBackground).opacity(0.5), description: "Light blur — very translucent"),
+        BGOption(name: ".regularMaterial",  preview: Color(.systemBackground).opacity(0.8),
+                 description: "Frosted glass - standard blur"),
+        BGOption(name: ".thickMaterial",    preview: Color(.systemBackground).opacity(0.95),
+                 description: "Heavier blur - more opaque"),
+        BGOption(name: ".ultraThinMaterial",preview: Color(.systemBackground).opacity(0.5),
+                 description: "Light blur - very translucent"),
         BGOption(name: "Color.sheetGreen",  preview: Color.sheetGreenLight, description: "Solid color background"),
-        BGOption(name: ".clear",            preview: Color.clear, description: "Transparent — see through"),
+        BGOption(name: ".clear",            preview: Color.clear, description: "Transparent - see through"),
     ]
  
     var body: some View {
@@ -114,10 +117,6 @@ struct CustomBackgroundVisual: View {
         let currentOption = options[selectedBackground]
         
         VStack(spacing: 16) {
-            Capsule()
-                .fill(Color(.systemFill))
-                .frame(width: 36, height: 5)
-                .padding(.top, 8)
             Image(systemName: "paintpalette.fill")
                 .font(.system(size: 40))
                 .foregroundStyle(Color.sheetGreen)
@@ -128,6 +127,7 @@ struct CustomBackgroundVisual: View {
                 .foregroundStyle(.secondary)
             Spacer()
         }
+        .padding(.top, 40)
         .presentationDetents([.medium])
         .presentationDragIndicator(.visible)
         .presentationCornerRadius(24)
@@ -147,6 +147,10 @@ struct BackgroundModifier: ViewModifier {
         }
     }
 }
+
+#Preview {
+    CustomBackgroundVisual()
+}
  
 struct CustomBackgroundExplanation: View {
     var body: some View {
@@ -156,10 +160,10 @@ struct CustomBackgroundExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".presentationBackground(.regularMaterial) — frosted glass blur. Standard iOS look.", color: .sheetGreen)
-                StepRow(number: 2, text: ".presentationBackground(Color.blue) — solid color. Good for branded sheets.", color: .sheetGreen)
-                StepRow(number: 3, text: ".presentationBackground(.clear) — fully transparent. Combine with custom views for floating card effects.", color: .sheetGreen)
-                StepRow(number: 4, text: ".presentationCornerRadius(32) — increase the top corner radius. Default is around 10pt.", color: .sheetGreen)
+                StepRow(number: 1, text: ".presentationBackground(.regularMaterial) - frosted glass blur. Standard iOS look.", color: .sheetGreen)
+                StepRow(number: 2, text: ".presentationBackground(Color.blue) - solid color. Good for branded sheets.", color: .sheetGreen)
+                StepRow(number: 3, text: ".presentationBackground(.clear) - fully transparent. Combine with custom views for floating card effects.", color: .sheetGreen)
+                StepRow(number: 4, text: ".presentationCornerRadius(32) - increase the top corner radius. Default is around 10pt.", color: .sheetGreen)
             }
  
             CalloutBox(style: .info, title: "Material blurs the content behind the sheet", contentBody: "Material backgrounds work best with background interaction disabled (default). If you enable background interaction with a material background, the blur may look odd, as the material will bleed into the background. Try use a semi-transparent color instead.")

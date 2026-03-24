@@ -143,11 +143,11 @@ struct ContentTransitionExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".numericText() — digits animate up or down individually. Perfect for counters, prices, scores.", color: .animBlue)
-                StepRow(number: 2, text: ".numericText(countsDown: true) — reverses the digit scroll direction for countdown timers.", color: .animBlue)
-                StepRow(number: 3, text: ".interpolate — morphs between glyphs. Smooth for short text changes.", color: .animBlue)
-                StepRow(number: 4, text: ".opacity — simply cross-fades. Safe fallback for any content.", color: .animBlue)
-                StepRow(number: 5, text: ".identity — no transition, snaps immediately. Use to disable the default cross-fade.", color: .animBlue)
+                StepRow(number: 1, text: ".numericText() - digits animate up or down individually. Perfect for counters, prices, scores.", color: .animBlue)
+                StepRow(number: 2, text: ".numericText(countsDown: true) - reverses the digit scroll direction for countdown timers.", color: .animBlue)
+                StepRow(number: 3, text: ".interpolate - morphs between glyphs. Smooth for short text changes.", color: .animBlue)
+                StepRow(number: 4, text: ".opacity - simply cross-fades. Safe fallback for any content.", color: .animBlue)
+                StepRow(number: 5, text: ".identity - no transition, snaps immediately. Use to disable the default cross-fade.", color: .animBlue)
             }
 
             CalloutBox(style: .success, title: "numericText is the secret sauce", contentBody: "It makes number changes look like a physical counter or odometer. Apple uses it throughout iOS in the dynamic island, live activities, and the calculator app.")

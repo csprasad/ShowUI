@@ -82,7 +82,7 @@ struct PhaseAnimatorVisual: View {
                     }
                 }
 
-                CalloutBox(style: .info, title: "PhaseAnimator cycles through states", contentBody: "Each phase plays in sequence when triggered. Unlike withAnimation, you don't manually chain — SwiftUI handles the sequencing.")
+                CalloutBox(style: .info, title: "PhaseAnimator cycles through states", contentBody: "Each phase plays in sequence when triggered. Unlike withAnimation, you don't manually chain - SwiftUI handles the sequencing.")
             }
         }
     }
@@ -147,12 +147,12 @@ struct PhaseAnimatorVisual: View {
 struct PhaseAnimatorExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "PhaseAnimator — iOS 17+")
+            SectionHeader(text: "PhaseAnimator - iOS 17+")
             Text("PhaseAnimator cycles through an array of phases automatically when triggered. Each phase transition can use a different animation. SwiftUI handles the sequencing, so no DispatchQueue.asyncAfter chains needed.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Define an array of phases — any Equatable type (Bool, Int, enum).", color: .animPurple)
+                StepRow(number: 1, text: "Define an array of phases - any Equatable type (Bool, Int, enum).", color: .animPurple)
                 StepRow(number: 2, text: "Use the current phase value to set your view's properties.", color: .animPurple)
                 StepRow(number: 3, text: "The animation closure returns a different Animation per phase transition.", color: .animPurple)
                 StepRow(number: 4, text: "Change trigger to start the cycle. It plays through all phases then stops.", color: .animPurple)
@@ -161,7 +161,7 @@ struct PhaseAnimatorExplanation: View {
             CalloutBox(style: .success, title: "Great for multi-step effects", contentBody: "Bounce, shake, heartbeat, shimmer any effect with multiple stages. Replaces async chains and nested withAnimation calls.")
 
             CodeBlock(code: """
-// Bounce effect — 3 phases
+// Bounce effect - 3 phases
 PhaseAnimator([0, 1, 2], trigger: didTap) { phase in
     Circle()
         .scaleEffect(phase == 1 ? 1.4 : phase == 2 ? 0.9 : 1.0)

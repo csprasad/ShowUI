@@ -90,7 +90,7 @@ struct InputValidationVisual: View {
                     hint: priceState == .invalid ? "Numbers only" : nil
                 )
 
-                // Submit button — only enabled when all valid
+                // Submit button - only enabled when all valid
                 let allValid = emailState == .valid && phoneState == .valid && priceState == .valid
                 Button("Submit") {}
                     .font(.system(size: 14, weight: .semibold))
@@ -158,7 +158,7 @@ struct InputValidationExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "Validating as you type")
-            Text("React to text changes in real time using computed properties or onChange. Give users immediate feedback — change border colour, show an icon, and disable the submit button until all fields are valid.")
+            Text("React to text changes in real time using computed properties or onChange. Give users immediate feedback - change border colour, show an icon, and disable the submit button until all fields are valid.")
                 .font(.system(size: 15))
                 .foregroundStyle(.secondary)
                 .lineSpacing(4)
@@ -169,7 +169,7 @@ struct InputValidationExplanation: View {
                 StepRow(number: 3, text: "Disable the submit button until all states are .valid.", color: Color(hex: "#185FA5"))
             }
 
-            CalloutBox(style: .info, title: "Format as you type", contentBody: "Use onChange to reformat input — e.g. insert dashes into a phone number automatically as the user types digits.")
+            CalloutBox(style: .info, title: "Format as you type", contentBody: "Use onChange to reformat input - e.g. insert dashes into a phone number automatically as the user types digits.")
 
             CodeBlock(code: """
 var emailValid: Bool {

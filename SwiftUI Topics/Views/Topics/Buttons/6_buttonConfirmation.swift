@@ -114,8 +114,8 @@ struct ConfirmationExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".confirmationDialog — presents a bottom sheet with multiple action options. Use when there are 2+ choices.", color: .btnPurple)
-                StepRow(number: 2, text: ".alert — presents a centered modal with a title, message and up to 2-3 buttons. Use for simple yes/no.", color: .btnPurple)
+                StepRow(number: 1, text: ".confirmationDialog - presents a bottom sheet with multiple action options. Use when there are 2+ choices.", color: .btnPurple)
+                StepRow(number: 2, text: ".alert - presents a centered modal with a title, message and up to 2-3 buttons. Use for simple yes/no.", color: .btnPurple)
                 StepRow(number: 3, text: "Always include a Cancel button with role: .cancel, even if it doesn’t do anything. This gives users an escape route.", color: .btnPurple)
                 StepRow(number: 4, text: "titleVisibility: .visible shows the dialog title. Default is .automatic which may hide it.", color: .btnPurple)
             }
@@ -125,7 +125,7 @@ struct ConfirmationExplanation: View {
             CalloutBox(style: .warning, title: "Don't confirm everything", contentBody: "Only confirm irreversible or high-stakes actions. Confirmations on low-stakes actions (e.g. 'Are you sure you want to like this?') feel patronising and train users to dismiss without reading.")
  
             CodeBlock(code: """
-// confirmationDialog — multiple options as sheet
+// confirmationDialog - multiple options as sheet
 Button("Delete", role: .destructive) {
     showDialog = true
 }
@@ -145,7 +145,7 @@ Button("Delete", role: .destructive) {
     Text("This cannot be undone.")
 }
  
-// Alert — simple modal
+// Alert - simple modal
 .alert("Sign out?", isPresented: $showAlert) {
     Button("Sign out", role: .destructive) { signOut() }
     Button("Cancel", role: .cancel) { }

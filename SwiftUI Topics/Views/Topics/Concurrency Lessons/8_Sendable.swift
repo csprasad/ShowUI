@@ -121,23 +121,23 @@ struct SendableExplanation: View {
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Structs and enums with Sendable properties are automatically Sendable, because they're copied, not shared.", color: Color(hex: "#993556"))
                 StepRow(number: 2, text: "A final class with only let properties can conform to Sendable, because its state is immutable.", color: Color(hex: "#993556"))
-                StepRow(number: 3, text: "Actors are inherently Sendable — their isolation protects their mutable state.", color: Color(hex: "#993556"))
+                StepRow(number: 3, text: "Actors are inherently Sendable - their isolation protects their mutable state.", color: Color(hex: "#993556"))
                 StepRow(number: 4, text: "A standard mutable class is not automatically Sendable, because its mutable state can be shared between tasks. Attempting to do so will cause the compiler rejects it at a task boundary.", color: Color(hex: "#993556"))
             }
             CalloutBox(style: .success, title: "Caught at compile time", contentBody: "This is how Swift 6 eliminates the race condition ghost bug, before your code ever runs.")
             CodeBlock(code: """
-// Automatically Sendable — struct, immutable
+// Automatically Sendable - struct, immutable
 struct UserProfile: Sendable {
     let id: UUID
     let name: String
 }
 
-// Sendable — actor protects its own mutable state
+// Sendable - actor protects its own mutable state
 actor ProfileCache {
     private var cache: [UUID: UserProfile] = [:]
 }
 
-// NOT Sendable — mutable class, compiler error
+// NOT Sendable - mutable class, compiler error
 class Config {
     var threshold = 10  // var = unsafe to share
 }

@@ -160,10 +160,10 @@ struct MenuButtonExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Menu { actions } label: { view } — the label is tappable, the content is the action list.", color: .btnPurple)
+                StepRow(number: 1, text: "Menu { actions } label: { view } - the label is tappable, the content is the action list.", color: .btnPurple)
                 StepRow(number: 2, text: "Button, Picker, and nested Menu all work inside the menu content.", color: .btnPurple)
                 StepRow(number: 3, text: "Divider() adds a visual separator between action groups.", color: .btnPurple)
-                StepRow(number: 4, text: "Picker inside Menu renders as a grouped selection — no extra styling needed.", color: .btnPurple)
+                StepRow(number: 4, text: "Picker inside Menu renders as a grouped selection - no extra styling needed.", color: .btnPurple)
                 StepRow(number: 5, text: "Nested Menu creates submenus, useful for Export As... style patterns.", color: .btnPurple)
             }
  
@@ -184,7 +184,7 @@ Menu {
     Image(systemName: "ellipsis.circle.fill")
 }
  
-// Picker menu — sort control
+// Picker menu - sort control
 Menu {
     Picker("Sort by", selection: $sortOrder) {
         Text("Date").tag(SortOrder.date)

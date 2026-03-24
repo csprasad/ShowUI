@@ -148,13 +148,13 @@ struct MultipleDetentsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".presentationDetents([.medium, .large]) — two stopping points. User drags between them.", color: .sheetGreen)
-                StepRow(number: 2, text: "Pass a Set, not an Array — order doesn't matter, detents are sorted by height automatically.", color: .sheetGreen)
-                StepRow(number: 3, text: "selection: $selectedDetent — Binding<PresentationDetent> lets you read the current size or set it programmatically.", color: .sheetGreen)
+                StepRow(number: 1, text: ".presentationDetents([.medium, .large]) - two stopping points. User drags between them.", color: .sheetGreen)
+                StepRow(number: 2, text: "Pass a Set, not an Array - order doesn't matter, detents are sorted by height automatically.", color: .sheetGreen)
+                StepRow(number: 3, text: "selection: $selectedDetent - Binding<PresentationDetent> lets you read the current size or set it programmatically.", color: .sheetGreen)
                 StepRow(number: 4, text: "Programmatically change size by assigning to the binding, and the sheet animates to the new detent.", color: .sheetGreen)
             }
  
-            CalloutBox(style: .success, title: "The maps pattern", contentBody: "[.fraction(0.15), .medium, .large] — a tiny peek, a half-sheet, and full screen. This is the pattern Apple uses in Maps and it's the most versatile multi-detent setup.")
+            CalloutBox(style: .success, title: "The maps pattern", contentBody: "[.fraction(0.15), .medium, .large] - a tiny peek, a half-sheet, and full screen. This is the pattern Apple uses in Maps and it's the most versatile multi-detent setup.")
  
             CalloutBox(style: .info, title: "Programmatic size changes", contentBody: "Assign to the selectedDetent binding from a button inside the sheet to animate it to a different size. e.g. a 'Expand' button that jumps from .medium to .large.")
  

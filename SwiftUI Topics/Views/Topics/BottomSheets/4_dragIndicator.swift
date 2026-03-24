@@ -18,9 +18,9 @@ struct DragIndicatorVisual: View {
     @State private var selectedScenario = 0
  
     let scenarios = [
-        (name: "Show",   desc: "Scrollable or resizable content — user needs to know they can drag"),
-        (name: "Hide",   desc: "Fixed-height sheet with no drag — indicator would be misleading"),
-        (name: "Auto",   desc: "SwiftUI decides based on detents — shown when multiple detents exist"),
+        (name: "Show",   desc: "Scrollable or resizable content - user needs to know they can drag"),
+        (name: "Hide",   desc: "Fixed-height sheet with no drag - indicator would be misleading"),
+        (name: "Auto",   desc: "SwiftUI decides based on detents - shown when multiple detents exist"),
     ]
  
     var indicator: Visibility {
@@ -136,9 +136,9 @@ struct DragIndicatorExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".presentationDragIndicator(.visible) — always show. Use when the sheet has multiple detents or scrollable content.", color: .sheetGreen)
-                StepRow(number: 2, text: ".presentationDragIndicator(.hidden) — never show. Use for fixed-height non-draggable sheets.", color: .sheetGreen)
-                StepRow(number: 3, text: ".presentationDragIndicator(.automatic) — SwiftUI decides. Shows when multiple detents exist, hides for single detent.", color: .sheetGreen)
+                StepRow(number: 1, text: ".presentationDragIndicator(.visible) - always show. Use when the sheet has multiple detents or scrollable content.", color: .sheetGreen)
+                StepRow(number: 2, text: ".presentationDragIndicator(.hidden) - never show. Use for fixed-height non-draggable sheets.", color: .sheetGreen)
+                StepRow(number: 3, text: ".presentationDragIndicator(.automatic) - SwiftUI decides. Shows when multiple detents exist, hides for single detent.", color: .sheetGreen)
             }
  
             CalloutBox(style: .info, title: "When to show", contentBody: "Show the indicator when the sheet is resizable (multiple detents) or when it contains a ScrollView. The indicator tells users they can interact with the sheet's height, and don't show it if they can't.")

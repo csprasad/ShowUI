@@ -95,7 +95,7 @@ struct ReturnKeyVisual: View {
             set: { values[field] = $0 }
         )
         return HStack(spacing: 10) {
-            // Return key label badge — use field position instead of comparing SubmitLabel
+            // Return key label badge - use field position instead of comparing SubmitLabel
                Text(field == .password ? "join" : "next")
                    .font(.system(size: 9, weight: .semibold, design: .monospaced))
                    .foregroundStyle(isFocused ? Color(hex: "#185FA5") : Color(.tertiaryLabel))
@@ -151,14 +151,14 @@ struct ReturnKeyExplanation: View {
                 .lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Add .submitLabel(.next) on intermediate fields — the key reads 'Next'.", color: Color(hex: "#185FA5"))
+                StepRow(number: 1, text: "Add .submitLabel(.next) on intermediate fields - the key reads 'Next'.", color: Color(hex: "#185FA5"))
                 StepRow(number: 2, text: "Add .submitLabel(.done) or .join on the last field.", color: Color(hex: "#185FA5"))
                 StepRow(number: 3, text: "In onSubmit, advance focus to the next field, or set it to nil and call your submit function.", color: Color(hex: "#185FA5"))
             }
 
-            CalloutBox(style: .info, title: "Available submit labels", contentBody: ".done, .go, .join, .next, .return, .route, .search, .send — each changes the Return key text without affecting behaviour.")
+            CalloutBox(style: .info, title: "Available submit labels", contentBody: ".done, .go, .join, .next, .return, .route, .search, .send - each changes the Return key text without affecting behaviour.")
 
-            CalloutBox(style: .success, title: "The full pattern", contentBody: "submitLabel + onSubmit + @FocusState together give you a fully keyboard-navigable form — no Done buttons needed on most fields.")
+            CalloutBox(style: .success, title: "The full pattern", contentBody: "submitLabel + onSubmit + @FocusState together give you a fully keyboard-navigable form - no Done buttons needed on most fields.")
 
             CodeBlock(code: """
 @FocusState private var focused: Field?

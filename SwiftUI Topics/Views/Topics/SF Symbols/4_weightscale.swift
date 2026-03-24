@@ -38,7 +38,7 @@ struct WeightScaleVisual: View {
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.sfGreen)
 
-                // Live preview — all 3 scales at current weight
+                // Live preview - all 3 scales at current weight
                 ZStack {
                     Color(.secondarySystemBackground)
                     HStack(spacing: 24) {
@@ -125,7 +125,7 @@ struct WeightScaleExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Font weight — use .font(.system(size:weight:)) to set the symbol's stroke weight. It matches the same weight as text.", color: .sfGreen)
+                StepRow(number: 1, text: "Font weight - use .font(.system(size:weight:)) to set the symbol's stroke weight. It matches the same weight as text.", color: .sfGreen)
                 StepRow(number: 2, text: ".imageScale(.small / .medium / .large) sizes the symbol at 75%, 100%, or 125% of the surrounding text size.", color: .sfGreen)
                 StepRow(number: 3, text: "Symbols in a Label or HStack alongside Text automatically inherit the text font and align optically.", color: .sfGreen)
                 StepRow(number: 4, text: ".fontWeight() alone works too, symbols inherit it from the text environment.", color: .sfGreen)
@@ -153,7 +153,7 @@ HStack {
 Image(systemName: "bolt.fill")
     .font(.system(size: 24, weight: .black))
 
-// Environment-based — all symbols in this view get bold
+// Environment-based - all symbols in this view get bold
 VStack {
     Image(systemName: "heart.fill")
     Image(systemName: "star.fill")

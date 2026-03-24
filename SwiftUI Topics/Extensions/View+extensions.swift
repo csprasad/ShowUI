@@ -18,7 +18,7 @@ extension View {
         if condition { transform(self) } else { self }
     }
 
-    /// Card style — white bg, rounded, subtle shadow
+    /// Card style - white bg, rounded, subtle shadow
     func cardStyle() -> some View {
         self
             .background(Color(.systemBackground))

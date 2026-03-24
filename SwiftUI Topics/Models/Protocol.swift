@@ -13,7 +13,7 @@ import SwiftUI
 
 // MARK: - Lesson Protocol
 /// Every individual lesson inside a topic must conform to this.
-/// The lesson is fully self-contained — it owns its visual and explanation.
+/// The lesson is fully self-contained - it owns its visual and explanation.
 protocol LessonProtocol: Identifiable, Hashable {
     var id: UUID { get }
     var number: Int { get }
@@ -27,7 +27,7 @@ protocol LessonProtocol: Identifiable, Hashable {
 
 // Default Hashable + Equatable based on id so conforming types don't need to implement it
 extension LessonProtocol {
-    var section: String? { nil }   // default — no section
+    var section: String? { nil }   // default - no section
     static func == (lhs: Self, rhs: Self) -> Bool { lhs.id == rhs.id }
     func hash(into hasher: inout Hasher) { hasher.combine(id) }
 }
@@ -55,7 +55,7 @@ struct AnyLesson: Identifiable, Hashable {
     let title: String
     let subtitle: String
     let icon: String
-    let section: String?       // optional — nil means no grouping
+    let section: String?       // optional - nil means no grouping
     let visual: AnyView
     let explanation: AnyView
  

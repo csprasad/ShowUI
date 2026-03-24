@@ -48,7 +48,7 @@ struct TimingCurveVisual: View {
         CurveOption(name: "custom",
                     code: ".timingCurve(0.2,0.8,0.9,0.1)",
                     anim: .timingCurve(0.2, 0.8, 0.9, 0.1, duration: 1.0),
-                    description: "Custom bezier — dramatic snap",
+                    description: "Custom bezier - dramatic snap",
                     curvePoints: (CGPoint(x: 0.2, y: 0.8), CGPoint(x: 0.9, y: 0.1))),
     ]
 
@@ -188,11 +188,11 @@ struct TimingCurveExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".linear — constant speed. Use for looping animations like spinners.", color: .animAmber)
-                StepRow(number: 2, text: ".easeIn — accelerates. Use for things leaving the screen.", color: .animAmber)
-                StepRow(number: 3, text: ".easeOut — decelerates. Use for things arriving on screen.", color: .animAmber)
-                StepRow(number: 4, text: ".easeInOut — slow start and end. The default — feels most natural.", color: .animAmber)
-                StepRow(number: 5, text: ".timingCurve(x1,y1,x2,y2) — full bezier control. Match any custom curve.", color: .animAmber)
+                StepRow(number: 1, text: ".linear - constant speed. Use for looping animations like spinners.", color: .animAmber)
+                StepRow(number: 2, text: ".easeIn - accelerates. Use for things leaving the screen.", color: .animAmber)
+                StepRow(number: 3, text: ".easeOut - decelerates. Use for things arriving on screen.", color: .animAmber)
+                StepRow(number: 4, text: ".easeInOut - slow start and end. The default - feels most natural.", color: .animAmber)
+                StepRow(number: 5, text: ".timingCurve(x1,y1,x2,y2) - full bezier control. Match any custom curve.", color: .animAmber)
             }
 
             CalloutBox(style: .info, title: "Rule of thumb", contentBody: "easeOut for things entering, easeIn for things leaving, easeInOut for things changing in place. Spring covers most other cases.")
@@ -203,7 +203,7 @@ struct TimingCurveExplanation: View {
 .easeOut(duration: 0.4)
 .easeInOut(duration: 0.5)
 
-// Custom bezier — matches CSS cubic-bezier()
+// Custom bezier - matches CSS cubic-bezier()
 .timingCurve(0.2, 0.8, 0.9, 0.1, duration: 0.6)
 """)
         }

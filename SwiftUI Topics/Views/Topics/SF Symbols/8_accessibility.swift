@@ -46,7 +46,7 @@ struct AccessibilityVisual: View {
                     VStack(spacing: 12) {
                         switch selectedDemo {
                         case 0:
-                            // Problem — no label, VoiceOver reads symbol name
+                            // Problem - no label, VoiceOver reads symbol name
                             HStack(spacing: 12) {
                                 Image(systemName: "person.fill.xmark")
                                     .font(.system(size: 28))
@@ -60,7 +60,7 @@ struct AccessibilityVisual: View {
                                 }
                             }
                         case 1:
-                            // Good — accessibilityLabel set
+                            // Good - accessibilityLabel set
                             HStack(spacing: 12) {
                                 Image(systemName: "person.fill.xmark")
                                     .font(.system(size: 28))
@@ -75,7 +75,7 @@ struct AccessibilityVisual: View {
                                 }
                             }
                         default:
-                            // Decorative — hidden from VoiceOver
+                            // Decorative - hidden from VoiceOver
                             HStack(spacing: 12) {
                                 Image(systemName: "sparkles")
                                     .font(.system(size: 28))
@@ -84,7 +84,7 @@ struct AccessibilityVisual: View {
                                 VStack(alignment: .leading) {
                                     Text("VoiceOver reads:")
                                         .font(.system(size: 11)).foregroundStyle(.secondary)
-                                    Text("(nothing — hidden)")
+                                    Text("(nothing - hidden)")
                                         .font(.system(size: 13, weight: .semibold))
                                         .foregroundStyle(.secondary)
                                 }
@@ -97,7 +97,7 @@ struct AccessibilityVisual: View {
 
                 // Code
                 let codes = [
-                    "Image(systemName: \"person.fill.xmark\")\n// No label — VoiceOver reads the symbol name",
+                    "Image(systemName: \"person.fill.xmark\")\n// No label - VoiceOver reads the symbol name",
                     "Image(systemName: \"person.fill.xmark\")\n    .accessibilityLabel(\"Remove user\")",
                     "Image(systemName: \"sparkles\")\n    .accessibilityHidden(true)"
                 ]
@@ -115,10 +115,10 @@ struct AccessibilityExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".accessibilityLabel(\"Remove user\") — give a clear, action-oriented description of what the symbol means in context.", color: .sfGreen)
-                StepRow(number: 2, text: ".accessibilityHidden(true) — hide purely decorative symbols. VoiceOver skips them entirely.", color: .sfGreen)
-                StepRow(number: 3, text: "Label automatically uses the title text as the accessibility label — another reason to prefer it over Image alone.", color: .sfGreen)
-                StepRow(number: 4, text: "Button { } label: { Image(...) } — the button needs an accessibilityLabel if the image-only label isn't descriptive.", color: .sfGreen)
+                StepRow(number: 1, text: ".accessibilityLabel(\"Remove user\") - give a clear, action-oriented description of what the symbol means in context.", color: .sfGreen)
+                StepRow(number: 2, text: ".accessibilityHidden(true) - hide purely decorative symbols. VoiceOver skips them entirely.", color: .sfGreen)
+                StepRow(number: 3, text: "Label automatically uses the title text as the accessibility label - another reason to prefer it over Image alone.", color: .sfGreen)
+                StepRow(number: 4, text: "Button { } label: { Image(...) } - the button needs an accessibilityLabel if the image-only label isn't descriptive.", color: .sfGreen)
             }
 
             CalloutBox(style: .danger, title: "Image-only buttons are a common mistake", contentBody: "A Button containing only an Image(systemName:) with no accessibilityLabel will read the symbol file name to VoiceOver users. Always add .accessibilityLabel to image-only buttons.")
@@ -126,15 +126,15 @@ struct AccessibilityExplanation: View {
             CalloutBox(style: .success, title: "Context matters for labels", contentBody: "\"Star\" is a bad label. \"Add to favorites\" is good. The label should describe the action or meaning in the current context, not just name the icon.")
 
             CodeBlock(code: """
-// Standalone symbol — describe its meaning
+// Standalone symbol - describe its meaning
 Image(systemName: "heart.fill")
     .accessibilityLabel("Liked")
 
-// Decorative — hidden from VoiceOver
+// Decorative - hidden from VoiceOver
 Image(systemName: "sparkles")
     .accessibilityHidden(true)
 
-// Image-only button — needs label
+// Image-only button - needs label
 Button {
     deleteItem()
 } label: {

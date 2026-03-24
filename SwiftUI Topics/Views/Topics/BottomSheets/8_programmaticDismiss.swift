@@ -45,9 +45,9 @@ struct ProgrammaticDismissVisual: View {
  
                 // Description
                 let descriptions = [
-                    "Sheet dismisses automatically after 3 seconds — no user interaction needed",
-                    "Sheet cannot be swiped to dismiss — .interactiveDismissDisabled(true)",
-                    "Dismiss only allowed after filling a required field — controlled dismiss",
+                    "Sheet dismisses automatically after 3 seconds - no user interaction needed",
+                    "Sheet cannot be swiped to dismiss - .interactiveDismissDisabled(true)",
+                    "Dismiss only allowed after filling a required field - controlled dismiss",
                 ]
                 Text(descriptions[selectedDemo])
                     .font(.system(size: 12)).foregroundStyle(.secondary)
@@ -152,7 +152,7 @@ struct ConditionalDismissSheet: View {
                     .textFieldStyle(.roundedBorder)
                     .padding(.horizontal, 32)
                 if !canDismiss {
-                    Text("Name is required").font(.system(size: 12)).foregroundStyle(.secondary)
+                    Text("*Name is required").font(.system(size: 12)).foregroundStyle(.red)
                 }
                 Spacer()
             }
@@ -170,6 +170,10 @@ struct ConditionalDismissSheet: View {
         .interactiveDismissDisabled(!canDismiss)
     }
 }
+
+#Preview {
+    ProgrammaticDismissVisual()
+}
  
 struct ProgrammaticDismissExplanation: View {
     var body: some View {
@@ -179,9 +183,9 @@ struct ProgrammaticDismissExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "@Environment(\\.dismiss) — call dismiss() from anywhere inside the sheet to close it.", color: .sheetGreen)
-                StepRow(number: 2, text: ".interactiveDismissDisabled(true) — prevents swipe-to-dismiss. User must use your dismiss control.", color: .sheetGreen)
-                StepRow(number: 3, text: ".interactiveDismissDisabled(!canDismiss) — conditional. Locks the sheet until conditions are met.", color: .sheetGreen)
+                StepRow(number: 1, text: "@Environment(\\.dismiss) - call dismiss() from anywhere inside the sheet to close it.", color: .sheetGreen)
+                StepRow(number: 2, text: ".interactiveDismissDisabled(true) - prevents swipe-to-dismiss. User must use your dismiss control.", color: .sheetGreen)
+                StepRow(number: 3, text: ".interactiveDismissDisabled(!canDismiss) - conditional. Locks the sheet until conditions are met.", color: .sheetGreen)
                 StepRow(number: 4, text: "Programmatic dismiss from parent: set the isPresented binding to false or the item binding to nil.", color: .sheetGreen)
             }
  

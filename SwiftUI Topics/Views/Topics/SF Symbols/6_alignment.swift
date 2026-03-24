@@ -63,7 +63,7 @@ struct AlignmentVisual: View {
                                 .font(.system(size: fontSize))
                         }
                     case 1:
-                        // Center alignment — symbol sits too high
+                        // Center alignment - symbol sits too high
                         HStack(alignment: .top, spacing: 6) {
                             Image(systemName: "star.fill")
                                 .font(.system(size: fontSize))
@@ -72,7 +72,7 @@ struct AlignmentVisual: View {
                                 .font(.system(size: fontSize))
                         }
                     default:
-                        // Label — perfect optical alignment built in
+                        // Label - perfect optical alignment built in
                         Label {
                             Text("Label alignment")
                                 .font(.system(size: fontSize))
@@ -118,10 +118,10 @@ struct AlignmentExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "HStack(alignment: .center) — correct for most symbol+text combinations. Centers the symbol on the text cap-height.", color: .sfGreen)
-                StepRow(number: 2, text: "Label — the best tool for icon+text. Handles alignment, spacing, and adapts automatically to Dynamic Type.", color: .sfGreen)
-                StepRow(number: 3, text: ".baselineOffset() — fine-tune vertical position if a specific symbol needs adjusting.", color: .sfGreen)
-                StepRow(number: 4, text: "Never use .top or .bottom alignment for symbols alongside text — they will visually misalign.", color: .sfGreen)
+                StepRow(number: 1, text: "HStack(alignment: .center) - correct for most symbol+text combinations. Centers the symbol on the text cap-height.", color: .sfGreen)
+                StepRow(number: 2, text: "Label - the best tool for icon+text. Handles alignment, spacing, and adapts automatically to Dynamic Type.", color: .sfGreen)
+                StepRow(number: 3, text: ".baselineOffset() - fine-tune vertical position if a specific symbol needs adjusting.", color: .sfGreen)
+                StepRow(number: 4, text: "Never use .top or .bottom alignment for symbols alongside text - they will visually misalign.", color: .sfGreen)
             }
 
             CalloutBox(style: .success, title: "Use Label whenever possible", contentBody: "Label(title, systemImage:) handles all alignment automatically and adapts to Dynamic Type size changes. It also supports accessibilityLabel for free.")
@@ -129,11 +129,11 @@ struct AlignmentExplanation: View {
             CalloutBox(style: .warning, title: "Symbol size affects alignment", contentBody: "If your symbol is a different size than the text (e.g. a large icon next to small text), optical alignment requires manual adjustment with .alignmentGuide or .offset.")
 
             CodeBlock(code: """
-// Best — Label handles everything
+// Best - Label handles everything
 Label("Downloads", systemImage: "arrow.down.circle.fill")
     .font(.body)
 
-// Good — center alignment in HStack
+// Good - center alignment in HStack
 HStack(alignment: .center, spacing: 6) {
     Image(systemName: "star.fill")
     Text("Rating")
@@ -144,7 +144,7 @@ HStack(alignment: .center, spacing: 6) {
 Image(systemName: "arrow.up")
     .baselineOffset(-2)  // nudge down 2pt
 
-// Dynamic Type safe — let Label adapt
+// Dynamic Type safe - let Label adapt
 Label {
     Text("File size")
         .font(.caption)

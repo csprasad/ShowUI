@@ -46,7 +46,7 @@ struct SheetLayoutVisual: View {
                 let infos = [
                     "Sheets have their own safe area. .ignoresSafeArea() inside a sheet works independently of the parent.",
                     "Use ScrollView inside sheets for content taller than the detent height. It prevents conflict with the drag gesture.",
-                    "Sheets handle keyboard avoidance automatically — content scrolls up when the keyboard appears.",
+                    "Sheets handle keyboard avoidance automatically - content scrolls up when the keyboard appears.",
                 ]
                 HStack(spacing: 8) {
                     Image(systemName: "info.circle.fill").font(.system(size: 12)).foregroundStyle(Color.sheetGreen)
@@ -154,7 +154,7 @@ struct KeyboardDemoSheet: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 16) {
-                    Text("Tap a field — the sheet scrolls to keep it visible above the keyboard")
+                    Text("Tap a field - the sheet scrolls to keep it visible above the keyboard")
                         .font(.system(size: 14)).foregroundStyle(.secondary)
                         .multilineTextAlignment(.center).padding(.horizontal, 24)
  
@@ -178,6 +178,10 @@ struct KeyboardDemoSheet: View {
         .presentationDragIndicator(.visible)
     }
 }
+
+#Preview {
+    SheetLayoutVisual()
+}
  
 struct SheetLayoutExplanation: View {
     var body: some View {
@@ -187,10 +191,10 @@ struct SheetLayoutExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Safe areas inside a sheet are independent — .ignoresSafeArea() affects the sheet's own safe area, not the parent.", color: .sheetGreen)
-                StepRow(number: 2, text: "ScrollView inside a sheet automatically coordinates with the drag gesture — pull down past the top to dismiss.", color: .sheetGreen)
-                StepRow(number: 3, text: "Keyboard avoidance is automatic — sheets scroll content up when the keyboard appears.", color: .sheetGreen)
-                StepRow(number: 4, text: ".presentationContentInteraction(.scrolls) — at the smallest detent, scrolling the content expands the sheet instead of scrolling.", color: .sheetGreen)
+                StepRow(number: 1, text: "Safe areas inside a sheet are independent - .ignoresSafeArea() affects the sheet's own safe area, not the parent.", color: .sheetGreen)
+                StepRow(number: 2, text: "ScrollView inside a sheet automatically coordinates with the drag gesture - pull down past the top to dismiss.", color: .sheetGreen)
+                StepRow(number: 3, text: "Keyboard avoidance is automatic - sheets scroll content up when the keyboard appears.", color: .sheetGreen)
+                StepRow(number: 4, text: ".presentationContentInteraction(.scrolls) - at the smallest detent, scrolling the content expands the sheet instead of scrolling.", color: .sheetGreen)
             }
  
             CalloutBox(style: .success, title: "Always use ScrollView for variable height content", contentBody: "If your sheet content might exceed the detent height, wrap it in a ScrollView. Without it, content clips at the detent boundary and users can't access it.")

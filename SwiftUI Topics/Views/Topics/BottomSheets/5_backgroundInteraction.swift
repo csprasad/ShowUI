@@ -64,7 +64,7 @@ struct BackgroundInteractionVisual: View {
                     }
                 }
  
-                // Counter button — interactive behind sheet in enabled mode
+                // Counter button - interactive behind sheet in enabled mode
                 HStack(spacing: 10) {
                     Button {
                         withAnimation { counter += 1 }
@@ -141,14 +141,14 @@ struct BackgroundInteractionVisual: View {
 struct BackgroundInteractionExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "Background interaction — iOS 16.4+")
+            SectionHeader(text: "Background interaction - iOS 16.4+")
             Text("By default, a sheet dims and blocks the background. presentationBackgroundInteraction lets the background remain tappable while the sheet is open, enabling map-style UIs where a sheet and a map coexist.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".disabled — default. Background is dimmed and non-interactive.", color: .sheetGreen)
-                StepRow(number: 2, text: ".enabled — background stays fully interactive. Sheet acts as a non-blocking overlay.", color: .sheetGreen)
-                StepRow(number: 3, text: ".enabled(upThrough: .medium) — interactive when sheet is at or below .medium, blocked when expanded.", color: .sheetGreen)
+                StepRow(number: 1, text: ".disabled - default. Background is dimmed and non-interactive.", color: .sheetGreen)
+                StepRow(number: 2, text: ".enabled - background stays fully interactive. Sheet acts as a non-blocking overlay.", color: .sheetGreen)
+                StepRow(number: 3, text: ".enabled(upThrough: .medium) - interactive when sheet is at or below .medium, blocked when expanded.", color: .sheetGreen)
             }
  
             CalloutBox(style: .success, title: "The Maps pattern in your app", contentBody: "Use .enabled(upThrough: .medium) with a map or content view behind the sheet. At the small detent, the user can interact with the map. When they expand the sheet, the background becomes blocked, just like in the Maps app. This is the recommended pattern for building map-style UIs in SwiftUI, as it mirrors exactly how Apple Maps works.")
@@ -168,7 +168,7 @@ struct BackgroundInteractionExplanation: View {
     .enabled(upThrough: .medium)
 )
  
-// Default — blocked
+// Default - blocked
 .presentationBackgroundInteraction(.disabled)
 """)
         }

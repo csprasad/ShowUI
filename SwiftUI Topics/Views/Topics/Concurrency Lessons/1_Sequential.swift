@@ -175,7 +175,7 @@ struct SequentialExplanation: View {
             CalloutBox(style: .danger, title: "Total: 4.5 seconds", contentBody: "You're wasting time. None of these requests depend on each other, so there's no reason to wait.")
             
             CodeBlock(code: """
-// Sequential — each line waits for the one above
+// Sequential - each line waits for the one above
 let profile   = try await fetchProfile()
 let posts     = try await fetchPosts()
 let followers = try await fetchFollowers()

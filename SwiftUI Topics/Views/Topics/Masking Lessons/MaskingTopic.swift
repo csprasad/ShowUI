@@ -117,7 +117,7 @@ struct MaskLesson: LessonProtocol {
 }
 
 // MARK: - Shared gradient used across all masking visuals
-// No image assets required — works out of the box
+// No image assets required - works out of the box
 extension View {
     var maskBaseGradient: some View {
         LinearGradient(

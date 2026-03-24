@@ -91,7 +91,7 @@ struct AsyncLetVisual: View {
  
                         Divider().padding(.vertical, 2)
  
-                        // Total bar — exactly 2s wide, lines up with 2s tick
+                        // Total bar - exactly 2s wide, lines up with 2s tick
                         HStack(spacing: 10) {
                             Text("Total")
                                 .font(.system(size: 11, design: .monospaced))
@@ -109,7 +109,7 @@ struct AsyncLetVisual: View {
                                         .frame(width: 2.0 * pxPerSec, height: 22)
                                         .transition(.opacity)
  
-                                    Text("2s — slowest task")
+                                    Text("2s - slowest task")
                                         .font(.system(size: 11, weight: .semibold))
                                         .foregroundStyle(Color(hex: "#085041"))
                                         .padding(.leading, 8)
@@ -119,7 +119,7 @@ struct AsyncLetVisual: View {
                             .frame(width: tw)
                         }
  
-                        // Tick marks — pixel-exact at 0, 1, 2s
+                        // Tick marks - pixel-exact at 0, 1, 2s
                         HStack(spacing: 0) {
                             Spacer().frame(width: labelWidth + 10)
                             ZStack(alignment: .leading) {
@@ -189,7 +189,7 @@ async let profile   = fetchProfile()
 async let posts     = fetchPosts()
 async let followers = fetchFollowers()
 
-// Destructure — this is the correct syntax
+// Destructure - this is the correct syntax
 let (p, po, f) = try await (profile, posts, followers)
 """)
         }

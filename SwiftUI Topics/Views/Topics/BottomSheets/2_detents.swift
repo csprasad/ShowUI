@@ -19,11 +19,11 @@ struct DetentsVisual: View {
     @State private var selectedDetent: String = "medium"
  
     let detentOptions: [(name: String, label: String, detent: PresentationDetent)] = [
-        ("medium",   ".medium — half screen",         .medium),
-        ("large",    ".large — full screen",           .large),
-        ("height200","height(200) — fixed 200pt",      .height(200)),
-        ("frac035",  "fraction(0.35) — 35% screen",   .fraction(0.35)),
-        ("frac075",  "fraction(0.75) — 75% screen",   .fraction(0.75)),
+        ("medium",   ".medium - half screen",         .medium),
+        ("large",    ".large - full screen",           .large),
+        ("height200","height(200) - fixed 200pt",      .height(200)),
+        ("frac035",  "fraction(0.35) - 35% screen",   .fraction(0.35)),
+        ("frac075",  "fraction(0.75) - 75% screen",   .fraction(0.75)),
     ]
  
     var currentDetent: PresentationDetent {
@@ -156,11 +156,11 @@ struct DetentsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".medium — half the screen height. The most common detent for quick actions.", color: .sheetGreen)
-                StepRow(number: 2, text: ".large — full screen height. The default when no detents are specified.", color: .sheetGreen)
-                StepRow(number: 3, text: ".height(200) — fixed pixel height. Use for sheets with fixed content.", color: .sheetGreen)
-                StepRow(number: 4, text: ".fraction(0.35) — percentage of screen height. Adapts to all screen sizes.", color: .sheetGreen)
-                StepRow(number: 5, text: "Custom — conform to CustomPresentationDetent to compute height from context (font size, screen dimensions).", color: .sheetGreen)
+                StepRow(number: 1, text: ".medium - half the screen height. The most common detent for quick actions.", color: .sheetGreen)
+                StepRow(number: 2, text: ".large - full screen height. The default when no detents are specified.", color: .sheetGreen)
+                StepRow(number: 3, text: ".height(200) - fixed pixel height. Use for sheets with fixed content.", color: .sheetGreen)
+                StepRow(number: 4, text: ".fraction(0.35) - percentage of screen height. Adapts to all screen sizes.", color: .sheetGreen)
+                StepRow(number: 5, text: "Custom - conform to CustomPresentationDetent to compute height from context (font size, screen dimensions).", color: .sheetGreen)
             }
  
             CalloutBox(style: .success, title: "fraction over height", contentBody: ".fraction is almost always better than .height for production apps, because it adapts to different iPhone screen sizes, Dynamic Type sizes, and landscape orientation automatically.")
@@ -174,7 +174,7 @@ struct DetentsExplanation: View {
         .presentationDetents([.medium])
 }
  
-// Multiple detents — user can drag between them
+// Multiple detents - user can drag between them
 .presentationDetents([.medium, .large])
  
 // Fixed height

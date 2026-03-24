@@ -127,9 +127,9 @@ struct CustomTransitionExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".slide, .scale, .opacity, .move(edge:) — built-in transitions.", color: .animAmber)
-                StepRow(number: 2, text: ".combined(with:) — layer two transitions together.", color: .animAmber)
-                StepRow(number: 3, text: ".asymmetric(insertion:removal:) — different transitions for enter and exit.", color: .animAmber)
+                StepRow(number: 1, text: ".slide, .scale, .opacity, .move(edge:) - built-in transitions.", color: .animAmber)
+                StepRow(number: 2, text: ".combined(with:) - layer two transitions together.", color: .animAmber)
+                StepRow(number: 3, text: ".asymmetric(insertion:removal:) - different transitions for enter and exit.", color: .animAmber)
                 StepRow(number: 4, text: "Build a custom one with ViewModifier + extension on AnyTransition.", color: .animAmber)
             }
 
@@ -146,7 +146,7 @@ struct CustomTransitionExplanation: View {
 // Combined
 .transition(.scale.combined(with: .opacity))
 
-// Asymmetric — different insert and removal
+// Asymmetric - different insert and removal
 .transition(.asymmetric(
     insertion: .move(edge: .leading).combined(with: .opacity),
     removal:   .move(edge: .trailing).combined(with: .opacity)

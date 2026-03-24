@@ -85,7 +85,7 @@ struct FullScreenCoverVisual: View {
                     }
                     .buttonStyle(PressableButtonStyle())
                     .sheet(isPresented: $showSheet) {
-                        MockSheetContent(title: ".sheet", subtitle: "Partial overlay — swipe down to dismiss")
+                        MockSheetContent(title: ".sheet", subtitle: "Partial overlay - swipe down to dismiss")
                     }
  
                     Button {
@@ -122,11 +122,10 @@ struct FullScreenContent: View {
                 Text(".fullScreenCover")
                     .font(.system(size: 24, weight: .bold))
                     .foregroundStyle(.white)
-                Text("Covers the entire screen.\nNo swipe-to-dismiss — you must provide a close button.")
+                Text("Covers the entire screen.\nNo swipe to dismiss.\nYou must provide a close button.")
                     .font(.system(size: 15))
                     .foregroundStyle(.white.opacity(0.8))
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 32)
                 Button {
                     dismiss()
                 } label: {
@@ -143,6 +142,10 @@ struct FullScreenContent: View {
         }
     }
 }
+
+#Preview {
+    FullScreenCoverVisual()
+}
  
 struct FullScreenCoverExplanation: View {
     var body: some View {
@@ -153,9 +156,9 @@ struct FullScreenCoverExplanation: View {
  
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Use .fullScreenCover for flows that take over the whole app, like onboarding, login, camera, media playback.", color: .sheetGreen)
-                StepRow(number: 2, text: "Always provide a dismiss button — users cannot swipe down to close a fullScreenCover.", color: .sheetGreen)
-                StepRow(number: 3, text: "The presenting view is completely hidden — no partial background visible.", color: .sheetGreen)
-                StepRow(number: 4, text: "The API is identical to .sheet — isPresented:, item:, onDismiss: all work the same way.", color: .sheetGreen)
+                StepRow(number: 2, text: "Always provide a dismiss button - users cannot swipe down to close a fullScreenCover.", color: .sheetGreen)
+                StepRow(number: 3, text: "The presenting view is completely hidden - no partial background visible.", color: .sheetGreen)
+                StepRow(number: 4, text: "The API is identical to .sheet - isPresented:, item:, onDismiss: all work the same way.", color: .sheetGreen)
             }
  
             CalloutBox(style: .danger, title: "Always include a close button", contentBody: "There is no swipe-to-dismiss on fullScreenCover. If you forget the close button, users are trapped. Use @Environment(\\.dismiss) and always make it reachable from the top of the screen.")
@@ -171,7 +174,7 @@ Button("Start onboarding") {
     OnboardingFlow()
 }
  
-// Inside fullScreenCover — must provide dismiss
+// Inside fullScreenCover - must provide dismiss
 struct OnboardingFlow: View {
     @Environment(\\.dismiss) var dismiss
  

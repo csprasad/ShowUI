@@ -31,7 +31,7 @@ enum ButtonLessons {
     @MainActor
     static let all: [any LessonProtocol] = [
         BLesson(number: 1,  title: "Button basics",
-                subtitle: "action, label, roles — .destructive and .cancel",
+                subtitle: "action, label, roles - .destructive and .cancel",
                 icon: "hand.tap.fill",
                 visual: AnyView(ButtonBasicsVisual()),
                 explanation: AnyView(ButtonBasicsExplanation())),
@@ -46,7 +46,7 @@ enum ButtonLessons {
                 visual: AnyView(CustomStyleVisual()),
                 explanation: AnyView(CustomStyleExplanation())),
         BLesson(number: 4,  title: "Loading state",
-                subtitle: "Disabled + progress indicator — the async button pattern",
+                subtitle: "Disabled + progress indicator - the async button pattern",
                 icon: "arrow.triangle.2.circlepath",
                 visual: AnyView(LoadingStateVisual()),
                 explanation: AnyView(LoadingStateExplanation())),

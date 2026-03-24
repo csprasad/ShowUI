@@ -111,9 +111,9 @@ struct LayeredSymbolsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Primary — the most prominent element. Always receives the first foregroundStyle color.", color: .sfGreen)
-                StepRow(number: 2, text: "Secondary — supporting elements. Receives the second color, or 60% opacity in hierarchical mode.", color: .sfGreen)
-                StepRow(number: 3, text: "Tertiary — background fill or decoration. Receives the third color, or 30% opacity in hierarchical mode.", color: .sfGreen)
+                StepRow(number: 1, text: "Primary - the most prominent element. Always receives the first foregroundStyle color.", color: .sfGreen)
+                StepRow(number: 2, text: "Secondary - supporting elements. Receives the second color, or 60% opacity in hierarchical mode.", color: .sfGreen)
+                StepRow(number: 3, text: "Tertiary - background fill or decoration. Receives the third color, or 30% opacity in hierarchical mode.", color: .sfGreen)
                 StepRow(number: 4, text: "Not every symbol uses all three layers, and not every symbol has layers at all. Always check the SF Symbols app to see the layer structure for a specific symbol.", color: .sfGreen)
             }
 
@@ -122,16 +122,16 @@ struct LayeredSymbolsExplanation: View {
             CalloutBox(style: .warning, title: "Layer assignment varies by symbol", contentBody: "There's no universal rule for which part of a symbol is primary vs secondary. A cloud symbol might have the lightning as primary and the cloud as secondary or the reverse. Always check.")
 
             CodeBlock(code: """
-// Palette mode — one color per layer
+// Palette mode - one color per layer
 Image(systemName: "cloud.bolt.rain.fill")
     .symbolRenderingMode(.palette)
     .foregroundStyle(
-        .yellow,   // primary   — lightning bolt
-        .gray,     // secondary — cloud
-        .blue      // tertiary  — rain drops
+        .yellow,   // primary   - lightning bolt
+        .gray,     // secondary - cloud
+        .blue      // tertiary  - rain drops
     )
 
-// Hierarchical — automatic opacity per layer
+// Hierarchical - automatic opacity per layer
 Image(systemName: "cloud.bolt.rain.fill")
     .symbolRenderingMode(.hierarchical)
     .foregroundStyle(.blue)

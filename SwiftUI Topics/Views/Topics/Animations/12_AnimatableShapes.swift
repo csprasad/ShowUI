@@ -169,7 +169,7 @@ struct AnimatableShapesExplanation: View {
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Conform your Shape to Animatable and implement animatableData.", color: .animCoral)
-                StepRow(number: 2, text: "animatableData is the value SwiftUI interpolates — expose whichever properties drive your path.", color: .animCoral)
+                StepRow(number: 2, text: "animatableData is the value SwiftUI interpolates - expose whichever properties drive your path.", color: .animCoral)
                 StepRow(number: 3, text: "When animatableData changes, path(in:) is called on every frame with the interpolated value.", color: .animCoral)
                 StepRow(number: 4, text: "For multiple animated properties, use AnimatablePair<A, B> as the animatableData type.", color: .animCoral)
             }

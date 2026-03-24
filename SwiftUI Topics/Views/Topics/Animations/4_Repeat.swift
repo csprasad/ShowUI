@@ -162,10 +162,10 @@ struct RepeatExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".repeatCount(3) — plays 3 times then stops.", color: .animCoral)
-                StepRow(number: 2, text: ".repeatForever() — loops until the view disappears or state resets.", color: .animCoral)
-                StepRow(number: 3, text: "autoreverses: true — plays forward then backward, creating a smooth loop.", color: .animCoral)
-                StepRow(number: 4, text: "autoreverses: false — snaps back to start between repeats. Useful for loaders.", color: .animCoral)
+                StepRow(number: 1, text: ".repeatCount(3) - plays 3 times then stops.", color: .animCoral)
+                StepRow(number: 2, text: ".repeatForever() - loops until the view disappears or state resets.", color: .animCoral)
+                StepRow(number: 3, text: "autoreverses: true - plays forward then backward, creating a smooth loop.", color: .animCoral)
+                StepRow(number: 4, text: "autoreverses: false - snaps back to start between repeats. Useful for loaders.", color: .animCoral)
             }
 
             CalloutBox(style: .warning, title: "Stop repeatForever carefully", contentBody: "A repeatForever animation keeps running even if the trigger state changes. Set the animated value back to its original with a non-repeating animation to stop it cleanly.")
@@ -178,12 +178,12 @@ withAnimation(.easeInOut(duration: 0.5).repeatCount(3)) {
     scale = 1.2
 }
 
-// Infinite loop — smooth with autoreverse
+// Infinite loop - smooth with autoreverse
 withAnimation(.easeInOut(duration: 0.8).repeatForever(autoreverses: true)) {
     isPulsing = true
 }
 
-// Spinner — linear, no autoreverse
+// Spinner - linear, no autoreverse
 withAnimation(.linear(duration: 1.0).repeatForever(autoreverses: false)) {
     rotation = 360
 }

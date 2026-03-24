@@ -166,7 +166,7 @@ struct TagBadge: View {
         Text(text)
             .font(.system(size: 11, weight: .semibold))
             .foregroundStyle(color)
-            .padding(.horizontal, 10)
+            .padding(.horizontal, 6)
             .padding(.vertical, 4)
             .background(color.opacity(0.12))
             .clipShape(Capsule())

@@ -104,10 +104,10 @@ struct SheetBasicsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".sheet(isPresented:) — takes a Binding<Bool>. Set to true to show, false to hide.", color: .sheetGreen)
-                StepRow(number: 2, text: ".sheet(item:) — takes a Binding<Item?> where Item is Identifiable. Set to a value to show, nil to hide.", color: .sheetGreen)
-                StepRow(number: 3, text: "@Environment(\\.dismiss) — call dismiss() from inside the sheet to close it.", color: .sheetGreen)
-                StepRow(number: 4, text: "onDismiss: — closure called after the sheet closes. Use to handle cleanup.", color: .sheetGreen)
+                StepRow(number: 1, text: ".sheet(isPresented:) - takes a Binding<Bool>. Set to true to show, false to hide.", color: .sheetGreen)
+                StepRow(number: 2, text: ".sheet(item:) - takes a Binding<Item?> where Item is Identifiable. Set to a value to show, nil to hide.", color: .sheetGreen)
+                StepRow(number: 3, text: "@Environment(\\.dismiss) - call dismiss() from inside the sheet to close it.", color: .sheetGreen)
+                StepRow(number: 4, text: "onDismiss: - closure called after the sheet closes. Use to handle cleanup.", color: .sheetGreen)
             }
  
             CalloutBox(style: .success, title: "Prefer item: over isPresented:", contentBody: "item: is more expressive, as it directly passes the sheet content automatically receives the item it was opened for. It also handles the case where the item changes while the sheet is open.")
@@ -123,7 +123,7 @@ Button("Open") { showSheet = true }
         MySheetView()
     }
  
-// item style — data-driven
+// item style - data-driven
 @State private var selectedUser: User? = nil
  
 List(users) { user in

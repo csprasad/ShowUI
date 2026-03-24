@@ -25,10 +25,10 @@ struct SpringVisual: View {
     }
 
     let presets: [SpringPreset] = [
-        SpringPreset(name: "smooth",    anim: .smooth,           description: "No bounce — gentle, professional"),
+        SpringPreset(name: "smooth",    anim: .smooth,           description: "No bounce - gentle, professional"),
         SpringPreset(name: "snappy",    anim: .snappy,           description: "Fast with slight bounce"),
         SpringPreset(name: "bouncy",    anim: .bouncy,           description: "Pronounced overshoot and settle"),
-        SpringPreset(name: "interactive", anim: .interactiveSpring(), description: "Follows finger — low response time"),
+        SpringPreset(name: "interactive", anim: .interactiveSpring(), description: "Follows finger - low response time"),
     ]
 
     var customSpring: Animation {
@@ -166,10 +166,10 @@ struct SpringExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".smooth — no bounce. Use for UI elements that should feel calm and professional.", color: .animTeal)
-                StepRow(number: 2, text: ".snappy — quick with a tiny overshoot. Great for interactive responses.", color: .animTeal)
-                StepRow(number: 3, text: ".bouncy — visible overshoot and settle. Use sparingly for delight moments.", color: .animTeal)
-                StepRow(number: 4, text: ".spring(duration:bounce:) — tune directly. duration is settle time, bounce from 0 (none) to 1 (very springy).", color: .animTeal)
+                StepRow(number: 1, text: ".smooth - no bounce. Use for UI elements that should feel calm and professional.", color: .animTeal)
+                StepRow(number: 2, text: ".snappy - quick with a tiny overshoot. Great for interactive responses.", color: .animTeal)
+                StepRow(number: 3, text: ".bouncy - visible overshoot and settle. Use sparingly for delight moments.", color: .animTeal)
+                StepRow(number: 4, text: ".spring(duration:bounce:) - tune directly. duration is settle time, bounce from 0 (none) to 1 (very springy).", color: .animTeal)
             }
 
             CalloutBox(style: .success, title: "Default to springs", contentBody: "Apple's own HIG recommends springs for most animations. They handle interruption gracefully if you tap mid-animation, a spring continues naturally from wherever it was.")
@@ -177,7 +177,7 @@ struct SpringExplanation: View {
             CalloutBox(style: .info, title: "bounce parameter", contentBody: "0.0 = critically damped (no overshoot). 0.3 = light bounce. 1.0 = very springy. Values above 1 are allowed but rarely useful.")
 
             CodeBlock(code: """
-// Semantic presets — use these first
+// Semantic presets - use these first
 .smooth          // calm, no bounce
 .snappy          // quick, minimal bounce
 .bouncy          // playful overshoot

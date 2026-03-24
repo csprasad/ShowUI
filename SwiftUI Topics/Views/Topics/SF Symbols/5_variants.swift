@@ -112,9 +112,9 @@ struct VariantsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".fill — solid filled version. Use for selected or active states.", color: .sfGreen)
-                StepRow(number: 2, text: ".slash — adds a diagonal slash. Universally means disabled or off.", color: .sfGreen)
-                StepRow(number: 3, text: ".circle / .square / .rectangle — wraps the symbol in a shape. Adds visual weight, good for buttons.", color: .sfGreen)
+                StepRow(number: 1, text: ".fill - solid filled version. Use for selected or active states.", color: .sfGreen)
+                StepRow(number: 2, text: ".slash - adds a diagonal slash. Universally means disabled or off.", color: .sfGreen)
+                StepRow(number: 3, text: ".circle / .square / .rectangle - wraps the symbol in a shape. Adds visual weight, good for buttons.", color: .sfGreen)
                 StepRow(number: 4, text: ".circle.fill combines variants, making the circle gets a fill background.", color: .sfGreen)
             }
 
@@ -134,7 +134,7 @@ Image(systemName: "bell")
 Image(systemName: "star")
     .symbolVariant(.circle.fill)  // star.circle.fill
 
-// Environment — all symbols inside get .fill
+// Environment - all symbols inside get .fill
 Label("Liked", systemImage: "heart")
     .symbolVariant(.fill)
 

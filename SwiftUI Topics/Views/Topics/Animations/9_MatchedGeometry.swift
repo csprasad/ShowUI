@@ -107,10 +107,10 @@ struct MatchedGeometryExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Create a @Namespace — a shared coordinate space for the effect.", color: .animCoral)
+                StepRow(number: 1, text: "Create a @Namespace - a shared coordinate space for the effect.", color: .animCoral)
                 StepRow(number: 2, text: "Apply .matchedGeometryEffect(id:in:) to both views with the same id and namespace.", color: .animCoral)
                 StepRow(number: 3, text: "Use an if/else to show one view OR the other based on state.", color: .animCoral)
-                StepRow(number: 4, text: "Wrap the state change in withAnimation — SwiftUI handles the morph.", color: .animCoral)
+                StepRow(number: 4, text: "Wrap the state change in withAnimation - SwiftUI handles the morph.", color: .animCoral)
             }
 
             CalloutBox(style: .warning, title: "Only one view active at a time", contentBody: "Both views with the same matchedGeometryEffect id must not be visible simultaneously. Use if/else or isSource: false to control which is the source of truth.")

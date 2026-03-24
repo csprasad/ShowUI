@@ -88,7 +88,7 @@ struct ConcurrentVisual: View {
  
                         Divider().padding(.vertical, 2)
  
-                        // Total bar — exactly 2s wide, lines up with 2s tick
+                        // Total bar - exactly 2s wide, lines up with 2s tick
                         HStack(spacing: 10) {
                             Text("Total")
                                 .font(.system(size: 11, design: .monospaced))
@@ -106,7 +106,7 @@ struct ConcurrentVisual: View {
                                         .frame(width: 2.0 * pxPerSec, height: 22)
                                         .transition(.opacity)
  
-                                    Text("2s — slowest task")
+                                    Text("2s - slowest task")
                                         .font(.system(size: 11, weight: .semibold))
                                         .foregroundStyle(Color(hex: "#085041"))
                                         .padding(.leading, 8)
@@ -116,7 +116,7 @@ struct ConcurrentVisual: View {
                             .frame(width: tw)
                         }
  
-                        // Tick marks — hardcoded, pixel-exact
+                        // Tick marks - hardcoded, pixel-exact
                         HStack(spacing: 0) {
                             Spacer().frame(width: labelWidth + 10)
                             ZStack(alignment: .leading) {
@@ -188,7 +188,7 @@ struct ConcurrentExplanation: View {
             CalloutBox(style: .success, title: "Total: 2 seconds", contentBody: "2s instead of 4.5s; a 55% reduction. None of the requests depended on each other, so there was no reason to wait.")
 
             CodeBlock(code: """
-// async let — all three start immediately
+// async let - all three start immediately
 async let profile   = fetchProfile()
 async let posts     = fetchPosts()
 async let followers = fetchFollowers()

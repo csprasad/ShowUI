@@ -32,7 +32,7 @@ struct AnimBasicsVisual: View {
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.animPurple)
 
-                // Animated subject — a card that moves, scales, changes color
+                // Animated subject - a card that moves, scales, changes color
                 ZStack {
                     Color(.secondarySystemBackground)
                     RoundedRectangle(cornerRadius: 16, style: .continuous)
@@ -125,14 +125,14 @@ struct AnimBasicsExplanation: View {
             CalloutBox(style: .info, title: "withAnimation vs .animation()", contentBody: "withAnimation applies to a whole state change. .animation(_, value:) is scoped to one view and one value more precise, preferred in SwiftUI.")
 
             CodeBlock(code: """
-// withAnimation — applies to all changes in the block
+// withAnimation - applies to all changes in the block
 Button("Animate") {
     withAnimation(.easeInOut(duration: 0.4)) {
         isOn.toggle()
     }
 }
 
-// .animation modifier — scoped to this view + value
+// .animation modifier - scoped to this view + value
 RoundedRectangle(cornerRadius: 12)
     .offset(x: isOn ? 60 : -60)
     .animation(.easeInOut(duration: 0.4), value: isOn)

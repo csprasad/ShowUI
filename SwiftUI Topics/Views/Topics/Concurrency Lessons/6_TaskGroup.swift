@@ -102,7 +102,7 @@ struct TaskGroupVisual: View {
                     (id: i, label: d.0, color: d.1, progress: 0, done: false, orderFinished: nil)
                 }
      
-                // Spawn a child task per item — mirrors how TaskGroup actually works
+                // Spawn a child task per item - mirrors how TaskGroup actually works
                 await withTaskGroup(of: (Int, Double).self) { group in
                     for (i, data) in taskData.enumerated() {
                         let duration = data.2

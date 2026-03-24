@@ -96,7 +96,7 @@ struct ClipShapeExplanation: View {
             CalloutBox(style: .success, title: "Use clipShape for performance", contentBody: "clipShape is optimised by the render engine. For simple shapes it's always faster than an equivalent .mask().")
 
             CodeBlock(code: """
-// Simple circle crop — common for avatars
+// Simple circle crop - common for avatars
 Image("avatar")
     .resizable()
     .frame(width: 60, height: 60)

@@ -439,6 +439,8 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
+				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
 				055545582F7273FF006086F5 /* BottomSheets */,
 				054ED8CC2F7117F7003BA047 /* SF Symbols */,
 				051191862F6FE2220089F2FF /* Animations */,
@@ -446,8 +448,6 @@
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 				05685BBC2F6AB66A004643FF /* Keyboard Lessons */,
-				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
-				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
 				059799FC2F06585800905892 /* Buttons */,
 			);
 			path = Topics;

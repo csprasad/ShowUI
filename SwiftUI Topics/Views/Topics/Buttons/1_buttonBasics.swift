@@ -117,9 +117,9 @@ struct ButtonBasicsExplanation: View {
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "The action closure fires when the button is tapped. Any state changes inside it update the UI.", color: .btnPurple)
-                StepRow(number: 2, text: ".destructive — tints the button red, signals irreversible action. Used in alerts and confirmation dialogs.", color: .btnPurple)
-                StepRow(number: 3, text: ".cancel — signals a dismissal. Used alongside .destructive to give users an escape route.", color: .btnPurple)
-                StepRow(number: 4, text: "The label can be any View — Text, Image, Label, HStack, or a fully custom view.", color: .btnPurple)
+                StepRow(number: 2, text: ".destructive - tints the button red, signals irreversible action. Used in alerts and confirmation dialogs.", color: .btnPurple)
+                StepRow(number: 3, text: ".cancel - signals a dismissal. Used alongside .destructive to give users an escape route.", color: .btnPurple)
+                StepRow(number: 4, text: "The label can be any View - Text, Image, Label, HStack, or a fully custom view.", color: .btnPurple)
             }
 
             CalloutBox(style: .info, title: "Role affects style automatically", contentBody: "Button(role: .destructive) with a .bordered style automatically renders in red. You don't need to manually set the color, and the role propagates through the style system.")
@@ -132,14 +132,14 @@ Button("Tap me") {
     count += 1
 }
 
-// Label closure — preferred for styled buttons
+// Label closure - preferred for styled buttons
 Button {
     saveDocument()
 } label: {
     Label("Save", systemImage: "square.and.arrow.down")
 }
 
-// Destructive role — turns red automatically
+// Destructive role - turns red automatically
 Button(role: .destructive) {
     deleteItem()
 } label: {

@@ -24,31 +24,31 @@ struct HapticVisual: View {
     }
  
     var options: [HapticOption] {[
-        HapticOption(name: "Light impact", subtitle: ".light — subtle, non-intrusive", color: Color(hex: "#B5D4F4")) {
+        HapticOption(name: "Light impact", subtitle: ".light - subtle, non-intrusive", color: Color(hex: "#B5D4F4")) {
             UIImpactFeedbackGenerator(style: .light).impactOccurred()
         },
-        HapticOption(name: "Medium impact", subtitle: ".medium — standard interaction", color: Color.btnPurple) {
+        HapticOption(name: "Medium impact", subtitle: ".medium - standard interaction", color: Color.btnPurple) {
             UIImpactFeedbackGenerator(style: .medium).impactOccurred()
         },
-        HapticOption(name: "Heavy impact", subtitle: ".heavy — strong, noticeable", color: Color(hex: "#3C3489")) {
+        HapticOption(name: "Heavy impact", subtitle: ".heavy - strong, noticeable", color: Color(hex: "#3C3489")) {
             UIImpactFeedbackGenerator(style: .heavy).impactOccurred()
         },
-        HapticOption(name: "Rigid", subtitle: ".rigid — sharp, mechanical", color: Color.animAmber) {
+        HapticOption(name: "Rigid", subtitle: ".rigid - sharp, mechanical", color: Color.animAmber) {
             UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
         },
-        HapticOption(name: "Soft", subtitle: ".soft — muffled, cushioned", color: Color.animTeal) {
+        HapticOption(name: "Soft", subtitle: ".soft - muffled, cushioned", color: Color.animTeal) {
             UIImpactFeedbackGenerator(style: .soft).impactOccurred()
         },
-        HapticOption(name: "Success", subtitle: "Notification — task completed", color: Color.sfGreen) {
+        HapticOption(name: "Success", subtitle: "Notification - task completed", color: Color.sfGreen) {
             UINotificationFeedbackGenerator().notificationOccurred(.success)
         },
-        HapticOption(name: "Warning", subtitle: "Notification — needs attention", color: Color.animAmber) {
+        HapticOption(name: "Warning", subtitle: "Notification - needs attention", color: Color.animAmber) {
             UINotificationFeedbackGenerator().notificationOccurred(.warning)
         },
-        HapticOption(name: "Error", subtitle: "Notification — something failed", color: Color.animCoral) {
+        HapticOption(name: "Error", subtitle: "Notification - something failed", color: Color.animCoral) {
             UINotificationFeedbackGenerator().notificationOccurred(.error)
         },
-        HapticOption(name: "Selection", subtitle: "UISelectionFeedbackGenerator — picker change", color: Color.animPink) {
+        HapticOption(name: "Selection", subtitle: "UISelectionFeedbackGenerator - picker change", color: Color.animPink) {
             UISelectionFeedbackGenerator().selectionChanged()
         },
     ]}
@@ -119,7 +119,7 @@ struct HapticExplanation: View {
             Text("Haptic feedback communicates information through touch. Apple's Taptic Engine can produce precise, nuanced patterns, which can use them to confirm actions, signal errors, and make interactions feel physical.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
-            SectionHeader(text: "UIImpactFeedbackGenerator — physical collisions")
+            SectionHeader(text: "UIImpactFeedbackGenerator - physical collisions")
             VStack(spacing: 8) {
                 hapticRow(".light",  "Subtle confirmation. Toggle switches, quiet acknowledgements.")
                 hapticRow(".medium", "Standard tap feedback. Most button presses.")
@@ -128,14 +128,14 @@ struct HapticExplanation: View {
                 hapticRow(".soft",   "Muffled, cushioned. Gentle interactions.")
             }
  
-            SectionHeader(text: "UINotificationFeedbackGenerator — outcomes")
+            SectionHeader(text: "UINotificationFeedbackGenerator - outcomes")
             VStack(spacing: 8) {
                 hapticRow(".success", "Task completed successfully.")
                 hapticRow(".warning", "Something needs attention.")
                 hapticRow(".error",   "Something went wrong.")
             }
  
-            SectionHeader(text: "UISelectionFeedbackGenerator — value changes")
+            SectionHeader(text: "UISelectionFeedbackGenerator - value changes")
             VStack(spacing: 8) {
                 hapticRow(".selectionChanged", "Picker scrolls, slider value changes, segment changes.")
             }
@@ -145,18 +145,18 @@ struct HapticExplanation: View {
             CalloutBox(style: .info, title: "Use sparingly", contentBody: "Haptics are powerful precisely because they're rare. Triggering impact feedback on every keystroke or scroll event desensitises users and drains the battery. Use them for meaningful moments only.")
  
             CodeBlock(code: """
-// Impact — most common
+// Impact - most common
 let impact = UIImpactFeedbackGenerator(style: .medium)
 impact.prepare()  // warm up the engine
 impact.impactOccurred()
  
-// Notification — outcomes
+// Notification - outcomes
 let notification = UINotificationFeedbackGenerator()
 notification.notificationOccurred(.success)
 notification.notificationOccurred(.warning)
 notification.notificationOccurred(.error)
  
-// Selection — value changes
+// Selection - value changes
 let selection = UISelectionFeedbackGenerator()
 selection.selectionChanged()
  
