@@ -41,6 +41,16 @@
 		054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D72F711A24003BA047 /* 6_alignment.swift */; };
 		054ED8DA2F711A63003BA047 /* 7_effectsReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D92F711A5F003BA047 /* 7_effectsReference.swift */; };
 		054ED8DC2F71229C003BA047 /* 0_symbolbrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8DB2F712297003BA047 /* 0_symbolbrowser.swift */; };
+		0555455A2F72740F006086F5 /* bottomsheetsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545592F72740A006086F5 /* bottomsheetsTopic.swift */; };
+		0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555455B2F727428006086F5 /* 1_sheetBasics.swift */; };
+		0555455E2F7274C7006086F5 /* 2_detents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555455D2F7274C2006086F5 /* 2_detents.swift */; };
+		055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555455F2F72751A006086F5 /* 3_multipleDetents.swift */; };
+		055545622F727578006086F5 /* 4_dragIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545612F727573006086F5 /* 4_dragIndicator.swift */; };
+		055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545632F7275D1006086F5 /* 5_backgroundInteraction.swift */; };
+		055545662F72766A006086F5 /* 6_customBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545652F727664006086F5 /* 6_customBackground.swift */; };
+		055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545672F7276D3006086F5 /* 7_fullScreenCover.swift */; };
+		0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 055545692F727731006086F5 /* 8_programmaticDismiss.swift */; };
+		0555456C2F7277B1006086F5 /* 9_sheetLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0555456B2F7277AB006086F5 /* 9_sheetLayout.swift */; };
 		0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563753D2F71C08E001E7148 /* ButtonsTopic.swift */; };
 		056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0563753F2F71C0E5001E7148 /* 1_buttonBasics.swift */; };
 		056375422F71C12C001E7148 /* 2_buttonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 056375412F71C120001E7148 /* 2_buttonStyles.swift */; };
@@ -69,7 +79,6 @@
 		05685BB52F6AAF9C004643FF /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BB42F6AAF98004643FF /* HomeView.swift */; };
 		05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BB62F6AAFD1004643FF /* TopicDetailView.swift */; };
 		05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BB82F6AB050004643FF /* ConcurrencyTopic.swift */; };
-		05685BBB2F6AB0AD004643FF /* PlaceHolderTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BBA2F6AB0A8004643FF /* PlaceHolderTopic.swift */; };
 		05685BBE2F6AB68A004643FF /* KeyboardTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BBD2F6AB688004643FF /* KeyboardTopic.swift */; };
 		05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BBF2F6AB6A6004643FF /* 1_keyboardtypes.swift */; };
 		05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC12F6AB6EB004643FF /* 2_focusmanagement.swift */; };
@@ -87,7 +96,6 @@
 		05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8243E2F6B3C7200A81A2F /* 7_TextMask.swift */; };
 		05D824412F6B3C9100A81A2F /* 8_AnimatedReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824402F6B3C8500A81A2F /* 8_AnimatedReveal.swift */; };
 		05D824432F6B3CAE00A81A2F /* 9_PathMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824422F6B3CA600A81A2F /* 9_PathMask.swift */; };
-		05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */; };
 		C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */; };
 		C80B1C3A2C6646FE002ED295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C392C6646FE002ED295 /* Assets.xcassets */; };
 		C80B1C3D2C6646FE002ED295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C80B1C3C2C6646FE002ED295 /* Preview Assets.xcassets */; };
@@ -129,6 +137,16 @@
 		054ED8D72F711A24003BA047 /* 6_alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_alignment.swift; sourceTree = "<group>"; };
 		054ED8D92F711A5F003BA047 /* 7_effectsReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_effectsReference.swift; sourceTree = "<group>"; };
 		054ED8DB2F712297003BA047 /* 0_symbolbrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 0_symbolbrowser.swift; sourceTree = "<group>"; };
+		055545592F72740A006086F5 /* bottomsheetsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bottomsheetsTopic.swift; sourceTree = "<group>"; };
+		0555455B2F727428006086F5 /* 1_sheetBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_sheetBasics.swift; sourceTree = "<group>"; };
+		0555455D2F7274C2006086F5 /* 2_detents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_detents.swift; sourceTree = "<group>"; };
+		0555455F2F72751A006086F5 /* 3_multipleDetents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_multipleDetents.swift; sourceTree = "<group>"; };
+		055545612F727573006086F5 /* 4_dragIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_dragIndicator.swift; sourceTree = "<group>"; };
+		055545632F7275D1006086F5 /* 5_backgroundInteraction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_backgroundInteraction.swift; sourceTree = "<group>"; };
+		055545652F727664006086F5 /* 6_customBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_customBackground.swift; sourceTree = "<group>"; };
+		055545672F7276D3006086F5 /* 7_fullScreenCover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_fullScreenCover.swift; sourceTree = "<group>"; };
+		055545692F727731006086F5 /* 8_programmaticDismiss.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_programmaticDismiss.swift; sourceTree = "<group>"; };
+		0555456B2F7277AB006086F5 /* 9_sheetLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_sheetLayout.swift; sourceTree = "<group>"; };
 		0563753D2F71C08E001E7148 /* ButtonsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsTopic.swift; sourceTree = "<group>"; };
 		0563753F2F71C0E5001E7148 /* 1_buttonBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_buttonBasics.swift; sourceTree = "<group>"; };
 		056375412F71C120001E7148 /* 2_buttonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_buttonStyles.swift; sourceTree = "<group>"; };
@@ -157,7 +175,6 @@
 		05685BB42F6AAF98004643FF /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		05685BB62F6AAFD1004643FF /* TopicDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicDetailView.swift; sourceTree = "<group>"; };
 		05685BB82F6AB050004643FF /* ConcurrencyTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcurrencyTopic.swift; sourceTree = "<group>"; };
-		05685BBA2F6AB0A8004643FF /* PlaceHolderTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceHolderTopic.swift; sourceTree = "<group>"; };
 		05685BBD2F6AB688004643FF /* KeyboardTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardTopic.swift; sourceTree = "<group>"; };
 		05685BBF2F6AB6A6004643FF /* 1_keyboardtypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_keyboardtypes.swift; sourceTree = "<group>"; };
 		05685BC12F6AB6EB004643FF /* 2_focusmanagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_focusmanagement.swift; sourceTree = "<group>"; };
@@ -175,7 +192,6 @@
 		05D8243E2F6B3C7200A81A2F /* 7_TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_TextMask.swift; sourceTree = "<group>"; };
 		05D824402F6B3C8500A81A2F /* 8_AnimatedReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_AnimatedReveal.swift; sourceTree = "<group>"; };
 		05D824422F6B3CA600A81A2F /* 9_PathMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_PathMask.swift; sourceTree = "<group>"; };
-		05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheet.swift; sourceTree = "<group>"; };
 		C80B1C322C6646FA002ED295 /* SwiftUI Topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI Topics.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C80B1C352C6646FA002ED295 /* SwiftUI_TopicsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_TopicsApp.swift; sourceTree = "<group>"; };
 		C80B1C392C6646FE002ED295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -261,6 +277,23 @@
 				051499B12F715E7B00EE4E83 /* 9_customSymbol.swift */,
 			);
 			path = "SF Symbols";
+			sourceTree = "<group>";
+		};
+		055545582F7273FF006086F5 /* BottomSheets */ = {
+			isa = PBXGroup;
+			children = (
+				055545592F72740A006086F5 /* bottomsheetsTopic.swift */,
+				0555455B2F727428006086F5 /* 1_sheetBasics.swift */,
+				0555455D2F7274C2006086F5 /* 2_detents.swift */,
+				0555455F2F72751A006086F5 /* 3_multipleDetents.swift */,
+				055545612F727573006086F5 /* 4_dragIndicator.swift */,
+				055545632F7275D1006086F5 /* 5_backgroundInteraction.swift */,
+				055545652F727664006086F5 /* 6_customBackground.swift */,
+				055545672F7276D3006086F5 /* 7_fullScreenCover.swift */,
+				055545692F727731006086F5 /* 8_programmaticDismiss.swift */,
+				0555456B2F7277AB006086F5 /* 9_sheetLayout.swift */,
+			);
+			path = BottomSheets;
 			sourceTree = "<group>";
 		};
 		05685B8D2F6A8F60004643FF /* Models */ = {
@@ -406,17 +439,16 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				055545582F7273FF006086F5 /* BottomSheets */,
 				054ED8CC2F7117F7003BA047 /* SF Symbols */,
 				051191862F6FE2220089F2FF /* Animations */,
 				05D8242B2F6B30E700A81A2F /* Masking Lessons */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 				05685BBC2F6AB66A004643FF /* Keyboard Lessons */,
-				05685BBA2F6AB0A8004643FF /* PlaceHolderTopic.swift */,
 				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
 				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
 				059799FC2F06585800905892 /* Buttons */,
-				05F7E1EC2EE22F2A0070EE3A /* BottomSheet.swift */,
 			);
 			path = Topics;
 			sourceTree = "<group>";
@@ -500,9 +532,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				05685B772F6A74B5004643FF /* Lesson.swift in Sources */,
+				055545622F727578006086F5 /* 4_dragIndicator.swift in Sources */,
 				051191A52F6FFBD80089F2FF /* 7_SymbolEffect.swift in Sources */,
 				051499B02F715CFF00EE4E83 /* 5_variants.swift in Sources */,
 				056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */,
+				0555456C2F7277B1006086F5 /* 9_sheetLayout.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
@@ -531,13 +565,16 @@
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
 				0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */,
 				054ED8D42F7119B0003BA047 /* 3_variablecolor.swift in Sources */,
+				0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */,
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
+				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				0563754A2F71C261001E7148 /* 6_buttonConfirmation.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
 				0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */,
+				0555455A2F72740F006086F5 /* bottomsheetsTopic.swift in Sources */,
 				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
 				051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */,
 				05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */,
@@ -555,9 +592,9 @@
 				05685BA52F6A9518004643FF /* 5_AsyncLet.swift in Sources */,
 				054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
-				05F7E1ED2EE22F3D0070EE3A /* BottomSheet.swift in Sources */,
 				054ED8DC2F71229C003BA047 /* 0_symbolbrowser.swift in Sources */,
 				05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */,
+				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
 				05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */,
 				05685BB12F6AAF1A004643FF /* TopicRegistry.swift in Sources */,
 				05D8243B2F6B3BFD00A81A2F /* 5_invertedMask.swift in Sources */,
@@ -566,20 +603,23 @@
 				05D824372F6B3BD100A81A2F /* 3_clipShapes.swift in Sources */,
 				05685B9E2F6A8F9D004643FF /* 3_RaceCondition.swift in Sources */,
 				05685BBE2F6AB68A004643FF /* KeyboardTopic.swift in Sources */,
+				055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */,
 				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
 				054ED8D62F7119D4003BA047 /* 4_weightscale.swift in Sources */,
 				05685B9F2F6A8F9D004643FF /* 4_Actor.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
+				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				05685BA12F6A8F9D004643FF /* SharedComponents.swift in Sources */,
+				055545662F72766A006086F5 /* 6_customBackground.swift in Sources */,
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
 				056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
 				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
-				05685BBB2F6AB0AD004643FF /* PlaceHolderTopic.swift in Sources */,
 				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
+				0555455E2F7274C7006086F5 /* 2_detents.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
