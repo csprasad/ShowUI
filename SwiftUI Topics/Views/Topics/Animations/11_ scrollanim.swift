@@ -164,15 +164,15 @@ struct ScrollAnimVisual: View {
 struct ScrollAnimExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "Scroll animations — iOS 17+")
-            Text("iOS 17 introduced first-class scroll animation APIs that let views react to their position in a scroll view. Previously this required GeometryReader hacks — now it's declarative and performant.")
+            SectionHeader(text: "Scroll animations - iOS 17+")
+            Text("iOS 17 introduced first-class scroll animation APIs that let views react to their position in a scroll view. Previously this required GeometryReader hacks - now it's declarative and performant.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".scrollTransition — apply effects as items enter and leave the visible area. phase.isIdentity is true when fully visible.", color: .animTeal)
-                StepRow(number: 2, text: ".visualEffect — access the view's geometry relative to the scroll view and apply transforms, opacity, blur.", color: .animTeal)
-                StepRow(number: 3, text: "Parallax — use GeometryReader inside the item to read scroll offset and offset content at a reduced rate.", color: .animTeal)
-                StepRow(number: 4, text: ".scrollTargetBehavior(.viewAligned) — snap scroll to individual items, like a pager.", color: .animTeal)
+                StepRow(number: 1, text: ".scrollTransition - apply effects as items enter and leave the visible area. phase.isIdentity is true when fully visible.", color: .animTeal)
+                StepRow(number: 2, text: ".visualEffect - access the view's geometry relative to the scroll view and apply transforms, opacity, blur.", color: .animTeal)
+                StepRow(number: 3, text: "Parallax - use GeometryReader inside the item to read scroll offset and offset content at a reduced rate.", color: .animTeal)
+                StepRow(number: 4, text: ".scrollTargetBehavior(.viewAligned) - snap scroll to individual items, like a pager.", color: .animTeal)
             }
 
             CalloutBox(style: .success, title: "scrollTransition phases", contentBody: "Phase has three states: .topLeading (item entering from top/leading), .identity (fully visible), .bottomTrailing (item leaving toward bottom/trailing). Drive all your effects from these three states.")
@@ -180,7 +180,7 @@ struct ScrollAnimExplanation: View {
             CalloutBox(style: .warning, title: "Performance note", contentBody: "visualEffect runs on every scroll frame. Keep the closure lightweight, transforms and opacity are fine. Avoid layout changes or heavy computation inside it.")
 
             CodeBlock(code: """
-// scrollTransition — fade and scale items as they scroll
+// scrollTransition - fade and scale items as they scroll
 ForEach(items) { item in
     CardView(item: item)
         .scrollTransition { content, phase in
@@ -191,7 +191,7 @@ ForEach(items) { item in
         }
 }
 
-// visualEffect — geometry-based effects
+// visualEffect - geometry-based effects
 CardView()
     .visualEffect { content, proxy in
         let frame = proxy.frame(in: .scrollView(axis: .horizontal))

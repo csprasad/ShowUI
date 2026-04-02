@@ -101,7 +101,7 @@ struct TopicDetailView: View {
                     .padding(.bottom, 4)
                 }
             } else {
-                // Flat list — no sections
+                // Flat list - no sections
                 ForEach(topic.lessons) { lesson in
                     NavigationLink(destination: LessonDetailView(lesson: lesson, topic: topic)) {
                         LessonRowCard(lesson: lesson, accentColor: topic.accentColor)

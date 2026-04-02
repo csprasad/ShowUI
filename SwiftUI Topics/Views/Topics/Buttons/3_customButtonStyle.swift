@@ -183,8 +183,8 @@ struct CustomStyleExplanation: View {
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Conform to ButtonStyle and implement makeBody(configuration:).", color: .btnPurple)
-                StepRow(number: 2, text: "configuration.label is the button's content — apply modifiers to it.", color: .btnPurple)
-                StepRow(number: 3, text: "configuration.isPressed is a Bool — true while the user's finger is down.", color: .btnPurple)
+                StepRow(number: 2, text: "configuration.label is the button's content - apply modifiers to it.", color: .btnPurple)
+                StepRow(number: 3, text: "configuration.isPressed is a Bool - true while the user's finger is down.", color: .btnPurple)
                 StepRow(number: 4, text: "Add .contentShape(Rectangle()) to ensure the full frame is tappable, not just the visible content.", color: .btnPurple)
                 StepRow(number: 5, text: "Animate using .animation(_:value: configuration.isPressed) for smooth press feedback.", color: .btnPurple)
             }

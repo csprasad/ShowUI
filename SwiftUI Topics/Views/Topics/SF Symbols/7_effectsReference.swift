@@ -137,25 +137,25 @@ struct EffectsReferenceVisual: View {
 struct EffectsReferenceExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "Symbol effects — quick reference")
+            SectionHeader(text: "Symbol effects - quick reference")
             Text("Symbol effects are covered in depth in the Animations topic (Lesson 7). This is a quick reference for the most common effects and their availability.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".bounce, .pulse, .variableColor, .appear, .disappear — iOS 17+", color: .sfGreen)
-                StepRow(number: 2, text: ".wiggle, .breathe, .rotate — iOS 18+", color: .sfGreen)
-                StepRow(number: 3, text: "value: trigger — fires once when value changes.", color: .sfGreen)
-                StepRow(number: 4, text: "options: .repeating, isActive: bool — loops while true.", color: .sfGreen)
+                StepRow(number: 1, text: ".bounce, .pulse, .variableColor, .appear, .disappear - iOS 17+", color: .sfGreen)
+                StepRow(number: 2, text: ".wiggle, .breathe, .rotate - iOS 18+", color: .sfGreen)
+                StepRow(number: 3, text: "value: trigger - fires once when value changes.", color: .sfGreen)
+                StepRow(number: 4, text: "options: .repeating, isActive: bool - loops while true.", color: .sfGreen)
             }
 
             CalloutBox(style: .info, title: "See Animations → Lesson 7", contentBody: "The full interactive lesson with all effects, trigger vs loop modes, and layer-aware behaviour is in the Animations topic.")
 
             CodeBlock(code: """
-// Trigger once — value changes fire the effect
+// Trigger once - value changes fire the effect
 Image(systemName: "bell.fill")
     .symbolEffect(.bounce, value: notificationCount)
 
-// Loop — runs while isActive is true
+// Loop - runs while isActive is true
 Image(systemName: "arrow.circlepath")
     .symbolEffect(.rotate, options: .repeating, isActive: isLoading)
 

@@ -108,7 +108,7 @@ struct LuminanceMaskExplanation: View {
             CalloutBox(style: .success, title: "True inverted mask", contentBody: "Wrap your shape in a ZStack with Color.white background, color the shape black, then apply .luminanceToAlpha(). Result: content visible everywhere except inside the shape.")
 
             CodeBlock(code: """
-// True inverted mask — visible everywhere except the shape
+// True inverted mask - visible everywhere except the shape
 content
     .mask {
         ZStack {

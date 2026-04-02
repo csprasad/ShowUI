@@ -30,7 +30,7 @@ struct DrawingGroupVisual: View {
                     VStack(alignment: .leading, spacing: 1) {
                         Text("drawingGroup()")
                             .font(.system(size: 13, weight: .semibold))
-                        Text(useDrawingGroup ? "Metal rendering — offloads to GPU" : "Standard CPU rendering")
+                        Text(useDrawingGroup ? "Metal rendering - offloads to GPU" : "Standard CPU rendering")
                             .font(.system(size: 11))
                             .foregroundStyle(.secondary)
                     }
@@ -81,8 +81,8 @@ struct DrawingGroupVisual: View {
                         .font(.system(size: 12))
                         .foregroundStyle(useDrawingGroup ? Color.animTeal : Color.animPink)
                     Text(useDrawingGroup
-                        ? "Flattened to a Metal texture — better for many overlapping transparent views"
-                        : "Each view rendered individually — can drop frames with many blended views")
+                        ? "Flattened to a Metal texture - better for many overlapping transparent views"
+                        : "Each view rendered individually - can drop frames with many blended views")
                         .font(.system(size: 12))
                         .foregroundStyle(.secondary)
                         .lineLimit(2)

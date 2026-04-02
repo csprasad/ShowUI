@@ -126,7 +126,7 @@ struct SymbolEffectVisual: View {
         let size: CGFloat = 56
 
         switch selectedEffect {
-        case 0: // bounce — discrete trigger is iOS 17+, repeating loop is iOS 18+
+        case 0: // bounce - discrete trigger is iOS 17+, repeating loop is iOS 18+
             if #available(iOS 18.0, *) {
                 Image(systemName: icon).font(.system(size: size))
                     .foregroundStyle(Color.animPurple)
@@ -137,29 +137,29 @@ struct SymbolEffectVisual: View {
                     .foregroundStyle(Color.animPurple)
                     .symbolEffect(.bounce, value: trigger)
             }
-        case 1: // pulse — iOS 17+
+        case 1: // pulse - iOS 17+
             Image(systemName: icon).font(.system(size: size))
                 .foregroundStyle(Color.animCoral)
                 .symbolEffect(.pulse, value: trigger)
                 .symbolEffect(.pulse, options: .repeating, isActive: isActive)
  
-        case 2: // variableColor — iOS 17+
+        case 2: // variableColor - iOS 17+
             Image(systemName: icon).font(.system(size: size))
                 .foregroundStyle(Color.animTeal)
                 .symbolEffect(.variableColor, value: trigger)
                 .symbolEffect(.variableColor.iterative.reversing, options: .repeating, isActive: isActive)
  
-        case 3: // appear — iOS 17+
+        case 3: // appear - iOS 17+
             Image(systemName: icon).font(.system(size: size))
                 .foregroundStyle(Color.animPurple)
                 .symbolEffect(.appear, isActive: trigger % 2 == 1)
  
-        case 4: // disappear — iOS 17+
+        case 4: // disappear - iOS 17+
             Image(systemName: icon).font(.system(size: size))
                 .foregroundStyle(Color.animPink)
                 .symbolEffect(.disappear, isActive: trigger % 2 == 1)
  
-        case 5: // wiggle — iOS 18+
+        case 5: // wiggle - iOS 18+
             if #available(iOS 18.0, *) {
                 Image(systemName: icon).font(.system(size: size))
                     .foregroundStyle(Color.animAmber)
@@ -169,7 +169,7 @@ struct SymbolEffectVisual: View {
                 unavailableOverlay("wiggle")
             }
  
-        case 6: // breathe — iOS 18+
+        case 6: // breathe - iOS 18+
             if #available(iOS 18.0, *) {
                 Image(systemName: icon).font(.system(size: size))
                     .foregroundStyle(Color.animBlue)
@@ -179,7 +179,7 @@ struct SymbolEffectVisual: View {
                 unavailableOverlay("breathe")
             }
  
-        default: // rotate — iOS 18+
+        default: // rotate - iOS 18+
             if #available(iOS 18.0, *) {
                 Image(systemName: icon).font(.system(size: size))
                     .foregroundStyle(Color.animTeal)
@@ -206,16 +206,16 @@ struct SymbolEffectVisual: View {
 struct SymbolEffectExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "SF Symbol effects — iOS 17+")
+            SectionHeader(text: "SF Symbol effects - iOS 17+")
             Text("symbolEffect() applies physics-based animations to SF Symbols using Apple's built-in symbol animation engine. Each effect understands the layers inside the symbol, so they don't just scale or fade the whole image.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".bounce — great for notifications, confirmations, draw attention.", color: .animPurple)
-                StepRow(number: 2, text: ".pulse — subtle emphasis, ideal for loading or waiting states.", color: .animPurple)
-                StepRow(number: 3, text: ".wiggle — conveys error, deletion, or incorrect action.", color: .animPurple)
-                StepRow(number: 4, text: ".variableColor — animates the variable color layers in sequence. Perfect for speaker waves, signal bars.", color: .animPurple)
-                StepRow(number: 5, text: ".appear / .disappear — animate the symbol into or out of existence, layer by layer.", color: .animPurple)
+                StepRow(number: 1, text: ".bounce - great for notifications, confirmations, draw attention.", color: .animPurple)
+                StepRow(number: 2, text: ".pulse - subtle emphasis, ideal for loading or waiting states.", color: .animPurple)
+                StepRow(number: 3, text: ".wiggle - conveys error, deletion, or incorrect action.", color: .animPurple)
+                StepRow(number: 4, text: ".variableColor - animates the variable color layers in sequence. Perfect for speaker waves, signal bars.", color: .animPurple)
+                StepRow(number: 5, text: ".appear / .disappear - animate the symbol into or out of existence, layer by layer.", color: .animPurple)
             }
 
             CalloutBox(style: .info, title: "Two trigger styles", contentBody: "value: trigger fires once on change. options: .repeating, isActive: looping fires continuously while a Bool is true. Use the right one for the context.")
@@ -235,7 +235,7 @@ Image(systemName: "arrow.circlepath")
 Image(systemName: "star.fill")
     .symbolEffect(.appear, isActive: isVisible)
 
-// Variable color — great for signal/volume
+// Variable color - great for signal/volume
 Image(systemName: "speaker.wave.3.fill")
     .symbolEffect(.variableColor.iterative.reversing,
                   options: .repeating, isActive: isPlaying)

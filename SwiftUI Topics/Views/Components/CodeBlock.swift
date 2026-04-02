@@ -94,7 +94,7 @@ struct CodeBlock: View {
                         "async", "throws", "private", "public", "static", "import",
                         "true", "false", "nil", "self", "some", "any"]
  
-        // Comments — grey
+        // Comments - grey
         if let commentRange = line.range(of: "//") {
             let nsStart = line.distance(from: line.startIndex, to: commentRange.lowerBound)
             if let attrRange = Range(NSRange(location: nsStart, length: line.count - nsStart), in: result) {
@@ -102,7 +102,7 @@ struct CodeBlock: View {
             }
         }
  
-        // String literals — orange/amber
+        // String literals - orange/amber
         let stringPattern = try? NSRegularExpression(pattern: #""[^"]*""#)
         let nsLine = line as NSString
         stringPattern?.enumerateMatches(in: line, range: NSRange(location: 0, length: nsLine.length)) { match, _, _ in
@@ -110,7 +110,7 @@ struct CodeBlock: View {
             result[range].foregroundColor = UIColor.systemOrange
         }
  
-        // Keywords — purple/indigo
+        // Keywords - purple/indigo
         for keyword in keywords {
             let pattern = "\\b\(keyword)\\b"
             guard let regex = try? NSRegularExpression(pattern: pattern) else { continue }
@@ -120,14 +120,14 @@ struct CodeBlock: View {
             }
         }
  
-        // Type names starting with uppercase — blue
+        // Type names starting with uppercase - blue
         let typePattern = try? NSRegularExpression(pattern: "\\b[A-Z][a-zA-Z0-9]*\\b")
         typePattern?.enumerateMatches(in: line, range: NSRange(location: 0, length: nsLine.length)) { match, _, _ in
             guard let match, let range = Range(match.range, in: result) else { return }
             result[range].foregroundColor = UIColor.systemBlue
         }
  
-        // Modifiers starting with . — teal
+        // Modifiers starting with . - teal
         let dotPattern = try? NSRegularExpression(pattern: #"\.[a-zA-Z][a-zA-Z0-9]*"#)
         dotPattern?.enumerateMatches(in: line, range: NSRange(location: 0, length: nsLine.length)) { match, _, _ in
             guard let match, let range = Range(match.range, in: result) else { return }

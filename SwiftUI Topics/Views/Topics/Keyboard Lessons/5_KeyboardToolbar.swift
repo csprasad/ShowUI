@@ -28,7 +28,7 @@ struct KeyboardToolbarVisual: View {
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color(hex: "#185FA5"))
 
-                Text("Tap the field — buttons appear above the keyboard")
+                Text("Tap the field - buttons appear above the keyboard")
                     .font(.system(size: 13))
                     .foregroundStyle(.secondary)
 
@@ -108,7 +108,7 @@ struct KeyboardToolbarExplanation: View {
                 StepRow(number: 3, text: "Always include a Done button that sets your @FocusState to nil.", color: Color(hex: "#185FA5"))
             }
 
-            CalloutBox(style: .success, title: "Rich toolbar pattern", contentBody: "Combine a ScrollView(.horizontal) of action buttons on the left with a Spacer() and a Done button on the right — the standard iOS pattern.")
+            CalloutBox(style: .success, title: "Rich toolbar pattern", contentBody: "Combine a ScrollView(.horizontal) of action buttons on the left with a Spacer() and a Done button on the right - the standard iOS pattern.")
 
             CodeBlock(code: """
 TextField("Amount", text: $amount)

@@ -76,7 +76,7 @@ struct TappableAreasVisual: View {
     private var demoView: some View {
         switch selectedDemo {
         case 0:
-            // Problem — tiny hit target
+            // Problem - tiny hit target
             VStack(spacing: 6) {
                 Text("Hit area = icon only")
                     .font(.system(size: 11)).foregroundStyle(.secondary)
@@ -94,7 +94,7 @@ struct TappableAreasVisual: View {
             }
  
         case 1:
-            // Fix — minimum 44×44 tap target
+            // Fix - minimum 44×44 tap target
             VStack(spacing: 6) {
                 Text("Hit area = 44×44pt minimum")
                     .font(.system(size: 11)).foregroundStyle(.secondary)
@@ -159,20 +159,20 @@ struct TappableAreasExplanation: View {
             CalloutBox(style: .success, title: "contentShape also fixes List rows", contentBody: "SwiftUI List rows with Spacer() in an HStack don't make the Spacer tappable. Add .contentShape(Rectangle()) to the HStack to make the entire row respond to taps.")
  
             CodeBlock(code: """
-// Problem — 16pt icon, tiny hit area
+// Problem - 16pt icon, tiny hit area
 Button { } label: {
     Image(systemName: "star")
         .font(.system(size: 16))
 }
  
-// Fix 1 — explicit minimum frame
+// Fix 1 - explicit minimum frame
 Button { } label: {
     Image(systemName: "star")
         .font(.system(size: 16))
         .frame(width: 44, height: 44)
 }
  
-// Fix 2 — contentShape expands without changing look
+// Fix 2 - contentShape expands without changing look
 Button { } label: {
     HStack {
         Image(systemName: "star")

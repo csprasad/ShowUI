@@ -57,7 +57,7 @@ struct BlendCategoryVisual: View {
                         )
                         .frame(width: geo.size.width, height: 140)
 
-                        // Overlay — sized to card width so it doesn't bleed out
+                        // Overlay - sized to card width so it doesn't bleed out
                         Rectangle()
                             .fill(overlayColor)
                             .frame(width: geo.size.width * 0.75, height: 120)
@@ -80,7 +80,7 @@ struct BlendCategoryVisual: View {
                 .animation(.easeInOut(duration: 0.2), value: selectedIndex)
                 .animation(.easeInOut(duration: 0.2), value: overlayColor)
 
-                // Mode selector chips — tap to switch the preview above
+                // Mode selector chips - tap to switch the preview above
                 let columns = Array(repeating: GridItem(.flexible(), spacing: 8), count: min(modes.count, 2))
                 LazyVGrid(columns: columns, spacing: 8) {
                     ForEach(modes.indices, id: \.self) { i in
@@ -115,7 +115,7 @@ struct BlendCategoryVisual: View {
             }
         } label: {
             HStack(spacing: 8) {
-                // Mini swatch — still shows the mode at small scale
+                // Mini swatch - still shows the mode at small scale
                 ZStack {
                     LinearGradient(
                         colors: [Color(hex: "#B5D4F4"), Color(hex: "#FAC775")],
@@ -174,7 +174,7 @@ struct BlendCategoryExplanation: View {
             VStack(spacing: 12) {
                 ForEach(category.modes.indices, id: \.self) { i in
                     let mode = category.modes[i]
-                    StepRow(number: i + 1, text: "\(mode.name) — \(mode.description)", color: category.accentColor)
+                    StepRow(number: i + 1, text: "\(mode.name) - \(mode.description)", color: category.accentColor)
                 }
             }
 
@@ -230,69 +230,69 @@ struct BlendCategoryExplanation: View {
         switch category {
         case .darken:
             return """
-// Multiply — classic shadow effect
+// Multiply - classic shadow effect
 Rectangle()
     .fill(.black.opacity(0.5))
     .blendMode(.multiply)
 
-// Color Burn — intense darkening
+// Color Burn - intense darkening
 Image("texture")
     .blendMode(.colorBurn)
 """
         case .lighten:
             return """
-// Screen — glow / light leak effect
+// Screen - glow / light leak effect
 Circle()
     .fill(.white.opacity(0.8))
     .blendMode(.screen)
 
-// Color Dodge — extreme brightening
+// Color Dodge - extreme brightening
 Rectangle()
     .fill(.yellow)
     .blendMode(.colorDodge)
 """
         case .contrast:
             return """
-// Overlay — adds texture to photos
+// Overlay - adds texture to photos
 Image("grunge_texture")
     .blendMode(.overlay)
 
-// Soft Light — subtle mood shift
+// Soft Light - subtle mood shift
 Rectangle()
     .fill(.orange.opacity(0.4))
     .blendMode(.softLight)
 """
         case .inversion:
             return """
-// Difference — psychedelic inversion
+// Difference - psychedelic inversion
 Rectangle()
     .fill(.white)
     .blendMode(.difference)  // fully inverts base
 
-// Exclusion — softer version
+// Exclusion - softer version
 Rectangle()
     .fill(color)
     .blendMode(.exclusion)
 """
         case .component:
             return """
-// Color — colorize a grayscale image
+// Color - colorize a grayscale image
 Rectangle()
     .fill(.blue)
     .blendMode(.color)
 
-// Luminosity — apply brightness only
+// Luminosity - apply brightness only
 Image("bright_layer")
     .blendMode(.luminosity)
 """
         case .compositing:
             return """
-// Source Atop — clip to destination shape
+// Source Atop - clip to destination shape
 Circle()
     .fill(.red)
     .blendMode(.sourceAtop)
 
-// Destination Out — punch a hole in dest
+// Destination Out - punch a hole in dest
 Circle()
     .fill(.white)
     .blendMode(.destinationOut)

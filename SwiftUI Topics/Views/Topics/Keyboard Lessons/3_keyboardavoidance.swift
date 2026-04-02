@@ -133,7 +133,7 @@ struct KeyboardAvoidanceVisual: View {
             case .ignored:
                 CalloutBox(style: .danger, title: "Keyboard overlaps content", contentBody: "Use .ignoresSafeArea(.keyboard) when you're handling avoidance yourself or the default behaviour breaks your layout.")
             case .padding:
-                CalloutBox(style: .info, title: "Manual safe area padding", contentBody: "Adds bottom padding equal to the keyboard height. Gives you fine control — useful when the automatic push isn't quite right.")
+                CalloutBox(style: .info, title: "Manual safe area padding", contentBody: "Adds bottom padding equal to the keyboard height. Gives you fine control - useful when the automatic push isn't quite right.")
             }
         }
     }
@@ -142,7 +142,7 @@ struct KeyboardAvoidanceVisual: View {
         switch selectedMode {
         case .automatic:
             return """
-// Default — SwiftUI handles it
+// Default - SwiftUI handles it
 ScrollView {
     TextField("Message", text: $text)
 }
@@ -174,14 +174,14 @@ struct KeyboardAvoidanceExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "How avoidance works")
-            Text("When the keyboard appears it reduces the visible safe area. SwiftUI automatically adjusts scroll views and form content — but sometimes the default behaviour conflicts with your layout.")
+            Text("When the keyboard appears it reduces the visible safe area. SwiftUI automatically adjusts scroll views and form content - but sometimes the default behaviour conflicts with your layout.")
                 .font(.system(size: 15))
                 .foregroundStyle(.secondary)
                 .lineSpacing(4)
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "By default ScrollView and Form push their content up automatically.", color: Color(hex: "#185FA5"))
-                StepRow(number: 2, text: ".ignoresSafeArea(.keyboard) opts out entirely — useful for chat screens where you want manual control.", color: Color(hex: "#185FA5"))
+                StepRow(number: 2, text: ".ignoresSafeArea(.keyboard) opts out entirely - useful for chat screens where you want manual control.", color: Color(hex: "#185FA5"))
                 StepRow(number: 3, text: ".scrollDismissesKeyboard(.interactively) lets users drag the scroll view to dismiss the keyboard.", color: Color(hex: "#185FA5"))
             }
 

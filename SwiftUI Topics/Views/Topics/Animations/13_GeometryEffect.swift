@@ -168,13 +168,13 @@ struct GeometryEffectExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "GeometryEffect")
-            Text("GeometryEffect lets you build custom animated transforms that integrate with SwiftUI's animation system. Unlike modifiers, they animate in the render pass — no view rebuilds, just matrix transforms on every frame.")
+            Text("GeometryEffect lets you build custom animated transforms that integrate with SwiftUI's animation system. Unlike modifiers, they animate in the render pass - no view rebuilds, just matrix transforms on every frame.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Conform to GeometryEffect and implement effectValue(size:) — return a ProjectionTransform.", color: .animAmber)
-                StepRow(number: 2, text: "Expose animatableData — SwiftUI interpolates this and calls effectValue on every frame.", color: .animAmber)
-                StepRow(number: 3, text: "Use sin() to create oscillating effects — sin() returns -1 to 1, scale to your amplitude.", color: .animAmber)
+                StepRow(number: 1, text: "Conform to GeometryEffect and implement effectValue(size:) - return a ProjectionTransform.", color: .animAmber)
+                StepRow(number: 2, text: "Expose animatableData - SwiftUI interpolates this and calls effectValue on every frame.", color: .animAmber)
+                StepRow(number: 3, text: "Use sin() to create oscillating effects - sin() returns -1 to 1, scale to your amplitude.", color: .animAmber)
                 StepRow(number: 4, text: "For 3D effects, use CATransform3D and set m34 for perspective.", color: .animAmber)
             }
 

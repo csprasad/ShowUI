@@ -11,7 +11,7 @@
 
 import SwiftUI
 
-// MARK: - LESSON 17: Scoped Animation — animation(_:body:)
+// MARK: - LESSON 17: Scoped Animation - animation(_:body:)
 struct ScopedAnimationVisual: View {
     @State private var isOn = false
     @State private var selectedDemo = 0
@@ -83,7 +83,7 @@ struct ScopedAnimationVisual: View {
     private var demoView: some View {
         switch selectedDemo {
         case 0:
-            // Problem — .animation() affects everything including the text
+            // Problem - .animation() affects everything including the text
             VStack(spacing: 12) {
                 RoundedRectangle(cornerRadius: 12)
                     .fill(Color.animCoral)
@@ -98,7 +98,7 @@ struct ScopedAnimationVisual: View {
             }
 
         case 1:
-            // Fix — animation scoped only to the shape change
+            // Fix - animation scoped only to the shape change
             VStack(spacing: 12) {
                 animation(.spring(duration: 0.6, bounce: 0.4)) { _ in
                     RoundedRectangle(cornerRadius: 12)
@@ -106,7 +106,7 @@ struct ScopedAnimationVisual: View {
                         .frame(width: isOn ? 140 : 60, height: 50)
                 }
 
-                // Text is NOT affected — no animation applied to it
+                // Text is NOT affected - no animation applied to it
                 Text("Count: \(isOn ? 100 : 0)")
                     .font(.system(size: 16, weight: .bold))
                     .foregroundStyle(.primary)
@@ -148,13 +148,13 @@ struct ScopedAnimationVisual: View {
 struct ScopedAnimationExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "animation(_:body:) — scoped animation")
+            SectionHeader(text: "animation(_:body:) - scoped animation")
             Text("The .animation(_ , value:) modifier is a shotgun, it animates every animatable property on the view whenever value changes. animation(_:body:) is a scalpel, it only animates the properties changed inside its body closure.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".animation(_, value:) on a view animates ALL its animatable properties — offset, scale, color, opacity, frame — anything that can animate.", color: .animCoral)
-                StepRow(number: 2, text: "This causes unintended side effects — a Text inside the view may animate its content change when you only wanted the frame to animate.", color: .animCoral)
+                StepRow(number: 1, text: ".animation(_, value:) on a view animates ALL its animatable properties - offset, scale, color, opacity, frame - anything that can animate.", color: .animCoral)
+                StepRow(number: 2, text: "This causes unintended side effects - a Text inside the view may animate its content change when you only wanted the frame to animate.", color: .animCoral)
                 StepRow(number: 3, text: "animation(_:body:) wraps only the properties you want animated, and everything else in the view remains instant.", color: .animCoral)
                 StepRow(number: 4, text: "Use it whenever you need animation on one property of a view without animating others, especially in list rows or complex layouts.", color: .animCoral)
             }
@@ -164,11 +164,11 @@ struct ScopedAnimationExplanation: View {
             CalloutBox(style: .info, title: "withAnimation still has its place", contentBody: "withAnimation animates all state changes in the block. animation(_:body:) is for view-level scoping. Use withAnimation at the call site, animation(body:) at the view level when you need precision.")
 
             CodeBlock(code: """
-// OLD — animates everything including unintended properties
+// OLD - animates everything including unintended properties
 Text("\\(count)")
     .animation(.spring(), value: count)  // animates text transition too
 
-// NEW — scoped to exact properties in the body
+// NEW - scoped to exact properties in the body
 animation(.spring(duration: 0.4)) {
     RoundedRectangle(cornerRadius: 12)
         .frame(width: isOn ? 200 : 80)  // only this width animates
@@ -178,7 +178,7 @@ Text("\\(count)")
     .contentTransition(.numericText())
     .animation(.spring(duration: 0.2), value: count)  // separate, controlled
 
-// Practical pattern — animate layout without affecting content
+// Practical pattern - animate layout without affecting content
 animation(.bouncy) {
     HStack {
         if isExpanded { Spacer() }

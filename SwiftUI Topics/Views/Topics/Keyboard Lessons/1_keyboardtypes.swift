@@ -244,21 +244,21 @@ struct KeyboardTypesExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "Choosing the right type")
-            Text("SwiftUI exposes every UIKit keyboard type through the .keyboardType() modifier. Picking the right one reduces friction — a number pad for a PIN means the user never has to switch modes.")
+            Text("SwiftUI exposes every UIKit keyboard type through the .keyboardType() modifier. Picking the right one reduces friction - a number pad for a PIN means the user never has to switch modes.")
                 .font(.system(size: 15))
                 .foregroundStyle(.secondary)
                 .lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Numeric input — use .numberPad for integers, .decimalPad when decimals are needed.", color: Color(hex: "#185FA5"))
-                StepRow(number: 2, text: "Contact fields — .emailAddress shows @, .URL shows /, .phonePad shows the dialpad.", color: Color(hex: "#185FA5"))
-                StepRow(number: 3, text: "Passwords and usernames — .asciiCapable prevents autocorrect and emoji.", color: Color(hex: "#185FA5"))
-                StepRow(number: 4, text: "Search fields — .webSearch shows a Search return key instead of Return.", color: Color(hex: "#185FA5"))
+                StepRow(number: 1, text: "Numeric input - use .numberPad for integers, .decimalPad when decimals are needed.", color: Color(hex: "#185FA5"))
+                StepRow(number: 2, text: "Contact fields - .emailAddress shows @, .URL shows /, .phonePad shows the dialpad.", color: Color(hex: "#185FA5"))
+                StepRow(number: 3, text: "Passwords and usernames - .asciiCapable prevents autocorrect and emoji.", color: Color(hex: "#185FA5"))
+                StepRow(number: 4, text: "Search fields - .webSearch shows a Search return key instead of Return.", color: Color(hex: "#185FA5"))
             }
 
             CalloutBox(style: .warning, title: "numberPad has no return key", contentBody: "On .numberPad and .decimalPad there is no return/done button. Always pair these with a keyboard toolbar (Lesson 5) so the user can dismiss.")
 
-            CalloutBox(style: .info, title: "This is a hint, not a filter", contentBody: "keyboardType only changes what the keyboard looks like — it doesn't prevent other input. Always validate programmatically too.")
+            CalloutBox(style: .info, title: "This is a hint, not a filter", contentBody: "keyboardType only changes what the keyboard looks like - it doesn't prevent other input. Always validate programmatically too.")
 
             CodeBlock(code: """
 TextField("Email", text: $email)

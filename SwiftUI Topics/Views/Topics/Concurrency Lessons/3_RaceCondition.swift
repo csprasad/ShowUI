@@ -26,9 +26,9 @@ struct RaceConditionVisual: View {
     let steps = [
         "Tap to start the simulation",
         "Task A reads balance: 100",
-        "Task B also reads balance: 100 — same stale value!",
+        "Task B also reads balance: 100 - same stale value!",
         "Task B writes 70 (100 − 30)",
-        "Task A writes 50 (100 − 50) — overwrites Task B!",
+        "Task A writes 50 (100 − 50) - overwrites Task B!",
         "Data lost. User withdrew 80 but balance only dropped 50."
     ]
 
@@ -188,9 +188,9 @@ struct RaceConditionExplanation: View {
 
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "Task A reads balance: 100", color: Color(hex: "#185FA5"))
-                StepRow(number: 2, text: "Task B reads balance: 100 — neither has written yet", color: Color(hex: "#0F6E56"))
+                StepRow(number: 2, text: "Task B reads balance: 100 - neither has written yet", color: Color(hex: "#0F6E56"))
                 StepRow(number: 3, text: "Task B writes 70 (100 − 30)", color: Color(hex: "#0F6E56"))
-                StepRow(number: 4, text: "Task A writes 50 (100 − 50) — silently overwrites Task B", color: Color(hex: "#A32D2D"))
+                StepRow(number: 4, text: "Task A writes 50 (100 − 50) - silently overwrites Task B", color: Color(hex: "#A32D2D"))
             }
 
             CalloutBox(style: .danger, title: "Silent data loss", contentBody: "The user withdrew $80 total. The balance should be $20. But it shows $50. No error was thrown. No crash. The bug is invisible.")
@@ -198,7 +198,7 @@ struct RaceConditionExplanation: View {
             CalloutBox(style: .info, title: "Why it's hard to catch", contentBody: "This only happens when the timing lines up exactly. It works perfectly in development and fails unpredictably in production, which is why it's called a ghost bug.")
 
             CodeBlock(code: """
-// Dangerous — class is not protected
+// Dangerous - class is not protected
 class BankAccount {
     var balance = 100
 

@@ -160,11 +160,11 @@ struct TimelineViewExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".animation — updates as fast as the display allows (60/120fps). Use for smooth animations.", color: .animPurple)
-                StepRow(number: 2, text: ".animation(minimumInterval:) — cap the update rate. 1/30 saves battery for less critical animation.", color: .animPurple)
-                StepRow(number: 3, text: ".periodic(from:by:) — fire at fixed intervals. Good for clocks, timers.", color: .animPurple)
-                StepRow(number: 4, text: "context.date — the current time. Use it to drive all animation values for frame-perfect sync.", color: .animPurple)
-                StepRow(number: 5, text: "Pair with Canvas for high-performance drawing — no view recycling overhead.", color: .animPurple)
+                StepRow(number: 1, text: ".animation - updates as fast as the display allows (60/120fps). Use for smooth animations.", color: .animPurple)
+                StepRow(number: 2, text: ".animation(minimumInterval:) - cap the update rate. 1/30 saves battery for less critical animation.", color: .animPurple)
+                StepRow(number: 3, text: ".periodic(from:by:) - fire at fixed intervals. Good for clocks, timers.", color: .animPurple)
+                StepRow(number: 4, text: "context.date - the current time. Use it to drive all animation values for frame-perfect sync.", color: .animPurple)
+                StepRow(number: 5, text: "Pair with Canvas for high-performance drawing - no view recycling overhead.", color: .animPurple)
             }
 
             CalloutBox(style: .warning, title: "paused parameter", contentBody: "Always use paused: !isRunning to stop the timeline when not needed. A running TimelineView with .animation schedule consumes CPU/GPU every frame even when off-screen.")
@@ -187,7 +187,7 @@ TimelineView(.animation(minimumInterval: 1/60)) { context in
     }
 }
 
-// Periodic — fires every second
+// Periodic - fires every second
 TimelineView(.periodic(from: .now, by: 1.0)) { context in
     Text(context.date, style: .time)
 }

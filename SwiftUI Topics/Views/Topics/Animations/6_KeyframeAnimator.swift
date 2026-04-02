@@ -214,7 +214,7 @@ struct KeyframeAnimatorVisual: View {
 struct KeyframeAnimatorExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "KeyframeAnimator — iOS 17+")
+            SectionHeader(text: "KeyframeAnimator - iOS 17+")
             Text("KeyframeAnimator gives you frame-by-frame control over multiple properties simultaneously on a precise timeline. Each property has its own track with independent keyframes and timing like a proper animation timeline editor.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 

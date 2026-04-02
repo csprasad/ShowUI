@@ -33,7 +33,7 @@ enum ConcurrencyLessons {
         ConcurrencyLesson(
             number: 1,
             title: "Sequential Execution",
-            subtitle: "Tasks wait in line — one finishes before the next begins",
+            subtitle: "Tasks wait in line - one finishes before the next begins",
             icon: "arrow.right.circle.fill",
             visual: AnyView(SequentialVisual()),
             explanation: AnyView(SequentialExplanation())
@@ -41,7 +41,7 @@ enum ConcurrencyLessons {
         ConcurrencyLesson(
             number: 2,
             title: "Concurrent Execution",
-            subtitle: "Tasks run at the same time — total time = the slowest",
+            subtitle: "Tasks run at the same time - total time = the slowest",
             icon: "arrow.triangle.branch",
             visual: AnyView(ConcurrentVisual()),
             explanation: AnyView(ConcurrentExplanation())
@@ -49,7 +49,7 @@ enum ConcurrencyLessons {
         ConcurrencyLesson(
             number: 3,
             title: "Race Condition",
-            subtitle: "Two tasks collide on shared data — silent data loss",
+            subtitle: "Two tasks collide on shared data - silent data loss",
             icon: "exclamationmark.triangle.fill",
             visual: AnyView(RaceConditionVisual()),
             explanation: AnyView(RaceConditionExplanation())
@@ -65,7 +65,7 @@ enum ConcurrencyLessons {
         ConcurrencyLesson(
             number: 5,
             title: "async let",
-            subtitle: "Start multiple tasks instantly — await them all at once",
+            subtitle: "Start multiple tasks instantly - await them all at once",
             icon: "bolt.horizontal.fill",
             visual: AnyView(AsyncLetVisual()),
             explanation: AnyView(AsyncLetExplanation())
@@ -81,7 +81,7 @@ enum ConcurrencyLessons {
         ConcurrencyLesson(
             number: 7,
             title: "Cancellation",
-            subtitle: "Tasks must cooperate — check if work is still needed",
+            subtitle: "Tasks must cooperate - check if work is still needed",
             icon: "stop.circle.fill",
             visual: AnyView(CancellationVisual()),
             explanation: AnyView(CancellationExplanation())

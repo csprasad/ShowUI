@@ -19,6 +19,7 @@ struct TopicRegistry {
         ConcurrencyTopic(),
         AnimationsTopic(),
         SFSymbolsTopic(),
+        StateBindingTopic(),
         KeyboardTopic(),
         BlendModesTopic(),
         MaskingTopic(),

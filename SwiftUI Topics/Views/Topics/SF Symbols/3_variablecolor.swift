@@ -36,7 +36,7 @@ struct VariableColorVisual: View {
                     Color(.secondarySystemBackground)
 
                     VStack(spacing: 12) {
-                        // variableValue: is the correct API — drives layer activation
+                        // variableValue: is the correct API - drives layer activation
                         Image(systemName: "speaker.wave.3.fill", variableValue: value)
                             .font(.system(size: 72))
                             .symbolRenderingMode(.hierarchical)
@@ -86,7 +86,7 @@ struct VariableColorVisual: View {
                     Spacer()
                 }
 
-                Text("Drag the slider — all symbols respond to the same variableValue")
+                Text("Drag the slider - all symbols respond to the same variableValue")
                     .font(.system(size: 11))
                     .foregroundStyle(.tertiary)
             }
@@ -133,12 +133,12 @@ struct VariableColorExplanation: View {
             CalloutBox(style: .info, title: "variableValue vs symbolEffect", contentBody: "Image(systemName:variableValue:) sets a static value. .symbolEffect(.variableColor) animates the value automatically in a loop, or you can use the effect for looping animations, the parameter for data-driven display.")
 
             CodeBlock(code: """
-// Data-driven — show actual value
+// Data-driven - show actual value
 Image(systemName: "speaker.wave.3.fill", variableValue: volume)
     .symbolRenderingMode(.hierarchical)
     .foregroundStyle(.green)
 
-// Animated loop — iOS 17+
+// Animated loop - iOS 17+
 Image(systemName: "wifi")
     .symbolEffect(.variableColor.iterative, options: .repeating)
 

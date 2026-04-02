@@ -19,7 +19,7 @@ struct CustomSymbolVisual: View {
         (icon: "square.and.arrow.down", title: "Design in SF Symbols app",   description: "Start from an existing symbol or draw from scratch using the SF Symbols app's canvas. Export as SVG template."),
         (icon: "pencil.and.outline",    title: "Draw in vector tool",         description: "Open the SVG template in Figma, Sketch or Illustrator. Draw your symbol using the provided guides for optical sizing."),
         (icon: "arrow.up.doc",          title: "Import into Xcode",           description: "Drag the .svg into your Xcode asset catalog. Set the Symbol tab, assign rendering layers, and set the symbol name."),
-        (icon: "checkmark.circle.fill", title: "Use like any symbol",         description: "Image(systemName: \"your.custom.symbol\") — it inherits font weight, rendering modes and symbol effects automatically."),
+        (icon: "checkmark.circle.fill", title: "Use like any symbol",         description: "Image(systemName: \"your.custom.symbol\") - it inherits font weight, rendering modes and symbol effects automatically."),
     ]
 
     var body: some View {

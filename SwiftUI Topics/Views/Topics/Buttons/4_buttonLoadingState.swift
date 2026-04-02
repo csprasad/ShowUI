@@ -204,10 +204,10 @@ struct LoadingStateExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
  
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "@State var isLoading — drive all three states from this single Bool.", color: .btnPurple)
-                StepRow(number: 2, text: ".disabled(isLoading) — prevents tapping again mid-request. Critical for network calls.", color: .btnPurple)
-                StepRow(number: 3, text: "Inline spinner — ProgressView() inside the label alongside changing text.", color: .btnPurple)
-                StepRow(number: 4, text: "Wrap state changes in withAnimation — smooth transitions between idle, loading, success.", color: .btnPurple)
+                StepRow(number: 1, text: "@State var isLoading - drive all three states from this single Bool.", color: .btnPurple)
+                StepRow(number: 2, text: ".disabled(isLoading) - prevents tapping again mid-request. Critical for network calls.", color: .btnPurple)
+                StepRow(number: 3, text: "Inline spinner - ProgressView() inside the label alongside changing text.", color: .btnPurple)
+                StepRow(number: 4, text: "Wrap state changes in withAnimation - smooth transitions between idle, loading, success.", color: .btnPurple)
             }
  
             CalloutBox(style: .success, title: "Task-based async pattern", contentBody: "In iOS 15+, use .task or an async button action directly. The button disables itself while the async work runs, no manual isLoading needed with the right architecture.")

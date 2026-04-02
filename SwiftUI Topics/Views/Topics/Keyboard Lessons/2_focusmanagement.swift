@@ -158,7 +158,7 @@ struct FocusManagementExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "How focus works")
-            Text("@FocusState is a property wrapper that tracks which field currently has keyboard focus. Assigning a value programmatically moves focus — and the keyboard — without the user tapping.")
+            Text("@FocusState is a property wrapper that tracks which field currently has keyboard focus. Assigning a value programmatically moves focus - and the keyboard - without the user tapping.")
                 .font(.system(size: 15))
                 .foregroundStyle(.secondary)
                 .lineSpacing(4)
@@ -172,7 +172,7 @@ struct FocusManagementExplanation: View {
 
             CalloutBox(style: .success, title: "Auto-advance pattern", contentBody: "In a form, set focusedField = .nextField inside onSubmit to move focus forward automatically when the user taps Return.")
 
-            CalloutBox(style: .info, title: "onAppear focus", contentBody: "Set focusedField = .firstField inside onAppear to open the keyboard immediately when a screen appears — common in search screens.")
+            CalloutBox(style: .info, title: "onAppear focus", contentBody: "Set focusedField = .firstField inside onAppear to open the keyboard immediately when a screen appears - common in search screens.")
 
             CodeBlock(code: """
 enum Field: Hashable { case name, email, password }

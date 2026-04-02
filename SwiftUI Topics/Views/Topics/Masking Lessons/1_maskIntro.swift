@@ -68,7 +68,7 @@ struct MaskIntroVisual: View {
                 if color {
                     MaskBaseGradient()
                 } else {
-                    // Mask layer — shows white circle on black
+                    // Mask layer - shows white circle on black
                     Color.black
                     Circle()
                         .fill(Color.white)
@@ -145,7 +145,7 @@ struct MaskIntroExplanation: View {
 // Content layer
 MaskBaseGradient()
     .mask {
-        // Mask layer — white = visible, black = hidden
+        // Mask layer - white = visible, black = hidden
         Circle()
     }
 """)

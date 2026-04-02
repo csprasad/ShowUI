@@ -171,14 +171,14 @@ struct CancellationExplanation: View {
                 StepRow(number: 2, text: "URLSession handles this for you, so cancelling the parent task cancels all child requests automatically.", color: Color(hex: "#993C1D"))
                 StepRow(number: 3, text: "For custom long-running work, use withTaskCancellationHandler to react immediately mid-suspension.", color: Color(hex: "#993C1D"))
             }
-            CalloutBox(style: .info, title: "Polling — the common case", contentBody: "Check before each unit of work. If cancelled, CancellationError is thrown and the task unwinds cleanly.")
+            CalloutBox(style: .info, title: "Polling - the common case", contentBody: "Check before each unit of work. If cancelled, CancellationError is thrown and the task unwinds cleanly.")
             CodeBlock(code: """
 for item in items {
     try Task.checkCancellation()
     await process(item)
 }
 """)
-            CalloutBox(style: .warning, title: "Advanced — react mid-suspension", contentBody: "checkCancellation only fires when execution reaches that line. If your task is suspended inside a long call, use withTaskCancellationHandler.")
+            CalloutBox(style: .warning, title: "Advanced - react mid-suspension", contentBody: "checkCancellation only fires when execution reaches that line. If your task is suspended inside a long call, use withTaskCancellationHandler.")
             CodeBlock(code: """
 await withTaskCancellationHandler {
     await doLongRunningWork()

@@ -24,11 +24,11 @@ struct ButtonStylesVisual: View {
     }
 
     let styles: [StyleOption] = [
-        StyleOption(name: "automatic",          code: ".buttonStyle(.automatic)",          description: "Context-aware default — varies by container"),
-        StyleOption(name: "plain",              code: ".buttonStyle(.plain)",              description: "No decoration — just the label content"),
+        StyleOption(name: "automatic",          code: ".buttonStyle(.automatic)",          description: "Context-aware default - varies by container"),
+        StyleOption(name: "plain",              code: ".buttonStyle(.plain)",              description: "No decoration - just the label content"),
         StyleOption(name: "borderless",         code: ".buttonStyle(.borderless)",         description: "Tinted text, no border. Good for inline actions"),
         StyleOption(name: "bordered",           code: ".buttonStyle(.bordered)",           description: "Rounded background tinted by role/tint color"),
-        StyleOption(name: "borderedProminent",  code: ".buttonStyle(.borderedProminent)",  description: "Filled background — primary action, most prominent"),
+        StyleOption(name: "borderedProminent",  code: ".buttonStyle(.borderedProminent)",  description: "Filled background - primary action, most prominent"),
     ]
 
     var body: some View {
@@ -121,11 +121,11 @@ struct ButtonStylesExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".automatic — default. Context-dependent: minimal in Lists, platform standard elsewhere.", color: .btnPurple)
-                StepRow(number: 2, text: ".plain — no visual decoration. The label renders exactly as-is. Use when you want full manual control.", color: .btnPurple)
-                StepRow(number: 3, text: ".borderless — tints the label with the tint color but adds no border or background. Good for inline and toolbar buttons.", color: .btnPurple)
-                StepRow(number: 4, text: ".bordered — adds a rounded background. Standard choice for secondary actions.", color: .btnPurple)
-                StepRow(number: 5, text: ".borderedProminent — filled background. Use for the primary call-to-action on a screen.", color: .btnPurple)
+                StepRow(number: 1, text: ".automatic - default. Context-dependent: minimal in Lists, platform standard elsewhere.", color: .btnPurple)
+                StepRow(number: 2, text: ".plain - no visual decoration. The label renders exactly as-is. Use when you want full manual control.", color: .btnPurple)
+                StepRow(number: 3, text: ".borderless - tints the label with the tint color but adds no border or background. Good for inline and toolbar buttons.", color: .btnPurple)
+                StepRow(number: 4, text: ".bordered - adds a rounded background. Standard choice for secondary actions.", color: .btnPurple)
+                StepRow(number: 5, text: ".borderedProminent - filled background. Use for the primary call-to-action on a screen.", color: .btnPurple)
             }
 
             CalloutBox(style: .success, title: ".tint() controls their color", contentBody: "All built-in styles respond to .tint(). Apply it to a button or its container and every bordered/borderless style in that scope inherits it. The role overrides tint for .destructive.")

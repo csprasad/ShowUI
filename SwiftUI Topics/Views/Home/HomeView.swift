@@ -40,7 +40,7 @@ struct HomeView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 20)
-//        .padding(.top, 60)
+        .padding(.top, 30)
         .padding(.bottom, 28)
     }
 
@@ -65,6 +65,10 @@ struct HomeView: View {
     }
 }
 
+#Preview {
+    HomeView()
+}
+
 // MARK: - Topic Card
 struct TopicCard: View {
     let topic: any TopicProtocol
@@ -72,7 +76,7 @@ struct TopicCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             // Icon area
-            HStack {
+            HStack(alignment: .top) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 12, style: .continuous)
                         .fill(topic.color)

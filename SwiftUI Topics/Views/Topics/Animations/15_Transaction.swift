@@ -145,10 +145,10 @@ struct TransactionExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "t.disablesAnimations = true — snap a state change without any animation.", color: .animBlue)
-                StepRow(number: 2, text: "withTransaction(t) — apply a custom transaction to a state change block.", color: .animBlue)
-                StepRow(number: 3, text: "SwiftUI naturally handles animation interruption — a new withAnimation mid-flight continues from the current position.", color: .animBlue)
-                StepRow(number: 4, text: "@Environment(\\.transaction) — read the current transaction inside a view if you need to inspect or modify it.", color: .animBlue)
+                StepRow(number: 1, text: "t.disablesAnimations = true - snap a state change without any animation.", color: .animBlue)
+                StepRow(number: 2, text: "withTransaction(t) - apply a custom transaction to a state change block.", color: .animBlue)
+                StepRow(number: 3, text: "SwiftUI naturally handles animation interruption - a new withAnimation mid-flight continues from the current position.", color: .animBlue)
+                StepRow(number: 4, text: "@Environment(\\.transaction) - read the current transaction inside a view if you need to inspect or modify it.", color: .animBlue)
             }
 
             CalloutBox(style: .info, title: "When to use Transaction directly", contentBody: "Mostly you won't. withAnimation covers 95% of cases. Use Transaction when you need to conditionally disable animations, or when you need to pass animation context across a boundary that withAnimation doesn't reach.")

@@ -34,7 +34,7 @@ enum KeyboardLessons {
         KeyboardLesson(
             number: 1,
             title: "Keyboard Types",
-            subtitle: "Every UIKeyboardType — when to use each one",
+            subtitle: "Every UIKeyboardType - when to use each one",
             icon: "keyboard",
             visual: AnyView(KeyboardTypesVisual()),
             explanation: AnyView(KeyboardTypesExplanation())

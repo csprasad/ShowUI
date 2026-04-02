@@ -30,7 +30,7 @@ struct BlendIntroVisual: View {
                         .tint(Color(hex: "#993556"))
                 }
 
-                // Side by side — no blend vs blend
+                // Side by side - no blend vs blend
                 HStack(spacing: 12) {
                     layerDemo(label: "No blend", useBlend: false)
                     layerDemo(label: blendOn ? ".multiply" : ".normal", useBlend: blendOn)
@@ -52,7 +52,7 @@ struct BlendIntroVisual: View {
     func layerDemo(label: String, useBlend: Bool) -> some View {
         VStack(spacing: 8) {
             ZStack {
-                // Base layer — checkerboard-like gradient
+                // Base layer - checkerboard-like gradient
                 LinearGradient(
                     colors: [Color(hex: "#B5D4F4"), Color(hex: "#9FE1CB"), Color(hex: "#FAC775")],
                     startPoint: .topLeading,

@@ -27,10 +27,10 @@ struct RenderingModesVisual: View {
     }
 
     let modes: [ModeOption] = [
-        ModeOption(name: "Monochrome",    description: "Single color — the default. Uses foregroundStyle.",              code: ".symbolRenderingMode(.monochrome)"),
-        ModeOption(name: "Hierarchical",  description: "Single color with opacity per layer — depth without complexity.", code: ".symbolRenderingMode(.hierarchical)"),
-        ModeOption(name: "Palette",       description: "Independent color per layer — full creative control.",            code: ".symbolRenderingMode(.palette)"),
-        ModeOption(name: "Multicolor",    description: "Apple's preset colors — the symbol's intended look.",             code: ".symbolRenderingMode(.multicolor)"),
+        ModeOption(name: "Monochrome",    description: "Single color - the default. Uses foregroundStyle.",              code: ".symbolRenderingMode(.monochrome)"),
+        ModeOption(name: "Hierarchical",  description: "Single color with opacity per layer - depth without complexity.", code: ".symbolRenderingMode(.hierarchical)"),
+        ModeOption(name: "Palette",       description: "Independent color per layer - full creative control.",            code: ".symbolRenderingMode(.palette)"),
+        ModeOption(name: "Multicolor",    description: "Apple's preset colors - the symbol's intended look.",             code: ".symbolRenderingMode(.multicolor)"),
     ]
 
     var body: some View {
@@ -138,10 +138,10 @@ struct RenderingModesExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Monochrome — single foregroundStyle color fills the whole symbol. Simple, consistent, the default.", color: .sfGreen)
-                StepRow(number: 2, text: "Hierarchical — one color with automatic opacity per layer. Primary=full, secondary=60%, tertiary=30%. Great for depth with no extra work.", color: .sfGreen)
-                StepRow(number: 3, text: "Palette — you supply a color per layer. Full control, most expressive. Requires 2–3 foregroundStyle values.", color: .sfGreen)
-                StepRow(number: 4, text: "Multicolor — Apple's intended colors for the symbol. Use when you want the standard look (e.g. red heart, blue wifi).", color: .sfGreen)
+                StepRow(number: 1, text: "Monochrome - single foregroundStyle color fills the whole symbol. Simple, consistent, the default.", color: .sfGreen)
+                StepRow(number: 2, text: "Hierarchical - one color with automatic opacity per layer. Primary=full, secondary=60%, tertiary=30%. Great for depth with no extra work.", color: .sfGreen)
+                StepRow(number: 3, text: "Palette - you supply a color per layer. Full control, most expressive. Requires 2–3 foregroundStyle values.", color: .sfGreen)
+                StepRow(number: 4, text: "Multicolor - Apple's intended colors for the symbol. Use when you want the standard look (e.g. red heart, blue wifi).", color: .sfGreen)
             }
 
             CalloutBox(style: .info, title: "Palette needs multiple foregroundStyle values", contentBody: "Pass colors separated by commas: .foregroundStyle(.blue, .green, .red). First = primary layer, second = secondary, third = tertiary.")
@@ -149,21 +149,21 @@ struct RenderingModesExplanation: View {
             CalloutBox(style: .success, title: "Not all symbols support all modes", contentBody: "Multicolor and hierarchical only work on symbols that have defined layer structure. Check SF Symbols app it shows which modes each symbol supports.")
 
             CodeBlock(code: """
-// Monochrome — default
+// Monochrome - default
 Image(systemName: "sun.max.fill")
     .foregroundStyle(.yellow)
 
-// Hierarchical — depth with one color
+// Hierarchical - depth with one color
 Image(systemName: "sun.max.fill")
     .symbolRenderingMode(.hierarchical)
     .foregroundStyle(.orange)
 
-// Palette — full layer control
+// Palette - full layer control
 Image(systemName: "sun.max.fill")
     .symbolRenderingMode(.palette)
     .foregroundStyle(.yellow, .orange)
 
-// Multicolor — Apple's preset
+// Multicolor - Apple's preset
 Image(systemName: "sun.max.fill")
     .symbolRenderingMode(.multicolor)
 """)

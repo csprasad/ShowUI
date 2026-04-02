@@ -115,7 +115,7 @@ ZStack {
     // Content layer
     MaskBaseGradient()
 
-    // Cutout shape — erases content beneath
+    // Cutout shape - erases content beneath
     Image(systemName: "heart.fill")
         .font(.system(size: 80))
         .blendMode(.destinationOut)
