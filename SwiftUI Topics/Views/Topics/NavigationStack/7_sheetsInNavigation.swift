@@ -12,140 +12,204 @@
 import SwiftUI
  
 // MARK: - LESSON 7: Sheets Inside Navigation
- 
 struct SheetsInNavVisual: View {
-    @State private var path = NavigationPath()
-    @State private var showSheet = false
-    @State private var showCover = false
     @State private var selectedPattern = 0
- 
-    let patterns = ["Sheet from list", "Sheet from detail", "Full screen cover"]
- 
+    let patterns = ["Sheet from root", "Sheet from detail", "Sheet with nav"]
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Sheets in navigation", systemImage: "rectangle.on.rectangle.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.navBlue)
- 
-                // Pattern selector
+
                 HStack(spacing: 8) {
                     ForEach(patterns.indices, id: \.self) { i in
                         Button {
-                            withAnimation(.spring(response: 0.3)) {
-                                selectedPattern = i
-                                path = NavigationPath()
-                            }
+                            withAnimation(.spring(response: 0.3)) { selectedPattern = i }
                         } label: {
                             Text(patterns[i])
-                                .font(.system(size: 10, weight: selectedPattern == i ? .semibold : .regular))
+                                .font(.system(size: 11, weight: selectedPattern == i ? .semibold : .regular))
                                 .foregroundStyle(selectedPattern == i ? Color.navBlue : .secondary)
-                                .padding(.horizontal, 8).padding(.vertical, 5)
+                                .padding(.horizontal, 8).padding(.vertical, 6)
                                 .background(selectedPattern == i ? Color.navBlueLight : Color(.systemFill))
                                 .clipShape(Capsule())
                         }
                         .buttonStyle(PressableButtonStyle())
                     }
                 }
- 
-                // Demo
-                NavigationStack(path: $path) {
-                    List(NavCategory.samples) { cat in
-                        NavigationLink(value: cat) {
-                            Label(cat.name, systemImage: cat.icon).foregroundStyle(cat.color)
-                        }
-                    }
-                    .navigationTitle("Topics")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        if selectedPattern == 0 {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button {
-                                    showSheet = true
-                                } label: {
-                                    Image(systemName: "plus")
-                                }
-                            }
-                        }
-                    }
-                    // Sheet on the LIST (root) — correct placement
-                    .sheet(isPresented: $showSheet) {
-                        sheetContent("Sheet from list root")
-                    }
-                    .navigationDestination(for: NavCategory.self) { cat in
-                        // Detail view
-                        detailView(cat)
-                    }
+
+                ZStack {
+                    Color(.secondarySystemBackground)
+                    sheetDiagram.padding(12)
                 }
-                .frame(height: 200)
+                .frame(maxWidth: .infinity).frame(height: 150)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
- 
-                // Pattern notes
-                let notes = [
-                    "Toolbar '+' button on the root opens a sheet. The sheet modifier is on the List, inside NavigationStack.",
-                    "Navigate into a detail view - the '+' button there opens a sheet. Sheet modifier on the detail view.",
-                    "Navigate into a detail - the cover button opens fullScreenCover. Applied on the detail view.",
+                .animation(.spring(response: 0.4), value: selectedPattern)
+
+                let descs = [
+                    "The sheet modifier goes on the root content view inside NavigationStack - not on NavigationStack itself. A toolbar button toggles the sheet.",
+                    "When navigated to a detail view, that detail view can present its own sheet. The sheet modifier goes on the detail view.",
+                    "A sheet can have its own independent NavigationStack inside it - for multi-step flows like onboarding or forms. It's completely separate from the presenting stack.",
                 ]
-                HStack(spacing: 8) {
-                    Image(systemName: "info.circle.fill").font(.system(size: 12)).foregroundStyle(Color.navBlue)
-                    Text(notes[selectedPattern]).font(.system(size: 12)).foregroundStyle(.secondary)
-                }
-                .padding(10).background(Color.navBlueLight).clipShape(RoundedRectangle(cornerRadius: 10))
-                .animation(.easeInOut(duration: 0.2), value: selectedPattern)
+                Text(descs[selectedPattern])
+                    .font(.system(size: 12)).foregroundStyle(.secondary).lineSpacing(2)
+                    .animation(.easeInOut(duration: 0.2), value: selectedPattern)
             }
         }
     }
- 
+
     @ViewBuilder
-    func detailView(_ cat: NavCategory) -> some View {
-        List(cat.items) { item in
-            Label(item.name, systemImage: item.icon)
-        }
-        .navigationTitle(cat.name)
-        .navigationBarTitleDisplayMode(.inline)
-        .toolbar {
-            if selectedPattern == 1 || selectedPattern == 2 {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        if selectedPattern == 2 { showCover = true }
-                        else { showSheet = true }
-                    } label: {
-                        Image(systemName: selectedPattern == 2 ? "arrow.up.left.and.arrow.down.right" : "plus")
+    private var sheetDiagram: some View {
+        switch selectedPattern {
+        case 0:
+            // Sheet from root
+            HStack(alignment: .top, spacing: 12) {
+                // Stack
+                VStack(spacing: 4) {
+                    Text("NavigationStack").font(.system(size: 8, weight: .semibold)).foregroundStyle(.secondary)
+                    VStack(spacing: 0) {
+                        HStack {
+                            Text("Root View").font(.system(size: 9, weight: .semibold))
+                            Spacer()
+                            Image(systemName: "plus").font(.system(size: 9)).foregroundStyle(Color.navBlue)
+                        }
+                        .padding(.horizontal, 8).padding(.vertical, 5)
+                        .background(Color(.systemBackground))
+                        .overlay(Divider(), alignment: .bottom)
+                        Text(".sheet(isPresented:)")
+                            .font(.system(size: 7, design: .monospaced)).foregroundStyle(Color.navBlue)
+                            .padding(4)
+                        Spacer()
                     }
+                    .frame(width: 100, height: 70)
+                    .background(Color(.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.navBlue.opacity(0.3), lineWidth: 1))
+                }
+
+                Image(systemName: "arrow.up.right").font(.system(size: 12)).foregroundStyle(Color.navBlue).padding(.top, 30)
+
+                // Sheet
+                VStack(spacing: 4) {
+                    Text("Sheet").font(.system(size: 8, weight: .semibold)).foregroundStyle(.secondary)
+                    VStack(spacing: 4) {
+                        Capsule().fill(Color(.systemGray4)).frame(width: 24, height: 3).padding(.top, 4)
+                        Text("Sheet content").font(.system(size: 9))
+                        Text("Separate context\nfrom the stack").font(.system(size: 7)).foregroundStyle(.secondary).multilineTextAlignment(.center)
+                        Spacer()
+                    }
+                    .frame(width: 90, height: 70)
+                    .background(Color(.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color(.systemFill), lineWidth: 1))
                 }
             }
-        }
-        .sheet(isPresented: $showSheet) {
-            sheetContent("Sheet from \(cat.name)")
-        }
-        .fullScreenCover(isPresented: $showCover) {
-            sheetContent("Full screen from \(cat.name)", isFullScreen: true)
+
+        case 1:
+            // Sheet from detail
+            HStack(alignment: .top, spacing: 6) {
+                miniScreen("Root", items: ["Item A ›"])
+                Image(systemName: "arrow.right").font(.system(size: 10)).foregroundStyle(.secondary).padding(.top, 25)
+                VStack(spacing: 4) {
+                    Text("Detail View").font(.system(size: 8, weight: .semibold)).foregroundStyle(.secondary)
+                    VStack(spacing: 3) {
+                        HStack {
+                            HStack(spacing: 2) {
+                                Image(systemName: "chevron.left").font(.system(size: 7))
+                                Text("Back").font(.system(size: 7))
+                            }.foregroundStyle(Color.navBlue)
+                            Spacer()
+                            Image(systemName: "ellipsis").font(.system(size: 9)).foregroundStyle(Color.navBlue)
+                        }
+                        .padding(.horizontal, 6).padding(.vertical, 4)
+                        .background(Color(.systemBackground))
+                        .overlay(Divider(), alignment: .bottom)
+                        Text(".sheet(isPresented:)").font(.system(size: 7, design: .monospaced)).foregroundStyle(Color.navBlue).padding(3)
+                        Text("applied here").font(.system(size: 7)).foregroundStyle(.secondary)
+                        Spacer()
+                    }
+                    .frame(width: 90, height: 65)
+                    .background(Color(.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.navBlue.opacity(0.3), lineWidth: 1))
+                }
+                Image(systemName: "arrow.up.right").font(.system(size: 10)).foregroundStyle(Color.navBlue).padding(.top, 25)
+                miniSheet("Sheet")
+            }
+
+        default:
+            // Sheet with own NavigationStack
+            HStack(alignment: .top, spacing: 8) {
+                VStack(spacing: 4) {
+                    Text("App stack").font(.system(size: 8, weight: .semibold)).foregroundStyle(.secondary)
+                    miniScreen("Root", items: ["Open →"])
+                }
+                Image(systemName: "arrow.up.right").font(.system(size: 10)).foregroundStyle(Color.navBlue).padding(.top, 20)
+                VStack(spacing: 4) {
+                    Text("Sheet (independent)").font(.system(size: 8, weight: .semibold)).foregroundStyle(.secondary)
+                    VStack(spacing: 0) {
+                        Capsule().fill(Color(.systemGray4)).frame(width: 20, height: 2).padding(.top, 3)
+                        HStack {
+                            Spacer()
+                            Text("Cancel").font(.system(size: 7)).foregroundStyle(Color.navBlue)
+                        }
+                        .padding(.horizontal, 6).padding(.vertical, 3)
+                        .background(Color(.systemBackground))
+                        .overlay(Divider(), alignment: .bottom)
+                        HStack {
+                            Text("Step 1").font(.system(size: 8))
+                            Spacer()
+                            Image(systemName: "arrow.right.circle").font(.system(size: 10)).foregroundStyle(Color.navBlue)
+                        }
+                        .padding(.horizontal, 6).padding(.vertical, 3)
+                        Text("NavigationStack").font(.system(size: 7, design: .monospaced)).foregroundStyle(Color.navBlue)
+                        Text("inside sheet").font(.system(size: 7)).foregroundStyle(.secondary)
+                        Spacer()
+                    }
+                    .frame(width: 110, height: 70)
+                    .background(Color(.systemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 6))
+                    .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color.navBlue.opacity(0.3), lineWidth: 1))
+                }
+            }
         }
     }
- 
-    func sheetContent(_ title: String, isFullScreen: Bool = false) -> some View {
-        NavigationStack {
-            VStack(spacing: 16) {
-                Image(systemName: isFullScreen ? "rectangle.fill" : "rectangle.bottomhalf.inset.filled")
-                    .font(.system(size: 48)).foregroundStyle(Color.navBlue)
-                Text(title).font(.system(size: 20, weight: .bold))
-                Text("This is a separate navigation context — it has its own NavigationStack if needed")
-                    .font(.system(size: 13)).foregroundStyle(.secondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 32)
+
+    func miniScreen(_ title: String, items: [String] = []) -> some View {
+        VStack(spacing: 0) {
+            Text(title).font(.system(size: 9, weight: .semibold))
+                .padding(.horizontal, 6).padding(.vertical, 4)
+                .background(Color(.systemBackground))
+                .overlay(Divider(), alignment: .bottom)
+                .frame(maxWidth: .infinity)
+            ForEach(items.prefix(2), id: \.self) { item in
+                Text(item).font(.system(size: 9)).padding(.horizontal, 6).padding(.vertical, 3)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                Divider().padding(.leading, 6)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .navigationTitle(title)
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("Done") { showSheet = false; showCover = false }
-                }
-            }
+            Spacer()
         }
+        .frame(width: 80, height: 65)
+        .background(Color(.systemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 6))
+        .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color(.systemFill), lineWidth: 0.5))
+    }
+
+    func miniSheet(_ title: String) -> some View {
+        VStack(spacing: 3) {
+            Capsule().fill(Color(.systemGray4)).frame(width: 20, height: 2).padding(.top, 3)
+            Text(title).font(.system(size: 9, weight: .semibold))
+            Text("Sheet content").font(.system(size: 8)).foregroundStyle(.secondary)
+            Spacer()
+        }
+        .frame(width: 80, height: 65)
+        .background(Color(.systemBackground))
+        .clipShape(RoundedRectangle(cornerRadius: 6))
+        .overlay(RoundedRectangle(cornerRadius: 6).stroke(Color(.systemFill), lineWidth: 0.5))
     }
 }
- 
+
 struct SheetsInNavExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

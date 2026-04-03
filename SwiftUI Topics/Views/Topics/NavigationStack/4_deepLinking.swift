@@ -12,122 +12,105 @@
 import SwiftUI
 
 // MARK: - LESSON 4: Deep Linking
- 
 struct DeepLinkVisual: View {
-    @State private var path = NavigationPath()
-    @State private var selectedSection: String? = nil
-    @State private var lastLink = "None"
- 
-    // Simulate different deep link scenarios
-    let deepLinks: [(label: String, icon: String, description: String, action: String)] = [
-        ("Open Swift",      "swift",                   "app://topic/swift",         "swift"),
-        ("Open SwiftUI",    "rectangle.3.group.fill",  "app://topic/swiftui",       "swiftui"),
-        ("Open item",       "doc.plaintext.fill",       "app://topic/swift/protocols","swift/protocols"),
-        ("Reset to root",   "house.fill",               "app://",                    "root"),
+    @State private var selectedSource = 0
+    @State private var animating = false
+    @State private var destination = "?"
+
+    let sources: [(name: String, icon: String, url: String, dest: String)] = [
+        ("URL scheme",     "link.circle.fill",         "app://topic/swift",              "Swift category"),
+        ("Notification",   "bell.fill",                "notification: new lesson",        "Swift → Protocols"),
+        ("Widget tap",     "square.grid.2x2.fill",     "widget://featured",              "SwiftUI category"),
+        ("Spotlight",      "magnifyingglass.circle.fill","spotlight://item/protocols",    "Protocols item"),
     ]
- 
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Deep linking", systemImage: "link.circle.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.navBlue)
- 
-                // Navigation stack that responds to deep links
-                NavigationStack(path: $path) {
-                    List(NavCategory.samples) { cat in
-                        NavigationLink(value: cat) {
-                            Label(cat.name, systemImage: cat.icon).foregroundStyle(cat.color)
-                        }
-                    }
-                    .navigationTitle("Topics")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationDestination(for: NavCategory.self) { cat in
-                        List(cat.items) { item in
-                            NavigationLink(value: item) {
-                                Label(item.name, systemImage: item.icon)
+
+                // Flow diagram
+                ZStack {
+                    Color(.secondarySystemBackground)
+                    VStack(spacing: 10) {
+                        // Source -> handler -> path
+                        HStack(spacing: 0) {
+                            // Source
+                            VStack(spacing: 4) {
+                                Image(systemName: sources[selectedSource].icon)
+                                    .font(.system(size: 22)).foregroundStyle(Color.navBlue)
+                                Text(sources[selectedSource].name)
+                                    .font(.system(size: 10, weight: .semibold)).foregroundStyle(Color.navBlue)
+                                Text(sources[selectedSource].url)
+                                    .font(.system(size: 8, design: .monospaced)).foregroundStyle(.secondary)
+                                    .multilineTextAlignment(.center).lineLimit(2)
                             }
+                            .frame(width: 90)
+
+                            // Arrow + handler label
+                            VStack(spacing: 2) {
+                                Image(systemName: "arrow.right").font(.system(size: 12)).foregroundStyle(.secondary)
+                                Text("parse\n& route").font(.system(size: 8)).foregroundStyle(.tertiary).multilineTextAlignment(.center)
+                            }
+                            .frame(width: 50)
+
+                            // Result
+                            VStack(spacing: 4) {
+                                Image(systemName: "rectangle.stack.fill")
+                                    .font(.system(size: 22)).foregroundStyle(Color(hex: "#1D9E75"))
+                                Text("NavigationPath")
+                                    .font(.system(size: 10, weight: .semibold)).foregroundStyle(Color(hex: "#1D9E75"))
+                                Text("→ \(sources[selectedSource].dest)")
+                                    .font(.system(size: 8)).foregroundStyle(Color(hex: "#1D9E75"))
+                                    .multilineTextAlignment(.center)
+                            }
+                            .frame(width: 90)
                         }
-                        .navigationTitle(cat.name)
-                        .navigationBarTitleDisplayMode(.inline)
-                        .navigationDestination(for: NavItem.self) { item in
-                            TypedItemDetail(item: item)
-                        }
+                        .animation(.spring(response: 0.35), value: selectedSource)
                     }
                 }
-                .frame(height: 180)
+                .frame(maxWidth: .infinity).frame(height: 110)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
- 
-                // Simulated deep link triggers
-                sectionLabel("Simulate incoming deep links")
-                VStack(spacing: 6) {
-                    ForEach(deepLinks, id: \.label) { link in
+
+                // Source selector
+                let cols = Array(repeating: GridItem(.flexible(), spacing: 6), count: 2)
+                LazyVGrid(columns: cols, spacing: 6) {
+                    ForEach(sources.indices, id: \.self) { i in
                         Button {
-                            handleDeepLink(link.action)
-                            lastLink = link.description
+                            withAnimation(.spring(response: 0.3)) { selectedSource = i }
                         } label: {
-                            HStack(spacing: 10) {
-                                Image(systemName: link.icon)
-                                    .font(.system(size: 14))
-                                    .foregroundStyle(Color.navBlue)
-                                    .frame(width: 24)
-                                VStack(alignment: .leading, spacing: 1) {
-                                    Text(link.label)
-                                        .font(.system(size: 13, weight: .semibold))
-                                    Text(link.description)
-                                        .font(.system(size: 10, design: .monospaced))
-                                        .foregroundStyle(.secondary)
-                                }
-                                Spacer()
-                                Image(systemName: "arrow.right.circle")
-                                    .font(.system(size: 14)).foregroundStyle(Color.navBlue)
+                            HStack(spacing: 6) {
+                                Image(systemName: sources[i].icon)
+                                    .font(.system(size: 13))
+                                    .foregroundStyle(selectedSource == i ? Color.navBlue : .secondary)
+                                Text(sources[i].name)
+                                    .font(.system(size: 11, weight: selectedSource == i ? .semibold : .regular))
+                                    .foregroundStyle(selectedSource == i ? Color.navBlue : .secondary)
                             }
-                            .padding(.horizontal, 12).padding(.vertical, 8)
-                            .background(Color(.systemFill))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 10).padding(.vertical, 7)
+                            .background(selectedSource == i ? Color.navBlueLight : Color(.systemFill))
+                            .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
                         .buttonStyle(PressableButtonStyle())
                     }
                 }
- 
+
+                // Key requirement
                 HStack(spacing: 6) {
-                    Image(systemName: "link").font(.system(size: 11)).foregroundStyle(Color.navBlue)
-                    Text("Last: \(lastLink)")
-                        .font(.system(size: 11, design: .monospaced)).foregroundStyle(.secondary)
+                    Image(systemName: "exclamationmark.circle.fill")
+                        .font(.system(size: 12)).foregroundStyle(Color.animAmber)
+                    Text("NavigationPath must live high enough in the view tree for deep link handlers to reach it")
+                        .font(.system(size: 12)).foregroundStyle(.secondary)
                 }
-                .padding(8).background(Color.navBlueLight).clipShape(RoundedRectangle(cornerRadius: 8))
-                .animation(.easeInOut(duration: 0.2), value: lastLink)
+                .padding(10).background(Color(hex: "#FAEEDA")).clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
-    }
- 
-    func handleDeepLink(_ action: String) {
-        withAnimation(.spring(duration: 0.4)) {
-            switch action {
-            case "root":
-                path = NavigationPath()
-            case "swift":
-                path = NavigationPath()
-                path.append(NavCategory.samples[0])
-            case "swiftui":
-                path = NavigationPath()
-                path.append(NavCategory.samples[1])
-            case "swift/protocols":
-                path = NavigationPath()
-                path.append(NavCategory.samples[0])
-                path.append(NavCategory.samples[0].items[0])
-            default:
-                break
-            }
-        }
-    }
- 
-    func sectionLabel(_ text: String) -> some View {
-        Text(text).font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
     }
 }
- 
+
 struct DeepLinkExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

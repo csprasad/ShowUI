@@ -12,60 +12,101 @@
 import SwiftUI
  
 // MARK: - LESSON 1: Stack Basics
- 
 struct NavBasicsVisual: View {
+    @State private var selectedStep = 0
+    let steps = ["Structure", "Push", "Pop"]
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Stack basics", systemImage: "rectangle.stack.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.navBlue)
- 
-                // Live NavigationStack demo embedded in card
-                NavigationStack {
-                    List(NavCategory.samples) { category in
-                        NavigationLink(destination: CategoryDetailView(category: category)) {
-                            Label(category.name, systemImage: category.icon)
-                                .foregroundStyle(category.color)
+
+                HStack(spacing: 8) {
+                    ForEach(steps.indices, id: \.self) { i in
+                        Button {
+                            withAnimation(.spring(response: 0.35)) { selectedStep = i }
+                        } label: {
+                            Text(steps[i])
+                                .font(.system(size: 12, weight: selectedStep == i ? .semibold : .regular))
+                                .foregroundStyle(selectedStep == i ? Color.navBlue : .secondary)
+                                .frame(maxWidth: .infinity).padding(.vertical, 7)
+                                .background(selectedStep == i ? Color.navBlueLight : Color(.systemFill))
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
+                        .buttonStyle(PressableButtonStyle())
                     }
-                    .navigationTitle("Topics")
-                    .navigationBarTitleDisplayMode(.inline)
                 }
-                .frame(height: 220)
+
+                ZStack {
+                    Color(.secondarySystemBackground)
+                    stepDiagram.padding(12)
+                }
+                .frame(maxWidth: .infinity).frame(height: 130)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 14)
-                        .stroke(Color(.systemFill), lineWidth: 1)
-                )
- 
-                // Code anatomy
-                VStack(alignment: .leading, spacing: 6) {
-                    codeRow("NavigationStack { ... }", desc: "The root container - manages the stack")
-                    codeRow("NavigationLink(destination:)", desc: "Pushes destination onto the stack")
-                    codeRow(".navigationTitle(\"...\")", desc: "Sets the bar title for this view")
-                    codeRow(".navigationBarTitleDisplayMode(.large)", desc: "Large or inline title style")
-                }
+                .animation(.spring(response: 0.4), value: selectedStep)
+
+                let descs = [
+                    "NavigationStack wraps your root view. NavigationLink defines what to push. .navigationTitle sets the bar title on each screen.",
+                    "Tapping a NavigationLink pushes the destination onto the stack. SwiftUI adds a back button automatically.",
+                    "Tapping the back button pops the top screen. The stack returns to the previous state.",
+                ]
+                Text(descs[selectedStep])
+                    .font(.system(size: 12)).foregroundStyle(.secondary).lineSpacing(2)
+                    .animation(.easeInOut(duration: 0.2), value: selectedStep)
             }
         }
     }
- 
-    func codeRow(_ code: String, desc: String) -> some View {
-        HStack(alignment: .top, spacing: 8) {
-            Text(code)
-                .font(.system(size: 11, design: .monospaced))
-                .foregroundStyle(Color.navBlue)
-                .frame(width: 180, alignment: .leading)
-            Text(desc)
-                .font(.system(size: 11))
-                .foregroundStyle(.secondary)
+
+    @ViewBuilder
+    private var stepDiagram: some View {
+        switch selectedStep {
+        case 0:
+            HStack(alignment: .top, spacing: 14) {
+                NavScreenMock(title: "Root", color: .navBlue, isTop: true, items: ["Item A", "Item B", "Item C"])
+                VStack(alignment: .leading, spacing: 5) {
+                    navCodeChip("NavigationStack { }")
+                    navCodeChip("NavigationLink(destination:)")
+                    navCodeChip(".navigationTitle(\"Root\")")
+                    navCodeChip(".navigationBarTitleDisplayMode")
+                }
+            }
+
+        case 1:
+            HStack(spacing: 8) {
+                NavScreenMock(title: "Root", color: .navBlue, isTop: false, items: ["Item A ›", "Item B"])
+                VStack(spacing: 6) {
+                    Image(systemName: "arrow.right.circle.fill")
+                        .font(.system(size: 20)).foregroundStyle(Color.navBlue)
+                    Text("push").font(.system(size: 9)).foregroundStyle(.secondary)
+                }
+                NavScreenMock(title: "Detail", color: .navBlue, isTop: true, hasBackButton: true)
+                VStack(alignment: .leading, spacing: 4) {
+                    Label("Auto back button", systemImage: "checkmark.circle.fill")
+                        .font(.system(size: 9, weight: .semibold)).foregroundStyle(Color(hex: "#1D9E75"))
+                    Text("Stack depth: 2")
+                        .font(.system(size: 9, design: .monospaced)).foregroundStyle(.secondary)
+                }
+            }
+
+        default:
+            HStack(spacing: 8) {
+                NavScreenMock(title: "Root", color: .navBlue, isTop: true, items: ["Item A", "Item B"])
+                VStack(spacing: 6) {
+                    Image(systemName: "arrow.left.circle.fill")
+                        .font(.system(size: 20)).foregroundStyle(.secondary)
+                    Text("pop").font(.system(size: 9)).foregroundStyle(.secondary)
+                }
+                NavScreenMock(title: "Detail", color: Color(.systemGray4), isTop: false, hasBackButton: true)
+                    .opacity(0.35)
+                Text("Removed\nfrom stack")
+                    .font(.system(size: 9)).foregroundStyle(.tertiary).multilineTextAlignment(.center)
+            }
         }
-        .padding(.horizontal, 10).padding(.vertical, 6)
-        .background(Color.navBlueLight)
-        .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
- 
+
 struct CategoryDetailView: View {
     let category: NavCategory
  

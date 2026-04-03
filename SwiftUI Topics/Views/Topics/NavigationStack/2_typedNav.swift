@@ -12,149 +12,130 @@
 import SwiftUI
 
 // MARK: - LESSON 2: Typed Navigation
- 
 struct TypedNavVisual: View {
-    @State private var path = NavigationPath()
-    @State private var selectedDemo = 0
- 
-    let demos = ["Value-based link", "Programmatic push", "Multiple types"]
- 
+    @State private var selectedView = 0
+    let views = ["Eager (old)", "Lazy (new)", "Flow"]
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Typed navigation", systemImage: "arrow.right.square.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.navBlue)
- 
-                // Demo selector
+
                 HStack(spacing: 8) {
-                    ForEach(demos.indices, id: \.self) { i in
+                    ForEach(views.indices, id: \.self) { i in
                         Button {
-                            withAnimation(.spring(response: 0.3)) { selectedDemo = i }
+                            withAnimation(.spring(response: 0.35)) { selectedView = i }
                         } label: {
-                            Text(demos[i])
-                                .font(.system(size: 10, weight: selectedDemo == i ? .semibold : .regular))
-                                .foregroundStyle(selectedDemo == i ? Color.navBlue : .secondary)
-                                .padding(.horizontal, 8).padding(.vertical, 5)
-                                .background(selectedDemo == i ? Color.navBlueLight : Color(.systemFill))
-                                .clipShape(Capsule())
+                            Text(views[i])
+                                .font(.system(size: 12, weight: selectedView == i ? .semibold : .regular))
+                                .foregroundStyle(selectedView == i ? Color.navBlue : .secondary)
+                                .frame(maxWidth: .infinity).padding(.vertical, 7)
+                                .background(selectedView == i ? Color.navBlueLight : Color(.systemFill))
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
                         .buttonStyle(PressableButtonStyle())
                     }
                 }
- 
-                // Live demo
-                NavigationStack(path: $path) {
-                    VStack(spacing: 10) {
-                        switch selectedDemo {
-                        case 0:
-                            // Value-based links — no destination: parameter
-                            ForEach(NavCategory.samples) { cat in
-                                NavigationLink(value: cat) {
-                                    HStack(spacing: 10) {
-                                        Image(systemName: cat.icon)
-                                            .foregroundStyle(cat.color).frame(width: 24)
-                                        Text(cat.name).font(.system(size: 14, weight: .medium))
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .font(.system(size: 12)).foregroundStyle(.tertiary)
-                                    }
-                                    .padding(10)
-                                    .background(Color(.systemFill))
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        case 1:
-                            // Programmatic push via path
-                            ForEach(NavCategory.samples) { cat in
-                                Button {
-                                    path.append(cat)
-                                } label: {
-                                    HStack(spacing: 10) {
-                                        Image(systemName: cat.icon).foregroundStyle(cat.color).frame(width: 24)
-                                        Text("Push \(cat.name) programmatically")
-                                            .font(.system(size: 13))
-                                        Spacer()
-                                        Image(systemName: "arrow.right.circle.fill")
-                                            .foregroundStyle(Color.navBlue)
-                                    }
-                                    .padding(10)
-                                    .background(Color(.systemFill))
-                                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                                }
-                                .buttonStyle(PressableButtonStyle())
-                            }
-                        default:
-                            // Multiple value types
-                            VStack(spacing: 8) {
-                                NavigationLink(value: NavCategory.samples[0]) {
-                                    typedRow("Category", "NavCategory", color: .animCoral)
-                                }
-                                .buttonStyle(.plain)
-                                NavigationLink(value: NavCategory.samples[0].items[0]) {
-                                    typedRow("Item", "NavItem", color: .navBlue)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                        }
-                    }
-                    .padding(10)
-                    .navigationTitle("Typed Nav")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .toolbar {
-                        if !path.isEmpty {
-                            ToolbarItem(placement: .navigationBarTrailing) {
-                                Button("Root") { path = NavigationPath() }
-                                    .font(.system(size: 13))
-                            }
-                        }
-                    }
-                    .navigationDestination(for: NavCategory.self) { cat in
-                        TypedCategoryDetail(category: cat, path: $path)
-                    }
-                    .navigationDestination(for: NavItem.self) { item in
-                        TypedItemDetail(item: item)
-                    }
+
+                ZStack {
+                    Color(.secondarySystemBackground)
+                    typedDiagram.padding(12)
                 }
-                .frame(height: 220)
+                .frame(maxWidth: .infinity).frame(height: 130)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
- 
-                // Path depth indicator
-                HStack(spacing: 6) {
-                    Image(systemName: "rectangle.stack")
-                        .font(.system(size: 12)).foregroundStyle(Color.navBlue)
-                    Text("Stack depth: \(path.count + 1)")
-                        .font(.system(size: 12, design: .monospaced)).foregroundStyle(.secondary)
-                    if path.count > 0 {
-                        Button("Pop all") { withAnimation { path = NavigationPath() } }
-                            .font(.system(size: 12)).foregroundStyle(Color.navBlue)
-                    }
-                }
+                .animation(.spring(response: 0.4), value: selectedView)
+
+                let descs = [
+                    "NavigationLink(destination: DetailView(item)) creates DetailView for every row eagerly - even rows you've never visited. 1000 rows = 1000 views.",
+                    "NavigationLink(value: item) pushes a value. .navigationDestination creates the view only when navigation happens - lazy and efficient.",
+                    "The typed value flows: link pushes a value → stack matches it to a registered destination → destination view is created on demand.",
+                ]
+                Text(descs[selectedView])
+                    .font(.system(size: 12)).foregroundStyle(.secondary).lineSpacing(2)
+                    .animation(.easeInOut(duration: 0.2), value: selectedView)
             }
         }
     }
- 
-    func typedRow(_ title: String, _ type: String, color: Color) -> some View {
-        HStack(spacing: 10) {
-            Text(type)
-                .font(.system(size: 11, design: .monospaced))
-                .foregroundStyle(color)
-                .padding(.horizontal, 8).padding(.vertical, 3)
-                .background(color.opacity(0.1))
-                .clipShape(Capsule())
-            Text("Push a \(title)")
-                .font(.system(size: 13))
-            Spacer()
-            Image(systemName: "chevron.right").font(.system(size: 12)).foregroundStyle(.tertiary)
+
+    @ViewBuilder
+    private var typedDiagram: some View {
+        switch selectedView {
+        case 0:
+            VStack(spacing: 6) {
+                HStack(spacing: 4) {
+                    Image(systemName: "xmark.circle.fill").foregroundStyle(Color(hex: "#E24B4A")).font(.system(size: 12))
+                    Text("Eager - destination created for EVERY row")
+                        .font(.system(size: 10, weight: .semibold)).foregroundStyle(Color(hex: "#E24B4A"))
+                }
+                HStack(spacing: 6) {
+                    ForEach(["Row 1", "Row 2", "Row 3", "..."], id: \.self) { row in
+                        VStack(spacing: 3) {
+                            Text(row).font(.system(size: 9)).foregroundStyle(.secondary)
+                            if row != "..." {
+                                Image(systemName: "arrow.down").font(.system(size: 8)).foregroundStyle(.tertiary)
+                                RoundedRectangle(cornerRadius: 4).fill(Color(hex: "#FCEBEB"))
+                                    .frame(width: 52, height: 24)
+                                    .overlay(Text("DetailView").font(.system(size: 7)).foregroundStyle(Color(hex: "#E24B4A")))
+                            } else {
+                                Text("more\nviews").font(.system(size: 8)).foregroundStyle(.tertiary).multilineTextAlignment(.center)
+                            }
+                        }
+                    }
+                }
+            }
+
+        case 1:
+            VStack(spacing: 6) {
+                HStack(spacing: 4) {
+                    Image(systemName: "checkmark.circle.fill").foregroundStyle(Color(hex: "#1D9E75")).font(.system(size: 12))
+                    Text("Lazy - destination created only on navigation")
+                        .font(.system(size: 10, weight: .semibold)).foregroundStyle(Color(hex: "#1D9E75"))
+                }
+                HStack(spacing: 10) {
+                    VStack(alignment: .leading, spacing: 4) {
+                        ForEach(["Row 1 → value", "Row 2 → value", "Row 3 → value"], id: \.self) { row in
+                            Text(row).font(.system(size: 9, design: .monospaced)).foregroundStyle(Color.navBlue)
+                                .padding(.horizontal, 6).padding(.vertical, 2)
+                                .background(Color.navBlueLight).clipShape(RoundedRectangle(cornerRadius: 3))
+                        }
+                    }
+                    Image(systemName: "arrow.right").font(.system(size: 10)).foregroundStyle(.secondary)
+                    VStack(alignment: .leading, spacing: 3) {
+                        navCodeChip(".navigationDestination", color: Color(hex: "#1D9E75"))
+                        navCodeChip("(for: Item.self)", color: Color(hex: "#1D9E75"))
+                        Text("→ ItemDetail(item)")
+                            .font(.system(size: 9)).foregroundStyle(Color(hex: "#1D9E75"))
+                        Text("(on demand ✓)").font(.system(size: 9)).foregroundStyle(Color(hex: "#1D9E75"))
+                    }
+                }
+            }
+
+        default:
+            VStack(spacing: 8) {
+                HStack(spacing: 0) {
+                    flowBox("NavigationLink\n(value: item)", color: .navBlue)
+                    Image(systemName: "arrow.right").font(.system(size: 10)).foregroundStyle(.secondary).frame(width: 20)
+                    flowBox("Stack\nroutes by\ntype", color: .animAmber)
+                    Image(systemName: "arrow.right").font(.system(size: 10)).foregroundStyle(.secondary).frame(width: 20)
+                    flowBox("Destination\ncreated\nlazily ✓", color: Color(hex: "#1D9E75"))
+                }
+                Text("path.append(value) also works · types must be Hashable")
+                    .font(.system(size: 9)).foregroundStyle(.tertiary)
+            }
         }
-        .padding(10)
-        .background(Color(.systemFill))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+
+    func flowBox(_ text: String, color: Color) -> some View {
+        Text(text).font(.system(size: 9, weight: .semibold)).foregroundStyle(color)
+            .multilineTextAlignment(.center)
+            .frame(width: 72, height: 48)
+            .background(color.opacity(0.1))
+            .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
- 
+
 struct TypedCategoryDetail: View {
     let category: NavCategory
     @Binding var path: NavigationPath

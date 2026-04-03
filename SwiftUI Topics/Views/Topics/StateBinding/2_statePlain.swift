@@ -68,7 +68,7 @@ struct StatePlainVisual: View {
                     }
                     .frame(maxWidth: .infinity)
 
-                    // Plain var version — shows the problem
+                    // Plain var version - shows the problem
                     PlainCounterView()
                         .frame(maxWidth: .infinity)
                 }
@@ -153,16 +153,16 @@ struct StatePlainExplanation: View {
             VStack(spacing: 12) {
                 StepRow(number: 1, text: "SwiftUI calls body to produce a view description. It doesn't re-call body unless it knows something changed.", color: .sbOrange)
                 StepRow(number: 2, text: "The only way SwiftUI knows to re-call body is if a @State, @Binding, @Observable, or @Environment value changes.", color: .sbOrange)
-                StepRow(number: 3, text: "A plain var mutates silently. SwiftUI has no observer on it — the view stays stale.", color: .sbOrange)
-                StepRow(number: 4, text: "You can't even write 'count += 1' in a Button action if count is a plain var — structs require mutating functions, and body can't be mutating.", color: .sbOrange)
+                StepRow(number: 3, text: "A plain var mutates silently. SwiftUI has no observer on it - the view stays stale.", color: .sbOrange)
+                StepRow(number: 4, text: "You can't even write 'count += 1' in a Button action if count is a plain var - structs require mutating functions, and body can't be mutating.", color: .sbOrange)
             }
 
             CalloutBox(style: .info, title: "The mental model", contentBody: "Think of @State as a signal flare. When the value changes, it fires a signal to SwiftUI: 'this view needs to be redrawn.' Plain properties have no flare - the change happens in silence and SwiftUI never reacts.")
 
-            CalloutBox(style: .success, title: "When plain let/var IS correct", contentBody: "Data that comes from outside and never changes inside this view - like a title string or a fixed color — should be a plain let or var property. If the view receives it and never modifies it, @State would be wrong.")
+            CalloutBox(style: .success, title: "When plain let/var IS correct", contentBody: "Data that comes from outside and never changes inside this view - like a title string or a fixed color - should be a plain let or var property. If the view receives it and never modifies it, @State would be wrong.")
 
             CodeBlock(code: """
-// ✗ Plain var — SwiftUI can't observe this
+// ✗ Plain var - SwiftUI can't observe this
 struct BrokenCounter: View {
     var count = 0  // plain property
 
@@ -173,7 +173,7 @@ struct BrokenCounter: View {
     }
 }
 
-// ✓ @State — SwiftUI observes and re-renders
+// ✓ @State - SwiftUI observes and re-renders
 struct WorkingCounter: View {
     @State private var count = 0  // watched by SwiftUI
 
@@ -184,7 +184,7 @@ struct WorkingCounter: View {
     }
 }
 
-// ✓ Plain let — data from outside, never mutated
+// ✓ Plain let - data from outside, never mutated
 struct TitleView: View {
     let title: String  // correct - this view doesn't own it
 

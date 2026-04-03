@@ -12,110 +12,104 @@
 import SwiftUI
 
 // MARK: - LESSON 8: Common Mistakes
- 
 struct NavMistakesVisual: View {
     @State private var selectedMistake = 0
- 
+
     struct Mistake {
         let title: String
         let problem: String
         let fix: String
-        let icon: String
+        let severity: String
     }
- 
+
     let mistakes: [Mistake] = [
-        Mistake(
-            title: "NavigationView (deprecated)",
-            problem: "NavigationView is deprecated in iOS 16. Using it causes visual glitches and misses all new navigation APIs.",
-            fix: "Replace with NavigationStack for single-column, NavigationSplitView for sidebar layouts.",
-            icon: "xmark.circle.fill"
-        ),
-        Mistake(
-            title: "NavigationLink(destination:) in List",
-            problem: "NavigationLink(destination: DetailView(item: item)) creates the destination view eagerly for every row - even before navigation. Expensive for large lists.",
-            fix: "Use NavigationLink(value: item) and .navigationDestination(for:) to create destination views lazily.",
-            icon: "bolt.slash.fill"
-        ),
-        Mistake(
-            title: "NavigationStack inside a sheet",
-            problem: "Wrapping a sheet's full content in NavigationStack and then also having an outer NavigationStack causes navigation conflicts.",
-            fix: "A sheet is an independent context. Only add NavigationStack inside a sheet if the sheet needs its own navigation. Don't nest stacks.",
-            icon: "rectangle.on.rectangle.slash.fill"
-        ),
-        Mistake(
-            title: ".sheet on NavigationStack",
-            problem: "Attaching .sheet or .alert to the NavigationStack view instead of its content causes presentation issues during navigation transitions.",
-            fix: "Always attach .sheet, .alert, .confirmationDialog to the content view inside NavigationStack - not to NavigationStack itself.",
-            icon: "arrow.triangle.merge"
-        ),
-        Mistake(
-            title: "Modifiers on NavigationStack",
-            problem: ".navigationTitle, .toolbar, .navigationBarTitleDisplayMode applied to NavigationStack have no effect.",
-            fix: "These modifiers must be applied inside NavigationStack - on the root content view or pushed destination views.",
-            icon: "exclamationmark.triangle.fill"
-        ),
+        Mistake(title: "Using NavigationView",
+                problem: "NavigationView is deprecated in iOS 16. It has bugs with modifiers, programmatic navigation, and misses all modern APIs.",
+                fix: "Replace with NavigationStack for single-column. NavigationSplitView for sidebar layouts.",
+                severity: "critical"),
+        Mistake(title: "Eager destination in List",
+                problem: "NavigationLink(destination: DetailView(item: item)) creates DetailView for every row - including ones never visited. Slow for large lists.",
+                fix: "Use NavigationLink(value: item) + .navigationDestination(for:). Destination is created lazily on navigation.",
+                severity: "performance"),
+        Mistake(title: "Modifiers on NavigationStack",
+                problem: ".navigationTitle, .toolbar, .sheet applied to the NavigationStack wrapper have no effect. Easy mistake to make.",
+                fix: "These modifiers must be on the content view inside NavigationStack, not on NavigationStack itself.",
+                severity: "bug"),
+        Mistake(title: "Nested NavigationStacks",
+                problem: "Putting a NavigationStack inside another NavigationStack causes conflicting navigation behaviour and visual glitches.",
+                fix: "Only one NavigationStack per navigation hierarchy. Sheets can have their own independent NavigationStack.",
+                severity: "bug"),
+        Mistake(title: "Path buried too deep",
+                problem: "NavigationPath declared inside a child view means URL handlers and notification delegates can't reach it to drive navigation.",
+                fix: "Keep NavigationPath at the App or scene level - somewhere that all external navigation triggers can access it.",
+                severity: "architecture"),
     ]
- 
+
+    let severityColors: [String: Color] = [
+        "critical": Color(hex: "#E24B4A"),
+        "performance": Color.animAmber,
+        "bug": Color.animCoral,
+        "architecture": Color.navBlue,
+    ]
+
     var body: some View {
         VisualCard {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: 14) {
                 Label("Common mistakes", systemImage: "exclamationmark.triangle.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.sbOrange)
- 
-                // Mistake selector
+
                 VStack(spacing: 6) {
                     ForEach(mistakes.indices, id: \.self) { i in
-                        Button {
-                            withAnimation(.spring(response: 0.3)) { selectedMistake = i }
-                        } label: {
-                            HStack(spacing: 10) {
-                                Image(systemName: mistakes[i].icon)
-                                    .font(.system(size: 14))
-                                    .foregroundStyle(selectedMistake == i ? Color(hex: "#E24B4A") : .secondary)
-                                    .frame(width: 20)
-                                Text(mistakes[i].title)
-                                    .font(.system(size: 12, weight: selectedMistake == i ? .semibold : .regular))
-                                    .foregroundStyle(selectedMistake == i ? Color(hex: "#E24B4A") : .primary)
-                                    .lineLimit(1)
-                                Spacer()
-                                if selectedMistake == i {
-                                    Image(systemName: "chevron.down")
-                                        .font(.system(size: 10)).foregroundStyle(.secondary)
+                        let isSelected = selectedMistake == i
+                        let color = severityColors[mistakes[i].severity] ?? .secondary
+
+                        VStack(alignment: .leading, spacing: 0) {
+                            Button {
+                                withAnimation(.spring(response: 0.3)) { selectedMistake = i }
+                            } label: {
+                                HStack(spacing: 10) {
+                                    Text(mistakes[i].severity.uppercased())
+                                        .font(.system(size: 8, weight: .bold))
+                                        .foregroundStyle(color)
+                                        .padding(.horizontal, 5).padding(.vertical, 2)
+                                        .background(color.opacity(0.12))
+                                        .clipShape(Capsule())
+                                    Text(mistakes[i].title)
+                                        .font(.system(size: 12, weight: isSelected ? .semibold : .regular))
+                                        .foregroundStyle(isSelected ? color : .primary)
+                                    Spacer()
+                                    Image(systemName: isSelected ? "chevron.up" : "chevron.down")
+                                        .font(.system(size: 9)).foregroundStyle(.secondary)
                                 }
+                                .padding(.horizontal, 12).padding(.vertical, 9)
                             }
-                            .padding(.horizontal, 12).padding(.vertical, 8)
-                            .background(selectedMistake == i ? Color(hex: "#FCEBEB") : Color(.systemFill))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                        .buttonStyle(PressableButtonStyle())
- 
-                        if selectedMistake == i {
-                            VStack(alignment: .leading, spacing: 8) {
-                                Label("Problem", systemImage: "xmark.circle")
-                                    .font(.system(size: 11, weight: .semibold))
-                                    .foregroundStyle(Color(hex: "#E24B4A"))
-                                Text(mistakes[i].problem)
-                                    .font(.system(size: 12)).foregroundStyle(.secondary).lineSpacing(2)
- 
-                                Label("Fix", systemImage: "checkmark.circle")
-                                    .font(.system(size: 11, weight: .semibold))
-                                    .foregroundStyle(Color(hex: "#1D9E75"))
-                                Text(mistakes[i].fix)
-                                    .font(.system(size: 12)).foregroundStyle(.secondary).lineSpacing(2)
+                            .buttonStyle(PressableButtonStyle())
+
+                            if isSelected {
+                                VStack(alignment: .leading, spacing: 8) {
+                                    HStack(alignment: .top, spacing: 6) {
+                                        Image(systemName: "xmark.circle.fill").font(.system(size: 11)).foregroundStyle(Color(hex: "#E24B4A"))
+                                        Text(mistakes[i].problem).font(.system(size: 11)).foregroundStyle(.secondary).lineSpacing(2)
+                                    }
+                                    HStack(alignment: .top, spacing: 6) {
+                                        Image(systemName: "checkmark.circle.fill").font(.system(size: 11)).foregroundStyle(Color(hex: "#1D9E75"))
+                                        Text(mistakes[i].fix).font(.system(size: 11)).foregroundStyle(.secondary).lineSpacing(2)
+                                    }
+                                }
+                                .padding(.horizontal, 12).padding(.bottom, 10)
+                                .transition(.opacity.combined(with: .move(edge: .top)))
                             }
-                            .padding(12)
-                            .background(Color(.secondarySystemBackground))
-                            .clipShape(RoundedRectangle(cornerRadius: 10))
-                            .transition(.opacity.combined(with: .move(edge: .top)))
                         }
+                        .background(isSelected ? color.opacity(0.06) : Color(.systemFill))
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                 }
             }
         }
     }
 }
- 
+
 struct NavMistakesExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

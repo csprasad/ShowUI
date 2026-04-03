@@ -12,121 +12,121 @@
 import SwiftUI
  
 // MARK: - LESSON 3: Navigation Path
- 
 struct NavPathVisual: View {
-    @State private var path = NavigationPath()
-    @State private var log: [String] = []
- 
+    @State private var stackDepth = 1
+    @State private var selectedOp = 0
+    let ops = ["Push", "Pop", "Jump to root", "Replace"]
+
+    var stackScreens: [String] {
+        var screens = ["Root"]
+        if stackDepth >= 2 { screens.append("Categories") }
+        if stackDepth >= 3 { screens.append("Swift") }
+        if stackDepth >= 4 { screens.append("Protocols") }
+        return screens
+    }
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
                 Label("Navigation path", systemImage: "list.bullet.rectangle.fill")
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.navBlue)
- 
-                // Path visualizer
-                HStack(spacing: 0) {
-                    pathStep("Root", isActive: true, isFirst: true)
-                    ForEach(0..<path.count, id: \.self) { i in
-                        Image(systemName: "chevron.right")
-                            .font(.system(size: 10)).foregroundStyle(.tertiary)
-                        pathStep("Level \(i+1)", isActive: i == path.count - 1, isFirst: false)
-                    }
-                    Spacer()
-                }
-                .padding(10)
-                .background(Color(.secondarySystemBackground))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
- 
-                // Navigation stack
-                NavigationStack(path: $path) {
-                    List {
-                        ForEach(NavCategory.samples) { cat in
-                            NavigationLink(value: cat) {
-                                Label(cat.name, systemImage: cat.icon).foregroundStyle(cat.color)
+
+                // Stack visualizer
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("NavigationPath - \(stackDepth - 1) item\(stackDepth == 2 ? "" : "s") above root")
+                        .font(.system(size: 11, weight: .semibold))
+                        .foregroundStyle(.secondary)
+
+                    // Visual stack
+                    HStack(spacing: 4) {
+                        ForEach(stackScreens.indices, id: \.self) { i in
+                            HStack(spacing: 4) {
+                                if i > 0 {
+                                    Image(systemName: "chevron.right")
+                                        .font(.system(size: 9)).foregroundStyle(.tertiary)
+                                }
+                                Text(stackScreens[i])
+                                    .font(.system(size: 11, weight: i == stackScreens.count - 1 ? .semibold : .regular))
+                                    .foregroundStyle(i == stackScreens.count - 1 ? Color.navBlue : .secondary)
+                                    .padding(.horizontal, 8).padding(.vertical, 4)
+                                    .background(i == stackScreens.count - 1 ? Color.navBlueLight : Color(.systemFill))
+                                    .clipShape(RoundedRectangle(cornerRadius: 6))
                             }
                         }
+                        Spacer()
                     }
-                    .navigationTitle("Root")
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationDestination(for: NavCategory.self) { cat in
-                        PathDetailView(category: cat, path: $path, log: $log)
-                    }
-                }
-                .frame(height: 180)
-                .clipShape(RoundedRectangle(cornerRadius: 14))
-                .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
- 
-                // Path controls
-                VStack(spacing: 8) {
-                    HStack(spacing: 8) {
-                        Button {
-                            path.append(NavCategory.samples[Int.random(in: 0..<3)])
-                            log.insert("Pushed programmatically", at: 0)
-                        } label: {
-                            Text("Push random")
-                                .font(.system(size: 13, weight: .semibold)).foregroundStyle(.white)
-                                .frame(maxWidth: .infinity).padding(.vertical, 9)
-                                .background(Color.navBlue).clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                        .buttonStyle(PressableButtonStyle())
- 
-                        Button {
-                            if !path.isEmpty {
-                                path.removeLast()
-                                log.insert("Popped one level", at: 0)
-                            }
-                        } label: {
-                            Text("Pop one")
-                                .font(.system(size: 13, weight: .semibold)).foregroundStyle(Color.navBlue)
-                                .frame(maxWidth: .infinity).padding(.vertical, 9)
-                                .background(Color.navBlueLight).clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                        .buttonStyle(PressableButtonStyle())
-                        .disabled(path.isEmpty)
- 
-                        Button {
-                            path = NavigationPath()
-                            log.insert("Popped to root", at: 0)
-                        } label: {
-                            Text("Root")
-                                .font(.system(size: 13, weight: .semibold)).foregroundStyle(Color(.systemRed))
-                                .frame(maxWidth: .infinity).padding(.vertical, 9)
-                                .background(Color(.systemRed).opacity(0.1)).clipShape(RoundedRectangle(cornerRadius: 10))
-                        }
-                        .buttonStyle(PressableButtonStyle())
-                        .disabled(path.isEmpty)
-                    }
- 
-                    // Log
-                    if !log.isEmpty {
-                        VStack(alignment: .leading, spacing: 3) {
-                            ForEach(Array(log.prefix(3).enumerated()), id: \.offset) { _, entry in
-                                Text(entry)
-                                    .font(.system(size: 11, design: .monospaced))
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding(8)
-                        .background(Color(.secondarySystemBackground))
-                        .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .padding(10)
+                    .background(Color(.secondarySystemBackground))
+                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .animation(.spring(response: 0.4), value: stackDepth)
+
+                    // path state display
+                    HStack(spacing: 6) {
+                        Text("path.count =")
+                            .font(.system(size: 11, design: .monospaced)).foregroundStyle(.secondary)
+                        Text("\(stackDepth - 1)")
+                            .font(.system(size: 13, weight: .bold, design: .monospaced))
+                            .foregroundStyle(Color.navBlue)
                     }
                 }
+
+                // Operation buttons
+                let cols = Array(repeating: GridItem(.flexible(), spacing: 8), count: 2)
+                LazyVGrid(columns: cols, spacing: 8) {
+                    opButton("Push", icon: "arrow.right.circle.fill", color: .navBlue) {
+                        if stackDepth < 4 { withAnimation(.spring(response: 0.35)) { stackDepth += 1 } }
+                    }
+                    opButton("Pop one", icon: "arrow.left.circle.fill", color: .animAmber) {
+                        if stackDepth > 1 { withAnimation(.spring(response: 0.35)) { stackDepth -= 1 } }
+                    }
+                    opButton("Pop to root", icon: "house.fill", color: Color(hex: "#E24B4A")) {
+                        withAnimation(.spring(response: 0.4, dampingFraction: 0.7)) { stackDepth = 1 }
+                    }
+                    opButton("Replace stack", icon: "arrow.triangle.2.circlepath", color: Color(hex: "#1D9E75")) {
+                        withAnimation(.spring(response: 0.4)) { stackDepth = Int.random(in: 2...4) }
+                    }
+                }
+
+                // Code for current operation
+                codeForState
             }
         }
     }
- 
-    func pathStep(_ label: String, isActive: Bool, isFirst: Bool) -> some View {
-        Text(label)
-            .font(.system(size: 10, weight: isActive ? .semibold : .regular))
-            .foregroundStyle(isActive ? Color.navBlue : .secondary)
-            .padding(.horizontal, 6).padding(.vertical, 3)
-            .background(isActive ? Color.navBlueLight : Color.clear)
-            .clipShape(RoundedRectangle(cornerRadius: 5))
+
+    func opButton(_ title: String, icon: String, color: Color, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            HStack(spacing: 6) {
+                Image(systemName: icon).font(.system(size: 14)).foregroundStyle(color)
+                Text(title).font(.system(size: 12, weight: .semibold)).foregroundStyle(color)
+                Spacer()
+            }
+            .padding(.horizontal, 12).padding(.vertical, 8)
+            .background(color.opacity(0.08))
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+        }
+        .buttonStyle(PressableButtonStyle())
+    }
+
+    @ViewBuilder
+    private var codeForState: some View {
+        let snippets: [String: String] = [
+            "1": "// At root\npath = NavigationPath()  // empty",
+            "2": "// One level deep\npath.append(categoriesValue)",
+            "3": "// Two levels deep\npath.append(categoriesValue)\npath.append(swiftCategory)",
+            "4": "// Three levels deep\npath.append(categoriesValue)\npath.append(swiftCategory)\npath.append(protocolsItem)",
+        ]
+        Text(snippets["\(stackDepth)"] ?? "")
+            .font(.system(size: 11, design: .monospaced))
+            .foregroundStyle(Color.navBlue)
+            .padding(10)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.navBlueLight)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .animation(.easeInOut(duration: 0.2), value: stackDepth)
     }
 }
- 
+
 struct PathDetailView: View {
     let category: NavCategory
     @Binding var path: NavigationPath

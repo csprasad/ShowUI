@@ -163,14 +163,14 @@ struct StateObjectExplanation: View {
                 StepRow(number: 4, text: "If you use @ObservedObject where you should use @StateObject, the model gets recreated every time the parent re-renders - a common and subtle bug.", color: .sbOrange)
             }
 
-            CalloutBox(style: .danger, title: "The @StateObject vs @ObservedObject bug", contentBody: "Using @ObservedObject var model = MyModel() means a new model is created every time the parent view renders. All state inside it resets. Always use @StateObject to own, @ObservedObject to reference (old API) — or @State to own with the new @Observable.")
+            CalloutBox(style: .danger, title: "The @StateObject vs @ObservedObject bug", contentBody: "Using @ObservedObject var model = MyModel() means a new model is created every time the parent view renders. All state inside it resets. Always use @StateObject to own, @ObservedObject to reference (old API) - or @State to own with the new @Observable.")
 
             CalloutBox(style: .info, title: "With @Observable (iOS 17+)", contentBody: "The distinction is simpler: @State owns (creates and stores), plain var references. No need for @StateObject or @ObservedObject with @Observable classes.")
 
             CodeBlock(code: """
 // ---- Modern API (@Observable, iOS 17+) ----
 
-// Owner — creates the model
+// Owner - creates the model
 struct ParentView: View {
     @State private var model = CartModel()  // owns it
 
@@ -180,7 +180,7 @@ struct ParentView: View {
     }
 }
 
-// References — receive it
+// References - receive it
 struct CartSummary: View {
     var cart: CartModel  // no wrapper needed
 }

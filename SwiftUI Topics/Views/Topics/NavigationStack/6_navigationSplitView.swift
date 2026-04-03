@@ -12,15 +12,16 @@
 import SwiftUI
 
 // MARK: - LESSON 6: NavigationSplitView
- 
 struct SplitViewVisual: View {
-    @State private var selectedCategory: NavCategory? = NavCategory.samples.first
-    @State private var selectedItem: NavItem? = nil
-    @State private var columnVisibility = NavigationSplitViewVisibility.automatic
+    @State private var selectedCategory: Int = 0
+    @State private var selectedItem: Int? = nil
     @State private var selectedLayout = 0
- 
-    let layouts = ["Two-column", "Three-column"]
- 
+
+    let categories = ["Swift", "SwiftUI", "Xcode"]
+    let categoryIcons = ["swift", "rectangle.3.group.fill", "hammer.fill"]
+    let categoryColors: [Color] = [.animCoral, .navBlue, .animAmber]
+    let items = [["Protocols", "Generics", "Concurrency"], ["State", "Layout", "Animations"], ["Instruments", "Previews", "Debugger"]]
+
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
@@ -30,121 +31,147 @@ struct SplitViewVisual: View {
                         .foregroundStyle(Color.navBlue)
                     Spacer()
                     Text("iPad / Mac")
-                        .font(.system(size: 10, weight: .semibold))
-                        .foregroundStyle(Color.navBlue)
+                        .font(.system(size: 10, weight: .semibold)).foregroundStyle(Color.navBlue)
                         .padding(.horizontal, 8).padding(.vertical, 3)
                         .background(Color.navBlueLight).clipShape(Capsule())
                 }
- 
-                // Layout selector
+
                 HStack(spacing: 8) {
-                    ForEach(layouts.indices, id: \.self) { i in
+                    ForEach(["Two-column", "Three-column"].indices, id: \.self) { i in
                         Button {
-                            withAnimation(.spring(response: 0.3)) { selectedLayout = i }
+                            withAnimation(.spring(response: 0.3)) { selectedLayout = i; selectedItem = nil }
                         } label: {
-                            Text(layouts[i])
+                            Text(["Two-column", "Three-column"][i])
                                 .font(.system(size: 12, weight: selectedLayout == i ? .semibold : .regular))
                                 .foregroundStyle(selectedLayout == i ? Color.navBlue : .secondary)
-                                .frame(maxWidth: .infinity).padding(.vertical, 8)
+                                .frame(maxWidth: .infinity).padding(.vertical, 7)
                                 .background(selectedLayout == i ? Color.navBlueLight : Color(.systemFill))
                                 .clipShape(RoundedRectangle(cornerRadius: 8))
                         }
                         .buttonStyle(PressableButtonStyle())
                     }
                 }
- 
-                // Split view demo
-                if selectedLayout == 0 {
-                    // Two-column
-                    NavigationSplitView {
-                        List(NavCategory.samples, selection: $selectedCategory) { cat in
-                            Label(cat.name, systemImage: cat.icon)
-                                .foregroundStyle(cat.color)
-                                .tag(cat)
-                        }
-                        .navigationTitle("Sidebar")
-                        .navigationBarTitleDisplayMode(.inline)
-                    } detail: {
-                        if let cat = selectedCategory {
-                            List(cat.items) { item in
-                                Label(item.name, systemImage: item.icon)
-                            }
-                            .navigationTitle(cat.name)
-                            .navigationBarTitleDisplayMode(.inline)
-                        } else {
-                            Text("Select a category")
-                                .foregroundStyle(.secondary)
-                        }
-                    }
-                    .frame(height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
-                } else {
-                    // Three-column
-                    NavigationSplitView {
-                        List(NavCategory.samples, selection: $selectedCategory) { cat in
-                            Label(cat.name, systemImage: cat.icon)
-                                .foregroundStyle(cat.color)
-                                .tag(cat)
-                        }
-                        .navigationTitle("Topics")
-                        .navigationBarTitleDisplayMode(.inline)
-                    } content: {
-                        if let cat = selectedCategory {
-                            List(cat.items, selection: $selectedItem) { item in
-                                Text(item.name).tag(item)
-                            }
-                            .navigationTitle(cat.name)
-                            .navigationBarTitleDisplayMode(.inline)
-                        } else {
-                            Text("Pick a topic").foregroundStyle(.secondary)
-                        }
-                    } detail: {
-                        if let item = selectedItem {
-                            VStack(spacing: 8) {
-                                Image(systemName: item.icon)
-                                    .font(.system(size: 32)).foregroundStyle(Color.navBlue)
-                                Text(item.name).font(.system(size: 18, weight: .bold))
-                                Text(item.description).font(.system(size: 13)).foregroundStyle(.secondary)
-                            }
-                            .frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .navigationTitle(item.name)
-                            .navigationBarTitleDisplayMode(.inline)
-                        } else {
-                            Text("Pick an item").foregroundStyle(.secondary)
-                        }
-                    }
-                    .frame(height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    .overlay(RoundedRectangle(cornerRadius: 14).stroke(Color(.systemFill), lineWidth: 1))
+
+                // Split view mockup
+                ZStack {
+                    Color(.secondarySystemBackground)
+                    splitMock
                 }
- 
-                // Selection state
-                HStack(spacing: 8) {
-                    if let cat = selectedCategory {
-                        selectionChip(cat.name, color: cat.color)
-                    }
-                    if let item = selectedItem, selectedLayout == 1 {
-                        Image(systemName: "chevron.right").font(.system(size: 10)).foregroundStyle(.tertiary)
-                        selectionChip(item.name, color: .navBlue)
-                    }
+                .frame(maxWidth: .infinity).frame(height: 160)
+                .clipShape(RoundedRectangle(cornerRadius: 14))
+                .animation(.spring(response: 0.35), value: selectedCategory)
+                .animation(.spring(response: 0.35), value: selectedItem)
+
+                // On iPhone note
+                HStack(spacing: 6) {
+                    Image(systemName: "iphone").font(.system(size: 12)).foregroundStyle(Color.navBlue)
+                    Text("On iPhone, NavigationSplitView collapses into a NavigationStack automatically - one codebase, all screen sizes")
+                        .font(.system(size: 12)).foregroundStyle(.secondary)
                 }
-                .animation(.spring(response: 0.3), value: selectedCategory?.id)
-                .animation(.spring(response: 0.3), value: selectedItem?.id)
+                .padding(10).background(Color.navBlueLight).clipShape(RoundedRectangle(cornerRadius: 10))
             }
         }
     }
- 
-    func selectionChip(_ text: String, color: Color) -> some View {
-        Text(text)
-            .font(.system(size: 11, weight: .semibold))
-            .foregroundStyle(color)
-            .padding(.horizontal, 10).padding(.vertical, 4)
-            .background(color.opacity(0.1))
-            .clipShape(Capsule())
+
+    @ViewBuilder
+    private var splitMock: some View {
+        if selectedLayout == 0 {
+            // Two-column
+            HStack(spacing: 0) {
+                // Sidebar
+                VStack(spacing: 0) {
+                    Text("Sidebar").font(.system(size: 10, weight: .semibold)).foregroundStyle(.secondary)
+                        .padding(.horizontal, 8).padding(.top, 8).padding(.bottom, 4)
+                    ForEach(categories.indices, id: \.self) { i in
+                        HStack(spacing: 6) {
+                            Image(systemName: categoryIcons[i]).font(.system(size: 11)).foregroundStyle(categoryColors[i])
+                            Text(categories[i]).font(.system(size: 11))
+                            Spacer()
+                        }
+                        .padding(.horizontal, 8).padding(.vertical, 5)
+                        .background(selectedCategory == i ? Color.navBlueLight : Color.clear)
+                        .onTapGesture { withAnimation { selectedCategory = i } }
+                    }
+                    Spacer()
+                }
+                .frame(width: 110)
+                .background(Color(.systemBackground))
+                Divider()
+                // Detail
+                VStack(spacing: 0) {
+                    Text(categories[selectedCategory]).font(.system(size: 12, weight: .semibold))
+                        .padding(.horizontal, 10).padding(.top, 8).padding(.bottom, 4)
+                    ForEach(items[selectedCategory].indices, id: \.self) { j in
+                        HStack {
+                            Text(items[selectedCategory][j]).font(.system(size: 11))
+                            Spacer()
+                        }
+                        .padding(.horizontal, 10).padding(.vertical, 4)
+                        Divider().padding(.leading, 10)
+                    }
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color(.systemBackground))
+            }
+        } else {
+            // Three-column
+            HStack(spacing: 0) {
+                // Sidebar
+                VStack(spacing: 0) {
+                    Text("Topics").font(.system(size: 9, weight: .semibold)).foregroundStyle(.secondary)
+                        .padding(.horizontal, 6).padding(.top, 6).padding(.bottom, 3)
+                    ForEach(categories.indices, id: \.self) { i in
+                        HStack(spacing: 4) {
+                            Image(systemName: categoryIcons[i]).font(.system(size: 10)).foregroundStyle(categoryColors[i])
+                            Text(categories[i]).font(.system(size: 10))
+                        }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.horizontal, 6).padding(.vertical, 4)
+                        .background(selectedCategory == i ? Color.navBlueLight : Color.clear)
+                        .onTapGesture { withAnimation { selectedCategory = i; selectedItem = nil } }
+                    }
+                    Spacer()
+                }
+                .frame(width: 80)
+                .background(Color(.systemBackground))
+                Divider()
+                // Content
+                VStack(spacing: 0) {
+                    Text(categories[selectedCategory]).font(.system(size: 9, weight: .semibold)).foregroundStyle(.secondary)
+                        .padding(.horizontal, 6).padding(.top, 6).padding(.bottom, 3)
+                    ForEach(items[selectedCategory].indices, id: \.self) { j in
+                        Text(items[selectedCategory][j]).font(.system(size: 10))
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(.horizontal, 6).padding(.vertical, 4)
+                            .background(selectedItem == j ? Color.navBlueLight : Color.clear)
+                            .onTapGesture { withAnimation { selectedItem = j } }
+                        Divider().padding(.leading, 6)
+                    }
+                    Spacer()
+                }
+                .frame(width: 90)
+                .background(Color(.systemBackground))
+                Divider()
+                // Detail
+                VStack {
+                    if let item = selectedItem {
+                        VStack(spacing: 6) {
+                            Image(systemName: "doc.text.fill").font(.system(size: 20)).foregroundStyle(Color.navBlue)
+                            Text(items[selectedCategory][item]).font(.system(size: 11, weight: .semibold))
+                            Text("Detail view").font(.system(size: 9)).foregroundStyle(.secondary)
+                        }
+                    } else {
+                        Text("Select an item").font(.system(size: 10)).foregroundStyle(.tertiary)
+                    }
+                }
+                .frame(maxWidth: .infinity)
+                .background(Color(.systemBackground))
+            }
+        }
     }
 }
- 
+
 struct SplitViewExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

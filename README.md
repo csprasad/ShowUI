@@ -29,14 +29,16 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 
 | Topic | Lessons | Highlights |
 |---|:---:|---|
-| 🔀 **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
-| ✨ **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
-| ⭐️ **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
-| ⌨️ **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
-| 🎭 **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
-| 🎨 **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |
-| 🖱 **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
-
+| **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
+| **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
+| **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
+| **State & Binding** | 8 | How SwiftUI views own, share and react to data changes |
+| **Navigation Stack** | 8 | Typed navigation, paths, deep linking, toolbars and split views |
+| **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
+| **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
+| **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |
+| **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
+| **Bottom Sheets** | 9 | Detents, drag indicators, background interaction and more |
 
 ## Lesson Structure
 

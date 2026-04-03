@@ -26,7 +26,7 @@ struct StateBasicsVisual: View {
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(Color.sbOrange)
 
-                // Counter — the classic @State demo
+                // Counter - the classic @State demo
                 VStack(spacing: 10) {
                     sectionLabel("Counter")
                     HStack(spacing: 16) {
