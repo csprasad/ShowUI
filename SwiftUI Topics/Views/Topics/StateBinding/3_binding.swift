@@ -182,7 +182,7 @@ struct BindingExplanation: View {
             CalloutBox(style: .warning, title: "Don't create @Binding yourself", contentBody: "Almost always, @Binding comes from a parent's @State via $. Constructing Binding(get:set:) manually is a code smell - if you find yourself doing that, reconsider where the state lives.")
 
             CodeBlock(code: """
-// Parent — owns the state
+// Parent - owns the state
 struct ParentView: View {
     @State private var isOn = false  // ← owns it
 
@@ -191,7 +191,7 @@ struct ParentView: View {
     }
 }
 
-// Child — references the state
+// Child - references the state
 struct ChildToggle: View {
     @Binding var isOn: Bool          // ← no initial value
 

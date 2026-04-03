@@ -14,9 +14,9 @@ import SwiftUI
 // MARK: - LESSON 8: Multiple State Sources
 
 struct MultipleSourcesVisual: View {
-    // Local state — owned here
+    // Local state - owned here
     @State private var localCount = 0
-    // @Observable model — shared logic
+    // @Observable model - shared logic
     @State private var sharedModel = ProfileModel()
     // System environment
     @Environment(\.colorScheme) var colorScheme

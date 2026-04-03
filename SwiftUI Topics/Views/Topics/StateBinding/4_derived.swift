@@ -19,7 +19,7 @@ struct DerivedStateVisual: View {
     @State private var newItem = ""
     @State private var temperature: Double = 22.0
 
-    // Derived — computed from state, no @State needed
+    // Derived - computed from state, no @State needed
     var filteredItems: [String] {
         searchText.isEmpty ? items : items.filter { $0.localizedCaseInsensitiveContains(searchText) }
     }
@@ -62,7 +62,7 @@ struct DerivedStateVisual: View {
                     .background(Color(.systemFill))
                     .clipShape(RoundedRectangle(cornerRadius: 8))
 
-                    // filteredItems is a computed property — no @State
+                    // filteredItems is a computed property - no @State
                     ForEach(filteredItems, id: \.self) { item in
                         HStack(spacing: 8) {
                             Image(systemName: "checkmark.circle")
@@ -102,7 +102,7 @@ struct DerivedStateVisual: View {
 
                 Divider()
 
-                // Temperature label — derived from Double
+                // Temperature label - derived from Double
                 VStack(alignment: .leading, spacing: 8) {
                     sectionLabel("Derived label from Double state")
                     HStack(spacing: 10) {
@@ -153,7 +153,7 @@ struct ShoppingList: View {
     @State private var items = ["Milk", "Eggs"]
     @State private var searchText = ""
 
-    // Derived — computed from @State, always in sync
+    // Derived - computed from @State, always in sync
     var filteredItems: [String] {
         searchText.isEmpty
             ? items

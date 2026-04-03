@@ -236,7 +236,7 @@ struct ChildView: View {
 
     var body: some View {
         Text(user.name)   // auto-observed
-        Text(user.level)  // computed — tracked automatically
+        Text(user.level)  // computed - tracked automatically
     }
 }
 """)

@@ -20,9 +20,10 @@ struct TopicRegistry {
         AnimationsTopic(),
         SFSymbolsTopic(),
         StateBindingTopic(),
+        NavigationStackTopic(),
         KeyboardTopic(),
-        BlendModesTopic(),
         MaskingTopic(),
+        BlendModesTopic(),
         ButtonsTopic(),
         BottomSheetsTopic(),
     ]
