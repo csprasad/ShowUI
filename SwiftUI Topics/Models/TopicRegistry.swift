@@ -22,6 +22,7 @@ struct TopicRegistry {
         StateBindingTopic(),
         NavigationStackTopic(),
         ListForEachTopic(),
+        TextTypographyTopic(),
         KeyboardTopic(),
         MaskingTopic(),
         BlendModesTopic(),
