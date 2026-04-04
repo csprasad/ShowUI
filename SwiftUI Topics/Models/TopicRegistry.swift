@@ -21,6 +21,7 @@ struct TopicRegistry {
         SFSymbolsTopic(),
         StateBindingTopic(),
         NavigationStackTopic(),
+        ListForEachTopic(),
         KeyboardTopic(),
         MaskingTopic(),
         BlendModesTopic(),
