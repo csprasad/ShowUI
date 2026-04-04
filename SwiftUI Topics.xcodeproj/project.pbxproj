@@ -43,6 +43,13 @@
 		051C4A882F7D17400003C63A /* 8_multipleSources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051C4A872F7D17350003C63A /* 8_multipleSources.swift */; };
 		051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051FDFB92F47323B0013F19E /* Color+Hex.swift */; };
 		05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05235D8F2F7FDF090002614B /* diagram+Helper.swift */; };
+		0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C52F817A250062C81B /* TextTypographyTopic.swift */; };
+		0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C72F817C390062C81B /* 1_TextBasics.swift */; };
+		0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */; };
+		0546F0CC2F817C5F0062C81B /* 3_TextTruncation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CB2F817C5E0062C81B /* 3_TextTruncation.swift */; };
+		0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */; };
+		0546F0D02F817D840062C81B /* 5_DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CF2F817D830062C81B /* 5_DynamicType.swift */; };
+		0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */; };
 		054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */; };
 		054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CF2F711945003BA047 /* 1_renderingmodes.swift */; };
 		054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D12F711981003BA047 /* 2_layeredsymbols.swift */; };
@@ -167,6 +174,13 @@
 		051C4A872F7D17350003C63A /* 8_multipleSources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_multipleSources.swift; sourceTree = "<group>"; };
 		051FDFB92F47323B0013F19E /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		05235D8F2F7FDF090002614B /* diagram+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "diagram+Helper.swift"; sourceTree = "<group>"; };
+		0546F0C52F817A250062C81B /* TextTypographyTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypographyTopic.swift; sourceTree = "<group>"; };
+		0546F0C72F817C390062C81B /* 1_TextBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TextBasics.swift; sourceTree = "<group>"; };
+		0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_TextFormatting.swift; sourceTree = "<group>"; };
+		0546F0CB2F817C5E0062C81B /* 3_TextTruncation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_TextTruncation.swift; sourceTree = "<group>"; };
+		0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_TextAdvanced.swift; sourceTree = "<group>"; };
+		0546F0CF2F817D830062C81B /* 5_DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_DynamicType.swift; sourceTree = "<group>"; };
+		0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_TextPrivacy.swift; sourceTree = "<group>"; };
 		054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTopic.swift; sourceTree = "<group>"; };
 		054ED8CF2F711945003BA047 /* 1_renderingmodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_renderingmodes.swift; sourceTree = "<group>"; };
 		054ED8D12F711981003BA047 /* 2_layeredsymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_layeredsymbols.swift; sourceTree = "<group>"; };
@@ -331,6 +345,20 @@
 				051FDFB92F47323B0013F19E /* Color+Hex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		0546F0C42F817A160062C81B /* Text & Typography */ = {
+			isa = PBXGroup;
+			children = (
+				0546F0C52F817A250062C81B /* TextTypographyTopic.swift */,
+				0546F0C72F817C390062C81B /* 1_TextBasics.swift */,
+				0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */,
+				0546F0CB2F817C5E0062C81B /* 3_TextTruncation.swift */,
+				0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */,
+				0546F0CF2F817D830062C81B /* 5_DynamicType.swift */,
+				0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */,
+			);
+			path = "Text & Typography";
 			sourceTree = "<group>";
 		};
 		054ED8CC2F7117F7003BA047 /* SF Symbols */ = {
@@ -544,6 +572,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				0546F0C42F817A160062C81B /* Text & Typography */,
 				05AED1112F80E56300E3C2BE /* ListForeach */,
 				05B149792F7F8B0500F00B04 /* NavigationStack */,
 				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
@@ -696,6 +725,7 @@
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				051C4A732F7D14240003C63A /* StatebindingTopic.swift in Sources */,
 				0563754A2F71C261001E7148 /* 6_buttonConfirmation.swift in Sources */,
+				0546F0D02F817D840062C81B /* 5_DynamicType.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
 				0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */,
 				0555455A2F72740F006086F5 /* bottomsheetsTopic.swift in Sources */,
@@ -709,6 +739,7 @@
 				056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
+				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
 				0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
@@ -725,8 +756,10 @@
 				05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */,
 				05B149852F7F925C00F00B04 /* 3_navPath.swift in Sources */,
 				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
+				0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */,
 				05AED11B2F80E6B800E3C2BE /* 4_SwipeActions.swift in Sources */,
 				05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */,
+				0546F0CC2F817C5F0062C81B /* 3_TextTruncation.swift in Sources */,
 				05685BB12F6AAF1A004643FF /* TopicRegistry.swift in Sources */,
 				05AED1152F80E5A400E3C2BE /* 1_ForEachBasics.swift in Sources */,
 				051C4A772F7D14B50003C63A /* 2_statePlain.swift in Sources */,
@@ -745,13 +778,16 @@
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
+				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				05685BA12F6A8F9D004643FF /* SharedComponents.swift in Sources */,
 				055545662F72766A006086F5 /* 6_customBackground.swift in Sources */,
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
+				0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */,
 				056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
+				0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */,
 				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
 				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
 				0555455E2F7274C7006086F5 /* 2_detents.swift in Sources */,
