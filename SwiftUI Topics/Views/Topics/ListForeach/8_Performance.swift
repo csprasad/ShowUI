@@ -87,7 +87,7 @@ struct ListPerformanceVisual: View {
                     renderingDiagram(isLazy: false)
 
                     VStack(alignment: .leading, spacing: 3) {
-                        featureRow("✗ Eager — all rows", good: false)
+                        featureRow("✗ Eager - all rows", good: false)
                         featureRow("✓ Full layout control", good: true)
                         featureRow("✗ No swipe actions", good: false)
                         featureRow("✗ No edit mode", good: false)
@@ -223,15 +223,15 @@ struct ListPerformanceVisual: View {
 struct ListPerformanceExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "List vs VStack — performance")
+            SectionHeader(text: "List vs VStack - performance")
             Text("The choice between List, VStack + ForEach, and LazyVStack comes down to what you need: system styling and editing features, full layout control, or lazy rendering with custom layout.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "List — lazy, system styling, swipe actions, edit mode. Best for data-driven rows of variable or large count.", color: .lfBlue)
-                StepRow(number: 2, text: "VStack + ForEach — eager, full layout control, no system styling. Best for short fixed lists or custom card layouts.", color: .lfBlue)
-                StepRow(number: 3, text: "LazyVStack + ForEach in ScrollView — lazy, full layout control, no system styling. Best for custom layouts with many items.", color: .lfBlue)
-                StepRow(number: 4, text: "LazyHStack — same as LazyVStack but horizontal. Use for horizontal carousels of many items.", color: .lfBlue)
+                StepRow(number: 1, text: "List - lazy, system styling, swipe actions, edit mode. Best for data-driven rows of variable or large count.", color: .lfBlue)
+                StepRow(number: 2, text: "VStack + ForEach - eager, full layout control, no system styling. Best for short fixed lists or custom card layouts.", color: .lfBlue)
+                StepRow(number: 3, text: "LazyVStack + ForEach in ScrollView - lazy, full layout control, no system styling. Best for custom layouts with many items.", color: .lfBlue)
+                StepRow(number: 4, text: "LazyHStack - same as LazyVStack but horizontal. Use for horizontal carousels of many items.", color: .lfBlue)
             }
 
             CalloutBox(style: .warning, title: "VStack with many rows is a common mistake", contentBody: "Putting 200 rows in a VStack renders all 200 immediately, even the ones far below the fold. This causes slow initial load and high memory. Use List or LazyVStack for anything that could grow beyond 20 rows.")
@@ -239,13 +239,13 @@ struct ListPerformanceExplanation: View {
             CalloutBox(style: .info, title: "When LazyVStack beats List", contentBody: "LazyVStack inside ScrollView when you need: custom spacing between items, no separator lines, horizontal padding that List won't give, or views mixed with non-row content above and below.")
 
             CodeBlock(code: """
-// List — system styling, lazy, editing support
+// List - system styling, lazy, editing support
 List(items) { item in
     ItemRow(item: item)
 }
 .listStyle(.insetGrouped)
 
-// LazyVStack — lazy + custom layout
+// LazyVStack - lazy + custom layout
 ScrollView {
     LazyVStack(spacing: 12) {
         ForEach(items) { item in
@@ -255,14 +255,14 @@ ScrollView {
     .padding(.horizontal, 16)
 }
 
-// VStack — only for short, fixed lists
+// VStack - only for short, fixed lists
 VStack(spacing: 8) {
     ForEach(tabs) { tab in  // e.g. 5 navigation tabs
         TabRow(tab: tab)
     }
 }
 
-// LazyHStack — horizontal carousel
+// LazyHStack - horizontal carousel
 ScrollView(.horizontal) {
     LazyHStack(spacing: 12) {
         ForEach(featuredItems) { item in

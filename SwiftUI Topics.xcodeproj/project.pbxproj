@@ -103,6 +103,13 @@
 		05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC52F6AB740004643FF /* 4_InputValidation.swift */; };
 		05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC72F6AB76B004643FF /* 5_KeyboardToolbar.swift */; };
 		05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05685BC92F6AB846004643FF /* 6_ReturnKey.swift */; };
+		057063FF2F82293D00B2512D /* Stacksspacertopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057063FE2F82293B00B2512D /* Stacksspacertopic.swift */; };
+		057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064002F82295C00B2512D /* 1_HStack&VStack.swift */; };
+		057064032F8229B500B2512D /* 2_ZStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064022F8229B200B2512D /* 2_ZStack.swift */; };
+		057064052F8229DE00B2512D /* 3_Spacer&Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064042F8229D800B2512D /* 3_Spacer&Divider.swift */; };
+		057064072F822A4200B2512D /* 4_Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064062F822A4000B2512D /* 4_Alignment.swift */; };
+		057064092F822AB600B2512D /* 5_Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064082F822AAE00B2512D /* 5_Frame.swift */; };
+		0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */; };
 		05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED1122F80E56E00E3C2BE /* ListforeachTopic.swift */; };
 		05AED1152F80E5A400E3C2BE /* 1_ForEachBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED1142F80E59B00E3C2BE /* 1_ForEachBasics.swift */; };
 		05AED1172F80E63900E3C2BE /* 2_ListBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AED1162F80E62F00E3C2BE /* 2_ListBasics.swift */; };
@@ -234,6 +241,13 @@
 		05685BC52F6AB740004643FF /* 4_InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_InputValidation.swift; sourceTree = "<group>"; };
 		05685BC72F6AB76B004643FF /* 5_KeyboardToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_KeyboardToolbar.swift; sourceTree = "<group>"; };
 		05685BC92F6AB846004643FF /* 6_ReturnKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_ReturnKey.swift; sourceTree = "<group>"; };
+		057063FE2F82293B00B2512D /* Stacksspacertopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stacksspacertopic.swift; sourceTree = "<group>"; };
+		057064002F82295C00B2512D /* 1_HStack&VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1_HStack&VStack.swift"; sourceTree = "<group>"; };
+		057064022F8229B200B2512D /* 2_ZStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ZStack.swift; sourceTree = "<group>"; };
+		057064042F8229D800B2512D /* 3_Spacer&Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_Spacer&Divider.swift"; sourceTree = "<group>"; };
+		057064062F822A4000B2512D /* 4_Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Alignment.swift; sourceTree = "<group>"; };
+		057064082F822AAE00B2512D /* 5_Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_Frame.swift; sourceTree = "<group>"; };
+		0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_Padding&Offset.swift"; sourceTree = "<group>"; };
 		05AED1122F80E56E00E3C2BE /* ListforeachTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListforeachTopic.swift; sourceTree = "<group>"; };
 		05AED1142F80E59B00E3C2BE /* 1_ForEachBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ForEachBasics.swift; sourceTree = "<group>"; };
 		05AED1162F80E62F00E3C2BE /* 2_ListBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ListBasics.swift; sourceTree = "<group>"; };
@@ -453,6 +467,20 @@
 			path = "Keyboard Lessons";
 			sourceTree = "<group>";
 		};
+		057063FD2F82291C00B2512D /* Stacks & Spacer */ = {
+			isa = PBXGroup;
+			children = (
+				0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */,
+				057064082F822AAE00B2512D /* 5_Frame.swift */,
+				057064062F822A4000B2512D /* 4_Alignment.swift */,
+				057064042F8229D800B2512D /* 3_Spacer&Divider.swift */,
+				057064022F8229B200B2512D /* 2_ZStack.swift */,
+				057064002F82295C00B2512D /* 1_HStack&VStack.swift */,
+				057063FE2F82293B00B2512D /* Stacksspacertopic.swift */,
+			);
+			path = "Stacks & Spacer";
+			sourceTree = "<group>";
+		};
 		059799FC2F06585800905892 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -572,6 +600,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				057063FD2F82291C00B2512D /* Stacks & Spacer */,
 				0546F0C42F817A160062C81B /* Text & Typography */,
 				05AED1112F80E56300E3C2BE /* ListForeach */,
 				05B149792F7F8B0500F00B04 /* NavigationStack */,
@@ -678,6 +707,7 @@
 				051C4A7C2F7D15E80003C63A /* 4_derived.swift in Sources */,
 				056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */,
 				0555456C2F7277B1006086F5 /* 9_sheetLayout.swift in Sources */,
+				057064072F822A4200B2512D /* 4_Alignment.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
@@ -692,6 +722,8 @@
 				05AED1232F80E78C00E3C2BE /* 8_Performance.swift in Sources */,
 				05685BB32F6AAF3D004643FF /* View+extensions.swift in Sources */,
 				051499B22F715E8200EE4E83 /* 9_customSymbol.swift in Sources */,
+				057064052F8229DE00B2512D /* 3_Spacer&Divider.swift in Sources */,
+				057063FF2F82293D00B2512D /* Stacksspacertopic.swift in Sources */,
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
@@ -703,6 +735,7 @@
 				05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */,
 				05B1497B2F7F8B5900F00B04 /* 8_commonMistakes.swift in Sources */,
 				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
+				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
 				054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */,
@@ -718,6 +751,7 @@
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
 				05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */,
 				051C4A882F7D17400003C63A /* 8_multipleSources.swift in Sources */,
+				057064092F822AB600B2512D /* 5_Frame.swift in Sources */,
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
@@ -739,7 +773,9 @@
 				056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
+				057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */,
 				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
+				057064032F8229B500B2512D /* 2_ZStack.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
 				0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,

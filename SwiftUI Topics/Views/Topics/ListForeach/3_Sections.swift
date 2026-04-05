@@ -140,9 +140,9 @@ struct SectionsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Section(\"Title\") { rows } — simplest form. Title string becomes the header.", color: .lfBlue)
-                StepRow(number: 2, text: "Section { rows } header: { view } footer: { view } — custom header and footer views.", color: .lfBlue)
-                StepRow(number: 3, text: "Section(isExpanded: $bool) — collapsible section. Works with .listStyle(.sidebar) for the chevron arrow.", color: .lfBlue)
+                StepRow(number: 1, text: "Section(\"Title\") { rows } - simplest form. Title string becomes the header.", color: .lfBlue)
+                StepRow(number: 2, text: "Section { rows } header: { view } footer: { view } - custom header and footer views.", color: .lfBlue)
+                StepRow(number: 3, text: "Section(isExpanded: $bool) - collapsible section. Works with .listStyle(.sidebar) for the chevron arrow.", color: .lfBlue)
                 StepRow(number: 4, text: "Nest ForEach inside Section to generate sections dynamically from grouped data.", color: .lfBlue)
             }
 

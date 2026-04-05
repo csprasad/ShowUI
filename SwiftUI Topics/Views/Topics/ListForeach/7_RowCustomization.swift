@@ -49,7 +49,7 @@ struct RowCustomizationVisual: View {
 
                 // Code for current style
                 let codes = [
-                    "// Default — system separators and insets",
+                    "// Default - system separators and insets",
                     ".listRowSeparator(.hidden)\n// Hides the row separator line",
                     ".listRowBackground(Color.lfBlueLight)\n// Custom row background color",
                     ".listRowInsets(EdgeInsets())\n// Removes default side insets → full width",
@@ -94,7 +94,7 @@ struct RowCustomizationVisual: View {
             .listStyle(.plain)
 
         case 3:
-            // Full width — no insets
+            // Full width - no insets
             List(Array(items)) { contact in
                 HStack(spacing: 12) {
                     Rectangle().fill(contact.name.hashValue % 2 == 0 ? Color.lfBlue : Color.animTeal)
@@ -142,18 +142,18 @@ struct RowCustomizationExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "Customizing list rows")
-            Text("SwiftUI provides modifiers to control every aspect of row appearance — separators, background, insets, and tint. These are applied per-row on the content view inside the List, not on the List itself.")
+            Text("SwiftUI provides modifiers to control every aspect of row appearance - separators, background, insets, and tint. These are applied per-row on the content view inside the List, not on the List itself.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".listRowSeparator(.hidden) — hides the separator line below a row. .visible forces it on.", color: .lfBlue)
-                StepRow(number: 2, text: ".listRowSeparatorTint(color) — changes the separator color for a specific row.", color: .lfBlue)
-                StepRow(number: 3, text: ".listRowBackground(view) — replaces the default white row background with any view.", color: .lfBlue)
-                StepRow(number: 4, text: ".listRowInsets(EdgeInsets()) — sets custom padding. EdgeInsets() removes all insets for full-width rows.", color: .lfBlue)
-                StepRow(number: 5, text: ".listItemTint(color) — tints interactive controls (toggles, disclosure indicators) inside the row.", color: .lfBlue)
+                StepRow(number: 1, text: ".listRowSeparator(.hidden) - hides the separator line below a row. .visible forces it on.", color: .lfBlue)
+                StepRow(number: 2, text: ".listRowSeparatorTint(color) - changes the separator color for a specific row.", color: .lfBlue)
+                StepRow(number: 3, text: ".listRowBackground(view) - replaces the default white row background with any view.", color: .lfBlue)
+                StepRow(number: 4, text: ".listRowInsets(EdgeInsets()) - sets custom padding. EdgeInsets() removes all insets for full-width rows.", color: .lfBlue)
+                StepRow(number: 5, text: ".listItemTint(color) - tints interactive controls (toggles, disclosure indicators) inside the row.", color: .lfBlue)
             }
 
-            CalloutBox(style: .info, title: "Apply to the row content, not the List", contentBody: "All .listRow* modifiers must be applied to the view inside the List/ForEach — not to the List container. They configure how the List wraps that specific row.")
+            CalloutBox(style: .info, title: "Apply to the row content, not the List", contentBody: "All .listRow* modifiers must be applied to the view inside the List/ForEach - not to the List container. They configure how the List wraps that specific row.")
 
             CalloutBox(style: .success, title: "Combining modifiers", contentBody: ".listRowSeparator(.hidden) + .listRowBackground(Color.clear) + .listRowInsets(EdgeInsets()) gives you a completely blank canvas for fully custom rows while keeping List's lazy rendering.")
 

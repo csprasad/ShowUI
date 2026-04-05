@@ -146,19 +146,19 @@ struct DynamicDataVisual: View {
 struct DynamicDataExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "Dynamic data — add, remove, sort")
+            SectionHeader(text: "Dynamic data - add, remove, sort")
             Text("List and ForEach react to @State array changes automatically. Add, remove, or reorder items in your array and SwiftUI animates the list to match. Filtering and sorting are best handled as derived computed properties.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "Add: tasks.append(newTask) inside withAnimation — the row slides in.", color: .lfBlue)
-                StepRow(number: 2, text: "Remove: tasks.remove(atOffsets:) or tasks.removeAll { condition } — the row slides out.", color: .lfBlue)
+                StepRow(number: 1, text: "Add: tasks.append(newTask) inside withAnimation - the row slides in.", color: .lfBlue)
+                StepRow(number: 2, text: "Remove: tasks.remove(atOffsets:) or tasks.removeAll { condition } - the row slides out.", color: .lfBlue)
                 StepRow(number: 3, text: "Sort: sort the array or use a computed property. Wrap in withAnimation for an animated reorder.", color: .lfBlue)
-                StepRow(number: 4, text: "Filter: derive a filtered array as a computed property — never store it in @State separately.", color: .lfBlue)
-                StepRow(number: 5, text: "onDelete with filtered list — map displayed indices back to the source array to delete the right item.", color: .lfBlue)
+                StepRow(number: 4, text: "Filter: derive a filtered array as a computed property - never store it in @State separately.", color: .lfBlue)
+                StepRow(number: 5, text: "onDelete with filtered list - map displayed indices back to the source array to delete the right item.", color: .lfBlue)
             }
 
-            CalloutBox(style: .warning, title: "Filtering + onDelete gotcha", contentBody: "When your ForEach shows a filtered or sorted subset, the IndexSet in onDelete refers to the displayed array — not the source array. Always map the displayed index back to the source before deleting.")
+            CalloutBox(style: .warning, title: "Filtering + onDelete gotcha", contentBody: "When your ForEach shows a filtered or sorted subset, the IndexSet in onDelete refers to the displayed array - not the source array. Always map the displayed index back to the source before deleting.")
 
             CalloutBox(style: .success, title: "withAnimation for list changes", contentBody: "Wrap array mutations in withAnimation { } to get smooth insert/remove animations. Without it, changes are still applied but snap instantly with no animation.")
 
@@ -166,7 +166,7 @@ struct DynamicDataExplanation: View {
 @State private var items: [Item] = []
 @State private var searchText = ""
 
-// Derived — never in @State
+// Derived - never in @State
 var filtered: [Item] {
     searchText.isEmpty ? items
         : items.filter { $0.name.contains(searchText) }
@@ -183,7 +183,7 @@ withAnimation { items.removeAll { $0.isDone } }
 // Sort (animated)
 withAnimation { items.sort { $0.name < $1.name } }
 
-// onDelete with filtered list — map indices back
+// onDelete with filtered list - map indices back
 .onDelete { indexSet in
     let idsToDelete = indexSet.map { filtered[$0].id }
     withAnimation {

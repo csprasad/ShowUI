@@ -124,22 +124,22 @@ struct SwipeActionsExplanation: View {
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: ".swipeActions(edge: .trailing) — the right swipe, the standard delete side. allowsFullSwipe triggers the first action on a full swipe.", color: .lfBlue)
-                StepRow(number: 2, text: ".swipeActions(edge: .leading) — the left swipe. Use for positive actions like mark done, flag, or pin.", color: .lfBlue)
-                StepRow(number: 3, text: "Button(role: .destructive) inside swipeActions — automatically tints the button red.", color: .lfBlue)
+                StepRow(number: 1, text: ".swipeActions(edge: .trailing) - the right swipe, the standard delete side. allowsFullSwipe triggers the first action on a full swipe.", color: .lfBlue)
+                StepRow(number: 2, text: ".swipeActions(edge: .leading) - the left swipe. Use for positive actions like mark done, flag, or pin.", color: .lfBlue)
+                StepRow(number: 3, text: "Button(role: .destructive) inside swipeActions - automatically tints the button red.", color: .lfBlue)
                 StepRow(number: 4, text: ".tint(color) on the button overrides the default gray with any color.", color: .lfBlue)
-                StepRow(number: 5, text: "allowsFullSwipe: true — full swipe triggers the first action without lifting. Use carefully for destructive actions.", color: .lfBlue)
+                StepRow(number: 5, text: "allowsFullSwipe: true - full swipe triggers the first action without lifting. Use carefully for destructive actions.", color: .lfBlue)
             }
 
             CalloutBox(style: .warning, title: "allowsFullSwipe on destructive actions", contentBody: "allowsFullSwipe: true on a delete button means a user can accidentally delete by swiping too far. Consider setting it to false for destructive actions, or providing an undo option.")
 
-            CalloutBox(style: .info, title: "Swipe actions replace onDelete", contentBody: ".swipeActions is more flexible than .onDelete — multiple buttons, custom colors, leading edge. Use .onDelete only for simple backward-compatible scenarios.")
+            CalloutBox(style: .info, title: "Swipe actions replace onDelete", contentBody: ".swipeActions is more flexible than .onDelete - multiple buttons, custom colors, leading edge. Use .onDelete only for simple backward-compatible scenarios.")
 
             CodeBlock(code: """
 List {
     ForEach(items) { item in
         ItemRow(item: item)
-            // Trailing — standard delete side
+            // Trailing - standard delete side
             .swipeActions(edge: .trailing, allowsFullSwipe: true) {
                 Button(role: .destructive) {
                     delete(item)
@@ -152,7 +152,7 @@ List {
                 }
                 .tint(.orange)
             }
-            // Leading — positive actions
+            // Leading - positive actions
             .swipeActions(edge: .leading) {
                 Button { markDone(item) } label: {
                     Label("Done", systemImage: "checkmark")
