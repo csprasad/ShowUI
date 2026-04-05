@@ -1,6 +1,6 @@
 //
 //
-//  Stacksspacertopic.swift
+//  StacksSpacerTopic.swift
 //  SwiftUI Topics
 //
 /// Created by `C S Prasad` on `05/04/26`
@@ -36,8 +36,8 @@ enum StacksSpacerLessons {
         SSLesson(number: 4, title: "Alignment",          subtitle: ".leading, .center, .trailing and custom alignment guides",        icon: "align.horizontal.center.fill",       visual: AnyView(AlignmentGuideVisual()),   explanation: AnyView(AlignmentGuideExplanation())),
         SSLesson(number: 5, title: "Frame",              subtitle: "Fixed size, maxWidth: .infinity and aspect ratios",               icon: "rectangle.dashed",                   visual: AnyView(FrameVisual()),            explanation: AnyView(FrameExplanation())),
         SSLesson(number: 6, title: "Padding & offset",   subtitle: ".padding() vs .offset() - what they do and when to use each",    icon: "arrow.up.left.and.arrow.down.right", visual: AnyView(PaddingOffsetVisual()),    explanation: AnyView(PaddingOffsetExplanation())),
-//        SSLesson(number: 7, title: "ViewThatFits",       subtitle: "Adaptive layout - picks the first view that fits the space",     icon: "arrow.down.left.and.arrow.up.right", visual: AnyView(ViewThatFitsVisual()),     explanation: AnyView(ViewThatFitsExplanation())),
-//        SSLesson(number: 8, title: "Layout priority",    subtitle: ".layoutPriority() - controlling which views expand and shrink",   icon: "scale.3d",                           visual: AnyView(LayoutPriorityVisual()),   explanation: AnyView(LayoutPriorityExplanation())),
+        SSLesson(number: 7, title: "ViewThatFits",       subtitle: "Adaptive layout - picks the first view that fits the space",     icon: "arrow.down.left.and.arrow.up.right", visual: AnyView(ViewThatFitsVisual()),     explanation: AnyView(ViewThatFitsExplanation())),
+        SSLesson(number: 8, title: "Layout priority",    subtitle: ".layoutPriority() - controlling which views expand and shrink",   icon: "scale.3d",                           visual: AnyView(LayoutPriorityVisual()),   explanation: AnyView(LayoutPriorityExplanation())),
     ]
 }
 

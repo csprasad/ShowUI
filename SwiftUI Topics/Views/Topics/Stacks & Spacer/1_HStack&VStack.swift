@@ -177,4 +177,3 @@ HStack(spacing: 16) {
         }
     }
 }
-
