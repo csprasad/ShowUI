@@ -22,6 +22,7 @@ struct TopicRegistry {
         StateBindingTopic(),
         NavigationStackTopic(),
         ListForEachTopic(),
+        FormsTopic(),
         TextTypographyTopic(),
         StacksSpacerTopic(),
         GesturesTopic(),
