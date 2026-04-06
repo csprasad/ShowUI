@@ -42,6 +42,9 @@ struct TopicRegistry {
         // --- G ---
         GesturesTopic(),
         
+        // --- I ---
+        ImagesTopic(),
+        
         // --- K ---
         KeyboardTopic(),
         
