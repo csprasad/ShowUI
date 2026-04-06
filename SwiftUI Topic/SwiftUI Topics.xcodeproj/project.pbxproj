@@ -127,6 +127,15 @@
 		0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */; };
 		058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836642F82CF610041B682 /* 7_ViewThatFits.swift */; };
 		058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836662F82CFF30041B682 /* 8_LayoutPriority.swift */; };
+		058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A42F8437AD00B95325 /* ImagesTopic.swift */; };
+		058C47A72F8437E900B95325 /* 1_ImageBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A62F8437E400B95325 /* 1_ImageBasics.swift */; };
+		058C47A92F84381F00B95325 /* 2_Resizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A82F84381A00B95325 /* 2_Resizable.swift */; };
+		058C47AB2F84385200B95325 /* 3_Clipping&Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47AA2F84384E00B95325 /* 3_Clipping&Shapes.swift */; };
+		058C47AD2F84388D00B95325 /* 4_ImageModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47AC2F84388900B95325 /* 4_ImageModifiers.swift */; };
+		058C47AF2F8438B800B95325 /* 5_AsyncImageBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47AE2F8438B400B95325 /* 5_AsyncImageBasics.swift */; };
+		058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B02F84391D00B95325 /* 6_AsyncImagePhases.swift */; };
+		058C47B32F84395F00B95325 /* 7_ImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B22F84395A00B95325 /* 7_ImageGrid.swift */; };
+		058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B42F8439D700B95325 /* 8_CustomImageLoader.swift */; };
 		05ADDCC22F83BEEA001F2DA9 /* GesturesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCC12F83BEEA001F2DA9 /* GesturesTopic.swift */; };
 		05ADDCC32F83BEEA001F2DA9 /* 2_Long.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCBA2F83BEEA001F2DA9 /* 2_Long.swift */; };
 		05ADDCC42F83BEEA001F2DA9 /* 1_Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCB92F83BEEA001F2DA9 /* 1_Tap.swift */; };
@@ -290,6 +299,15 @@
 		0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_Padding&Offset.swift"; sourceTree = "<group>"; };
 		058836642F82CF610041B682 /* 7_ViewThatFits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ViewThatFits.swift; sourceTree = "<group>"; };
 		058836662F82CFF30041B682 /* 8_LayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_LayoutPriority.swift; sourceTree = "<group>"; };
+		058C47A42F8437AD00B95325 /* ImagesTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTopic.swift; sourceTree = "<group>"; };
+		058C47A62F8437E400B95325 /* 1_ImageBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ImageBasics.swift; sourceTree = "<group>"; };
+		058C47A82F84381A00B95325 /* 2_Resizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Resizable.swift; sourceTree = "<group>"; };
+		058C47AA2F84384E00B95325 /* 3_Clipping&Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_Clipping&Shapes.swift"; sourceTree = "<group>"; };
+		058C47AC2F84388900B95325 /* 4_ImageModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_ImageModifiers.swift; sourceTree = "<group>"; };
+		058C47AE2F8438B400B95325 /* 5_AsyncImageBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_AsyncImageBasics.swift; sourceTree = "<group>"; };
+		058C47B02F84391D00B95325 /* 6_AsyncImagePhases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_AsyncImagePhases.swift; sourceTree = "<group>"; };
+		058C47B22F84395A00B95325 /* 7_ImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ImageGrid.swift; sourceTree = "<group>"; };
+		058C47B42F8439D700B95325 /* 8_CustomImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_CustomImageLoader.swift; sourceTree = "<group>"; };
 		05ADDCB92F83BEEA001F2DA9 /* 1_Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_Tap.swift; sourceTree = "<group>"; };
 		05ADDCBA2F83BEEA001F2DA9 /* 2_Long.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Long.swift; sourceTree = "<group>"; };
 		05ADDCBB2F83BEEA001F2DA9 /* 3_drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_drag.swift; sourceTree = "<group>"; };
@@ -559,6 +577,22 @@
 			path = "Stacks & Spacer";
 			sourceTree = "<group>";
 		};
+		058C47A32F84379300B95325 /* Images & AsyncImage */ = {
+			isa = PBXGroup;
+			children = (
+				058C47A42F8437AD00B95325 /* ImagesTopic.swift */,
+				058C47A62F8437E400B95325 /* 1_ImageBasics.swift */,
+				058C47A82F84381A00B95325 /* 2_Resizable.swift */,
+				058C47AA2F84384E00B95325 /* 3_Clipping&Shapes.swift */,
+				058C47AC2F84388900B95325 /* 4_ImageModifiers.swift */,
+				058C47AE2F8438B400B95325 /* 5_AsyncImageBasics.swift */,
+				058C47B02F84391D00B95325 /* 6_AsyncImagePhases.swift */,
+				058C47B22F84395A00B95325 /* 7_ImageGrid.swift */,
+				058C47B42F8439D700B95325 /* 8_CustomImageLoader.swift */,
+			);
+			path = "Images & AsyncImage";
+			sourceTree = "<group>";
+		};
 		059799FC2F06585800905892 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
@@ -692,6 +726,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				058C47A32F84379300B95325 /* Images & AsyncImage */,
 				051191862F6FE2220089F2FF /* Animations */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				055545582F7273FF006086F5 /* BottomSheets */,
@@ -846,6 +881,7 @@
 				0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */,
 				055DF12B2F83D29400A0268C /* 2_Toggle&Picker.swift in Sources */,
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
+				058C47AF2F8438B800B95325 /* 5_AsyncImageBasics.swift in Sources */,
 				05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */,
 				0558851C2F842548004779A1 /* StepRow.swift in Sources */,
 				051C4A882F7D17400003C63A /* 8_multipleSources.swift in Sources */,
@@ -854,6 +890,7 @@
 				055885202F842587004779A1 /* VisualCard.swift in Sources */,
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
+				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
@@ -875,6 +912,7 @@
 				C80B1C362C6646FA002ED295 /* SwiftUI_TopicsApp.swift in Sources */,
 				056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
+				058C47B32F84395F00B95325 /* 7_ImageGrid.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
 				05ADDCC22F83BEEA001F2DA9 /* GesturesTopic.swift in Sources */,
 				051FABC32F83F91F00AE69D6 /* EmptyLessonsView.swift in Sources */,
@@ -887,6 +925,7 @@
 				05ADDCC92F83BEEA001F2DA9 /* 4_magnify.swift in Sources */,
 				05ADDCCA2F83BEEA001F2DA9 /* 6_simultaneous.swift in Sources */,
 				057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */,
+				058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */,
 				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
 				057064032F8229B500B2512D /* 2_ZStack.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
@@ -905,6 +944,7 @@
 				054ED8DC2F71229C003BA047 /* 0_symbolbrowser.swift in Sources */,
 				05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */,
 				05B149852F7F925C00F00B04 /* 3_navPath.swift in Sources */,
+				058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */,
 				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
 				0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */,
 				05AED11B2F80E6B800E3C2BE /* 4_SwipeActions.swift in Sources */,
@@ -912,6 +952,7 @@
 				058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */,
 				0546F0CC2F817C5F0062C81B /* 3_TextTruncation.swift in Sources */,
 				05685BB12F6AAF1A004643FF /* TopicRegistry.swift in Sources */,
+				058C47A92F84381F00B95325 /* 2_Resizable.swift in Sources */,
 				05AED1152F80E5A400E3C2BE /* 1_ForEachBasics.swift in Sources */,
 				051C4A772F7D14B50003C63A /* 2_statePlain.swift in Sources */,
 				05D8243B2F6B3BFD00A81A2F /* 5_invertedMask.swift in Sources */,
@@ -927,6 +968,7 @@
 				054ED8D62F7119D4003BA047 /* 4_weightscale.swift in Sources */,
 				051C4A752F7D14420003C63A /* 1_stateBasics.swift in Sources */,
 				05685B9F2F6A8F9D004643FF /* 4_Actor.swift in Sources */,
+				058C47AB2F84385200B95325 /* 3_Clipping&Shapes.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
@@ -938,6 +980,8 @@
 				055885162F8424F6004779A1 /* TagBadge.swift in Sources */,
 				0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */,
 				056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */,
+				058C47A72F8437E900B95325 /* 1_ImageBasics.swift in Sources */,
+				058C47AD2F84388D00B95325 /* 4_ImageModifiers.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
 				0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */,
