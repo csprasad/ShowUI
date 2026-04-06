@@ -24,6 +24,7 @@ struct TopicRegistry {
         ListForEachTopic(),
         TextTypographyTopic(),
         StacksSpacerTopic(),
+        GesturesTopic(),
         KeyboardTopic(),
         MaskingTopic(),
         BlendModesTopic(),
