@@ -34,6 +34,9 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 | **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
 | **State & Binding** | 8 | How SwiftUI views own, share and react to data changes |
 | **Navigation Stack** | 8 | Typed navigation, paths, deep linking, toolbars and split views |
+| **List & ForEach** | 8 | Dynamic lists, swipe actions, edit mode, sections and performance |
+| **Text & Typography** | 6 | Fonts, markdown formatting, trunction and advanced styling |
+| **Stacks & Spacer** | 8 | Layout fundamentals: HStack, VStack, ZStack, frame, alignment |
 | **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
 | **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
 | **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |

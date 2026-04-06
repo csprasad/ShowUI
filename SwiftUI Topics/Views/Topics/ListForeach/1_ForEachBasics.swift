@@ -52,7 +52,7 @@ struct ForEachBasicsVisual: View {
                             if contact.id != LFContact.samples[3].id { Divider().padding(.leading, 50) }
                         }
                     case 1:
-                        // id: \.self — plain strings
+                        // id: \.self - plain strings
                         ForEach(fruits, id: \.self) { fruit in
                             HStack(spacing: 10) {
                                 Image(systemName: "circle.fill")
@@ -122,23 +122,23 @@ struct ForEachBasicsVisual: View {
 struct ForEachBasicsExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "ForEach — iterating over data")
-            Text("ForEach generates views from a collection. It is not a loop — it's a view builder that creates a view for each element. SwiftUI uses the id to track identity across re-renders and animate additions, removals, and reorders correctly.")
+            SectionHeader(text: "ForEach - iterating over data")
+            Text("ForEach generates views from a collection. It is not a loop - it's a view builder that creates a view for each element. SwiftUI uses the id to track identity across re-renders and animate additions, removals, and reorders correctly.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "ForEach(items) — works when items conform to Identifiable. SwiftUI uses item.id automatically.", color: .lfBlue)
-                StepRow(number: 2, text: "ForEach(items, id: \\.self) — for types that are Hashable but not Identifiable (strings, ints). The value itself is the ID.", color: .lfBlue)
-                StepRow(number: 3, text: "ForEach(items.indices, id: \\.self) — when you need the index alongside the value. Avoid when you can — index-based iteration breaks animations.", color: .lfBlue)
-                StepRow(number: 4, text: "ForEach is NOT limited to List — use it inside VStack, HStack, ScrollView, or anywhere you need generated views.", color: .lfBlue)
+                StepRow(number: 1, text: "ForEach(items) - works when items conform to Identifiable. SwiftUI uses item.id automatically.", color: .lfBlue)
+                StepRow(number: 2, text: "ForEach(items, id: \\.self) - for types that are Hashable but not Identifiable (strings, ints). The value itself is the ID.", color: .lfBlue)
+                StepRow(number: 3, text: "ForEach(items.indices, id: \\.self) - when you need the index alongside the value. Avoid when you can - index-based iteration breaks animations.", color: .lfBlue)
+                StepRow(number: 4, text: "ForEach is NOT limited to List - use it inside VStack, HStack, ScrollView, or anywhere you need generated views.", color: .lfBlue)
             }
 
-            CalloutBox(style: .danger, title: "IDs must be unique and stable", contentBody: "If two items share the same ID, SwiftUI gets confused and produces wrong animations or crashes. If IDs change between renders (random UUIDs), SwiftUI treats every item as new each time — destroying all animations.")
+            CalloutBox(style: .danger, title: "IDs must be unique and stable", contentBody: "If two items share the same ID, SwiftUI gets confused and produces wrong animations or crashes. If IDs change between renders (random UUIDs), SwiftUI treats every item as new each time - destroying all animations.")
 
-            CalloutBox(style: .info, title: "Identifiable is the best approach", contentBody: "Conform your model to Identifiable by adding 'let id = UUID()'. This is the most reliable pattern — stable, unique IDs that SwiftUI can track across state changes.")
+            CalloutBox(style: .info, title: "Identifiable is the best approach", contentBody: "Conform your model to Identifiable by adding 'let id = UUID()'. This is the most reliable pattern - stable, unique IDs that SwiftUI can track across state changes.")
 
             CodeBlock(code: """
-// Best — Identifiable model
+// Best - Identifiable model
 struct Contact: Identifiable {
     let id = UUID()   // stable, unique
     var name: String
@@ -147,7 +147,7 @@ ForEach(contacts) { contact in
     Text(contact.name)
 }
 
-// OK — Hashable values as ID
+// OK - Hashable values as ID
 ForEach(["Swift", "iOS", "Xcode"], id: \\.self) { item in
     Text(item)
 }
@@ -157,7 +157,7 @@ ForEach(items.indices, id: \\.self) { i in
     Text("\\(i + 1). \\(items[i].name)")
 }
 
-// Works anywhere — not just List
+// Works anywhere - not just List
 VStack {
     ForEach(items) { item in
         ItemCard(item: item)

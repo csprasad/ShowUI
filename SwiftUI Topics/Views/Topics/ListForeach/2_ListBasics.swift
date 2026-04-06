@@ -133,18 +133,18 @@ struct ListBasicsVisual: View {
 struct ListBasicsExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
-            SectionHeader(text: "List — the workhorse view")
-            Text("List is a container that displays rows of data with system-standard styling — separators, backgrounds, insets. Unlike a VStack with ForEach, List is lazy — it only renders visible rows, making it efficient for hundreds or thousands of items.")
+            SectionHeader(text: "List - the workhorse view")
+            Text("List is a container that displays rows of data with system-standard styling - separators, backgrounds, insets. Unlike a VStack with ForEach, List is lazy - it only renders visible rows, making it efficient for hundreds or thousands of items.")
                 .font(.system(size: 15)).foregroundStyle(.secondary).lineSpacing(4)
 
             VStack(spacing: 12) {
-                StepRow(number: 1, text: "List(items) { item in } — simplest form. Items must be Identifiable.", color: .lfBlue)
-                StepRow(number: 2, text: ".listStyle(.insetGrouped) — the modern iOS style. .plain for no background. .sidebar for navigation lists.", color: .lfBlue)
-                StepRow(number: 3, text: "Single selection: List(items, selection: $selected) — $selected is Binding<ID?>.", color: .lfBlue)
-                StepRow(number: 4, text: "Multi-selection: List(items, selection: $selected) — $selected is Binding<Set<ID>>.", color: .lfBlue)
+                StepRow(number: 1, text: "List(items) { item in } - simplest form. Items must be Identifiable.", color: .lfBlue)
+                StepRow(number: 2, text: ".listStyle(.insetGrouped) - the modern iOS style. .plain for no background. .sidebar for navigation lists.", color: .lfBlue)
+                StepRow(number: 3, text: "Single selection: List(items, selection: $selected) - $selected is Binding<ID?>.", color: .lfBlue)
+                StepRow(number: 4, text: "Multi-selection: List(items, selection: $selected) - $selected is Binding<Set<ID>>.", color: .lfBlue)
             }
 
-            CalloutBox(style: .info, title: "List vs VStack + ForEach", contentBody: "List is lazy — renders only visible rows. VStack renders all rows immediately. Use List for dynamic data that may be long. Use VStack + ForEach inside ScrollView when you need custom layout or the data is short and fixed.")
+            CalloutBox(style: .info, title: "List vs VStack + ForEach", contentBody: "List is lazy - renders only visible rows. VStack renders all rows immediately. Use List for dynamic data that may be long. Use VStack + ForEach inside ScrollView when you need custom layout or the data is short and fixed.")
 
             CalloutBox(style: .success, title: "Selection requires Edit mode on iOS", contentBody: "Multi-selection in List only shows checkmarks when EditButton is active or .environment(\\.editMode, .constant(.active)) is set. Single selection works without edit mode.")
 
