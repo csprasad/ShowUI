@@ -45,6 +45,15 @@
 		051FABC52F83F93800AE69D6 /* PressableButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051FABC42F83F93700AE69D6 /* PressableButtonStyle.swift */; };
 		051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051FDFB92F47323B0013F19E /* Color+Hex.swift */; };
 		05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05235D8F2F7FDF090002614B /* diagram+Helper.swift */; };
+		05351D652F85775C00E291E8 /* ColorsGradientsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D642F85775A00E291E8 /* ColorsGradientsTopic.swift */; };
+		05351D672F85778D00E291E8 /* 1_ColorSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D662F85778700E291E8 /* 1_ColorSystem.swift */; };
+		05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D682F8577CE00E291E8 /* 2_LinearGradient.swift */; };
+		05351D6B2F8577F400E291E8 /* 3_Radial&Angular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D6A2F8577EF00E291E8 /* 3_Radial&Angular.swift */; };
+		05351D6D2F85786C00E291E8 /* 4_MeshGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D6C2F85786800E291E8 /* 4_MeshGradient.swift */; };
+		05351D6F2F85789000E291E8 /* 5_Materials&Vibrancy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D6E2F85788B00E291E8 /* 5_Materials&Vibrancy.swift */; };
+		05351D712F8578CB00E291E8 /* 6_GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D702F8578C500E291E8 /* 6_GradientFill.swift */; };
+		05351D732F85790C00E291E8 /* 7_DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D722F85790800E291E8 /* 7_DynamicColor.swift */; };
+		05351D752F85794100E291E8 /* 8_ColorHarmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */; };
 		0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C52F817A250062C81B /* TextTypographyTopic.swift */; };
 		0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C72F817C390062C81B /* 1_TextBasics.swift */; };
 		0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */; };
@@ -217,6 +226,15 @@
 		051FABC42F83F93700AE69D6 /* PressableButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PressableButtonStyle.swift; sourceTree = "<group>"; };
 		051FDFB92F47323B0013F19E /* Color+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Hex.swift"; sourceTree = "<group>"; };
 		05235D8F2F7FDF090002614B /* diagram+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "diagram+Helper.swift"; sourceTree = "<group>"; };
+		05351D642F85775A00E291E8 /* ColorsGradientsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsGradientsTopic.swift; sourceTree = "<group>"; };
+		05351D662F85778700E291E8 /* 1_ColorSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ColorSystem.swift; sourceTree = "<group>"; };
+		05351D682F8577CE00E291E8 /* 2_LinearGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_LinearGradient.swift; sourceTree = "<group>"; };
+		05351D6A2F8577EF00E291E8 /* 3_Radial&Angular.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_Radial&Angular.swift"; sourceTree = "<group>"; };
+		05351D6C2F85786800E291E8 /* 4_MeshGradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_MeshGradient.swift; sourceTree = "<group>"; };
+		05351D6E2F85788B00E291E8 /* 5_Materials&Vibrancy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_Materials&Vibrancy.swift"; sourceTree = "<group>"; };
+		05351D702F8578C500E291E8 /* 6_GradientFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_GradientFill.swift; sourceTree = "<group>"; };
+		05351D722F85790800E291E8 /* 7_DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_DynamicColor.swift; sourceTree = "<group>"; };
+		05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ColorHarmony.swift; sourceTree = "<group>"; };
 		0546F0C52F817A250062C81B /* TextTypographyTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypographyTopic.swift; sourceTree = "<group>"; };
 		0546F0C72F817C390062C81B /* 1_TextBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TextBasics.swift; sourceTree = "<group>"; };
 		0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_TextFormatting.swift; sourceTree = "<group>"; };
@@ -427,6 +445,22 @@
 				051FDFB92F47323B0013F19E /* Color+Hex.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		05351D632F85774A00E291E8 /* Colors & Gradients */ = {
+			isa = PBXGroup;
+			children = (
+				05351D642F85775A00E291E8 /* ColorsGradientsTopic.swift */,
+				05351D662F85778700E291E8 /* 1_ColorSystem.swift */,
+				05351D682F8577CE00E291E8 /* 2_LinearGradient.swift */,
+				05351D6A2F8577EF00E291E8 /* 3_Radial&Angular.swift */,
+				05351D6C2F85786800E291E8 /* 4_MeshGradient.swift */,
+				05351D6E2F85788B00E291E8 /* 5_Materials&Vibrancy.swift */,
+				05351D702F8578C500E291E8 /* 6_GradientFill.swift */,
+				05351D722F85790800E291E8 /* 7_DynamicColor.swift */,
+				05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */,
+			);
+			path = "Colors & Gradients";
 			sourceTree = "<group>";
 		};
 		0546F0C42F817A160062C81B /* Text & Typography */ = {
@@ -726,14 +760,15 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				058C47A32F84379300B95325 /* Images & AsyncImage */,
 				051191862F6FE2220089F2FF /* Animations */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				055545582F7273FF006086F5 /* BottomSheets */,
 				059799FC2F06585800905892 /* Buttons */,
+				05351D632F85774A00E291E8 /* Colors & Gradients */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 				055DF1252F83D22E00A0268C /* Forms */,
 				05ADDCB82F83BECF001F2DA9 /* Gesture */,
+				058C47A32F84379300B95325 /* Images & AsyncImage */,
 				05685BBC2F6AB66A004643FF /* Keyboard Lessons */,
 				05AED1112F80E56300E3C2BE /* ListForeach */,
 				05D8242B2F6B30E700A81A2F /* Masking Lessons */,
@@ -839,6 +874,7 @@
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
+				05351D652F85775C00E291E8 /* ColorsGradientsTopic.swift in Sources */,
 				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
 				056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */,
 				05AED1172F80E63900E3C2BE /* 2_ListBasics.swift in Sources */,
@@ -892,6 +928,7 @@
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
+				05351D6D2F85786C00E291E8 /* 4_MeshGradient.swift in Sources */,
 				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				055DF1292F83D26500A0268C /* 1_FormBasics.swift in Sources */,
@@ -905,6 +942,7 @@
 				0555455A2F72740F006086F5 /* bottomsheetsTopic.swift in Sources */,
 				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
 				051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */,
+				05351D752F85794100E291E8 /* 8_ColorHarmony.swift in Sources */,
 				05B149812F7F91CC00F00B04 /* 6_navigationSplitView.swift in Sources */,
 				05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */,
 				05685BC82F6AB771004643FF /* 5_KeyboardToolbar.swift in Sources */,
@@ -929,7 +967,9 @@
 				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
 				057064032F8229B500B2512D /* 2_ZStack.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
+				05351D732F85790C00E291E8 /* 7_DynamicColor.swift in Sources */,
 				0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */,
+				05351D6F2F85789000E291E8 /* 5_Materials&Vibrancy.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
 				05D824392F6B3BEA00A81A2F /* 4_gradientMask.swift in Sources */,
 				0511918E2F6FE2710089F2FF /* 6_KeyframeAnimator.swift in Sources */,
@@ -963,14 +1003,17 @@
 				055DF1312F83D36B00A0268C /* 5_DatePicker&ColorPicker.swift in Sources */,
 				05685BBE2F6AB68A004643FF /* KeyboardTopic.swift in Sources */,
 				05B149892F7F931D00F00B04 /* 2_typedNav.swift in Sources */,
+				05351D6B2F8577F400E291E8 /* 3_Radial&Angular.swift in Sources */,
 				055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */,
 				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
+				05351D672F85778D00E291E8 /* 1_ColorSystem.swift in Sources */,
 				054ED8D62F7119D4003BA047 /* 4_weightscale.swift in Sources */,
 				051C4A752F7D14420003C63A /* 1_stateBasics.swift in Sources */,
 				05685B9F2F6A8F9D004643FF /* 4_Actor.swift in Sources */,
 				058C47AB2F84385200B95325 /* 3_Clipping&Shapes.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
+				05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
@@ -979,6 +1022,7 @@
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
 				055885162F8424F6004779A1 /* TagBadge.swift in Sources */,
 				0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */,
+				05351D712F8578CB00E291E8 /* 6_GradientFill.swift in Sources */,
 				056375522F71C359001E7148 /* 10_buttonHaptic.swift in Sources */,
 				058C47A72F8437E900B95325 /* 1_ImageBasics.swift in Sources */,
 				058C47AD2F84388D00B95325 /* 4_ImageModifiers.swift in Sources */,
