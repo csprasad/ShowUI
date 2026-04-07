@@ -35,6 +35,7 @@ struct TopicRegistry {
         
         // --- C ---
         ConcurrencyTopic(),
+        ColorsGradientsTopic(),
         
         // --- F ---
         FormsTopic(),
