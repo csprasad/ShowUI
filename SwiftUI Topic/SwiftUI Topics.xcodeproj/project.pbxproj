@@ -244,6 +244,7 @@
 		05351D702F8578C500E291E8 /* 6_GradientFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_GradientFill.swift; sourceTree = "<group>"; };
 		05351D722F85790800E291E8 /* 7_DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_DynamicColor.swift; sourceTree = "<group>"; };
 		05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ColorHarmony.swift; sourceTree = "<group>"; };
+		053B9FB42F86CFF20032F0C6 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Topics-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0546F0C52F817A250062C81B /* TextTypographyTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypographyTopic.swift; sourceTree = "<group>"; };
 		0546F0C72F817C390062C81B /* 1_TextBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TextBasics.swift; sourceTree = "<group>"; };
 		0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_TextFormatting.swift; sourceTree = "<group>"; };
@@ -763,6 +764,7 @@
 		C80B1C342C6646FA002ED295 /* SwiftUI Topics */ = {
 			isa = PBXGroup;
 			children = (
+				053B9FB42F86CFF20032F0C6 /* SwiftUI-Topics-Info.plist */,
 				051695FC2EE0A5A50017DCC8 /* App */,
 				05685B8D2F6A8F60004643FF /* Models */,
 				C80B1C432C664725002ED295 /* Views */,
@@ -1215,6 +1217,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Topics/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Topics-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShowUI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you and your friends on the map.";
@@ -1222,6 +1225,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1246,6 +1250,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"SwiftUI Topics/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "SwiftUI-Topics-Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = ShowUI;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you and your friends on the map.";
@@ -1253,6 +1258,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

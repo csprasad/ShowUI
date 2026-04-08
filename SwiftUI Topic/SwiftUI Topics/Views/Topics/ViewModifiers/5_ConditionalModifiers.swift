@@ -43,16 +43,21 @@ struct ConditionalModifierVisual: View {
                         .buttonStyle(PressableButtonStyle())
                     }
                 }
+                Divider()
 
                 switch selectedPattern {
                 case 0:
                     // if/else pattern
                     VStack(spacing: 12) {
+                        sectionHeader()
+                        
                         HStack(spacing: 10) {
                             toggleChip("Selected", isOn: $isSelected, color: .vmGreen)
                             toggleChip("Error", isOn: $isError, color: .animCoral)
                             toggleChip("Disabled", isOn: $isDisabled, color: .secondary)
                         }
+                        
+                        flowArrow
 
                         // The view that changes
                         Group {
@@ -89,10 +94,14 @@ struct ConditionalModifierVisual: View {
                 case 1:
                     // Ternary - same type modifiers
                     VStack(spacing: 12) {
+                        sectionHeader()
+                        
                         HStack(spacing: 10) {
                             toggleChip("Highlighted", isOn: $isSelected, color: .vmGreen)
                             toggleChip("Error", isOn: $isError, color: .animCoral)
                         }
+                        
+                        flowArrow
 
                         // Ternary for same-type modifiers
                         Text("Email address")
@@ -114,12 +123,16 @@ struct ConditionalModifierVisual: View {
                 default:
                     // .if() extension
                     VStack(spacing: 12) {
+                        sectionHeader()
+                        
                         HStack(spacing: 10) {
                             toggleChip("Rounded", isOn: $isSelected, color: .vmGreen)
                             toggleChip("Shadow", isOn: $isError, color: .navBlue)
                             toggleChip("Scale 1.1", isOn: $isDisabled, color: .ssPurple)
                         }
-
+                        
+                        flowArrow
+                            
                         Text("Apply me!")
                             .font(.system(size: 16, weight: .semibold))
                             .foregroundStyle(.white)
@@ -136,8 +149,22 @@ struct ConditionalModifierVisual: View {
                         Text(".if() extension - apply modifier only when condition is true").font(.system(size: 10)).foregroundStyle(.secondary)
                     }
                 }
+                
             }
         }
+    }
+    
+    private func sectionHeader(_ text: String = "Select Modifiers") -> some View {
+        Text(text)
+            .font(.system(size: 8, weight: .semibold))
+            .textCase(.uppercase)
+            .foregroundStyle(.secondary)
+    }
+    
+    private var flowArrow: some View {
+        Image(systemName: "arrow.down")
+            .font(.system(size: 8, weight: .semibold))
+            .foregroundStyle(.secondary)
     }
 
     func toggleChip(_ label: String, isOn: Binding<Bool>, color: Color) -> some View {

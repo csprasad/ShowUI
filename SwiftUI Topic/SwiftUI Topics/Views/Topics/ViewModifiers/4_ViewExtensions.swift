@@ -90,7 +90,7 @@ struct ViewExtensionVisual: View {
             HStack(spacing: 10) {
                 Text("Default").font(.system(size: 13)).foregroundStyle(Color.vmGreen).cardStyle()
                 Text("Blue").font(.system(size: 13)).foregroundStyle(Color.navBlue).cardStyle(color: .navBlue)
-                Text("r=24").font(.system(size: 13)).foregroundStyle(Color.ssPurple).cardStyle(color: .ssPurple, radius: 24)
+                Text("r = 24").font(.system(size: 13)).foregroundStyle(Color.ssPurple).cardStyle(color: .ssPurple, radius: 24)
             }
         case 1:
             // badge()

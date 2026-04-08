@@ -59,18 +59,23 @@ struct WhatIsModifierVisual: View {
                 // Live preview
                 ZStack {
                     Color(.secondarySystemBackground)
-                    HStack(spacing: 20) {
+                    HStack(alignment: .top, spacing: 20) {
                         // Preview
                         VStack(spacing: 6) {
                             Text("Preview").font(.system(size: 10, weight: .semibold)).foregroundStyle(.secondary)
+                            Divider()
                             viewAtStep(step)
+                                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                            Spacer(minLength: 0)
                         }
+                        .frame(maxWidth: 100)
                         // Code
-                        VStack(alignment: .leading, spacing: 3) {
+                        VStack(alignment: .leading, spacing: 6) {
                             Text("Code").font(.system(size: 10, weight: .semibold)).foregroundStyle(.secondary)
+                            Divider()
                             codeAtStep(step)
+                            Spacer(minLength: 0)
                         }
-                        Spacer()
                     }
                     .padding(12)
                 }
@@ -88,25 +93,28 @@ struct WhatIsModifierVisual: View {
         case 1: Text("Hello").font(.system(size: 14)).padding(12)
         case 2: Text("Hello").font(.system(size: 14)).padding(12)
                     .background(Color.vmGreenLight)
+                    .foregroundStyle(Color.vmGreen)
         case 3: Text("Hello").font(.system(size: 14)).padding(12)
                     .background(Color.vmGreenLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .foregroundStyle(Color.vmGreen)
         default: Text("Hello").font(.system(size: 14)).padding(12)
                     .background(Color.vmGreenLight)
                     .clipShape(RoundedRectangle(cornerRadius: 10))
                     .shadow(color: Color.vmGreen.opacity(0.25), radius: 6, y: 3)
+                    .foregroundStyle(Color.vmGreen)
         }
     }
 
     @ViewBuilder
     func codeAtStep(_ s: Int) -> some View {
         VStack(alignment: .leading, spacing: 2) {
-            codeToken("Text(\"Hello\")", color: .blue)
-            if s >= 1 { codeToken("  .padding(12)", color: .vmGreen, indent: false) }
-            if s >= 2 { codeToken("  .background(.vmGreenLight)", color: .vmGreen, indent: false) }
-            if s >= 3 { codeToken("  .clipShape(RoundedRectangle(", color: .vmGreen, indent: false) }
-            if s >= 3 { codeToken("      cornerRadius: 10))", color: .vmGreen, indent: false) }
-            if s >= 4 { codeToken("  .shadow(radius: 6, y: 3)", color: .vmGreen, indent: false) }
+            codeToken("Text(\"Hello\")", color: .animCoral)
+            if s >= 1 { codeToken("  .padding(12)", color: .secondary, indent: false) }
+            if s >= 2 { codeToken("  .background(.vmGreenLight)", color: .secondary, indent: false) }
+            if s >= 3 { codeToken("  .clipShape(RoundedRectangle(", color: .secondary, indent: false) }
+            if s >= 3 { codeToken("      cornerRadius: 10))", color: .secondary, indent: false) }
+            if s >= 4 { codeToken("  .shadow(radius: 6, y: 3)", color: .secondary, indent: false) }
         }
     }
 

@@ -56,7 +56,7 @@ struct BuiltInModifierVisual: View {
                     Color(.secondarySystemBackground)
                     modifierDemo.padding(12)
                 }
-                .frame(maxWidth: .infinity).frame(height: 180)
+                .frame(maxWidth: .infinity).frame(height: 250)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
                 .animation(.spring(response: 0.35), value: selectedModifier)
                 .animation(.easeInOut(duration: 0.1), value: shadowRadius)
@@ -76,9 +76,9 @@ struct BuiltInModifierVisual: View {
             VStack(spacing: 12) {
                 RoundedRectangle(cornerRadius: 16)
                     .fill(Color(.systemBackground))
-                    .frame(width: 120, height: 70)
+                    .frame(width: 120, height: 60)
                     .shadow(color: Color.vmGreen.opacity(0.35), radius: shadowRadius, x: shadowX, y: shadowY)
-                    .overlay(Text("Shadow").font(.system(size: 12)).foregroundStyle(.secondary))
+                    .overlay(Text("Shadow").font(.system(size: 12)).foregroundStyle(.secondary)).padding(.bottom)
 
                 VStack(spacing: 5) {
                     sliderRow("radius", value: $shadowRadius, range: 0...30)
@@ -91,8 +91,9 @@ struct BuiltInModifierVisual: View {
             // overlay alignment grid
             VStack(spacing: 10) {
                 ZStack {
-                    GradientPlaceholder(index: 3)
+                    GradientPlaceholder(index: 9)
                         .frame(width: 120, height: 80)
+                        .background(LinearGradient(colors: [.vmGreen, Color(hex: "#4ADE80")], startPoint: .topLeading, endPoint: .bottomTrailing))
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                         .overlay(alignment: alignments[overlayAlignment].1) {
                             if showOverlay {
@@ -100,7 +101,7 @@ struct BuiltInModifierVisual: View {
                                     .font(.system(size: 10, weight: .semibold))
                                     .foregroundStyle(.white)
                                     .padding(.horizontal, 6).padding(.vertical, 3)
-                                    .background(Color.vmGreen)
+                                    .background(Color.black)
                                     .clipShape(Capsule())
                                     .padding(4)
                                     .transition(.scale.combined(with: .opacity))
@@ -122,9 +123,9 @@ struct BuiltInModifierVisual: View {
                     ForEach(alignments.indices, id: \.self) { i in
                         Button { withAnimation { overlayAlignment = i } } label: {
                             Text(alignments[i].0.replacingOccurrences(of: ".", with: ""))
-                                .font(.system(size: 7, design: .monospaced))
+                                .font(.system(size: 9, design: .monospaced))
                                 .foregroundStyle(overlayAlignment == i ? .white : .secondary)
-                                .frame(maxWidth: .infinity).padding(.vertical, 4)
+                                .frame(maxWidth: .infinity).padding(.vertical, 8)
                                 .background(overlayAlignment == i ? Color.vmGreen : Color(.systemFill))
                                 .clipShape(RoundedRectangle(cornerRadius: 4))
                         }.buttonStyle(PressableButtonStyle())
@@ -174,7 +175,7 @@ struct BuiltInModifierVisual: View {
                     ("Custom", AnyShape(UnevenRoundedRectangle(topLeadingRadius: 20, bottomLeadingRadius: 4, bottomTrailingRadius: 20, topTrailingRadius: 4))),
                 ], id: \.0) { name, shape in
                     VStack(spacing: 5) {
-                        GradientPlaceholder(index: 2).frame(width: 56, height: 56).clipShape(shape)
+                        GradientPlaceholder(index: 8).frame(width: 56, height: 56).clipShape(shape)
                         Text(name).font(.system(size: 8)).foregroundStyle(.secondary).multilineTextAlignment(.center)
                     }
                 }

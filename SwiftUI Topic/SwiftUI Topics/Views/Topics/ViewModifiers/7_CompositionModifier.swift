@@ -16,7 +16,6 @@ import SwiftUI
 struct InteractiveCardModifier: ViewModifier {
     var color: Color
     var isSelected: Bool
-
     @GestureState private var isPressed = false
 
     func body(content: Content) -> some View {
@@ -24,14 +23,17 @@ struct InteractiveCardModifier: ViewModifier {
             .padding(14)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .fill(isSelected ? color : Color(.systemBackground))
-                    .shadow(color: isSelected ? color.opacity(0.25) : .black.opacity(0.06),
+                    // CHANGE: Use opacity so it doesn't "cover" the UI with solid color
+                    .fill(isSelected ? color.opacity(0.12) : Color(.systemBackground))
+                    .shadow(color: isSelected ? color.opacity(0.2) : .black.opacity(0.06),
                             radius: isSelected ? 10 : 4,
                             y: isSelected ? 4 : 2)
             )
             .overlay(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
-                    .stroke(isSelected ? color : Color(.systemFill), lineWidth: isSelected ? 2 : 0.5)
+                    // High contrast border makes it feel "selected"
+                    .stroke(isSelected ? color : Color(.systemFill),
+                            lineWidth: isSelected ? 2 : 0.5)
             )
             .scaleEffect(isPressed ? 0.96 : 1.0)
             .animation(.spring(response: 0.25, dampingFraction: 0.65), value: isPressed)
@@ -60,7 +62,7 @@ struct ModifierCompositionVisual: View {
     @State private var triggerAnim = false
     @State private var selectedDemo = 0
 
-    let demos = ["Composed card", "AnimatableModifier", "Modifier stack"]
+    let demos = ["Composed card", "Animatable", "Modifier stack"]
     let items = ["Swift", "SwiftUI", "Combine", "CoreData"]
 
     var body: some View {
@@ -92,7 +94,7 @@ struct ModifierCompositionVisual: View {
                     VStack(spacing: 10) {
                         Text("Tap to select - InteractiveCardModifier combines background + shadow + overlay + press + animation")
                             .font(.system(size: 10)).foregroundStyle(.secondary)
-                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 2), spacing: 8) {
+                        LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8, alignment: .leading), count: 2), spacing: 8) {
                             ForEach(items.indices, id: \.self) { i in
                                 Button {
                                     withAnimation(.spring(response: 0.35)) {
@@ -116,7 +118,7 @@ struct ModifierCompositionVisual: View {
                 case 1:
                     // AnimatableModifier
                     VStack(spacing: 14) {
-                        Text("AnimatableModifier interpolates multiple values simultaneously")
+                        Text("Animatable Modifier interpolates multiple values simultaneously")
                             .font(.system(size: 10)).foregroundStyle(.secondary)
 
                         HStack(spacing: 20) {
@@ -126,9 +128,9 @@ struct ModifierCompositionVisual: View {
                                     .foregroundStyle(Color.vmGreen)
                                     .modifier(ScaleAndFadeModifier(
                                         scale: triggerAnim ? 1.0 : 0.5,
-                                        opacity: triggerAnim ? 1.0 : 0.0
+                                        opacity: triggerAnim ? 1.0 : 0.5
                                     ))
-                                    .animation(.spring(response: 0.5, dampingFraction: 0.6).delay(triggerAnim ? 0 : 0), value: triggerAnim)
+                                    .animation(.spring(response: 0.5, dampingFraction: 0.6), value: triggerAnim)
                             }
                         }
                         .frame(height: 50)
