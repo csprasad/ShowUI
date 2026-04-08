@@ -62,6 +62,7 @@ struct TopicRegistry {
         SFSymbolsTopic(),
         StacksSpacerTopic(),
         StateBindingTopic(),
+        ScrollViewsTopic(),
         
         // --- T ---
         TextTypographyTopic(),
