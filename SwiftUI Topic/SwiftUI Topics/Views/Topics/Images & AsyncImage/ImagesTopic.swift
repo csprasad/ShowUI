@@ -79,7 +79,7 @@ struct GradientPlaceholder: View {
     private let icons = [
         "mountain.2.fill", "building.fill", "leaf.fill",
         "star.fill", "globe.americas.fill", "camera.fill",
-        "heart.fill", "moon.stars.fill", "flame.fill"
+        "heart.fill", "moon.stars.fill", "flame.fill", "circle.fill"
     ]
 
     var colors: [Color] { palettes[index % palettes.count] }

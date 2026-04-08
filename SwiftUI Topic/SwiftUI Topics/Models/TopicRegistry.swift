@@ -66,6 +66,9 @@ struct TopicRegistry {
         // --- T ---
         TextTypographyTopic(),
         
+        // --- V ---
+        ViewModifiersTopic(),
+        
         // 💡 Rule: Always keep a trailing comma on the last item to prevent diff-noise.
     ]
 }
