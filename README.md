@@ -29,20 +29,27 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 
 | Topic | Lessons | Highlights |
 |---|:---:|---|
-| **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
+| **Alerts & Popovers** | 8 | Alert, confirmationDialog, sheet, popover, fullScreenCover |
 | **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
-| **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
-| **State & Binding** | 8 | How SwiftUI views own, share and react to data changes |
-| **Navigation Stack** | 8 | Typed navigation, paths, deep linking, toolbars and split views |
-| **List & ForEach** | 8 | Dynamic lists, swipe actions, edit mode, sections and performance |
-| **Text & Typography** | 6 | Fonts, markdown formatting, trunction and advanced styling |
-| **Stacks & Spacer** | 8 | Layout fundamentals: HStack, VStack, ZStack, frame, alignment |
-| **Gestures** | 8 | Tap, drag, pinch, rotate and composing complex interactions |
-| **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
-| **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
 | **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |
-| **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
 | **Bottom Sheets** | 9 | Detents, drag indicators, background interaction and more |
+| **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
+| **Colors & Gradients** | 8 | Color system, gradients, materials, opacity and dynamic color |
+| **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
+| **Forms & SettingsUI** | 8 | Form, Section, Picker, Toggle, Slider and validation patterns |
+| **Gestures** | 8 | Tap, drag, pinch, rotate and composing complex interactions |
+| **Grids** | 8 | LazyVGrid, LazyHGrid, Grid, columns, alignment and performance |
+| **Images & AsyncImage** | 8 | Resizable, aspect ratio, clipping, filters and async loading |
+| **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
+| **List & ForEach** | 8 | Dynamic lists, swipe actions, edit mode, sections and performance |
+| **Masking** | 9 | Clip shapes, gradient fade, inverted mask, animated reveal, path mask |
+| **Navigation Stack** | 8 | Typed navigation, paths, deep linking, toolbars and split views |
+| **ScrollView & Scroll APIs** | 8 | Scroll axes, offsets, paging, transitions, targets and scroll position |
+| **SF Symbols** | 10 | Searchable browser with 300+ symbols, rendering modes, variable color, layer toggle |
+| **Stacks & Spacer** | 8 | Layout fundamentals: HStack, VStack, ZStack, frame, alignment |
+| **State & Binding** | 8 | How SwiftUI views own, share and react to data changes |
+| **Text & Typography** | 6 | Fonts, markdown formatting, trunction and advanced styling |
+| **ViewModifiers** | 8 | Custom modifiers, modifier order, conditional styling and reuse |
 
 ## Lesson Structure
 

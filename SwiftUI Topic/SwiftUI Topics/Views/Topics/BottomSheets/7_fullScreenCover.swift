@@ -12,7 +12,7 @@
 import SwiftUI
  
 // MARK: - LESSON 7: Full Screen Cover
-struct FullScreenCoverVisual: View {
+struct BottomSheetFullScreenCoverVisual: View {
     @State private var showSheet = false
     @State private var showFullScreen = false
     @State private var selectedComparison = 0
@@ -142,12 +142,8 @@ struct FullScreenContent: View {
         }
     }
 }
-
-#Preview {
-    FullScreenCoverVisual()
-}
  
-struct FullScreenCoverExplanation: View {
+struct BottomSheetFullScreenCoverExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: ".fullScreenCover vs .sheet")

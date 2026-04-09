@@ -27,6 +27,7 @@ struct TopicRegistry {
     static let all: [any TopicProtocol] = [
         // --- A ---
         AnimationsTopic(),
+        AlertsSheetsTopic(),
         
         // --- B ---
         BlendModesTopic(),
@@ -42,6 +43,7 @@ struct TopicRegistry {
         
         // --- G ---
         GesturesTopic(),
+        GridsTopic(),
         
         // --- I ---
         ImagesTopic(),
