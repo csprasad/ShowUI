@@ -154,6 +154,15 @@
 		058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B02F84391D00B95325 /* 6_AsyncImagePhases.swift */; };
 		058C47B32F84395F00B95325 /* 7_ImageGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B22F84395A00B95325 /* 7_ImageGrid.swift */; };
 		058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47B42F8439D700B95325 /* 8_CustomImageLoader.swift */; };
+		059A0EB52F86E8FB002325BA /* ScrollviewsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EB42F86E8F9002325BA /* ScrollviewsTopic.swift */; };
+		059A0EB72F86E927002325BA /* 1_ScrollViewBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EB62F86E923002325BA /* 1_ScrollViewBasics.swift */; };
+		059A0EB92F86E965002325BA /* 2_ScrollTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EB82F86E960002325BA /* 2_ScrollTransition.swift */; };
+		059A0EBB2F86E993002325BA /* 3_ScrollTargetBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EBA2F86E98F002325BA /* 3_ScrollTargetBehavior.swift */; };
+		059A0EBD2F86E9E3002325BA /* 4_ScrollPosition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EBC2F86E9E0002325BA /* 4_ScrollPosition.swift */; };
+		059A0EBF2F86EA1E002325BA /* 5_ScrollOffset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EBE2F86EA19002325BA /* 5_ScrollOffset.swift */; };
+		059A0EC12F86EA54002325BA /* 6_visualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC02F86EA51002325BA /* 6_visualEffect.swift */; };
+		059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC22F86EA7C002325BA /* 7_safeAreaInset.swift */; };
+		059A0EC52F86EAAD002325BA /* 8_ScrollModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC42F86EAA9002325BA /* 8_ScrollModifiers.swift */; };
 		05A69F8C2F862314004663AD /* ViewModifiersTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8B2F86230D004663AD /* ViewModifiersTopic.swift */; };
 		05A69F8E2F86233A004663AD /* 1_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8D2F862333004663AD /* 1_Modifier.swift */; };
 		05A69F902F86236E004663AD /* 2_ModifierOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8F2F86236A004663AD /* 2_ModifierOrder.swift */; };
@@ -364,6 +373,15 @@
 		058C47B02F84391D00B95325 /* 6_AsyncImagePhases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_AsyncImagePhases.swift; sourceTree = "<group>"; };
 		058C47B22F84395A00B95325 /* 7_ImageGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ImageGrid.swift; sourceTree = "<group>"; };
 		058C47B42F8439D700B95325 /* 8_CustomImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_CustomImageLoader.swift; sourceTree = "<group>"; };
+		059A0EB42F86E8F9002325BA /* ScrollviewsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollviewsTopic.swift; sourceTree = "<group>"; };
+		059A0EB62F86E923002325BA /* 1_ScrollViewBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ScrollViewBasics.swift; sourceTree = "<group>"; };
+		059A0EB82F86E960002325BA /* 2_ScrollTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ScrollTransition.swift; sourceTree = "<group>"; };
+		059A0EBA2F86E98F002325BA /* 3_ScrollTargetBehavior.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_ScrollTargetBehavior.swift; sourceTree = "<group>"; };
+		059A0EBC2F86E9E0002325BA /* 4_ScrollPosition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_ScrollPosition.swift; sourceTree = "<group>"; };
+		059A0EBE2F86EA19002325BA /* 5_ScrollOffset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_ScrollOffset.swift; sourceTree = "<group>"; };
+		059A0EC02F86EA51002325BA /* 6_visualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_visualEffect.swift; sourceTree = "<group>"; };
+		059A0EC22F86EA7C002325BA /* 7_safeAreaInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_safeAreaInset.swift; sourceTree = "<group>"; };
+		059A0EC42F86EAA9002325BA /* 8_ScrollModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ScrollModifiers.swift; sourceTree = "<group>"; };
 		05A69F8B2F86230D004663AD /* ViewModifiersTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiersTopic.swift; sourceTree = "<group>"; };
 		05A69F8D2F862333004663AD /* 1_Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_Modifier.swift; sourceTree = "<group>"; };
 		05A69F8F2F86236A004663AD /* 2_ModifierOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ModifierOrder.swift; sourceTree = "<group>"; };
@@ -719,6 +737,22 @@
 			path = Buttons;
 			sourceTree = "<group>";
 		};
+		059A0EB32F86E8F1002325BA /* Scrollviews */ = {
+			isa = PBXGroup;
+			children = (
+				059A0EB42F86E8F9002325BA /* ScrollviewsTopic.swift */,
+				059A0EB62F86E923002325BA /* 1_ScrollViewBasics.swift */,
+				059A0EB82F86E960002325BA /* 2_ScrollTransition.swift */,
+				059A0EBA2F86E98F002325BA /* 3_ScrollTargetBehavior.swift */,
+				059A0EBC2F86E9E0002325BA /* 4_ScrollPosition.swift */,
+				059A0EBE2F86EA19002325BA /* 5_ScrollOffset.swift */,
+				059A0EC02F86EA51002325BA /* 6_visualEffect.swift */,
+				059A0EC22F86EA7C002325BA /* 7_safeAreaInset.swift */,
+				059A0EC42F86EAA9002325BA /* 8_ScrollModifiers.swift */,
+			);
+			path = Scrollviews;
+			sourceTree = "<group>";
+		};
 		05A69F8A2F862301004663AD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -882,6 +916,7 @@
 				05AED1112F80E56300E3C2BE /* ListForeach */,
 				05D8242B2F6B30E700A81A2F /* Masking Lessons */,
 				05B149792F7F8B0500F00B04 /* NavigationStack */,
+				059A0EB32F86E8F1002325BA /* Scrollviews */,
 				054ED8CC2F7117F7003BA047 /* SF Symbols */,
 				057063FD2F82291C00B2512D /* Stacks & Spacer */,
 				051C4A712F7D14140003C63A /* StateBinding */,
@@ -980,10 +1015,12 @@
 				055885222F842747004779A1 /* TopicCard.swift in Sources */,
 				051C4A7C2F7D15E80003C63A /* 4_derived.swift in Sources */,
 				056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */,
+				059A0EB92F86E965002325BA /* 2_ScrollTransition.swift in Sources */,
 				0555456C2F7277B1006086F5 /* 9_sheetLayout.swift in Sources */,
 				057064072F822A4200B2512D /* 4_Alignment.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */,
+				059A0EC52F86EAAD002325BA /* 8_ScrollModifiers.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				05351D652F85775C00E291E8 /* ColorsGradientsTopic.swift in Sources */,
 				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
@@ -1033,6 +1070,7 @@
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
+				059A0EBB2F86E993002325BA /* 3_ScrollTargetBehavior.swift in Sources */,
 				0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */,
 				054ED8D42F7119B0003BA047 /* 3_variablecolor.swift in Sources */,
 				05317A632F86E43500B409CC /* 7_MixedLayouts.swift in Sources */,
@@ -1042,6 +1080,7 @@
 				058C47AF2F8438B800B95325 /* 5_AsyncImageBasics.swift in Sources */,
 				05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */,
 				0558851C2F842548004779A1 /* StepRow.swift in Sources */,
+				059A0EB52F86E8FB002325BA /* ScrollviewsTopic.swift in Sources */,
 				051C4A882F7D17400003C63A /* 8_multipleSources.swift in Sources */,
 				057064092F822AB600B2512D /* 5_Frame.swift in Sources */,
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
@@ -1052,6 +1091,7 @@
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				05351D6D2F85786C00E291E8 /* 4_MeshGradient.swift in Sources */,
 				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
+				059A0EBD2F86E9E3002325BA /* 4_ScrollPosition.swift in Sources */,
 				0518ADE72F6B1D4300BA2F73 /* Blendcategoryvisual.swift in Sources */,
 				055DF1292F83D26500A0268C /* 1_FormBasics.swift in Sources */,
 				051C4A732F7D14240003C63A /* StatebindingTopic.swift in Sources */,
@@ -1074,6 +1114,7 @@
 				056375482F71C21D001E7148 /* 5_toggleButton.swift in Sources */,
 				051FDFBA2F47324A0013F19E /* Color+Hex.swift in Sources */,
 				058C47B32F84395F00B95325 /* 7_ImageGrid.swift in Sources */,
+				059A0EC12F86EA54002325BA /* 6_visualEffect.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
 				05ADDCC22F83BEEA001F2DA9 /* GesturesTopic.swift in Sources */,
 				051FABC32F83F91F00AE69D6 /* EmptyLessonsView.swift in Sources */,
@@ -1098,6 +1139,7 @@
 				05351D6F2F85789000E291E8 /* 5_Materials&Vibrancy.swift in Sources */,
 				05685BC22F6AB6EE004643FF /* 2_focusmanagement.swift in Sources */,
 				05D824392F6B3BEA00A81A2F /* 4_gradientMask.swift in Sources */,
+				059A0EB72F86E927002325BA /* 1_ScrollViewBasics.swift in Sources */,
 				0511918E2F6FE2710089F2FF /* 6_KeyframeAnimator.swift in Sources */,
 				051FABC52F83F93800AE69D6 /* PressableButtonStyle.swift in Sources */,
 				05317A5B2F86E35100B409CC /* 3_LazyHGrid.swift in Sources */,
@@ -1105,6 +1147,7 @@
 				05685BA52F6A9518004643FF /* 5_AsyncLet.swift in Sources */,
 				05A69F9C2F862560004663AD /* 8_Built-inModifier.swift in Sources */,
 				054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */,
+				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
@@ -1130,6 +1173,7 @@
 				05D824432F6B3CAE00A81A2F /* 9_PathMask.swift in Sources */,
 				05D824372F6B3BD100A81A2F /* 3_clipShapes.swift in Sources */,
 				05685B9E2F6A8F9D004643FF /* 3_RaceCondition.swift in Sources */,
+				059A0EBF2F86EA1E002325BA /* 5_ScrollOffset.swift in Sources */,
 				055DF1312F83D36B00A0268C /* 5_DatePicker&ColorPicker.swift in Sources */,
 				05FBC4AB2F87A6130033F0C3 /* AlertsSheetsTopic.swift in Sources */,
 				05685BBE2F6AB68A004643FF /* KeyboardTopic.swift in Sources */,
