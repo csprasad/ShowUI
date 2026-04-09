@@ -13,11 +13,9 @@ import SwiftUI
  
 // MARK: - LESSON 1: Sheet Basics
 struct SheetBasicsVisual: View {
-    //TODO: - IdentifiedString is temporary solutions to make selectedItem confirms to Identifiable!!
-    struct IdentifiedString: Identifiable, Equatable { let id = UUID(); let value: String }
+    @State private var selectedItem: String? = nil
     @State private var showSheet = false
     @State private var showItemSheet = false
-    @State private var selectedItem: IdentifiedString? = nil
     let items = ["Settings", "Profile", "Notifications"]
  
     var body: some View {
@@ -59,7 +57,7 @@ struct SheetBasicsVisual: View {
                     HStack(spacing: 8) {
                         ForEach(items, id: \.self) { item in
                             Button {
-                                selectedItem = IdentifiedString(value: item)
+                                selectedItem = item
                             } label: {
                                 Text(item)
                                     .font(.system(size: 13, weight: .medium))
@@ -73,8 +71,8 @@ struct SheetBasicsVisual: View {
                         }
                     }
                 }
-                .sheet(item: $selectedItem) { identified in
-                    MockSheetContent(title: identified.value, subtitle: "Sheet opened for \(identified.value)")
+                .sheet(item: $selectedItem) { item in
+                    MockSheetContent(title: item, subtitle: "Sheet opened for \(item)")
                 }
  
                 // Dismiss info
