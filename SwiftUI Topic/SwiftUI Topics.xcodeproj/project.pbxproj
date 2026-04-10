@@ -201,6 +201,15 @@
 		05B149872F7F92AE00F00B04 /* 4_deepLinking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B149862F7F92A800F00B04 /* 4_deepLinking.swift */; };
 		05B149892F7F931D00F00B04 /* 2_typedNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B149882F7F930D00F00B04 /* 2_typedNav.swift */; };
 		05B1498B2F7F93C500F00B04 /* 1_stack_Basics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B1498A2F7F93BD00F00B04 /* 1_stack_Basics.swift */; };
+		05C01A3E2F88AF49008E0717 /* GeometryReaderTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A3D2F88AF47008E0717 /* GeometryReaderTopic.swift */; };
+		05C01A402F88AF6D008E0717 /* 1_GeometryReaderBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A3F2F88AF66008E0717 /* 1_GeometryReaderBasics.swift */; };
+		05C01A422F88AFC1008E0717 /* 2_CoordinateSpaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A412F88AFBB008E0717 /* 2_CoordinateSpaces.swift */; };
+		05C01A442F88AFF3008E0717 /* 3_ProportionalSizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A432F88AFEF008E0717 /* 3_ProportionalSizing.swift */; };
+		05C01A462F88B060008E0717 /* 4_Offset&Parallax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A452F88B05B008E0717 /* 4_Offset&Parallax.swift */; };
+		05C01A482F88B082008E0717 /* 5_PreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A472F88B07D008E0717 /* 5_PreferenceKey.swift */; };
+		05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A492F88B0C5008E0717 /* 6_matchedGeometryEffect.swift */; };
+		05C01A4C2F88B12D008E0717 /* 7_Size-AdaptiveLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A4B2F88B122008E0717 /* 7_Size-AdaptiveLayouts.swift */; };
+		05C01A4E2F88B261008E0717 /* 8_CustomLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A4D2F88B25B008E0717 /* 8_CustomLayoutProtocol.swift */; };
 		05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242C2F6B310300A81A2F /* MaskingTopic.swift */; };
 		05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */; };
 		05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824342F6B3BB000A81A2F /* 2_basicMask.swift */; };
@@ -429,6 +438,15 @@
 		05B149862F7F92A800F00B04 /* 4_deepLinking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_deepLinking.swift; sourceTree = "<group>"; };
 		05B149882F7F930D00F00B04 /* 2_typedNav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_typedNav.swift; sourceTree = "<group>"; };
 		05B1498A2F7F93BD00F00B04 /* 1_stack_Basics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_stack_Basics.swift; sourceTree = "<group>"; };
+		05C01A3D2F88AF47008E0717 /* GeometryReaderTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryReaderTopic.swift; sourceTree = "<group>"; };
+		05C01A3F2F88AF66008E0717 /* 1_GeometryReaderBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_GeometryReaderBasics.swift; sourceTree = "<group>"; };
+		05C01A412F88AFBB008E0717 /* 2_CoordinateSpaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_CoordinateSpaces.swift; sourceTree = "<group>"; };
+		05C01A432F88AFEF008E0717 /* 3_ProportionalSizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_ProportionalSizing.swift; sourceTree = "<group>"; };
+		05C01A452F88B05B008E0717 /* 4_Offset&Parallax.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4_Offset&Parallax.swift"; sourceTree = "<group>"; };
+		05C01A472F88B07D008E0717 /* 5_PreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_PreferenceKey.swift; sourceTree = "<group>"; };
+		05C01A492F88B0C5008E0717 /* 6_matchedGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_matchedGeometryEffect.swift; sourceTree = "<group>"; };
+		05C01A4B2F88B122008E0717 /* 7_Size-AdaptiveLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_Size-AdaptiveLayouts.swift"; sourceTree = "<group>"; };
+		05C01A4D2F88B25B008E0717 /* 8_CustomLayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_CustomLayoutProtocol.swift; sourceTree = "<group>"; };
 		05D8242C2F6B310300A81A2F /* MaskingTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingTopic.swift; sourceTree = "<group>"; };
 		05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_maskIntro.swift; sourceTree = "<group>"; };
 		05D824342F6B3BB000A81A2F /* 2_basicMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_basicMask.swift; sourceTree = "<group>"; };
@@ -835,6 +853,22 @@
 			path = NavigationStack;
 			sourceTree = "<group>";
 		};
+		05C01A3C2F88AF3A008E0717 /* Geometry Reader */ = {
+			isa = PBXGroup;
+			children = (
+				05C01A3D2F88AF47008E0717 /* GeometryReaderTopic.swift */,
+				05C01A3F2F88AF66008E0717 /* 1_GeometryReaderBasics.swift */,
+				05C01A412F88AFBB008E0717 /* 2_CoordinateSpaces.swift */,
+				05C01A432F88AFEF008E0717 /* 3_ProportionalSizing.swift */,
+				05C01A452F88B05B008E0717 /* 4_Offset&Parallax.swift */,
+				05C01A472F88B07D008E0717 /* 5_PreferenceKey.swift */,
+				05C01A492F88B0C5008E0717 /* 6_matchedGeometryEffect.swift */,
+				05C01A4B2F88B122008E0717 /* 7_Size-AdaptiveLayouts.swift */,
+				05C01A4D2F88B25B008E0717 /* 8_CustomLayoutProtocol.swift */,
+			);
+			path = "Geometry Reader";
+			sourceTree = "<group>";
+		};
 		05D8242B2F6B30E700A81A2F /* Masking Lessons */ = {
 			isa = PBXGroup;
 			children = (
@@ -943,6 +977,7 @@
 				05351D632F85774A00E291E8 /* Colors & Gradients */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
 				055DF1252F83D22E00A0268C /* Forms */,
+				05C01A3C2F88AF3A008E0717 /* Geometry Reader */,
 				05ADDCB82F83BECF001F2DA9 /* Gesture */,
 				05317A532F86E29500B409CC /* Grids */,
 				058C47A32F84379300B95325 /* Images & AsyncImage */,
@@ -1044,6 +1079,7 @@
 				05B1497D2F7F8BCC00F00B04 /* 7_sheetsInNavigation.swift in Sources */,
 				05AED11D2F80E6EF00E3C2BE /* 5_EditMode.swift in Sources */,
 				055DF1332F83D38C00A0268C /* 6_Validation.swift in Sources */,
+				05C01A462F88B060008E0717 /* 4_Offset&Parallax.swift in Sources */,
 				051499B02F715CFF00EE4E83 /* 5_variants.swift in Sources */,
 				051C4A7A2F7D15590003C63A /* 3_binding.swift in Sources */,
 				05A69F9A2F86250B004663AD /* 7_CompositionModifier.swift in Sources */,
@@ -1052,6 +1088,7 @@
 				056375462F71C1C6001E7148 /* 4_buttonLoadingState.swift in Sources */,
 				059A0EB92F86E965002325BA /* 2_ScrollTransition.swift in Sources */,
 				0555456C2F7277B1006086F5 /* 9_sheetLayout.swift in Sources */,
+				05C01A422F88AFC1008E0717 /* 2_CoordinateSpaces.swift in Sources */,
 				057064072F822A4200B2512D /* 4_Alignment.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */,
@@ -1090,6 +1127,7 @@
 				05B149832F7F91FA00F00B04 /* NavigationstackTopic.swift in Sources */,
 				05FBC4BD2F87AA8A0033F0C3 /* String+Ex.swift in Sources */,
 				0558851E2F842570004779A1 /* CalloutBox.swift in Sources */,
+				05C01A442F88AFF3008E0717 /* 3_ProportionalSizing.swift in Sources */,
 				05A69F982F8624BF004663AD /* 6_EnvironmentModifiers.swift in Sources */,
 				05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */,
 				05B1497B2F7F8B5900F00B04 /* 8_commonMistakes.swift in Sources */,
@@ -1098,6 +1136,7 @@
 				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
+				05C01A402F88AF6D008E0717 /* 1_GeometryReaderBasics.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
 				054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */,
 				056375502F71C323001E7148 /* 9_buttonLongPress.swift in Sources */,
@@ -1122,11 +1161,13 @@
 				051C4A882F7D17400003C63A /* 8_multipleSources.swift in Sources */,
 				057064092F822AB600B2512D /* 5_Frame.swift in Sources */,
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
+				05C01A4E2F88B261008E0717 /* 8_CustomLayoutProtocol.swift in Sources */,
 				055885202F842587004779A1 /* VisualCard.swift in Sources */,
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
+				05C01A4C2F88B12D008E0717 /* 7_Size-AdaptiveLayouts.swift in Sources */,
 				05351D6D2F85786C00E291E8 /* 4_MeshGradient.swift in Sources */,
 				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
 				059A0EBD2F86E9E3002325BA /* 4_ScrollPosition.swift in Sources */,
@@ -1138,6 +1179,7 @@
 				055DF1372F83D41800A0268C /* 7_LabeledContent.swift in Sources */,
 				05685BB72F6AAFD1004643FF /* TopicDetailView.swift in Sources */,
 				0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */,
+				05C01A3E2F88AF49008E0717 /* GeometryReaderTopic.swift in Sources */,
 				055DF1272F83D24500A0268C /* FormsTopic.swift in Sources */,
 				0555455A2F72740F006086F5 /* bottomsheetsTopic.swift in Sources */,
 				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
@@ -1234,8 +1276,10 @@
 				05F97AF32F882E0B00205019 /* 2_Fill&Stroke.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */,
+				05C01A482F88B082008E0717 /* 5_PreferenceKey.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
 				054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */,
+				05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				055DF12D2F83D2CC00A0268C /* 3_Slider&Stepper.swift in Sources */,
@@ -1404,7 +1448,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1437,7 +1482,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = (

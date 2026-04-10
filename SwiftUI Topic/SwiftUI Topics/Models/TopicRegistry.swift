@@ -44,6 +44,7 @@ struct TopicRegistry {
         // --- G ---
         GesturesTopic(),
         GridsTopic(),
+        GeometryReaderTopic(),
         
         // --- I ---
         ImagesTopic(),
