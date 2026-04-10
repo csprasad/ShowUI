@@ -39,6 +39,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 | **Forms & SettingsUI** | 8 | Form, Section, Picker, Toggle, Slider and validation patterns |
 | **Gestures** | 8 | Tap, drag, pinch, rotate and composing complex interactions |
 | **Grids** | 8 | LazyVGrid, LazyHGrid, Grid, columns, alignment and performance |
+| **Geometry Reader** | 8 | Size-adaptive layouts, coordinate spaces, anchor preferences and proxies |
 | **Images & AsyncImage** | 8 | Resizable, aspect ratio, clipping, filters and async loading |
 | **Keyboard** | 6 | Every keyboard type, focus chaining, avoidance modes side by side |
 | **List & ForEach** | 8 | Dynamic lists, swipe actions, edit mode, sections and performance |
