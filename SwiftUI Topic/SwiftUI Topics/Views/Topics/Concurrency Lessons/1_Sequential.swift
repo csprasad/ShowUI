@@ -183,8 +183,3 @@ let followers = try await fetchFollowers()
         }
     }
 }
-
-
-#Preview {
-    SequentialVisual()
-}

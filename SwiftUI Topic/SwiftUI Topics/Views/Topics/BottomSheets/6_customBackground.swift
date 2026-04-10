@@ -147,10 +147,6 @@ struct BackgroundModifier: ViewModifier {
         }
     }
 }
-
-#Preview {
-    CustomBackgroundVisual()
-}
  
 struct CustomBackgroundExplanation: View {
     var body: some View {

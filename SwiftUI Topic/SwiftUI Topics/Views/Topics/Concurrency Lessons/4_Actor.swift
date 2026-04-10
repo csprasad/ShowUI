@@ -206,7 +206,3 @@ await account.withdraw(50)  // safe from any task
         }
     }
 }
-
-#Preview {
-    ActorVisual()
-}

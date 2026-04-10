@@ -36,8 +36,8 @@ enum ShapesPathsLessons {
         SPLesson(number: 4, title: "Shape protocol",         subtitle: "Conforming to Shape - reusable, parameterized, composable shapes",       icon: "hexagon.fill",                   visual: AnyView(ShapeProtocolVisual()),     explanation: AnyView(ShapeProtocolExplanation())),
         SPLesson(number: 5, title: "Animatable shapes",      subtitle: "AnimatablePair, animatableData, smooth morphing between shapes",         icon: "sparkles",                       visual: AnyView(AnimatableShapesVisual()),  explanation: AnyView(AnimatableShapesExplanation())),
         SPLesson(number: 6, title: "Trim & draw-on effect",  subtitle: ".trim(from:to:) - progress rings, draw-on animation, progress bars",    icon: "circle.dotted",                  visual: AnyView(TrimVisual()),              explanation: AnyView(TrimExplanation())),
-//        SPLesson(number: 7, title: "Canvas",                 subtitle: "Canvas view - imperative drawing, symbols, blend modes, performance",   icon: "paintpalette.fill",              visual: AnyView(CanvasVisual()),            explanation: AnyView(CanvasExplanation())),
-//        SPLesson(number: 8, title: "Composing shapes",       subtitle: "Combining shapes with ZStack, masks, even-odd fill, clipping paths",    icon: "square.on.square.fill",          visual: AnyView(ComposingShapesVisual()),   explanation: AnyView(ComposingShapesExplanation())),
+        SPLesson(number: 7, title: "Canvas",                 subtitle: "Canvas view - imperative drawing, symbols, blend modes, performance",   icon: "paintpalette.fill",              visual: AnyView(CanvasVisual()),            explanation: AnyView(CanvasExplanation())),
+        SPLesson(number: 8, title: "Composing shapes",       subtitle: "Combining shapes with ZStack, masks, even-odd fill, clipping paths",    icon: "square.on.square.fill",          visual: AnyView(ComposingShapesVisual()),   explanation: AnyView(ComposingShapesExplanation())),
     ]
 }
 

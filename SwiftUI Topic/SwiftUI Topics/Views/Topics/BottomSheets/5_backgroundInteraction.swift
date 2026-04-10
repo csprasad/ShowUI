@@ -134,10 +134,6 @@ struct BackgroundInteractionVisual: View {
     }
 }
 
-#Preview {
-    BackgroundInteractionVisual()
-}
- 
 struct BackgroundInteractionExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

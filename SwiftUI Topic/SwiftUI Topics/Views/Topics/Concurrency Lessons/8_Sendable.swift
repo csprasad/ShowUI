@@ -145,7 +145,3 @@ class Config {
         }
     }
 }
-
-#Preview {
-    SendableVisual()
-}

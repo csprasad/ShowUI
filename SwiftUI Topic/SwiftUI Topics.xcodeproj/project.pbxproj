@@ -70,6 +70,8 @@
 		0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */; };
 		0546F0D02F817D840062C81B /* 5_DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CF2F817D830062C81B /* 5_DynamicType.swift */; };
 		0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */; };
+		054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DD2F88A43300F7E172 /* 7_Canvas.swift */; };
+		054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */; };
 		054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */; };
 		054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CF2F711945003BA047 /* 1_renderingmodes.swift */; };
 		054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8D12F711981003BA047 /* 2_layeredsymbols.swift */; };
@@ -296,6 +298,8 @@
 		0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_TextAdvanced.swift; sourceTree = "<group>"; };
 		0546F0CF2F817D830062C81B /* 5_DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_DynamicType.swift; sourceTree = "<group>"; };
 		0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_TextPrivacy.swift; sourceTree = "<group>"; };
+		054D98DD2F88A43300F7E172 /* 7_Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_Canvas.swift; sourceTree = "<group>"; };
+		054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ComposingShapesVisual.swift; sourceTree = "<group>"; };
 		054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTopic.swift; sourceTree = "<group>"; };
 		054ED8CF2F711945003BA047 /* 1_renderingmodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_renderingmodes.swift; sourceTree = "<group>"; };
 		054ED8D12F711981003BA047 /* 2_layeredsymbols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_layeredsymbols.swift; sourceTree = "<group>"; };
@@ -858,6 +862,8 @@
 				05F97AF62F882E7C00205019 /* 4_ShapeProtocol.swift */,
 				05F97AF82F882EBA00205019 /* 5_AnimatableShapes.swift */,
 				05F97AFA2F882FBB00205019 /* 6_Trim&Draw-on.swift */,
+				054D98DD2F88A43300F7E172 /* 7_Canvas.swift */,
+				054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */,
 			);
 			path = ShapesPaths;
 			sourceTree = "<group>";
@@ -929,7 +935,6 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				05F97AED2F882D1500205019 /* ShapesPaths */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				051191862F6FE2220089F2FF /* Animations */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
@@ -947,6 +952,7 @@
 				05B149792F7F8B0500F00B04 /* NavigationStack */,
 				059A0EB32F86E8F1002325BA /* Scrollviews */,
 				054ED8CC2F7117F7003BA047 /* SF Symbols */,
+				05F97AED2F882D1500205019 /* ShapesPaths */,
 				057063FD2F82291C00B2512D /* Stacks & Spacer */,
 				051C4A712F7D14140003C63A /* StateBinding */,
 				0546F0C42F817A160062C81B /* Text & Typography */,
@@ -1229,6 +1235,7 @@
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */,
 				051191982F6FEAB20089F2FF /* 17_ScopedAnimation.swift in Sources */,
+				054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				055DF12D2F83D2CC00A0268C /* 3_Slider&Stepper.swift in Sources */,
@@ -1251,6 +1258,7 @@
 				05A69F8E2F86233A004663AD /* 1_Modifier.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
 				05A69F902F86236E004663AD /* 2_ModifierOrder.swift in Sources */,
+				054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */,
 				05AED1212F80E75700E3C2BE /* 7_RowCustomization.swift in Sources */,
 				058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */,
 			);

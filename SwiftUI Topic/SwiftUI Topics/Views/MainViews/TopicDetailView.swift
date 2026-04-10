@@ -147,9 +147,3 @@ struct TopicDetailView: View {
         return seen.map { LessonGroup(section: $0, lessons: dict[$0] ?? []) }
     }
 }
-
-#Preview {
-    NavigationStack {
-        TopicDetailView(topic: AnimationsTopic())
-    }
-}

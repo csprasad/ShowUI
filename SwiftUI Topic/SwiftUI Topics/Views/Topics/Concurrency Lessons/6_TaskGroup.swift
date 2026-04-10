@@ -162,7 +162,3 @@ func downloadImages(urls: [URL]) async throws -> [UIImage] {
         }
     }
 }
-
-#Preview {
-    TaskGroupVisual()
-}
