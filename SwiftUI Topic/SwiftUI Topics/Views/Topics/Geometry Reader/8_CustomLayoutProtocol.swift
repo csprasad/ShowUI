@@ -162,14 +162,13 @@ struct DiagonalGridDemo: View {
                     }
                     .padding(.vertical, 4)
                 }
-            }
-            .overlay(
                 Text("Diagonal offset via Layout.placeSubviews")
-                    .font(.system(size: 9)).foregroundStyle(.secondary).padding(6),
-                alignment: .bottomLeading
-            )
+                    .font(.system(size: 9)).foregroundStyle(.secondary).padding(6)
+            }
+            
+            
         }
-        .frame(maxWidth: .infinity).frame(height: 180)
+        .frame(maxWidth: .infinity).frame(height: 200)
         .clipShape(RoundedRectangle(cornerRadius: 14))
     }
 }
@@ -193,7 +192,7 @@ struct RadialLayoutDemo: View {
                     .overlay(Image(systemName: "star.fill").font(.system(size: 16)).foregroundStyle(.white))
             }
         }
-        .frame(maxWidth: .infinity).frame(height: 180)
+        .frame(maxWidth: .infinity).frame(height: 220)
         .clipShape(RoundedRectangle(cornerRadius: 14))
         .overlay(Text("Radial placement - use Layout.placeSubviews with angle math")
             .font(.system(size: 9)).foregroundStyle(.secondary).padding(8), alignment: .bottomLeading)

@@ -11,10 +11,6 @@
 
 import SwiftUI
 
-#Preview {
-    AdaptiveLayoutVisual()
-}
-
 // MARK: - LESSON 7: Size-Adaptive Layouts
 struct AdaptiveLayoutVisual: View {
     @State private var containerWidth: CGFloat = 260
@@ -47,8 +43,8 @@ struct AdaptiveLayoutVisual: View {
                 // Width slider - simulates narrow/wide container
                 HStack(spacing: 8) {
                     Text("width:").font(.system(size: 12)).foregroundStyle(.secondary).frame(width: 36)
-                    Slider(value: $containerWidth, in: 120...340, step: 4).tint(.geoGreen)
-                    Text("\(Int(containerWidth))pt").font(.system(size: 12, design: .monospaced)).foregroundStyle(Color.geoGreen).frame(width: 36)
+                    Slider(value: $containerWidth, in: 120...260, step: 4).tint(.geoGreen)
+                    Text("\(Int(containerWidth))pt").font(.system(size: 12, design: .monospaced)).foregroundStyle(Color.geoGreen).frame(width: 40)
                 }
 
                 // Container that mimics the given width
@@ -65,7 +61,7 @@ struct AdaptiveLayoutVisual: View {
                         .padding(10)
                         .animation(.spring(response: 0.4), value: containerWidth)
                 }
-                .frame(height: 140)
+                .frame(height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 14))
             }
         }

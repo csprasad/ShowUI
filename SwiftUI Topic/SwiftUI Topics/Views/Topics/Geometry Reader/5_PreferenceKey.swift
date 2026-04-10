@@ -11,10 +11,6 @@
 
 import SwiftUI
 
-#Preview {
-    PreferenceKeyVisual()
-}
-
 // MARK: - LESSON 5: PreferenceKey
 struct WidthPreferenceKey: PreferenceKey {
     static var defaultValue: CGFloat = 0
