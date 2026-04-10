@@ -89,10 +89,6 @@ struct SheetBasicsVisual: View {
         }
     }
 }
-
-#Preview {
-    SheetBasicsVisual()
-}
  
 struct SheetBasicsExplanation: View {
     var body: some View {

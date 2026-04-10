@@ -199,8 +199,3 @@ let (p, po, f) = try await (profile, posts, followers)
         }
     }
 }
-
-
-#Preview {
-    ConcurrentVisual()
-}

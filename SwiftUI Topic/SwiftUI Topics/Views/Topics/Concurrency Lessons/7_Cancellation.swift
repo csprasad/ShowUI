@@ -189,7 +189,3 @@ await withTaskCancellationHandler {
         }
     }
 }
-
-#Preview {
-    CancellationVisual()
-}

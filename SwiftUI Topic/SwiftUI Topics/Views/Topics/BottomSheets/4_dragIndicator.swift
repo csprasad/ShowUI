@@ -123,10 +123,6 @@ struct DragIndicatorVisual: View {
         }
     }
 }
-
-#Preview {
-    DragIndicatorVisual()
-}
  
 struct DragIndicatorExplanation: View {
     var body: some View {

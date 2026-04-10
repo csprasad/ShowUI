@@ -65,6 +65,7 @@ struct TopicRegistry {
         StacksSpacerTopic(),
         StateBindingTopic(),
         ScrollViewsTopic(),
+        ShapesPathsTopic(),
         
         // --- T ---
         TextTypographyTopic(),

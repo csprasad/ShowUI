@@ -170,10 +170,6 @@ struct ConditionalDismissSheet: View {
         .interactiveDismissDisabled(!canDismiss)
     }
 }
-
-#Preview {
-    ProgrammaticDismissVisual()
-}
  
 struct ProgrammaticDismissExplanation: View {
     var body: some View {

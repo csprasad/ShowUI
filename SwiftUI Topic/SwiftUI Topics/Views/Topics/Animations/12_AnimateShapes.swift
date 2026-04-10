@@ -1,6 +1,6 @@
 //
 //
-//  12_AnimatableShapes.swift
+//  12_AnimateShapes.swift
 //  SwiftUI Topics
 //
 /// Created by `C S Prasad` on `22/03/26`
@@ -12,7 +12,7 @@
 import SwiftUI
 
 // MARK: - LESSON 12: Animatable Shapes
-struct AnimatableShapesVisual: View {
+struct AnimateShapesVisual: View {
     @State private var progress: CGFloat = 0.5
     @State private var cornerRadius: CGFloat = 20
     @State private var sides: CGFloat = 3
@@ -160,7 +160,7 @@ struct ProgressRingShape: Shape {
     }
 }
 
-struct AnimatableShapesExplanation: View {
+struct AnimateShapesExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             SectionHeader(text: "Animatable shapes")

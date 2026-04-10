@@ -179,10 +179,6 @@ struct KeyboardDemoSheet: View {
     }
 }
 
-#Preview {
-    SheetLayoutVisual()
-}
- 
 struct SheetLayoutExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {

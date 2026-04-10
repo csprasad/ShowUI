@@ -144,10 +144,6 @@ struct DetentsVisual: View {
     }
 }
 
-#Preview {
-    DetentsVisual()
-}
-
 struct DetentsExplanation: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
