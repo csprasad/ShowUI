@@ -37,6 +37,7 @@ struct TopicRegistry {
         // --- C ---
         ConcurrencyTopic(),
         ColorsGradientsTopic(),
+        ControlsDeepDiveTopic(),
         
         // --- F ---
         FormsTopic(),
@@ -70,6 +71,7 @@ struct TopicRegistry {
         
         // --- T ---
         TextTypographyTopic(),
+        TextFieldDeepDiveTopic(),
         
         // --- V ---
         ViewModifiersTopic(),
