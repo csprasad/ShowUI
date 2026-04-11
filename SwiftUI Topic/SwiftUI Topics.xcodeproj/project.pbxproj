@@ -183,6 +183,15 @@
 		05A69F982F8624BF004663AD /* 6_EnvironmentModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F972F8624BA004663AD /* 6_EnvironmentModifiers.swift */; };
 		05A69F9A2F86250B004663AD /* 7_CompositionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F992F862502004663AD /* 7_CompositionModifier.swift */; };
 		05A69F9C2F862560004663AD /* 8_Built-inModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F9B2F86255A004663AD /* 8_Built-inModifier.swift */; };
+		05AB11D02F8A126700C6A5C4 /* ControlsDeepDiveTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11CF2F8A125700C6A5C4 /* ControlsDeepDiveTopic.swift */; };
+		05AB11D22F8A130F00C6A5C4 /* 1_ToggleDeepDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11D12F8A130600C6A5C4 /* 1_ToggleDeepDive.swift */; };
+		05AB11D42F8A135400C6A5C4 /* 2_TogglePatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11D32F8A135000C6A5C4 /* 2_TogglePatterns.swift */; };
+		05AB11D62F8A139000C6A5C4 /* 3_PickerDeepDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11D52F8A138B00C6A5C4 /* 3_PickerDeepDive.swift */; };
+		05AB11D82F8A146400C6A5C4 /* 4_PickerPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11D72F8A145E00C6A5C4 /* 4_PickerPatterns.swift */; };
+		05AB11DA2F8A149000C6A5C4 /* 5_SliderDeepDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11D92F8A148A00C6A5C4 /* 5_SliderDeepDive.swift */; };
+		05AB11DC2F8A150000C6A5C4 /* 6_SliderPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11DB2F8A14FB00C6A5C4 /* 6_SliderPatterns.swift */; };
+		05AB11DE2F8A152F00C6A5C4 /* 7_StepperDeepDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11DD2F8A152800C6A5C4 /* 7_StepperDeepDive.swift */; };
+		05AB11E02F8A160900C6A5C4 /* 8_ControlsComposition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05AB11DF2F8A160400C6A5C4 /* 8_ControlsComposition.swift */; };
 		05ADDCC22F83BEEA001F2DA9 /* GesturesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCC12F83BEEA001F2DA9 /* GesturesTopic.swift */; };
 		05ADDCC32F83BEEA001F2DA9 /* 2_Long.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCBA2F83BEEA001F2DA9 /* 2_Long.swift */; };
 		05ADDCC42F83BEEA001F2DA9 /* 1_Tap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADDCB92F83BEEA001F2DA9 /* 1_Tap.swift */; };
@@ -429,6 +438,15 @@
 		05A69F972F8624BA004663AD /* 6_EnvironmentModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_EnvironmentModifiers.swift; sourceTree = "<group>"; };
 		05A69F992F862502004663AD /* 7_CompositionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_CompositionModifier.swift; sourceTree = "<group>"; };
 		05A69F9B2F86255A004663AD /* 8_Built-inModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_Built-inModifier.swift"; sourceTree = "<group>"; };
+		05AB11CF2F8A125700C6A5C4 /* ControlsDeepDiveTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsDeepDiveTopic.swift; sourceTree = "<group>"; };
+		05AB11D12F8A130600C6A5C4 /* 1_ToggleDeepDive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ToggleDeepDive.swift; sourceTree = "<group>"; };
+		05AB11D32F8A135000C6A5C4 /* 2_TogglePatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_TogglePatterns.swift; sourceTree = "<group>"; };
+		05AB11D52F8A138B00C6A5C4 /* 3_PickerDeepDive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_PickerDeepDive.swift; sourceTree = "<group>"; };
+		05AB11D72F8A145E00C6A5C4 /* 4_PickerPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_PickerPatterns.swift; sourceTree = "<group>"; };
+		05AB11D92F8A148A00C6A5C4 /* 5_SliderDeepDive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_SliderDeepDive.swift; sourceTree = "<group>"; };
+		05AB11DB2F8A14FB00C6A5C4 /* 6_SliderPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_SliderPatterns.swift; sourceTree = "<group>"; };
+		05AB11DD2F8A152800C6A5C4 /* 7_StepperDeepDive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_StepperDeepDive.swift; sourceTree = "<group>"; };
+		05AB11DF2F8A160400C6A5C4 /* 8_ControlsComposition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ControlsComposition.swift; sourceTree = "<group>"; };
 		05ADDCB92F83BEEA001F2DA9 /* 1_Tap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_Tap.swift; sourceTree = "<group>"; };
 		05ADDCBA2F83BEEA001F2DA9 /* 2_Long.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Long.swift; sourceTree = "<group>"; };
 		05ADDCBB2F83BEEA001F2DA9 /* 3_drag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_drag.swift; sourceTree = "<group>"; };
@@ -839,6 +857,22 @@
 			path = ViewModifiers;
 			sourceTree = "<group>";
 		};
+		05AB11CE2F8A124100C6A5C4 /* Controls Deep Dive */ = {
+			isa = PBXGroup;
+			children = (
+				05AB11CF2F8A125700C6A5C4 /* ControlsDeepDiveTopic.swift */,
+				05AB11D12F8A130600C6A5C4 /* 1_ToggleDeepDive.swift */,
+				05AB11D32F8A135000C6A5C4 /* 2_TogglePatterns.swift */,
+				05AB11D52F8A138B00C6A5C4 /* 3_PickerDeepDive.swift */,
+				05AB11D72F8A145E00C6A5C4 /* 4_PickerPatterns.swift */,
+				05AB11D92F8A148A00C6A5C4 /* 5_SliderDeepDive.swift */,
+				05AB11DB2F8A14FB00C6A5C4 /* 6_SliderPatterns.swift */,
+				05AB11DD2F8A152800C6A5C4 /* 7_StepperDeepDive.swift */,
+				05AB11DF2F8A160400C6A5C4 /* 8_ControlsComposition.swift */,
+			);
+			path = "Controls Deep Dive";
+			sourceTree = "<group>";
+		};
 		05ADDCB82F83BECF001F2DA9 /* Gesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1003,6 +1037,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				05AB11CE2F8A124100C6A5C4 /* Controls Deep Dive */,
 				0551B6632F8960E40084A2CB /* Textfield Deep Dive */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				051191862F6FE2220089F2FF /* Animations */,
@@ -1151,6 +1186,7 @@
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
 				0551B6712F8962AA0084A2CB /* 6_InlineValidation.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
+				05AB11DC2F8A150000C6A5C4 /* 6_SliderPatterns.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
 				05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */,
 				05317A552F86E2A200B409CC /* GridsTopic.swift in Sources */,
@@ -1169,6 +1205,7 @@
 				05685BC62F6AB740004643FF /* 4_InputValidation.swift in Sources */,
 				05B1497B2F7F8B5900F00B04 /* 8_commonMistakes.swift in Sources */,
 				05317A652F86E47A00B409CC /* 8_Performance&Patterns.swift in Sources */,
+				05AB11D42F8A135400C6A5C4 /* 2_TogglePatterns.swift in Sources */,
 				05F97AF72F882E8100205019 /* 4_ShapeProtocol.swift in Sources */,
 				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
@@ -1182,6 +1219,7 @@
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
+				05AB11D22F8A130F00C6A5C4 /* 1_ToggleDeepDive.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
 				059A0EBB2F86E993002325BA /* 3_ScrollTargetBehavior.swift in Sources */,
@@ -1200,6 +1238,7 @@
 				051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */,
 				05C01A4E2F88B261008E0717 /* 8_CustomLayoutProtocol.swift in Sources */,
 				055885202F842587004779A1 /* VisualCard.swift in Sources */,
+				05AB11E02F8A160900C6A5C4 /* 8_ControlsComposition.swift in Sources */,
 				0551B6672F89611E0084A2CB /* 1_TextFieldBasics.swift in Sources */,
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
@@ -1207,6 +1246,7 @@
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				0551B6732F8962D30084A2CB /* 7_CustomTextFieldStyles.swift in Sources */,
 				05C01A4C2F88B12D008E0717 /* 7_Size-AdaptiveLayouts.swift in Sources */,
+				05AB11D02F8A126700C6A5C4 /* ControlsDeepDiveTopic.swift in Sources */,
 				05351D6D2F85786C00E291E8 /* 4_MeshGradient.swift in Sources */,
 				055545642F7275DB006086F5 /* 5_backgroundInteraction.swift in Sources */,
 				059A0EBD2F86E9E3002325BA /* 4_ScrollPosition.swift in Sources */,
@@ -1250,7 +1290,9 @@
 				05ADDCC92F83BEEA001F2DA9 /* 4_magnify.swift in Sources */,
 				05ADDCCA2F83BEEA001F2DA9 /* 6_simultaneous.swift in Sources */,
 				057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */,
+				05AB11DA2F8A149000C6A5C4 /* 5_SliderDeepDive.swift in Sources */,
 				058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */,
+				05AB11D82F8A146400C6A5C4 /* 4_PickerPatterns.swift in Sources */,
 				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
 				05317A572F86E2EF00B409CC /* 1_GridItem.swift in Sources */,
 				057064032F8229B500B2512D /* 2_ZStack.swift in Sources */,
@@ -1288,6 +1330,7 @@
 				05AED11B2F80E6B800E3C2BE /* 4_SwipeActions.swift in Sources */,
 				05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */,
 				058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */,
+				05AB11DE2F8A152F00C6A5C4 /* 7_StepperDeepDive.swift in Sources */,
 				0546F0CC2F817C5F0062C81B /* 3_TextTruncation.swift in Sources */,
 				05685BB12F6AAF1A004643FF /* TopicRegistry.swift in Sources */,
 				058C47A92F84381F00B95325 /* 2_Resizable.swift in Sources */,
@@ -1309,6 +1352,7 @@
 				05351D6B2F8577F400E291E8 /* 3_Radial&Angular.swift in Sources */,
 				055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */,
 				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
+				05AB11D62F8A139000C6A5C4 /* 3_PickerDeepDive.swift in Sources */,
 				05317A612F86E41400B409CC /* 6_PinnedHeaders.swift in Sources */,
 				0551B66F2F89623D0084A2CB /* 5_SecureField.swift in Sources */,
 				05351D672F85778D00E291E8 /* 1_ColorSystem.swift in Sources */,

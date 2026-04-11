@@ -37,6 +37,7 @@ struct TopicRegistry {
         // --- C ---
         ConcurrencyTopic(),
         ColorsGradientsTopic(),
+        ControlsDeepDiveTopic(),
         
         // --- F ---
         FormsTopic(),
