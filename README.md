@@ -29,6 +29,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 
 | Topic | Lessons | Highlights |
 |---|:---:|---|
+| **@Observable & @State** | 8 | State ownership, observation, bindings, environment and the new Observation framework |
 | **Alerts & Popovers** | 8 | Alert, confirmationDialog, sheet, popover, fullScreenCover |
 | **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
 | **Animations Deep Dive** | 8 | Springs, timing, transitions, keyframes, phase animators and custom |
