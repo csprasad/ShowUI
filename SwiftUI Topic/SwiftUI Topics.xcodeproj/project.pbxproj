@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0504643E2F8A69EB0092A145 /* TabviewBarsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0504643D2F8A69E40092A145 /* TabviewBarsTopic.swift */; };
+		050464402F8A6A310092A145 /* 1_TabViewBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0504643F2F8A6A2D0092A145 /* 1_TabViewBasics.swift */; };
+		050464422F8A6B0E0092A145 /* 2_ProgrammaticSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050464412F8A6B090092A145 /* 2_ProgrammaticSelection.swift */; };
+		050464442F8A6B3B0092A145 /* 3_Badges&Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050464432F8A6B360092A145 /* 3_Badges&Appearance.swift */; };
+		050464462F8A6BA10092A145 /* 4_PageTabViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050464452F8A6B9E0092A145 /* 4_PageTabViewStyle.swift */; };
+		050464482F8A6BE50092A145 /* 5_TabwithNavigationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050464472F8A6BDE0092A145 /* 5_TabwithNavigationStack.swift */; };
+		0504644A2F8A6C230092A145 /* 6_CustomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 050464492F8A6C1D0092A145 /* 6_CustomTabBar.swift */; };
+		0504644C2F8A6C580092A145 /* 7_iPadSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0504644B2F8A6C530092A145 /* 7_iPadSidebar.swift */; };
+		0504644E2F8A6D070092A145 /* 8_TabPatterns&CommonMistakes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0504644D2F8A6CFD0092A145 /* 8_TabPatterns&CommonMistakes.swift */; };
 		051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191872F6FE22C0089F2FF /* AnimationsTopic.swift */; };
 		0511918A2F6FE24A0089F2FF /* 2_Spring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191892F6FE2490089F2FF /* 2_Spring.swift */; };
 		0511918C2F6FE2620089F2FF /* 4_Repeat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0511918B2F6FE2610089F2FF /* 4_Repeat.swift */; };
@@ -261,6 +270,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0504643D2F8A69E40092A145 /* TabviewBarsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabviewBarsTopic.swift; sourceTree = "<group>"; };
+		0504643F2F8A6A2D0092A145 /* 1_TabViewBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TabViewBasics.swift; sourceTree = "<group>"; };
+		050464412F8A6B090092A145 /* 2_ProgrammaticSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ProgrammaticSelection.swift; sourceTree = "<group>"; };
+		050464432F8A6B360092A145 /* 3_Badges&Appearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_Badges&Appearance.swift"; sourceTree = "<group>"; };
+		050464452F8A6B9E0092A145 /* 4_PageTabViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_PageTabViewStyle.swift; sourceTree = "<group>"; };
+		050464472F8A6BDE0092A145 /* 5_TabwithNavigationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_TabwithNavigationStack.swift; sourceTree = "<group>"; };
+		050464492F8A6C1D0092A145 /* 6_CustomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_CustomTabBar.swift; sourceTree = "<group>"; };
+		0504644B2F8A6C530092A145 /* 7_iPadSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_iPadSidebar.swift; sourceTree = "<group>"; };
+		0504644D2F8A6CFD0092A145 /* 8_TabPatterns&CommonMistakes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_TabPatterns&CommonMistakes.swift"; sourceTree = "<group>"; };
 		051191872F6FE22C0089F2FF /* AnimationsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsTopic.swift; sourceTree = "<group>"; };
 		051191892F6FE2490089F2FF /* 2_Spring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Spring.swift; sourceTree = "<group>"; };
 		0511918B2F6FE2610089F2FF /* 4_Repeat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Repeat.swift; sourceTree = "<group>"; };
@@ -527,6 +545,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0504643C2F8A69210092A145 /* TabviewBars */ = {
+			isa = PBXGroup;
+			children = (
+				0504643D2F8A69E40092A145 /* TabviewBarsTopic.swift */,
+				0504643F2F8A6A2D0092A145 /* 1_TabViewBasics.swift */,
+				050464412F8A6B090092A145 /* 2_ProgrammaticSelection.swift */,
+				050464432F8A6B360092A145 /* 3_Badges&Appearance.swift */,
+				050464452F8A6B9E0092A145 /* 4_PageTabViewStyle.swift */,
+				050464472F8A6BDE0092A145 /* 5_TabwithNavigationStack.swift */,
+				050464492F8A6C1D0092A145 /* 6_CustomTabBar.swift */,
+				0504644B2F8A6C530092A145 /* 7_iPadSidebar.swift */,
+				0504644D2F8A6CFD0092A145 /* 8_TabPatterns&CommonMistakes.swift */,
+			);
+			path = TabviewBars;
+			sourceTree = "<group>";
+		};
 		051191862F6FE2220089F2FF /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -1037,8 +1071,6 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				05AB11CE2F8A124100C6A5C4 /* Controls Deep Dive */,
-				0551B6632F8960E40084A2CB /* Textfield Deep Dive */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				051191862F6FE2220089F2FF /* Animations */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
@@ -1046,6 +1078,7 @@
 				059799FC2F06585800905892 /* Buttons */,
 				05351D632F85774A00E291E8 /* Colors & Gradients */,
 				05685B9B2F6A8F9D004643FF /* Concurrency Lessons */,
+				05AB11CE2F8A124100C6A5C4 /* Controls Deep Dive */,
 				055DF1252F83D22E00A0268C /* Forms */,
 				05C01A3C2F88AF3A008E0717 /* Geometry Reader */,
 				05ADDCB82F83BECF001F2DA9 /* Gesture */,
@@ -1060,7 +1093,9 @@
 				05F97AED2F882D1500205019 /* ShapesPaths */,
 				057063FD2F82291C00B2512D /* Stacks & Spacer */,
 				051C4A712F7D14140003C63A /* StateBinding */,
+				0504643C2F8A69210092A145 /* TabviewBars */,
 				0546F0C42F817A160062C81B /* Text & Typography */,
+				0551B6632F8960E40084A2CB /* Textfield Deep Dive */,
 				05A69F8A2F862301004663AD /* ViewModifiers */,
 			);
 			path = Topics;
@@ -1185,6 +1220,7 @@
 				057063FF2F82293D00B2512D /* StacksSpacerTopic.swift in Sources */,
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
 				0551B6712F8962AA0084A2CB /* 6_InlineValidation.swift in Sources */,
+				050464482F8A6BE50092A145 /* 5_TabwithNavigationStack.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
 				05AB11DC2F8A150000C6A5C4 /* 6_SliderPatterns.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
@@ -1197,6 +1233,7 @@
 				055885182F84251A004779A1 /* LessonRowCard.swift in Sources */,
 				051C4A822F7D162B0003C63A /* 5_environment.swift in Sources */,
 				05D824412F6B3C9100A81A2F /* 8_AnimatedReveal.swift in Sources */,
+				050464442F8A6B3B0092A145 /* 3_Badges&Appearance.swift in Sources */,
 				05B149832F7F91FA00F00B04 /* NavigationstackTopic.swift in Sources */,
 				05FBC4BD2F87AA8A0033F0C3 /* String+Ex.swift in Sources */,
 				0558851E2F842570004779A1 /* CalloutBox.swift in Sources */,
@@ -1219,6 +1256,7 @@
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
+				050464402F8A6A310092A145 /* 1_TabViewBasics.swift in Sources */,
 				05AB11D22F8A130F00C6A5C4 /* 1_ToggleDeepDive.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
@@ -1242,6 +1280,7 @@
 				0551B6672F89611E0084A2CB /* 1_TextFieldBasics.swift in Sources */,
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
+				0504643E2F8A69EB0092A145 /* TabviewBarsTopic.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				0551B6732F8962D30084A2CB /* 7_CustomTextFieldStyles.swift in Sources */,
@@ -1310,7 +1349,9 @@
 				05FBC4B32F87A72D0033F0C3 /* 4_SheetDetents&Styling.swift in Sources */,
 				05685BA52F6A9518004643FF /* 5_AsyncLet.swift in Sources */,
 				05A69F9C2F862560004663AD /* 8_Built-inModifier.swift in Sources */,
+				0504644E2F8A6D070092A145 /* 8_TabPatterns&CommonMistakes.swift in Sources */,
 				054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */,
+				0504644A2F8A6C230092A145 /* 6_CustomTabBar.swift in Sources */,
 				0551B66B2F8961B10084A2CB /* 3_KeyboardTypes.swift in Sources */,
 				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
@@ -1327,6 +1368,7 @@
 				058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */,
 				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
 				0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */,
+				050464422F8A6B0E0092A145 /* 2_ProgrammaticSelection.swift in Sources */,
 				05AED11B2F80E6B800E3C2BE /* 4_SwipeActions.swift in Sources */,
 				05685B9D2F6A8F9D004643FF /* 2_Concurrent.swift in Sources */,
 				058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */,
@@ -1350,6 +1392,7 @@
 				05FBC4B12F87A6B40033F0C3 /* 3_SheetBasics.swift in Sources */,
 				05FBC4AD2F87A64A0033F0C3 /* 1_AlertBasics.swift in Sources */,
 				05351D6B2F8577F400E291E8 /* 3_Radial&Angular.swift in Sources */,
+				050464462F8A6BA10092A145 /* 4_PageTabViewStyle.swift in Sources */,
 				055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */,
 				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
 				05AB11D62F8A139000C6A5C4 /* 3_PickerDeepDive.swift in Sources */,
@@ -1383,6 +1426,7 @@
 				058C47AD2F84388D00B95325 /* 4_ImageModifiers.swift in Sources */,
 				05685BA32F6A8F9D004643FF /* LessonDetailView.swift in Sources */,
 				05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */,
+				0504644C2F8A6C580092A145 /* 7_iPadSidebar.swift in Sources */,
 				0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */,
 				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
 				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
