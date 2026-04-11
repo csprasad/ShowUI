@@ -28,6 +28,7 @@ struct TopicRegistry {
         // --- A ---
         AnimationsTopic(),
         AlertsSheetsTopic(),
+        AnimationsDeepDiveTopic(),
         
         // --- B ---
         BlendModesTopic(),

@@ -163,6 +163,15 @@
 		057064072F822A4200B2512D /* 4_Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064062F822A4000B2512D /* 4_Alignment.swift */; };
 		057064092F822AB600B2512D /* 5_Frame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057064082F822AAE00B2512D /* 5_Frame.swift */; };
 		0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */; };
+		0572B0D02F8ABAB80037331F /* AnimationsDeepDiveTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0CF2F8ABAB00037331F /* AnimationsDeepDiveTopic.swift */; };
+		0572B0D22F8ABADC0037331F /* 1_AnimationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0D12F8ABAD50037331F /* 1_AnimationTypes.swift */; };
+		0572B0D42F8ABB4E0037331F /* 2_ExplicitVsImplicit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0D32F8ABB3B0037331F /* 2_ExplicitVsImplicit.swift */; };
+		0572B0D62F8ABB740037331F /* 3_Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0D52F8ABB6F0037331F /* 3_Transitions.swift */; };
+		0572B0D82F8ABB920037331F /* 4_Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0D72F8ABB900037331F /* 4_Keyframe.swift */; };
+		0572B0DA2F8ABBC50037331F /* 5_DeepPhaseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0D92F8ABBC00037331F /* 5_DeepPhaseAnimator.swift */; };
+		0572B0DC2F8ABC500037331F /* 6_MatchedGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0DB2F8ABC4C0037331F /* 6_MatchedGeometry.swift */; };
+		0572B0DE2F8ABC940037331F /* 7_CustomAnimatableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0DD2F8ABC8F0037331F /* 7_CustomAnimatableData.swift */; };
+		0572B0E02F8ABD2A0037331F /* 8_AnimationPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0DF2F8ABD250037331F /* 8_AnimationPatterns.swift */; };
 		058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836642F82CF610041B682 /* 7_ViewThatFits.swift */; };
 		058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836662F82CFF30041B682 /* 8_LayoutPriority.swift */; };
 		058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A42F8437AD00B95325 /* ImagesTopic.swift */; };
@@ -427,6 +436,15 @@
 		057064062F822A4000B2512D /* 4_Alignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Alignment.swift; sourceTree = "<group>"; };
 		057064082F822AAE00B2512D /* 5_Frame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_Frame.swift; sourceTree = "<group>"; };
 		0570640A2F822B7500B2512D /* 6_Padding&Offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_Padding&Offset.swift"; sourceTree = "<group>"; };
+		0572B0CF2F8ABAB00037331F /* AnimationsDeepDiveTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationsDeepDiveTopic.swift; sourceTree = "<group>"; };
+		0572B0D12F8ABAD50037331F /* 1_AnimationTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_AnimationTypes.swift; sourceTree = "<group>"; };
+		0572B0D32F8ABB3B0037331F /* 2_ExplicitVsImplicit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ExplicitVsImplicit.swift; sourceTree = "<group>"; };
+		0572B0D52F8ABB6F0037331F /* 3_Transitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_Transitions.swift; sourceTree = "<group>"; };
+		0572B0D72F8ABB900037331F /* 4_Keyframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Keyframe.swift; sourceTree = "<group>"; };
+		0572B0D92F8ABBC00037331F /* 5_DeepPhaseAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_DeepPhaseAnimator.swift; sourceTree = "<group>"; };
+		0572B0DB2F8ABC4C0037331F /* 6_MatchedGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_MatchedGeometry.swift; sourceTree = "<group>"; };
+		0572B0DD2F8ABC8F0037331F /* 7_CustomAnimatableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_CustomAnimatableData.swift; sourceTree = "<group>"; };
+		0572B0DF2F8ABD250037331F /* 8_AnimationPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_AnimationPatterns.swift; sourceTree = "<group>"; };
 		058836642F82CF610041B682 /* 7_ViewThatFits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ViewThatFits.swift; sourceTree = "<group>"; };
 		058836662F82CFF30041B682 /* 8_LayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_LayoutPriority.swift; sourceTree = "<group>"; };
 		058C47A42F8437AD00B95325 /* ImagesTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTopic.swift; sourceTree = "<group>"; };
@@ -825,6 +843,22 @@
 			path = "Stacks & Spacer";
 			sourceTree = "<group>";
 		};
+		0572B0CE2F8ABAA40037331F /* Animation Deep Dive */ = {
+			isa = PBXGroup;
+			children = (
+				0572B0CF2F8ABAB00037331F /* AnimationsDeepDiveTopic.swift */,
+				0572B0D12F8ABAD50037331F /* 1_AnimationTypes.swift */,
+				0572B0D32F8ABB3B0037331F /* 2_ExplicitVsImplicit.swift */,
+				0572B0D52F8ABB6F0037331F /* 3_Transitions.swift */,
+				0572B0D72F8ABB900037331F /* 4_Keyframe.swift */,
+				0572B0D92F8ABBC00037331F /* 5_DeepPhaseAnimator.swift */,
+				0572B0DB2F8ABC4C0037331F /* 6_MatchedGeometry.swift */,
+				0572B0DD2F8ABC8F0037331F /* 7_CustomAnimatableData.swift */,
+				0572B0DF2F8ABD250037331F /* 8_AnimationPatterns.swift */,
+			);
+			path = "Animation Deep Dive";
+			sourceTree = "<group>";
+		};
 		058C47A32F84379300B95325 /* Images & AsyncImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -1072,6 +1106,7 @@
 			isa = PBXGroup;
 			children = (
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
+				0572B0CE2F8ABAA40037331F /* Animation Deep Dive */,
 				051191862F6FE2220089F2FF /* Animations */,
 				0518ADE12F6B1BFF00BA2F73 /* BlendModes Lessons */,
 				055545582F7273FF006086F5 /* BottomSheets */,
@@ -1257,6 +1292,7 @@
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
 				050464402F8A6A310092A145 /* 1_TabViewBasics.swift in Sources */,
+				0572B0D22F8ABADC0037331F /* 1_AnimationTypes.swift in Sources */,
 				05AB11D22F8A130F00C6A5C4 /* 1_ToggleDeepDive.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
@@ -1265,8 +1301,10 @@
 				054ED8D42F7119B0003BA047 /* 3_variablecolor.swift in Sources */,
 				05317A632F86E43500B409CC /* 7_MixedLayouts.swift in Sources */,
 				0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */,
+				0572B0DC2F8ABC500037331F /* 6_MatchedGeometry.swift in Sources */,
 				055DF12B2F83D29400A0268C /* 2_Toggle&Picker.swift in Sources */,
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
+				0572B0D42F8ABB4E0037331F /* 2_ExplicitVsImplicit.swift in Sources */,
 				058C47AF2F8438B800B95325 /* 5_AsyncImageBasics.swift in Sources */,
 				05235D902F7FDF0B0002614B /* diagram+Helper.swift in Sources */,
 				0558851C2F842548004779A1 /* StepRow.swift in Sources */,
@@ -1279,6 +1317,7 @@
 				05AB11E02F8A160900C6A5C4 /* 8_ControlsComposition.swift in Sources */,
 				0551B6672F89611E0084A2CB /* 1_TextFieldBasics.swift in Sources */,
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
+				0572B0D62F8ABB740037331F /* 3_Transitions.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
 				0504643E2F8A69EB0092A145 /* TabviewBarsTopic.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
@@ -1320,6 +1359,7 @@
 				05A69F922F8623BC004663AD /* 3_CustomViewModifier.swift in Sources */,
 				05ADDCC32F83BEEA001F2DA9 /* 2_Long.swift in Sources */,
 				05ADDCC42F83BEEA001F2DA9 /* 1_Tap.swift in Sources */,
+				0572B0D02F8ABAB80037331F /* AnimationsDeepDiveTopic.swift in Sources */,
 				05ADDCC52F83BEEA001F2DA9 /* 7_composition.swift in Sources */,
 				05FBC4BB2F87A8700033F0C3 /* 8_CustomOverlays.swift in Sources */,
 				05ADDCC62F83BEEA001F2DA9 /* 5_rotate.swift in Sources */,
@@ -1328,6 +1368,7 @@
 				0551B6752F8963170084A2CB /* 8_TextFieldInLists.swift in Sources */,
 				05ADDCC92F83BEEA001F2DA9 /* 4_magnify.swift in Sources */,
 				05ADDCCA2F83BEEA001F2DA9 /* 6_simultaneous.swift in Sources */,
+				0572B0D82F8ABB920037331F /* 4_Keyframe.swift in Sources */,
 				057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */,
 				05AB11DA2F8A149000C6A5C4 /* 5_SliderDeepDive.swift in Sources */,
 				058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */,
@@ -1367,6 +1408,7 @@
 				05B149852F7F925C00F00B04 /* 3_navPath.swift in Sources */,
 				058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */,
 				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
+				0572B0E02F8ABD2A0037331F /* 8_AnimationPatterns.swift in Sources */,
 				0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */,
 				050464422F8A6B0E0092A145 /* 2_ProgrammaticSelection.swift in Sources */,
 				05AED11B2F80E6B800E3C2BE /* 4_SwipeActions.swift in Sources */,
@@ -1382,6 +1424,7 @@
 				054ED8DA2F711A63003BA047 /* 7_effectsReference.swift in Sources */,
 				05D824432F6B3CAE00A81A2F /* 9_PathMask.swift in Sources */,
 				05D824372F6B3BD100A81A2F /* 3_clipShapes.swift in Sources */,
+				0572B0DA2F8ABBC50037331F /* 5_DeepPhaseAnimator.swift in Sources */,
 				05F97AF12F882DB700205019 /* 1_Built-inShapes.swift in Sources */,
 				05685B9E2F6A8F9D004643FF /* 3_RaceCondition.swift in Sources */,
 				059A0EBF2F86EA1E002325BA /* 5_ScrollOffset.swift in Sources */,
@@ -1434,6 +1477,7 @@
 				05A69F8E2F86233A004663AD /* 1_Modifier.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
 				05A69F902F86236E004663AD /* 2_ModifierOrder.swift in Sources */,
+				0572B0DE2F8ABC940037331F /* 7_CustomAnimatableData.swift in Sources */,
 				054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */,
 				05AED1212F80E75700E3C2BE /* 7_RowCustomization.swift in Sources */,
 				058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */,

@@ -31,12 +31,13 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 |---|:---:|---|
 | **Alerts & Popovers** | 8 | Alert, confirmationDialog, sheet, popover, fullScreenCover |
 | **Animations** | 17 | Springs, keyframes, phase animator, scroll effects, TimelineView particles, GeometryEffect |
+| **Animations Deep Dive** | 8 | Springs, timing, transitions, keyframes, phase animators and custom |
 | **Blend Modes** | 7 | All 20 blend modes with live color picker and category breakdown |
 | **Bottom Sheets** | 9 | Detents, drag indicators, background interaction and more |
 | **Buttons** | 10 | Loading states, toggle patterns, menus, haptics, custom styles, hit testing |
 | **Colors & Gradients** | 8 | Color system, gradients, materials, opacity and dynamic color |
 | **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
-| **Toggle, Picker, Slider, Stepper** | 8 | All four interactive controls - styles, customisation and real-world patterns |
+| **Controls Deep Dive** | 8 | Toggle, Picker, Slider, Stepper controls - styles, customisation and real-world patterns |
 | **Forms & SettingsUI** | 8 | Form, Section, Picker, Toggle, Slider and validation patterns |
 | **Gestures** | 8 | Tap, drag, pinch, rotate and composing complex interactions |
 | **Grids** | 8 | LazyVGrid, LazyHGrid, Grid, columns, alignment and performance |
