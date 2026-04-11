@@ -53,6 +53,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 | **Shapes & Paths** | 8 | Built-in shapes, custom paths, stroke, fill, trim and animation |
 | **Text & Typography** | 6 | Fonts, markdown formatting, trunction and advanced styling |
 | **TextField Deep Dive** | 8 | Focus, formatting, validation, keyboard, secure fields and custom styles |
+| **TabView & Tab Bars** | 8 | Tab navigation, paging, badges, customisation and sidebar on iPad |
 | **ViewModifiers** | 8 | Custom modifiers, modifier order, conditional styling and reuse |
 
 ## Lesson Structure
