@@ -256,6 +256,15 @@
 		05D8243F2F6B3C7700A81A2F /* 7_TextMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8243E2F6B3C7200A81A2F /* 7_TextMask.swift */; };
 		05D824412F6B3C9100A81A2F /* 8_AnimatedReveal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824402F6B3C8500A81A2F /* 8_AnimatedReveal.swift */; };
 		05D824432F6B3CAE00A81A2F /* 9_PathMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824422F6B3CA600A81A2F /* 9_PathMask.swift */; };
+		05E507022F8AD06600817190 /* ObservablestateTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507012F8AD05E00817190 /* ObservablestateTopic.swift */; };
+		05E507042F8AD09900817190 /* 1_@StateFundamentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507032F8AD09400817190 /* 1_@StateFundamentals.swift */; };
+		05E507062F8AD10200817190 /* 2_@BindingDeepDive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507052F8AD0F800817190 /* 2_@BindingDeepDive.swift */; };
+		05E507082F8AD13000817190 /* 3_@ObservableBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507072F8AD12B00817190 /* 3_@ObservableBasics.swift */; };
+		05E5070A2F8AD19600817190 /* 4_Fine-GrainedObservation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507092F8AD19500817190 /* 4_Fine-GrainedObservation.swift */; };
+		05E5070C2F8AD1E600817190 /* 5_@Statewith@Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5070B2F8AD1DF00817190 /* 5_@Statewith@Observable.swift */; };
+		05E5070E2F8AD29700817190 /* 6_@Environmentwith@Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5070D2F8AD28D00817190 /* 6_@Environmentwith@Observable.swift */; };
+		05E507102F8AD2BD00817190 /* 7_OldvsNew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5070F2F8AD2B700817190 /* 7_OldvsNew.swift */; };
+		05E507122F8AD30B00817190 /* 8_Patterns&Pitfalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E507112F8AD30600817190 /* 8_Patterns&Pitfalls.swift */; };
 		05F97AEF2F882D1F00205019 /* ShapesPathsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F97AEE2F882D1E00205019 /* ShapesPathsTopic.swift */; };
 		05F97AF12F882DB700205019 /* 1_Built-inShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F97AF02F882DB300205019 /* 1_Built-inShapes.swift */; };
 		05F97AF32F882E0B00205019 /* 2_Fill&Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05F97AF22F882E0600205019 /* 2_Fill&Stroke.swift */; };
@@ -529,6 +538,15 @@
 		05D8243E2F6B3C7200A81A2F /* 7_TextMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_TextMask.swift; sourceTree = "<group>"; };
 		05D824402F6B3C8500A81A2F /* 8_AnimatedReveal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_AnimatedReveal.swift; sourceTree = "<group>"; };
 		05D824422F6B3CA600A81A2F /* 9_PathMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_PathMask.swift; sourceTree = "<group>"; };
+		05E507012F8AD05E00817190 /* ObservablestateTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservablestateTopic.swift; sourceTree = "<group>"; };
+		05E507032F8AD09400817190 /* 1_@StateFundamentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1_@StateFundamentals.swift"; sourceTree = "<group>"; };
+		05E507052F8AD0F800817190 /* 2_@BindingDeepDive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2_@BindingDeepDive.swift"; sourceTree = "<group>"; };
+		05E507072F8AD12B00817190 /* 3_@ObservableBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_@ObservableBasics.swift"; sourceTree = "<group>"; };
+		05E507092F8AD19500817190 /* 4_Fine-GrainedObservation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4_Fine-GrainedObservation.swift"; sourceTree = "<group>"; };
+		05E5070B2F8AD1DF00817190 /* 5_@Statewith@Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_@Statewith@Observable.swift"; sourceTree = "<group>"; };
+		05E5070D2F8AD28D00817190 /* 6_@Environmentwith@Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_@Environmentwith@Observable.swift"; sourceTree = "<group>"; };
+		05E5070F2F8AD2B700817190 /* 7_OldvsNew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_OldvsNew.swift; sourceTree = "<group>"; };
+		05E507112F8AD30600817190 /* 8_Patterns&Pitfalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_Patterns&Pitfalls.swift"; sourceTree = "<group>"; };
 		05F97AEE2F882D1E00205019 /* ShapesPathsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapesPathsTopic.swift; sourceTree = "<group>"; };
 		05F97AF02F882DB300205019 /* 1_Built-inShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1_Built-inShapes.swift"; sourceTree = "<group>"; };
 		05F97AF22F882E0600205019 /* 2_Fill&Stroke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2_Fill&Stroke.swift"; sourceTree = "<group>"; };
@@ -1022,6 +1040,22 @@
 			path = "Masking Lessons";
 			sourceTree = "<group>";
 		};
+		05E507002F8AD04900817190 /* @Observable & @State */ = {
+			isa = PBXGroup;
+			children = (
+				05E507012F8AD05E00817190 /* ObservablestateTopic.swift */,
+				05E507032F8AD09400817190 /* 1_@StateFundamentals.swift */,
+				05E507052F8AD0F800817190 /* 2_@BindingDeepDive.swift */,
+				05E507072F8AD12B00817190 /* 3_@ObservableBasics.swift */,
+				05E507092F8AD19500817190 /* 4_Fine-GrainedObservation.swift */,
+				05E5070B2F8AD1DF00817190 /* 5_@Statewith@Observable.swift */,
+				05E5070D2F8AD28D00817190 /* 6_@Environmentwith@Observable.swift */,
+				05E5070F2F8AD2B700817190 /* 7_OldvsNew.swift */,
+				05E507112F8AD30600817190 /* 8_Patterns&Pitfalls.swift */,
+			);
+			path = "@Observable & @State";
+			sourceTree = "<group>";
+		};
 		05F97AED2F882D1500205019 /* ShapesPaths */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1139,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				05E507002F8AD04900817190 /* @Observable & @State */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				0572B0CE2F8ABAA40037331F /* Animation Deep Dive */,
 				051191862F6FE2220089F2FF /* Animations */,
@@ -1236,6 +1271,7 @@
 				059A0EC52F86EAAD002325BA /* 8_ScrollModifiers.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				05351D652F85775C00E291E8 /* ColorsGradientsTopic.swift in Sources */,
+				05E5070A2F8AD19600817190 /* 4_Fine-GrainedObservation.swift in Sources */,
 				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
 				056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */,
 				05AED1172F80E63900E3C2BE /* 2_ListBasics.swift in Sources */,
@@ -1262,6 +1298,7 @@
 				05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */,
 				05317A552F86E2A200B409CC /* GridsTopic.swift in Sources */,
 				05317A5D2F86E3A000B409CC /* 4_Grid(non-lazy).swift in Sources */,
+				05E5070C2F8AD1E600817190 /* 5_@Statewith@Observable.swift in Sources */,
 				054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */,
 				05A69F8C2F862314004663AD /* ViewModifiersTopic.swift in Sources */,
 				055DF12F2F83D31A00A0268C /* 4_TextField.swift in Sources */,
@@ -1279,6 +1316,7 @@
 				05317A652F86E47A00B409CC /* 8_Performance&Patterns.swift in Sources */,
 				05AB11D42F8A135400C6A5C4 /* 2_TogglePatterns.swift in Sources */,
 				05F97AF72F882E8100205019 /* 4_ShapeProtocol.swift in Sources */,
+				05E5070E2F8AD29700817190 /* 6_@Environmentwith@Observable.swift in Sources */,
 				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
@@ -1300,6 +1338,7 @@
 				0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */,
 				054ED8D42F7119B0003BA047 /* 3_variablecolor.swift in Sources */,
 				05317A632F86E43500B409CC /* 7_MixedLayouts.swift in Sources */,
+				05E507022F8AD06600817190 /* ObservablestateTopic.swift in Sources */,
 				0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */,
 				0572B0DC2F8ABC500037331F /* 6_MatchedGeometry.swift in Sources */,
 				055DF12B2F83D29400A0268C /* 2_Toggle&Picker.swift in Sources */,
@@ -1319,6 +1358,7 @@
 				055DF1352F83D3E500A0268C /* 8_SettingsUI.swift in Sources */,
 				0572B0D62F8ABB740037331F /* 3_Transitions.swift in Sources */,
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
+				05E507102F8AD2BD00817190 /* 7_OldvsNew.swift in Sources */,
 				0504643E2F8A69EB0092A145 /* TabviewBarsTopic.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
@@ -1376,6 +1416,7 @@
 				0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */,
 				05317A572F86E2EF00B409CC /* 1_GridItem.swift in Sources */,
 				057064032F8229B500B2512D /* 2_ZStack.swift in Sources */,
+				05E507082F8AD13000817190 /* 3_@ObservableBasics.swift in Sources */,
 				05D8243D2F6B3C6200A81A2F /* 6_LuminanceAlpha.swift in Sources */,
 				05351D732F85790C00E291E8 /* 7_DynamicColor.swift in Sources */,
 				0563754C2F71C2A2001E7148 /* 7_buttonMenu.swift in Sources */,
@@ -1394,6 +1435,7 @@
 				054ED8D22F711984003BA047 /* 2_layeredsymbols.swift in Sources */,
 				0504644A2F8A6C230092A145 /* 6_CustomTabBar.swift in Sources */,
 				0551B66B2F8961B10084A2CB /* 3_KeyboardTypes.swift in Sources */,
+				05E507122F8AD30B00817190 /* 8_Patterns&Pitfalls.swift in Sources */,
 				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,
@@ -1456,6 +1498,7 @@
 				05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
+				05E507062F8AD10200817190 /* 2_@BindingDeepDive.swift in Sources */,
 				055DF12D2F83D2CC00A0268C /* 3_Slider&Stepper.swift in Sources */,
 				055545662F72766A006086F5 /* 6_customBackground.swift in Sources */,
 				05685BB92F6AB052004643FF /* ConcurrencyTopic.swift in Sources */,
@@ -1479,6 +1522,7 @@
 				05A69F902F86236E004663AD /* 2_ModifierOrder.swift in Sources */,
 				0572B0DE2F8ABC940037331F /* 7_CustomAnimatableData.swift in Sources */,
 				054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */,
+				05E507042F8AD09900817190 /* 1_@StateFundamentals.swift in Sources */,
 				05AED1212F80E75700E3C2BE /* 7_RowCustomization.swift in Sources */,
 				058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */,
 			);

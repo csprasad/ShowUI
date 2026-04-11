@@ -25,6 +25,9 @@ import SwiftUI
 /// Git can auto-merge changes to different parts of this file without human intervention.
 struct TopicRegistry {
     static let all: [any TopicProtocol] = [
+        // --- @ ---
+        ObservableStateTopic(),
+        
         // --- A ---
         AnimationsTopic(),
         AlertsSheetsTopic(),
