@@ -192,6 +192,15 @@
 		059A0EC12F86EA54002325BA /* 6_visualEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC02F86EA51002325BA /* 6_visualEffect.swift */; };
 		059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC22F86EA7C002325BA /* 7_safeAreaInset.swift */; };
 		059A0EC52F86EAAD002325BA /* 8_ScrollModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059A0EC42F86EAA9002325BA /* 8_ScrollModifiers.swift */; };
+		059D825D2F8B8B300078221B /* SwiftdataTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D825C2F8B8B2D0078221B /* SwiftdataTopic.swift */; };
+		059D825F2F8B8B4C0078221B /* 1_@ModelBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D825E2F8B8B480078221B /* 1_@ModelBasics.swift */; };
+		059D82612F8B8C4D0078221B /* 2_@Query&Fetching.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D82602F8B8C490078221B /* 2_@Query&Fetching.swift */; };
+		059D82632F8B8C7E0078221B /* 3_CRUDOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D82622F8B8C6E0078221B /* 3_CRUDOperations.swift */; };
+		059D82652F8B925D0078221B /* 4_Relationships.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D82642F8B92580078221B /* 4_Relationships.swift */; };
+		059D82672F8B92970078221B /* 5_Predicates&Filtering.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D82662F8B92920078221B /* 5_Predicates&Filtering.swift */; };
+		059D82692F8B92DF0078221B /* 6_Schema&Migrations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D82682F8B92D90078221B /* 6_Schema&Migrations.swift */; };
+		059D826B2F8B94330078221B /* 7_CloudKit&Sync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D826A2F8B942D0078221B /* 7_CloudKit&Sync.swift */; };
+		059D826D2F8B95330078221B /* 8_SDPatterns&Pitfalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 059D826C2F8B952A0078221B /* 8_SDPatterns&Pitfalls.swift */; };
 		05A69F8C2F862314004663AD /* ViewModifiersTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8B2F86230D004663AD /* ViewModifiersTopic.swift */; };
 		05A69F8E2F86233A004663AD /* 1_Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8D2F862333004663AD /* 1_Modifier.swift */; };
 		05A69F902F86236E004663AD /* 2_ModifierOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A69F8F2F86236A004663AD /* 2_ModifierOrder.swift */; };
@@ -246,6 +255,14 @@
 		05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A492F88B0C5008E0717 /* 6_matchedGeometryEffect.swift */; };
 		05C01A4C2F88B12D008E0717 /* 7_Size-AdaptiveLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A4B2F88B122008E0717 /* 7_Size-AdaptiveLayouts.swift */; };
 		05C01A4E2F88B261008E0717 /* 8_CustomLayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C01A4D2F88B25B008E0717 /* 8_CustomLayoutProtocol.swift */; };
+		05C4906D2F8BF5EE003EAD0B /* 9_FetchDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C4906C2F8BF5E9003EAD0B /* 9_FetchDescriptor.swift */; };
+		05C4906F2F8BF68B003EAD0B /* 10_ActorIsolation&Concurrency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C4906E2F8BF681003EAD0B /* 10_ActorIsolation&Concurrency.swift */; };
+		05C490712F8BF6B5003EAD0B /* 11_BatchOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490702F8BF6AE003EAD0B /* 11_BatchOperations.swift */; };
+		05C490732F8BF727003EAD0B /* 12_Custom@AttributeTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490722F8BF721003EAD0B /* 12_Custom@AttributeTypes.swift */; };
+		05C490752F8BF753003EAD0B /* 13_Undo&HistoryTracking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490742F8BF74C003EAD0B /* 13_Undo&HistoryTracking.swift */; };
+		05C490772F8BF7BD003EAD0B /* 14_SDPerformance&Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490762F8BF7B4003EAD0B /* 14_SDPerformance&Debugging.swift */; };
+		05C490792F8BF7EB003EAD0B /* 15_TestingStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490782F8BF7E1003EAD0B /* 15_TestingStrategies.swift */; };
+		05C4907B2F8BF84A003EAD0B /* 16_RWArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C4907A2F8BF845003EAD0B /* 16_RWArchitecture.swift */; };
 		05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242C2F6B310300A81A2F /* MaskingTopic.swift */; };
 		05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */; };
 		05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824342F6B3BB000A81A2F /* 2_basicMask.swift */; };
@@ -474,6 +491,15 @@
 		059A0EC02F86EA51002325BA /* 6_visualEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_visualEffect.swift; sourceTree = "<group>"; };
 		059A0EC22F86EA7C002325BA /* 7_safeAreaInset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_safeAreaInset.swift; sourceTree = "<group>"; };
 		059A0EC42F86EAA9002325BA /* 8_ScrollModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ScrollModifiers.swift; sourceTree = "<group>"; };
+		059D825C2F8B8B2D0078221B /* SwiftdataTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftdataTopic.swift; sourceTree = "<group>"; };
+		059D825E2F8B8B480078221B /* 1_@ModelBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "1_@ModelBasics.swift"; sourceTree = "<group>"; };
+		059D82602F8B8C490078221B /* 2_@Query&Fetching.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "2_@Query&Fetching.swift"; sourceTree = "<group>"; };
+		059D82622F8B8C6E0078221B /* 3_CRUDOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_CRUDOperations.swift; sourceTree = "<group>"; };
+		059D82642F8B92580078221B /* 4_Relationships.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_Relationships.swift; sourceTree = "<group>"; };
+		059D82662F8B92920078221B /* 5_Predicates&Filtering.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_Predicates&Filtering.swift"; sourceTree = "<group>"; };
+		059D82682F8B92D90078221B /* 6_Schema&Migrations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_Schema&Migrations.swift"; sourceTree = "<group>"; };
+		059D826A2F8B942D0078221B /* 7_CloudKit&Sync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_CloudKit&Sync.swift"; sourceTree = "<group>"; };
+		059D826C2F8B952A0078221B /* 8_SDPatterns&Pitfalls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_SDPatterns&Pitfalls.swift"; sourceTree = "<group>"; };
 		05A69F8B2F86230D004663AD /* ViewModifiersTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiersTopic.swift; sourceTree = "<group>"; };
 		05A69F8D2F862333004663AD /* 1_Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_Modifier.swift; sourceTree = "<group>"; };
 		05A69F8F2F86236A004663AD /* 2_ModifierOrder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_ModifierOrder.swift; sourceTree = "<group>"; };
@@ -528,6 +554,14 @@
 		05C01A492F88B0C5008E0717 /* 6_matchedGeometryEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_matchedGeometryEffect.swift; sourceTree = "<group>"; };
 		05C01A4B2F88B122008E0717 /* 7_Size-AdaptiveLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_Size-AdaptiveLayouts.swift"; sourceTree = "<group>"; };
 		05C01A4D2F88B25B008E0717 /* 8_CustomLayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_CustomLayoutProtocol.swift; sourceTree = "<group>"; };
+		05C4906C2F8BF5E9003EAD0B /* 9_FetchDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_FetchDescriptor.swift; sourceTree = "<group>"; };
+		05C4906E2F8BF681003EAD0B /* 10_ActorIsolation&Concurrency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "10_ActorIsolation&Concurrency.swift"; sourceTree = "<group>"; };
+		05C490702F8BF6AE003EAD0B /* 11_BatchOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11_BatchOperations.swift; sourceTree = "<group>"; };
+		05C490722F8BF721003EAD0B /* 12_Custom@AttributeTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12_Custom@AttributeTypes.swift"; sourceTree = "<group>"; };
+		05C490742F8BF74C003EAD0B /* 13_Undo&HistoryTracking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "13_Undo&HistoryTracking.swift"; sourceTree = "<group>"; };
+		05C490762F8BF7B4003EAD0B /* 14_SDPerformance&Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14_SDPerformance&Debugging.swift"; sourceTree = "<group>"; };
+		05C490782F8BF7E1003EAD0B /* 15_TestingStrategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15_TestingStrategies.swift; sourceTree = "<group>"; };
+		05C4907A2F8BF845003EAD0B /* 16_RWArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16_RWArchitecture.swift; sourceTree = "<group>"; };
 		05D8242C2F6B310300A81A2F /* MaskingTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingTopic.swift; sourceTree = "<group>"; };
 		05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_maskIntro.swift; sourceTree = "<group>"; };
 		05D824342F6B3BB000A81A2F /* 2_basicMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_basicMask.swift; sourceTree = "<group>"; };
@@ -927,6 +961,30 @@
 			path = Scrollviews;
 			sourceTree = "<group>";
 		};
+		059D825B2F8B8B250078221B /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+				059D825C2F8B8B2D0078221B /* SwiftdataTopic.swift */,
+				059D825E2F8B8B480078221B /* 1_@ModelBasics.swift */,
+				059D82602F8B8C490078221B /* 2_@Query&Fetching.swift */,
+				059D82622F8B8C6E0078221B /* 3_CRUDOperations.swift */,
+				059D82642F8B92580078221B /* 4_Relationships.swift */,
+				059D82662F8B92920078221B /* 5_Predicates&Filtering.swift */,
+				059D82682F8B92D90078221B /* 6_Schema&Migrations.swift */,
+				059D826A2F8B942D0078221B /* 7_CloudKit&Sync.swift */,
+				059D826C2F8B952A0078221B /* 8_SDPatterns&Pitfalls.swift */,
+				05C4906C2F8BF5E9003EAD0B /* 9_FetchDescriptor.swift */,
+				05C4906E2F8BF681003EAD0B /* 10_ActorIsolation&Concurrency.swift */,
+				05C490702F8BF6AE003EAD0B /* 11_BatchOperations.swift */,
+				05C490722F8BF721003EAD0B /* 12_Custom@AttributeTypes.swift */,
+				05C490742F8BF74C003EAD0B /* 13_Undo&HistoryTracking.swift */,
+				05C490762F8BF7B4003EAD0B /* 14_SDPerformance&Debugging.swift */,
+				05C490782F8BF7E1003EAD0B /* 15_TestingStrategies.swift */,
+				05C4907A2F8BF845003EAD0B /* 16_RWArchitecture.swift */,
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
 		05A69F8A2F862301004663AD /* ViewModifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1139,6 +1197,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				059D825B2F8B8B250078221B /* SwiftData */,
 				05E507002F8AD04900817190 /* @Observable & @State */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				0572B0CE2F8ABAA40037331F /* Animation Deep Dive */,
@@ -1268,7 +1327,9 @@
 				057064072F822A4200B2512D /* 4_Alignment.swift in Sources */,
 				0518ADE52F6B1D2400BA2F73 /* 1_blendintro.swift in Sources */,
 				05AED1132F80E57200E3C2BE /* ListforeachTopic.swift in Sources */,
+				05C490732F8BF727003EAD0B /* 12_Custom@AttributeTypes.swift in Sources */,
 				059A0EC52F86EAAD002325BA /* 8_ScrollModifiers.swift in Sources */,
+				059D826B2F8B94330078221B /* 7_CloudKit&Sync.swift in Sources */,
 				05685BC02F6AB6B9004643FF /* 1_keyboardtypes.swift in Sources */,
 				05351D652F85775C00E291E8 /* ColorsGradientsTopic.swift in Sources */,
 				05E5070A2F8AD19600817190 /* 4_Fine-GrainedObservation.swift in Sources */,
@@ -1300,9 +1361,11 @@
 				05317A5D2F86E3A000B409CC /* 4_Grid(non-lazy).swift in Sources */,
 				05E5070C2F8AD1E600817190 /* 5_@Statewith@Observable.swift in Sources */,
 				054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */,
+				059D825F2F8B8B4C0078221B /* 1_@ModelBasics.swift in Sources */,
 				05A69F8C2F862314004663AD /* ViewModifiersTopic.swift in Sources */,
 				055DF12F2F83D31A00A0268C /* 4_TextField.swift in Sources */,
 				055885182F84251A004779A1 /* LessonRowCard.swift in Sources */,
+				059D82692F8B92DF0078221B /* 6_Schema&Migrations.swift in Sources */,
 				051C4A822F7D162B0003C63A /* 5_environment.swift in Sources */,
 				05D824412F6B3C9100A81A2F /* 8_AnimatedReveal.swift in Sources */,
 				050464442F8A6B3B0092A145 /* 3_Badges&Appearance.swift in Sources */,
@@ -1321,10 +1384,13 @@
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
 				05C01A402F88AF6D008E0717 /* 1_GeometryReaderBasics.swift in Sources */,
+				05C4906D2F8BF5EE003EAD0B /* 9_FetchDescriptor.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
 				054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */,
 				056375502F71C323001E7148 /* 9_buttonLongPress.swift in Sources */,
 				05AED1192F80E67800E3C2BE /* 3_Sections.swift in Sources */,
+				059D82652F8B925D0078221B /* 4_Relationships.swift in Sources */,
+				05C4906F2F8BF68B003EAD0B /* 10_ActorIsolation&Concurrency.swift in Sources */,
 				051191A32F6FFB990089F2FF /* 5_PhaseAnimator.swift in Sources */,
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
@@ -1341,6 +1407,7 @@
 				05E507022F8AD06600817190 /* ObservablestateTopic.swift in Sources */,
 				0555456A2F72773A006086F5 /* 8_programmaticDismiss.swift in Sources */,
 				0572B0DC2F8ABC500037331F /* 6_MatchedGeometry.swift in Sources */,
+				059D82632F8B8C7E0078221B /* 3_CRUDOperations.swift in Sources */,
 				055DF12B2F83D29400A0268C /* 2_Toggle&Picker.swift in Sources */,
 				051191A72F6FFC280089F2FF /* 9_MatchedGeometry.swift in Sources */,
 				0572B0D42F8ABB4E0037331F /* 2_ExplicitVsImplicit.swift in Sources */,
@@ -1399,6 +1466,7 @@
 				05A69F922F8623BC004663AD /* 3_CustomViewModifier.swift in Sources */,
 				05ADDCC32F83BEEA001F2DA9 /* 2_Long.swift in Sources */,
 				05ADDCC42F83BEEA001F2DA9 /* 1_Tap.swift in Sources */,
+				059D82612F8B8C4D0078221B /* 2_@Query&Fetching.swift in Sources */,
 				0572B0D02F8ABAB80037331F /* AnimationsDeepDiveTopic.swift in Sources */,
 				05ADDCC52F83BEEA001F2DA9 /* 7_composition.swift in Sources */,
 				05FBC4BB2F87A8700033F0C3 /* 8_CustomOverlays.swift in Sources */,
@@ -1441,6 +1509,7 @@
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,
 				0551B6652F8960FB0084A2CB /* TextFieldDeepDiveTopic.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
+				05C4907B2F8BF84A003EAD0B /* 16_RWArchitecture.swift in Sources */,
 				051C4A842F7D16D60003C63A /* 6_observable.swift in Sources */,
 				05FBC4B52F87A7530033F0C3 /* 5_Popover.swift in Sources */,
 				05B149872F7F92AE00F00B04 /* 4_deepLinking.swift in Sources */,
@@ -1464,9 +1533,11 @@
 				051C4A772F7D14B50003C63A /* 2_statePlain.swift in Sources */,
 				05D8243B2F6B3BFD00A81A2F /* 5_invertedMask.swift in Sources */,
 				054ED8DA2F711A63003BA047 /* 7_effectsReference.swift in Sources */,
+				059D82672F8B92970078221B /* 5_Predicates&Filtering.swift in Sources */,
 				05D824432F6B3CAE00A81A2F /* 9_PathMask.swift in Sources */,
 				05D824372F6B3BD100A81A2F /* 3_clipShapes.swift in Sources */,
 				0572B0DA2F8ABBC50037331F /* 5_DeepPhaseAnimator.swift in Sources */,
+				05C490772F8BF7BD003EAD0B /* 14_SDPerformance&Debugging.swift in Sources */,
 				05F97AF12F882DB700205019 /* 1_Built-inShapes.swift in Sources */,
 				05685B9E2F6A8F9D004643FF /* 3_RaceCondition.swift in Sources */,
 				059A0EBF2F86EA1E002325BA /* 5_ScrollOffset.swift in Sources */,
@@ -1477,6 +1548,7 @@
 				05FBC4B12F87A6B40033F0C3 /* 3_SheetBasics.swift in Sources */,
 				05FBC4AD2F87A64A0033F0C3 /* 1_AlertBasics.swift in Sources */,
 				05351D6B2F8577F400E291E8 /* 3_Radial&Angular.swift in Sources */,
+				05C490792F8BF7EB003EAD0B /* 15_TestingStrategies.swift in Sources */,
 				050464462F8A6BA10092A145 /* 4_PageTabViewStyle.swift in Sources */,
 				055545602F72751F006086F5 /* 3_multipleDetents.swift in Sources */,
 				056375442F71C17C001E7148 /* 3_customButtonStyle.swift in Sources */,
@@ -1490,6 +1562,8 @@
 				058C47AB2F84385200B95325 /* 3_Clipping&Shapes.swift in Sources */,
 				05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */,
 				05F97AF32F882E0B00205019 /* 2_Fill&Stroke.swift in Sources */,
+				05C490712F8BF6B5003EAD0B /* 11_BatchOperations.swift in Sources */,
+				05C490752F8BF753003EAD0B /* 13_Undo&HistoryTracking.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */,
 				05C01A482F88B082008E0717 /* 5_PreferenceKey.swift in Sources */,
@@ -1498,6 +1572,7 @@
 				05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
+				059D826D2F8B95330078221B /* 8_SDPatterns&Pitfalls.swift in Sources */,
 				05E507062F8AD10200817190 /* 2_@BindingDeepDive.swift in Sources */,
 				055DF12D2F83D2CC00A0268C /* 3_Slider&Stepper.swift in Sources */,
 				055545662F72766A006086F5 /* 6_customBackground.swift in Sources */,
@@ -1516,6 +1591,7 @@
 				0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */,
 				051191962F6FEA960089F2FF /* 15_Transaction.swift in Sources */,
 				0518ADE32F6B1C2800BA2F73 /* BlendmodesTopic.swift in Sources */,
+				059D825D2F8B8B300078221B /* SwiftdataTopic.swift in Sources */,
 				0555455E2F7274C7006086F5 /* 2_detents.swift in Sources */,
 				05A69F8E2F86233A004663AD /* 1_Modifier.swift in Sources */,
 				05685BA92F6A958B004643FF /* 7_Cancellation.swift in Sources */,
