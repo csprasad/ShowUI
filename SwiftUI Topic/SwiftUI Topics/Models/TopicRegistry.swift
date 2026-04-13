@@ -43,6 +43,9 @@ struct TopicRegistry {
         ColorsGradientsTopic(),
         ControlsDeepDiveTopic(),
         
+        // --- E ---
+        EnvironmentDependenciesTopic(),
+        
         // --- F ---
         FormsTopic(),
         

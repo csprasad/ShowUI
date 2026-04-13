@@ -138,3 +138,18 @@ struct CodeBlock: View {
     }
 }
  
+// MARK: - Plain Code Block
+struct PlainCodeBlock: View {
+    let fgColor: Color
+    let bgColor: Color
+    let code: String
+
+    var body: some View {
+        Text(code)
+            .font(.system(size: 8, design: .monospaced))
+            .foregroundStyle(Color.envGreen)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .padding().background(Color.envGreenLight)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+    }
+}
