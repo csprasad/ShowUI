@@ -72,6 +72,7 @@ struct TopicRegistry {
         StateBindingTopic(),
         ScrollViewsTopic(),
         ShapesPathsTopic(),
+        SwiftDataTopic(),
         
         // --- T ---
         TextTypographyTopic(),
