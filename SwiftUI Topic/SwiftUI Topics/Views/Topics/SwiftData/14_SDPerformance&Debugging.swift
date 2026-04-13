@@ -83,19 +83,19 @@ CK_LOGGING_LEVEL=5
                         Text("The N+1 query problem").font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
 
                         nPlusOneCard(
-                            label: "❌ N+1 - bad",
+                            label: "✗ N+1 - bad",
                             code: "@Query var projects: [Project]\n\nbody {\n    ForEach(projects) { project in\n        Text(project.tasks.count)  // ← fault! 1 SQL per project\n        // 20 projects = 21 queries\n    }\n}",
                             color: .animCoral,
                             note: "Each project.tasks access fires a separate SELECT"
                         )
                         nPlusOneCard(
-                            label: "✅ Prefetch - good",
+                            label: "✓ Prefetch - good",
                             code: "var descriptor = FetchDescriptor<Project>()\ndescriptor.relationshipKeyPathsForPrefetching\n    = [\\.tasks]\nlet projects = try context.fetch(descriptor)\n// 1 query for projects + 1 for all tasks = 2 total",
                             color: .formGreen,
                             note: "prefetching joins the relationship in one query"
                         )
                         nPlusOneCard(
-                            label: "✅ fetchCount - counts only",
+                            label: "✓ fetchCount - counts only",
                             code: "// Don't fetch objects just to count them\nlet count = try context.fetchCount(\n    FetchDescriptor<Task>(\n        predicate: #Predicate { !$0.isDone }\n    )\n)  // SELECT COUNT(*) - zero objects materialised",
                             color: .formGreen,
                             note: "fetchCount generates a COUNT query, not a full fetch"
@@ -129,8 +129,8 @@ CK_LOGGING_LEVEL=5
             Text(code).font(.system(size: 8, design: .monospaced)).foregroundStyle(color)
                 .padding(6).background(color.opacity(0.08)).clipShape(RoundedRectangle(cornerRadius: 5))
             Text(note).font(.system(size: 10)).foregroundStyle(.secondary)
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+        .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func instrumentTip(icon: String, title: String, desc: String) -> some View {
@@ -140,12 +140,12 @@ CK_LOGGING_LEVEL=5
                 Text(title).font(.system(size: 11, weight: .semibold))
                 Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(Color.sdPurpleLight.opacity(0.5)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func codeBlock(_ text: String) -> some View {
-        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
+        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple).frame(maxWidth: .infinity, alignment: .leading)
             .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }

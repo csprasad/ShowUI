@@ -97,8 +97,8 @@ let container = try ModelContainer(
 """)
                     }
 
-                case 2:
-                    EmptyView()
+//                case 2:
+//                    EmptyView()
 
                 default:
                     // Conflict handling
@@ -146,7 +146,7 @@ let container = try ModelContainer(
             Image(systemName: good ? "checkmark.circle.fill" : "xmark.circle.fill")
                 .font(.system(size: 12)).foregroundStyle(good ? Color.formGreen : Color.animCoral)
             Text(text).font(.system(size: 11)).foregroundStyle(.secondary)
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(7).background(good ? Color(hex: "#E1F5EE") : Color(hex: "#FCEBEB")).clipShape(RoundedRectangle(cornerRadius: 7))
     }
 
@@ -157,7 +157,7 @@ let container = try ModelContainer(
                 Text(strategy).font(.system(size: 11, weight: .semibold)).foregroundStyle(color)
                 Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(color.opacity(0.07)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 

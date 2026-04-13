@@ -58,17 +58,17 @@ struct BatchOpsVisual: View {
                     // Naive vs batch comparison
                     VStack(spacing: 8) {
                         batchCompare(
-                            title: "❌ Naive - one-by-one insert",
+                            title: "✗ Naive - one-by-one insert",
                             code: "for item in 10_000_items {\n    context.insert(item)\n}\ntry context.save()\n// ≈ 8–15 seconds - UI freezes",
                             timeLabel: "~12s", timeColor: .animCoral, barFill: 0.9
                         )
                         batchCompare(
-                            title: "✅ Chunked - save every N",
+                            title: "✓ Chunked - save every N",
                             code: "for chunk in items.chunked(into: 500) {\n    chunk.forEach { context.insert($0) }\n    try context.save()  // flush each chunk\n}\n// ≈ 1–2 seconds - stays responsive",
                             timeLabel: "~1.5s", timeColor: .animAmber, barFill: 0.15
                         )
                         batchCompare(
-                            title: "⚡ NSBatchInsertRequest (CoreData bridge)",
+                            title: "⚡︎ NSBatchInsertRequest (CoreData bridge)",
                             code: "// Via NSPersistentContainer escape hatch\nlet request = NSBatchInsertRequest(\n    entity: TodoItem.entity(),\n    objects: rawDicts\n)\ntry container.performBackgroundTask { ctx in\n    try ctx.execute(request)\n}\n// ≈ 0.2 seconds - bypasses all overhead",
                             timeLabel: "~0.2s", timeColor: .formGreen, barFill: 0.03
                         )
@@ -163,8 +163,8 @@ try container.viewContext.execute(batchDelete)
     func batchCompare(title: String, code: String, timeLabel: String, timeColor: Color, barFill: Double) -> some View {
         VStack(alignment: .leading, spacing: 5) {
             Text(title).font(.system(size: 10, weight: .semibold))
-            Text(code).font(.system(size: 8, design: .monospaced)).foregroundStyle(.secondary)
-                .padding(5).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 5))
+            Text(code).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
+                .padding(5).clipShape(RoundedRectangle(cornerRadius: 5))
             HStack(spacing: 8) {
                 GeometryReader { g in
                     ZStack(alignment: .leading) {
@@ -175,7 +175,7 @@ try container.viewContext.execute(batchDelete)
                 Text(timeLabel).font(.system(size: 10, weight: .semibold, design: .monospaced)).foregroundStyle(timeColor).frame(width: 40)
             }
         }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func runChunkSimulation() {
@@ -205,8 +205,8 @@ try container.viewContext.execute(batchDelete)
     }
 
     func codeBlock(_ text: String) -> some View {
-        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
-            .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
+        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple).frame(maxWidth: .infinity, alignment: .leading)
+            .padding(16).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

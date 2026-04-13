@@ -204,8 +204,8 @@ struct TodoListView: View {
     }
 
     func codeBlock(_ text: String) -> some View {
-        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
-            .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
+        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple).frame(maxWidth: .infinity, alignment: .leading)
+            .padding().background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

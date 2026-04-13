@@ -1197,7 +1197,6 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
-				059D825B2F8B8B250078221B /* SwiftData */,
 				05E507002F8AD04900817190 /* @Observable & @State */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				0572B0CE2F8ABAA40037331F /* Animation Deep Dive */,
@@ -1222,6 +1221,7 @@
 				05F97AED2F882D1500205019 /* ShapesPaths */,
 				057063FD2F82291C00B2512D /* Stacks & Spacer */,
 				051C4A712F7D14140003C63A /* StateBinding */,
+				059D825B2F8B8B250078221B /* SwiftData */,
 				0504643C2F8A69210092A145 /* TabviewBars */,
 				0546F0C42F817A160062C81B /* Text & Typography */,
 				0551B6632F8960E40084A2CB /* Textfield Deep Dive */,

@@ -11,13 +11,10 @@
 
 import SwiftUI
 
-#Preview {
-    SDMigrationsVisual()
-}
 // MARK: - LESSON 6: Schema & Migrations
 struct SDMigrationsVisual: View {
     @State private var selectedDemo = 0
-    let demos = ["VersionedSchema", "Migration plan", "Migration types"]
+    let demos = ["VersionSchema", "Migration plan", "Migration types"]
 
     var body: some View {
         VisualCard {
@@ -149,8 +146,8 @@ enum MyMigrationPlan: SchemaMigrationPlan {
             Text("When: \(when)").font(.system(size: 10)).foregroundStyle(.secondary)
             Text(how).font(.system(size: 9, design: .monospaced)).foregroundStyle(color)
                 .padding(5).background(color.opacity(0.08)).clipShape(RoundedRectangle(cornerRadius: 5))
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding(8).background(Color.sdBlueLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func codeNote(_ text: String) -> some View {

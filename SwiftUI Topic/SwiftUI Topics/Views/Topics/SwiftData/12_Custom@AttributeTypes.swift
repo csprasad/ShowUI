@@ -78,8 +78,8 @@ struct CustomAttributeVisual: View {
                                 }
                             }
                             codeSnip("// Stored as JSON: {\"rawValue\":1}\n@Model class Item {\n    var priority: Priority = .low\n}")
-                        }
-                        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+                        } .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
 
                         // TagList Codable struct
                         VStack(alignment: .leading, spacing: 6) {
@@ -111,7 +111,7 @@ struct CustomAttributeVisual: View {
                             }
                             codeSnip("// Stored as JSON blob in DB\nvar tags: TagList = TagList()")
                         }
-                        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+                        .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
                     }
 
                 case 1:
@@ -161,8 +161,8 @@ struct CustomAttributeVisual: View {
             Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             Text(code).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
                 .padding(6).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 5))
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity)
+        .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func codeSnip(_ text: String) -> some View {

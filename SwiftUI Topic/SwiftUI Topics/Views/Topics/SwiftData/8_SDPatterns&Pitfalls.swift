@@ -14,7 +14,7 @@ import SwiftUI
 // MARK: - LESSON 8: Patterns & Pitfalls
 struct SDPatternsVisual: View {
     @State private var selectedDemo = 0
-    let demos = ["Common mistakes", "Background context", "Testing"]
+    let demos = ["Common mistakes", "Bg context", "Testing"]
 
     var body: some View {
         VisualCard {
@@ -178,12 +178,12 @@ extension ModelContainer {
                     Text(fix).font(.system(size: 10)).foregroundStyle(Color.sdBlue)
                 }.padding(.leading, 18)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(bad ? Color(hex: "#FCEBEB") : Color(hex: "#E1F5EE")).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func codeBlock(_ text: String) -> some View {
-        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdBlue)
+        Text(text).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdBlue) 
             .padding(8).background(Color.sdBlueLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }

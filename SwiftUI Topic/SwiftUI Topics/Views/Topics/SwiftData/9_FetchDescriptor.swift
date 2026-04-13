@@ -199,8 +199,8 @@ struct FetchDescriptorVisual: View {
             Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             Text(example).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.sdPurple)
                 .padding(5).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 5))
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding(8).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func compCard(title: String, color: Color, pros: [String], cons: [String]) -> some View {
@@ -224,7 +224,7 @@ struct FetchDescriptorVisual: View {
                     }
                 }
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(color.opacity(0.07)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 

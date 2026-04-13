@@ -133,15 +133,15 @@ Task {
     var architectureDiagram: some View {
         VStack(spacing: 4) {
             HStack(spacing: 8) {
-                layerBox("Main Thread", icon: "iphone", color: .sdBlue, note: "@Environment(\\.modelContext)\nUI reads & simple writes")
+                layerBox("Main Thread", icon: "iphone", color: .sdBlue, note: "@Environment(\\.modelContext) UI reads & writes")
                 Image(systemName: "arrow.left.arrow.right").font(.system(size: 12)).foregroundStyle(.secondary)
-                layerBox("@ModelActor", icon: "cpu.fill", color: .sdPurple, note: "Background context\nImport, processing, bulk ops")
+                layerBox("@ModelActor", icon: "cpu.fill", color: .sdPurple, note: "Background context Import, processing, bulk ops")
             }
             HStack(spacing: 6) {
                 Image(systemName: "info.circle.fill").font(.system(size: 11)).foregroundStyle(Color.sdPurple)
                 Text("Changes from @ModelActor auto-merge into the main context via NSPersistentStore notifications")
                     .font(.system(size: 10)).foregroundStyle(.secondary)
-            }
+            }.frame(maxWidth: .infinity, alignment: .leading)
             .padding(7).background(Color.sdPurpleLight).clipShape(RoundedRectangle(cornerRadius: 7))
         }
     }
@@ -155,7 +155,7 @@ Task {
             Text(note).font(.system(size: 8, design: .monospaced)).foregroundStyle(.secondary).multilineTextAlignment(.center)
         }
         .padding(8).background(color.opacity(0.08)).clipShape(RoundedRectangle(cornerRadius: 8))
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .leading)
     }
 
     var simulatedLog: some View {
@@ -212,7 +212,7 @@ Task {
                     Text(fix).font(.system(size: 10)).foregroundStyle(Color.sdPurple)
                 }.padding(.leading, 18)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(bad ? Color(hex: "#FCEBEB") : Color(hex: "#E1F5EE")).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 

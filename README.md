@@ -53,6 +53,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 | **Stacks & Spacer** | 8 | Layout fundamentals: HStack, VStack, ZStack, frame, alignment |
 | **State & Binding** | 8 | How SwiftUI views own, share and react to data changes |
 | **Shapes & Paths** | 8 | Built-in shapes, custom paths, stroke, fill, trim and animation |
+| **SwiftData** | 8 | Models, queries, relationships, migrations, CloudKit sync and patterns |
 | **Text & Typography** | 6 | Fonts, markdown formatting, trunction and advanced styling |
 | **TextField Deep Dive** | 8 | Focus, formatting, validation, keyboard, secure fields and custom styles |
 | **TabView & Tab Bars** | 8 | Tab navigation, paging, badges, customisation and sidebar on iPad |
