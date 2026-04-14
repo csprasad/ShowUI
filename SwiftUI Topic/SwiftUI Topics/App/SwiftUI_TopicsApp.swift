@@ -10,9 +10,15 @@
 ///
 
 import SwiftUI
+import TipKit
 
 @main
 struct SwiftUI_TopicsApp: App {
+    
+    init() {
+        try? Tips.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
