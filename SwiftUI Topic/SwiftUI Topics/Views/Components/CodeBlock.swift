@@ -147,9 +147,9 @@ struct PlainCodeBlock: View {
     var body: some View {
         Text(code)
             .font(.system(size: 8, design: .monospaced))
-            .foregroundStyle(Color.envGreen)
+            .foregroundStyle(fgColor)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding().background(Color.envGreenLight)
+            .padding().background(bgColor)
             .clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
