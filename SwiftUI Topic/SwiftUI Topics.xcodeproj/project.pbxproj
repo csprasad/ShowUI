@@ -34,6 +34,7 @@
 		051191A92F6FFC730089F2FF /* 12_AnimateShapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191A82F6FFC6E0089F2FF /* 12_AnimateShapes.swift */; };
 		051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191AA2F6FFCC60089F2FF /* 14_TimelineView.swift */; };
 		051191AD2F6FFCF40089F2FF /* 16_DrawingGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051191AC2F6FFCF10089F2FF /* 16_DrawingGroup.swift */; };
+		0513DBB12F8E22C400882172 /* TipComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0513DBB02F8E22BF00882172 /* TipComponents.swift */; };
 		051499B02F715CFF00EE4E83 /* 5_variants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051499AF2F715CFC00EE4E83 /* 5_variants.swift */; };
 		051499B22F715E8200EE4E83 /* 9_customSymbol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051499B12F715E7B00EE4E83 /* 9_customSymbol.swift */; };
 		051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 051499B32F715F1600EE4E83 /* 8_accessibility.swift */; };
@@ -285,6 +286,15 @@
 		05C490772F8BF7BD003EAD0B /* 14_SDPerformance&Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490762F8BF7B4003EAD0B /* 14_SDPerformance&Debugging.swift */; };
 		05C490792F8BF7EB003EAD0B /* 15_TestingStrategies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C490782F8BF7E1003EAD0B /* 15_TestingStrategies.swift */; };
 		05C4907B2F8BF84A003EAD0B /* 16_RWArchitecture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C4907A2F8BF845003EAD0B /* 16_RWArchitecture.swift */; };
+		05D7DA5E2F8E05B4009BF94A /* TipkitTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA5D2F8E05B1009BF94A /* TipkitTopic.swift */; };
+		05D7DA602F8E05E2009BF94A /* 1_TipKitFundamentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA5F2F8E05DD009BF94A /* 1_TipKitFundamentals.swift */; };
+		05D7DA622F8E062D009BF94A /* 2_TipViewInlineTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA612F8E0621009BF94A /* 2_TipViewInlineTips.swift */; };
+		05D7DA642F8E067A009BF94A /* 3_popoverTipFloatingTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA632F8E0671009BF94A /* 3_popoverTipFloatingTips.swift */; };
+		05D7DA662F8E06F0009BF94A /* 4_DisplayRules.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA652F8E06EA009BF94A /* 4_DisplayRules.swift */; };
+		05D7DA682F8E071C009BF94A /* 5_Events&Parameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA672F8E0717009BF94A /* 5_Events&Parameters.swift */; };
+		05D7DA6A2F8E07F5009BF94A /* 6_TipCustomisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA692F8E07F0009BF94A /* 6_TipCustomisation.swift */; };
+		05D7DA6C2F8E081D009BF94A /* 7_Testing&Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA6B2F8E0818009BF94A /* 7_Testing&Debugging.swift */; };
+		05D7DA6E2F8E086F009BF94A /* 8_Patterns&BestPractices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D7DA6D2F8E0869009BF94A /* 8_Patterns&BestPractices.swift */; };
 		05D8242D2F6B310600A81A2F /* MaskingTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242C2F6B310300A81A2F /* MaskingTopic.swift */; };
 		05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */; };
 		05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D824342F6B3BB000A81A2F /* 2_basicMask.swift */; };
@@ -354,6 +364,7 @@
 		051191A82F6FFC6E0089F2FF /* 12_AnimateShapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 12_AnimateShapes.swift; sourceTree = "<group>"; };
 		051191AA2F6FFCC60089F2FF /* 14_TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 14_TimelineView.swift; sourceTree = "<group>"; };
 		051191AC2F6FFCF10089F2FF /* 16_DrawingGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16_DrawingGroup.swift; sourceTree = "<group>"; };
+		0513DBB02F8E22BF00882172 /* TipComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipComponents.swift; sourceTree = "<group>"; };
 		051499AF2F715CFC00EE4E83 /* 5_variants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_variants.swift; sourceTree = "<group>"; };
 		051499B12F715E7B00EE4E83 /* 9_customSymbol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_customSymbol.swift; sourceTree = "<group>"; };
 		051499B32F715F1600EE4E83 /* 8_accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_accessibility.swift; sourceTree = "<group>"; };
@@ -606,6 +617,15 @@
 		05C490762F8BF7B4003EAD0B /* 14_SDPerformance&Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "14_SDPerformance&Debugging.swift"; sourceTree = "<group>"; };
 		05C490782F8BF7E1003EAD0B /* 15_TestingStrategies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 15_TestingStrategies.swift; sourceTree = "<group>"; };
 		05C4907A2F8BF845003EAD0B /* 16_RWArchitecture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 16_RWArchitecture.swift; sourceTree = "<group>"; };
+		05D7DA5D2F8E05B1009BF94A /* TipkitTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipkitTopic.swift; sourceTree = "<group>"; };
+		05D7DA5F2F8E05DD009BF94A /* 1_TipKitFundamentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TipKitFundamentals.swift; sourceTree = "<group>"; };
+		05D7DA612F8E0621009BF94A /* 2_TipViewInlineTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_TipViewInlineTips.swift; sourceTree = "<group>"; };
+		05D7DA632F8E0671009BF94A /* 3_popoverTipFloatingTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 3_popoverTipFloatingTips.swift; sourceTree = "<group>"; };
+		05D7DA652F8E06EA009BF94A /* 4_DisplayRules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_DisplayRules.swift; sourceTree = "<group>"; };
+		05D7DA672F8E0717009BF94A /* 5_Events&Parameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_Events&Parameters.swift"; sourceTree = "<group>"; };
+		05D7DA692F8E07F0009BF94A /* 6_TipCustomisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_TipCustomisation.swift; sourceTree = "<group>"; };
+		05D7DA6B2F8E0818009BF94A /* 7_Testing&Debugging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "7_Testing&Debugging.swift"; sourceTree = "<group>"; };
+		05D7DA6D2F8E0869009BF94A /* 8_Patterns&BestPractices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_Patterns&BestPractices.swift"; sourceTree = "<group>"; };
 		05D8242C2F6B310300A81A2F /* MaskingTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskingTopic.swift; sourceTree = "<group>"; };
 		05D8242E2F6B311F00A81A2F /* 1_maskIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_maskIntro.swift; sourceTree = "<group>"; };
 		05D824342F6B3BB000A81A2F /* 2_basicMask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_basicMask.swift; sourceTree = "<group>"; };
@@ -1161,6 +1181,23 @@
 			path = "Geometry Reader";
 			sourceTree = "<group>";
 		};
+		05D7DA5C2F8E059C009BF94A /* Tipkit */ = {
+			isa = PBXGroup;
+			children = (
+				05D7DA5D2F8E05B1009BF94A /* TipkitTopic.swift */,
+				0513DBB02F8E22BF00882172 /* TipComponents.swift */,
+				05D7DA5F2F8E05DD009BF94A /* 1_TipKitFundamentals.swift */,
+				05D7DA612F8E0621009BF94A /* 2_TipViewInlineTips.swift */,
+				05D7DA632F8E0671009BF94A /* 3_popoverTipFloatingTips.swift */,
+				05D7DA652F8E06EA009BF94A /* 4_DisplayRules.swift */,
+				05D7DA672F8E0717009BF94A /* 5_Events&Parameters.swift */,
+				05D7DA692F8E07F0009BF94A /* 6_TipCustomisation.swift */,
+				05D7DA6B2F8E0818009BF94A /* 7_Testing&Debugging.swift */,
+				05D7DA6D2F8E0869009BF94A /* 8_Patterns&BestPractices.swift */,
+			);
+			path = Tipkit;
+			sourceTree = "<group>";
+		};
 		05D8242B2F6B30E700A81A2F /* Masking Lessons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1277,6 +1314,7 @@
 		C8B046B12DBE39FA0088D969 /* Topics */ = {
 			isa = PBXGroup;
 			children = (
+				05D7DA5C2F8E059C009BF94A /* Tipkit */,
 				0535841A2F8E2E26000BD2C1 /* Swift Charts */,
 				05E507002F8AD04900817190 /* @Observable & @State */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
@@ -1396,6 +1434,7 @@
 				05B1497D2F7F8BCC00F00B04 /* 7_sheetsInNavigation.swift in Sources */,
 				05AED11D2F80E6EF00E3C2BE /* 5_EditMode.swift in Sources */,
 				055DF1332F83D38C00A0268C /* 6_Validation.swift in Sources */,
+				05D7DA6C2F8E081D009BF94A /* 7_Testing&Debugging.swift in Sources */,
 				05C01A462F88B060008E0717 /* 4_Offset&Parallax.swift in Sources */,
 				0551B6692F89617B0084A2CB /* 2_FocusState&Chain.swift in Sources */,
 				051499B02F715CFF00EE4E83 /* 5_variants.swift in Sources */,
@@ -1418,10 +1457,12 @@
 				05E5070A2F8AD19600817190 /* 4_Fine-GrainedObservation.swift in Sources */,
 				0563754E2F71C2E2001E7148 /* 8_buttonTappableAreas.swift in Sources */,
 				056375402F71C0ED001E7148 /* 1_buttonBasics.swift in Sources */,
+				05D7DA602F8E05E2009BF94A /* 1_TipKitFundamentals.swift in Sources */,
 				05AED1172F80E63900E3C2BE /* 2_ListBasics.swift in Sources */,
 				05B1498B2F7F93C500F00B04 /* 1_stack_Basics.swift in Sources */,
 				05317A592F86E32C00B409CC /* 2_LazyVGrid.swift in Sources */,
 				05685BB52F6AAF9C004643FF /* HomeView.swift in Sources */,
+				05D7DA642F8E067A009BF94A /* 3_popoverTipFloatingTips.swift in Sources */,
 				051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */,
 				05F97AFB2F882FC000205019 /* 6_Trim&Draw-on.swift in Sources */,
 				0535842E2F8E3036000BD2C1 /* 9_ChartsInteractivity.swift in Sources */,
@@ -1487,6 +1528,7 @@
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
 				053584222F8E2ED8000BD2C1 /* 3_Line&AreaCharts.swift in Sources */,
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
+				05D7DA622F8E062D009BF94A /* 2_TipViewInlineTips.swift in Sources */,
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
 				050464402F8A6A310092A145 /* 1_TabViewBasics.swift in Sources */,
 				0572B0D22F8ABADC0037331F /* 1_AnimationTypes.swift in Sources */,
@@ -1544,6 +1586,7 @@
 				051191922F6FE9EE0089F2FF /* 11_ scrollanim.swift in Sources */,
 				051191882F6FE2300089F2FF /* AnimationsTopic.swift in Sources */,
 				05F97AEF2F882D1F00205019 /* ShapesPathsTopic.swift in Sources */,
+				05D7DA6A2F8E07F5009BF94A /* 6_TipCustomisation.swift in Sources */,
 				05351D752F85794100E291E8 /* 8_ColorHarmony.swift in Sources */,
 				05B149812F7F91CC00F00B04 /* 6_navigationSplitView.swift in Sources */,
 				05D824352F6B3BBB00A81A2F /* 2_basicMask.swift in Sources */,
@@ -1557,6 +1600,7 @@
 				059A0EC12F86EA54002325BA /* 6_visualEffect.swift in Sources */,
 				051191A12F6FFB630089F2FF /* 3_TimingCurve.swift in Sources */,
 				05ADDCC22F83BEEA001F2DA9 /* GesturesTopic.swift in Sources */,
+				05D7DA662F8E06F0009BF94A /* 4_DisplayRules.swift in Sources */,
 				05A7F9922F8D6B5400FF7A67 /* 5_@AppStorage&@SceneStorage.swift in Sources */,
 				051FABC32F83F91F00AE69D6 /* EmptyLessonsView.swift in Sources */,
 				05A69F922F8623BC004663AD /* 3_CustomViewModifier.swift in Sources */,
@@ -1616,6 +1660,7 @@
 				05F97AF92F882EBD00205019 /* 5_AnimatableShapes.swift in Sources */,
 				05685B9C2F6A8F9D004643FF /* 1_Sequential.swift in Sources */,
 				05B149852F7F925C00F00B04 /* 3_navPath.swift in Sources */,
+				05D7DA5E2F8E05B4009BF94A /* TipkitTopic.swift in Sources */,
 				058C47B12F84392100B95325 /* 6_AsyncImagePhases.swift in Sources */,
 				0555455C2F727430006086F5 /* 1_sheetBasics.swift in Sources */,
 				0572B0E02F8ABD2A0037331F /* 8_AnimationPatterns.swift in Sources */,
@@ -1665,6 +1710,7 @@
 				05F97AF32F882E0B00205019 /* 2_Fill&Stroke.swift in Sources */,
 				05C490712F8BF6B5003EAD0B /* 11_BatchOperations.swift in Sources */,
 				05C490752F8BF753003EAD0B /* 13_Undo&HistoryTracking.swift in Sources */,
+				05D7DA6E2F8E086F009BF94A /* 8_Patterns&BestPractices.swift in Sources */,
 				05685BA02F6A8F9D004643FF /* 8_Sendable.swift in Sources */,
 				05351D692F8577D200E291E8 /* 2_LinearGradient.swift in Sources */,
 				05C01A482F88B082008E0717 /* 5_PreferenceKey.swift in Sources */,
@@ -1675,6 +1721,7 @@
 				053584342F8E3604000BD2C1 /* 12_Real-WorldPatterns.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				059D826D2F8B95330078221B /* 8_SDPatterns&Pitfalls.swift in Sources */,
+				0513DBB12F8E22C400882172 /* TipComponents.swift in Sources */,
 				05E507062F8AD10200817190 /* 2_@BindingDeepDive.swift in Sources */,
 				055DF12D2F83D2CC00A0268C /* 3_Slider&Stepper.swift in Sources */,
 				055545662F72766A006086F5 /* 6_customBackground.swift in Sources */,
@@ -1705,6 +1752,7 @@
 				053584262F8E2F3F000BD2C1 /* 5_Point&ScatterCharts.swift in Sources */,
 				05AED1212F80E75700E3C2BE /* 7_RowCustomization.swift in Sources */,
 				058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */,
+				05D7DA682F8E071C009BF94A /* 5_Events&Parameters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

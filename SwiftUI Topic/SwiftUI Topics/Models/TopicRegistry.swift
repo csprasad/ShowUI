@@ -82,6 +82,7 @@ struct TopicRegistry {
         TextTypographyTopic(),
         TextFieldDeepDiveTopic(),
         TabViewBarsTopic(),
+        TipKitTopic(),
         
         // --- V ---
         ViewModifiersTopic(),

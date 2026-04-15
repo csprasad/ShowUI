@@ -10,9 +10,20 @@
 ///
 
 import SwiftUI
+import TipKit
 
 @main
 struct SwiftUI_TopicsApp: App {
+    
+    init() {
+        try? Tips.resetDatastore()
+        
+        try? Tips.configure([
+            .displayFrequency(.immediate),
+            .datastoreLocation(.applicationDefault)
+        ])
+    }
+    
     var body: some Scene {
         WindowGroup {
             HomeView()
