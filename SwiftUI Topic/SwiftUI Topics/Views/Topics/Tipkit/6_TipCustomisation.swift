@@ -11,6 +11,10 @@
 
 import SwiftUI
 
+#Preview {
+    TKCustomisationVisual()
+}
+
 // MARK: - LESSON 6: Tip Customisation
 struct TKCustomisationVisual: View {
     @State private var selectedDemo   = 0
@@ -92,7 +96,7 @@ struct TKCustomisationVisual: View {
                 case 1:
                     // Custom actions
                     VStack(spacing: 8) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 struct ProTip: Tip {
     var title: Text { Text("Unlock Pro features") }
     var message: Text? {
@@ -132,7 +136,7 @@ struct ProTip: Tip {
                 default:
                     // TipViewStyle
                     VStack(spacing: 8) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 // Custom TipViewStyle
 struct CompactTipStyle: TipViewStyle {
     func makeBody(configuration: Configuration) -> some View {
@@ -223,11 +227,6 @@ TipView(myTip)
             .frame(maxWidth: .infinity).padding(.vertical, 8)
             .background(Color.tkAmber).clipShape(RoundedRectangle(cornerRadius: 8))
             .buttonStyle(PressableButtonStyle())
-    }
-
-    func codeBlock(_ t: String) -> some View {
-        Text(t).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(8).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

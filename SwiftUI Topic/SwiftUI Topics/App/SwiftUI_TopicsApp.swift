@@ -16,7 +16,12 @@ import TipKit
 struct SwiftUI_TopicsApp: App {
     
     init() {
-        try? Tips.configure()
+        try? Tips.resetDatastore()
+        
+        try? Tips.configure([
+            .displayFrequency(.immediate),
+            .datastoreLocation(.applicationDefault)
+        ])
     }
     
     var body: some Scene {

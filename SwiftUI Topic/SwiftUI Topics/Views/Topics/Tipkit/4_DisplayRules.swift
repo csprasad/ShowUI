@@ -62,7 +62,7 @@ struct TKDisplayRulesVisual: View {
                 case 0:
                     // #Rule anatomy
                     VStack(spacing: 8) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 struct SearchTip: Tip {
     // @Parameter enables rules to observe this value
     @Parameter static var hasUsedSearch: Bool = false
@@ -101,12 +101,12 @@ struct SearchTip: Tip {
                 case 1:
                     // Multiple rules - live simulator
                     VStack(spacing: 10) {
-                        Text("Adjust values to see tip eligibility change").font(.system(size: 11)).foregroundStyle(.secondary)
+                        Text("Adjust values to see tip eligibility change").font(.system(size: 11, weight: .bold)).foregroundStyle(.secondary)
 
                         VStack(spacing: 8) {
                             // Launch count
                             HStack(spacing: 8) {
-                                Text("App launches:").font(.system(size: 12)).foregroundStyle(.secondary).frame(width: 90)
+                                Text("App launches:").font(.system(size: 12)).foregroundStyle(Color.tkAmber).frame(width: 90)
                                 Stepper(value: $appLaunchCount, in: 0...10) {
                                     Text("\(appLaunchCount)").font(.system(size: 14, weight: .bold, design: .monospaced)).foregroundStyle(Color.tkAmber)
                                         .contentTransition(.numericText()).animation(.spring(duration: 0.2), value: appLaunchCount)
@@ -114,7 +114,7 @@ struct SearchTip: Tip {
                             }
                             Toggle("Completed onboarding", isOn: $hasCompletedTour.animation()).tint(.tkAmber).font(.system(size: 13))
                         }
-                        .padding(10).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 10))
+                        .padding(10).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 10))
 
                         // Rule results
                         ruleResult("launches >= 3", result: ruleAResult, pass: appLaunchCount >= 3)
@@ -132,7 +132,7 @@ struct SearchTip: Tip {
                                 Text("All rules must pass")
                                     .font(.system(size: 10)).foregroundStyle(.secondary)
                             }
-                        }
+                        }.frame(maxWidth: .infinity, alignment: .leading)
                         .padding(10)
                         .background(allPass ? Color(hex: "#E1F5EE") : Color(hex: "#FCEBEB"))
                         .clipShape(RoundedRectangle(cornerRadius: 10))
@@ -142,7 +142,7 @@ struct SearchTip: Tip {
                 default:
                     // MaxDisplayCount
                     VStack(spacing: 8) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 struct SearchTip: Tip {
     // Only show this tip at most 3 times
     var options: [Option] {[
@@ -187,8 +187,8 @@ case .pending:      print("rules not met yet")
             Text(icon).font(.system(size: 9, design: .monospaced)).foregroundStyle(color)
                 .padding(5).background(color.opacity(0.08)).clipShape(RoundedRectangle(cornerRadius: 5))
             Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding(8).background(color.opacity(0.1)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
     func ruleResult(_ rule: String, result: String, pass: Bool) -> some View {
@@ -211,13 +211,8 @@ case .pending:      print("rules not met yet")
                 Text(title).font(.system(size: 10, weight: .semibold, design: .monospaced)).foregroundStyle(Color.tkAmber)
                 Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             }
-        }
-        .padding(8).background(Color.tkAmberLight.opacity(0.5)).clipShape(RoundedRectangle(cornerRadius: 8))
-    }
-
-    func codeBlock(_ t: String) -> some View {
-        Text(t).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(8).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+            .padding(8).background(Color(.systemGray6)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

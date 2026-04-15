@@ -94,7 +94,7 @@ struct TKTestingVisual: View {
                             .padding(8).background(Color(hex: "#E1F5EE")).clipShape(RoundedRectangle(cornerRadius: 8))
                         }
 
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 // Unit tests - in-memory datastore
 func testTipEligibility() async throws {
     try Tips.configure([
@@ -122,7 +122,7 @@ func testTipEligibility() async throws {
                         }
                         .pickerStyle(.segmented)
 
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 // In #Preview - control which tips show
 
 // 1. Show ALL tips regardless of rules (development)
@@ -211,11 +211,6 @@ func testTipEligibility() async throws {
             }
         }
         .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 7))
-    }
-
-    func codeBlock(_ t: String) -> some View {
-        Text(t).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(8).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

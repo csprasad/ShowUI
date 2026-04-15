@@ -12,8 +12,6 @@
 import SwiftUI
 import TipKit
 
-
-
 // MARK: - LESSON 3: popoverTip - Floating Tips
 struct TKPopoverTipVisual: View {
     @State private var selectedDemo   = 0
@@ -66,7 +64,7 @@ struct TKPopoverTipVisual: View {
                             }
                             .buttonStyle(PressableButtonStyle())
                             .popover(isPresented: $showPopover1) {
-                                simulatedPopoverTip(tip: FavouriteTip(), onDismiss: { showPopover1 = false })
+                                simulatedPopoverTip(tip: FavouriteTip(id: "xx"), onDismiss: { showPopover1 = false })
                             }
 
                             Button {
@@ -131,7 +129,7 @@ struct TKPopoverTipVisual: View {
                                         Image(systemName: "plus")
                                     }
                                     .popover(isPresented: $showPopover1) {
-                                        simulatedPopoverTip(tip: WelcomeTip(), onDismiss: { showPopover1 = false })
+                                        simulatedPopoverTip(tip: WelcomeTip(id: "nn"), onDismiss: { showPopover1 = false })
                                     }
                                 }
                                 ToolbarItem(placement: .navigationBarLeading) {
@@ -141,7 +139,7 @@ struct TKPopoverTipVisual: View {
                                         Image(systemName: "magnifyingglass")
                                     }
                                     .popover(isPresented: $showPopover2) {
-                                        simulatedPopoverTip(tip: SearchTip(), onDismiss: { showPopover2 = false })
+                                        simulatedPopoverTip(tip: SearchTip(id: "nn"), onDismiss: { showPopover2 = false })
                                     }
                                 }
                             }

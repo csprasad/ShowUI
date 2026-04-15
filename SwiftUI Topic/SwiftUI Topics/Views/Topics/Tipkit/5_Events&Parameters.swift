@@ -52,7 +52,7 @@ struct TKEventsVisual: View {
                 case 0:
                     // @Parameter live demo
                     VStack(spacing: 10) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 struct FeatureTip: Tip {
     // Static @Parameter - observable by TipKit
     @Parameter
@@ -94,14 +94,14 @@ struct FeatureTip: Tip {
                             }
                             .animation(.spring(response: 0.4, dampingFraction: 0.8), value: parameterTipEligible)
 
-                            codeSnip("// Update from anywhere:\nFeatureTip.hasCompletedOnboarding = true\n// TipKit observes the change - rule re-evaluates")
+                            PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: "// Update from anywhere:\nFeatureTip.hasCompletedOnboarding = true\n// TipKit observes the change - rule re-evaluates")
                         }
                     }
 
                 case 1:
                     // Events.donate() demo
                     VStack(spacing: 10) {
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 struct SearchTip: Tip {
     // Event counts how many times action occurs
     static let searchPerformed = Event(
@@ -216,18 +216,8 @@ struct SearchTip: Tip {
             Text(code).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
                 .padding(5).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 5))
             Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
-        }
-        .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 8))
-    }
-
-    func codeSnip(_ text: String) -> some View {
-        Text(text).font(.system(size: 9, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(7).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 7))
-    }
-
-    func codeBlock(_ t: String) -> some View {
-        Text(t).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(8).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 8))
+        }.frame(maxWidth: .infinity, alignment: .leading)
+        .padding(8).background(Color(.systemGray6)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

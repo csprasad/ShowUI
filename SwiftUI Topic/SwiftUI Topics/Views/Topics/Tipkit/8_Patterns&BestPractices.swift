@@ -54,7 +54,7 @@ struct TKPatternsVisual: View {
                     VStack(spacing: 8) {
                         Text("Only one tip should appear at a time").font(.system(size: 11, weight: .semibold)).foregroundStyle(.secondary)
 
-                        codeBlock("""
+                        PlainCodeBlock(fgColor: Color.tkAmber, bgColor: Color.tkAmberLight, code: """
 // Sequencing via @Parameter dependencies
 struct Step2Tip: Tip {
     // Only show step 2 after step 1 was seen
@@ -213,11 +213,6 @@ Step3Tip.step2Completed = true  // unlocks step 3
         }
         .padding(8).background(good ? Color(hex: "#E1F5EE") : Color(hex: "#FCEBEB"))
         .clipShape(RoundedRectangle(cornerRadius: 8))
-    }
-
-    func codeBlock(_ t: String) -> some View {
-        Text(t).font(.system(size: 8, design: .monospaced)).foregroundStyle(Color.tkAmber)
-            .padding(8).background(Color.tkAmberLight).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 }
 

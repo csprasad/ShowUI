@@ -19,9 +19,12 @@ struct TKFundamentalsVisual: View {
     @State private var showingTip   = true
     @State private var dismissCount = 0
     let demos = ["Tip anatomy", "configure()", "Tip lifecycle"]
+    @State private var welcomeSeed    = 0
 
-    let welcomeTip = WelcomeTip()
-
+    var welcomeTip: WelcomeTip {
+        WelcomeTip(id: "welcome-v\(welcomeSeed)")
+    }
+    
     var body: some View {
         VisualCard {
             VStack(alignment: .leading, spacing: 16) {
