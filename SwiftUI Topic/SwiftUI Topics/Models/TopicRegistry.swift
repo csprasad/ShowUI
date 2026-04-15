@@ -76,6 +76,7 @@ struct TopicRegistry {
         ScrollViewsTopic(),
         ShapesPathsTopic(),
         SwiftDataTopic(),
+        SwiftChartsTopic(),
         
         // --- T ---
         TextTypographyTopic(),

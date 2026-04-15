@@ -73,6 +73,19 @@
 		05351D712F8578CB00E291E8 /* 6_GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D702F8578C500E291E8 /* 6_GradientFill.swift */; };
 		05351D732F85790C00E291E8 /* 7_DynamicColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D722F85790800E291E8 /* 7_DynamicColor.swift */; };
 		05351D752F85794100E291E8 /* 8_ColorHarmony.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */; };
+		0535841C2F8E2E3C000BD2C1 /* SwiftChartsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535841B2F8E2E36000BD2C1 /* SwiftChartsTopic.swift */; };
+		0535841E2F8E2E62000BD2C1 /* 1_ChartFundamentals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535841D2F8E2E5D000BD2C1 /* 1_ChartFundamentals.swift */; };
+		053584202F8E2E98000BD2C1 /* 2_BarCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535841F2F8E2E95000BD2C1 /* 2_BarCharts.swift */; };
+		053584222F8E2ED8000BD2C1 /* 3_Line&AreaCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584212F8E2ED3000BD2C1 /* 3_Line&AreaCharts.swift */; };
+		053584242F8E2F13000BD2C1 /* 4_Pie&DonutCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584232F8E2F0D000BD2C1 /* 4_Pie&DonutCharts.swift */; };
+		053584262F8E2F3F000BD2C1 /* 5_Point&ScatterCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584252F8E2F39000BD2C1 /* 5_Point&ScatterCharts.swift */; };
+		053584282F8E2F6B000BD2C1 /* 6_Axes&ScalesCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584272F8E2F62000BD2C1 /* 6_Axes&ScalesCharts.swift */; };
+		0535842A2F8E2FDD000BD2C1 /* 7_ChartAnnotations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584292F8E2FD8000BD2C1 /* 7_ChartAnnotations.swift */; };
+		0535842C2F8E3009000BD2C1 /* 8_Multi-Mark&Combining.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535842B2F8E3003000BD2C1 /* 8_Multi-Mark&Combining.swift */; };
+		0535842E2F8E3036000BD2C1 /* 9_ChartsInteractivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535842D2F8E302F000BD2C1 /* 9_ChartsInteractivity.swift */; };
+		053584302F8E357B000BD2C1 /* 10_ScrollingCharts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0535842F2F8E3577000BD2C1 /* 10_ScrollingCharts.swift */; };
+		053584322F8E35B9000BD2C1 /* 11_ChartStyling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584312F8E35B5000BD2C1 /* 11_ChartStyling.swift */; };
+		053584342F8E3604000BD2C1 /* 12_Real-WorldPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053584332F8E3600000BD2C1 /* 12_Real-WorldPatterns.swift */; };
 		0546F0C62F817A270062C81B /* TextTypographyTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C52F817A250062C81B /* TextTypographyTopic.swift */; };
 		0546F0C82F817C3A0062C81B /* 1_TextBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C72F817C390062C81B /* 1_TextBasics.swift */; };
 		0546F0CA2F817C4E0062C81B /* 2_TextFormatting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0C92F817C4E0062C81B /* 2_TextFormatting.swift */; };
@@ -390,6 +403,19 @@
 		05351D702F8578C500E291E8 /* 6_GradientFill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_GradientFill.swift; sourceTree = "<group>"; };
 		05351D722F85790800E291E8 /* 7_DynamicColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_DynamicColor.swift; sourceTree = "<group>"; };
 		05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ColorHarmony.swift; sourceTree = "<group>"; };
+		0535841B2F8E2E36000BD2C1 /* SwiftChartsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftChartsTopic.swift; sourceTree = "<group>"; };
+		0535841D2F8E2E5D000BD2C1 /* 1_ChartFundamentals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ChartFundamentals.swift; sourceTree = "<group>"; };
+		0535841F2F8E2E95000BD2C1 /* 2_BarCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_BarCharts.swift; sourceTree = "<group>"; };
+		053584212F8E2ED3000BD2C1 /* 3_Line&AreaCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "3_Line&AreaCharts.swift"; sourceTree = "<group>"; };
+		053584232F8E2F0D000BD2C1 /* 4_Pie&DonutCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "4_Pie&DonutCharts.swift"; sourceTree = "<group>"; };
+		053584252F8E2F39000BD2C1 /* 5_Point&ScatterCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "5_Point&ScatterCharts.swift"; sourceTree = "<group>"; };
+		053584272F8E2F62000BD2C1 /* 6_Axes&ScalesCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "6_Axes&ScalesCharts.swift"; sourceTree = "<group>"; };
+		053584292F8E2FD8000BD2C1 /* 7_ChartAnnotations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ChartAnnotations.swift; sourceTree = "<group>"; };
+		0535842B2F8E3003000BD2C1 /* 8_Multi-Mark&Combining.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "8_Multi-Mark&Combining.swift"; sourceTree = "<group>"; };
+		0535842D2F8E302F000BD2C1 /* 9_ChartsInteractivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 9_ChartsInteractivity.swift; sourceTree = "<group>"; };
+		0535842F2F8E3577000BD2C1 /* 10_ScrollingCharts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 10_ScrollingCharts.swift; sourceTree = "<group>"; };
+		053584312F8E35B5000BD2C1 /* 11_ChartStyling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 11_ChartStyling.swift; sourceTree = "<group>"; };
+		053584332F8E3600000BD2C1 /* 12_Real-WorldPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "12_Real-WorldPatterns.swift"; sourceTree = "<group>"; };
 		053B9FB42F86CFF20032F0C6 /* SwiftUI-Topics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "SwiftUI-Topics-Info.plist"; sourceTree = SOURCE_ROOT; };
 		0546F0C52F817A250062C81B /* TextTypographyTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextTypographyTopic.swift; sourceTree = "<group>"; };
 		0546F0C72F817C390062C81B /* 1_TextBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_TextBasics.swift; sourceTree = "<group>"; };
@@ -767,6 +793,26 @@
 				05351D742F85793A00E291E8 /* 8_ColorHarmony.swift */,
 			);
 			path = "Colors & Gradients";
+			sourceTree = "<group>";
+		};
+		0535841A2F8E2E26000BD2C1 /* Swift Charts */ = {
+			isa = PBXGroup;
+			children = (
+				0535841B2F8E2E36000BD2C1 /* SwiftChartsTopic.swift */,
+				0535841D2F8E2E5D000BD2C1 /* 1_ChartFundamentals.swift */,
+				0535841F2F8E2E95000BD2C1 /* 2_BarCharts.swift */,
+				053584212F8E2ED3000BD2C1 /* 3_Line&AreaCharts.swift */,
+				053584232F8E2F0D000BD2C1 /* 4_Pie&DonutCharts.swift */,
+				053584252F8E2F39000BD2C1 /* 5_Point&ScatterCharts.swift */,
+				053584272F8E2F62000BD2C1 /* 6_Axes&ScalesCharts.swift */,
+				053584292F8E2FD8000BD2C1 /* 7_ChartAnnotations.swift */,
+				0535842B2F8E3003000BD2C1 /* 8_Multi-Mark&Combining.swift */,
+				0535842D2F8E302F000BD2C1 /* 9_ChartsInteractivity.swift */,
+				0535842F2F8E3577000BD2C1 /* 10_ScrollingCharts.swift */,
+				053584312F8E35B5000BD2C1 /* 11_ChartStyling.swift */,
+				053584332F8E3600000BD2C1 /* 12_Real-WorldPatterns.swift */,
+			);
+			path = "Swift Charts";
 			sourceTree = "<group>";
 		};
 		0546F0C42F817A160062C81B /* Text & Typography */ = {
@@ -1269,6 +1315,7 @@
 			isa = PBXGroup;
 			children = (
 				05D7DA5C2F8E059C009BF94A /* Tipkit */,
+				0535841A2F8E2E26000BD2C1 /* Swift Charts */,
 				05E507002F8AD04900817190 /* @Observable & @State */,
 				05FBC4A92F87A5FC0033F0C3 /* AlertsSheetsTopic */,
 				0572B0CE2F8ABAA40037331F /* Animation Deep Dive */,
@@ -1418,6 +1465,7 @@
 				05D7DA642F8E067A009BF94A /* 3_popoverTipFloatingTips.swift in Sources */,
 				051191AB2F6FFCCC0089F2FF /* 14_TimelineView.swift in Sources */,
 				05F97AFB2F882FC000205019 /* 6_Trim&Draw-on.swift in Sources */,
+				0535842E2F8E3036000BD2C1 /* 9_ChartsInteractivity.swift in Sources */,
 				05A7F98E2F8D6AD800FF7A67 /* 3_Injecting@ObservableModels.swift in Sources */,
 				05FBC4B72F87A7D30033F0C3 /* 6_fullScreenCover.swift in Sources */,
 				05F97AF52F882E3D00205019 /* 3_CustomPath.swift in Sources */,
@@ -1429,6 +1477,7 @@
 				057064052F8229DE00B2512D /* 3_Spacer&Divider.swift in Sources */,
 				057063FF2F82293D00B2512D /* StacksSpacerTopic.swift in Sources */,
 				05685BCA2F6AB84A004643FF /* 6_ReturnKey.swift in Sources */,
+				0535842C2F8E3009000BD2C1 /* 8_Multi-Mark&Combining.swift in Sources */,
 				0551B6712F8962AA0084A2CB /* 6_InlineValidation.swift in Sources */,
 				050464482F8A6BE50092A145 /* 5_TabwithNavigationStack.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
@@ -1441,6 +1490,7 @@
 				054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */,
 				059D825F2F8B8B4C0078221B /* 1_@ModelBasics.swift in Sources */,
 				05A69F8C2F862314004663AD /* ViewModifiersTopic.swift in Sources */,
+				053584282F8E2F6B000BD2C1 /* 6_Axes&ScalesCharts.swift in Sources */,
 				055DF12F2F83D31A00A0268C /* 4_TextField.swift in Sources */,
 				055885182F84251A004779A1 /* LessonRowCard.swift in Sources */,
 				059D82692F8B92DF0078221B /* 6_Schema&Migrations.swift in Sources */,
@@ -1460,19 +1510,23 @@
 				05AB11D42F8A135400C6A5C4 /* 2_TogglePatterns.swift in Sources */,
 				05F97AF72F882E8100205019 /* 4_ShapeProtocol.swift in Sources */,
 				05E5070E2F8AD29700817190 /* 6_@Environmentwith@Observable.swift in Sources */,
+				053584322F8E35B9000BD2C1 /* 11_ChartStyling.swift in Sources */,
 				051191942F6FEA880089F2FF /* 13_GeometryEffect.swift in Sources */,
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
 				05C01A402F88AF6D008E0717 /* 1_GeometryReaderBasics.swift in Sources */,
 				05C4906D2F8BF5EE003EAD0B /* 9_FetchDescriptor.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
+				053584302F8E357B000BD2C1 /* 10_ScrollingCharts.swift in Sources */,
 				054ED8D82F711A28003BA047 /* 6_alignment.swift in Sources */,
 				056375502F71C323001E7148 /* 9_buttonLongPress.swift in Sources */,
 				05AED1192F80E67800E3C2BE /* 3_Sections.swift in Sources */,
 				059D82652F8B925D0078221B /* 4_Relationships.swift in Sources */,
 				05C4906F2F8BF68B003EAD0B /* 10_ActorIsolation&Concurrency.swift in Sources */,
 				051191A32F6FFB990089F2FF /* 5_PhaseAnimator.swift in Sources */,
+				0535841E2F8E2E62000BD2C1 /* 1_ChartFundamentals.swift in Sources */,
 				0518ADEB2F6B2A6900BA2F73 /* CodeBlock.swift in Sources */,
+				053584222F8E2ED8000BD2C1 /* 3_Line&AreaCharts.swift in Sources */,
 				0558851A2F842530004779A1 /* SectionHeader.swift in Sources */,
 				05D7DA622F8E062D009BF94A /* 2_TipViewInlineTips.swift in Sources */,
 				05A69F942F862420004663AD /* 4_ViewExtensions.swift in Sources */,
@@ -1509,6 +1563,7 @@
 				05AED11F2F80E72400E3C2BE /* 6_DynamicData.swift in Sources */,
 				05E507102F8AD2BD00817190 /* 7_OldvsNew.swift in Sources */,
 				0504643E2F8A69EB0092A145 /* TabviewBarsTopic.swift in Sources */,
+				0535842A2F8E2FDD000BD2C1 /* 7_ChartAnnotations.swift in Sources */,
 				058C47B52F8439DE00B95325 /* 8_CustomImageLoader.swift in Sources */,
 				05685BAF2F6AAF00004643FF /* Protocol.swift in Sources */,
 				0551B6732F8962D30084A2CB /* 7_CustomTextFieldStyles.swift in Sources */,
@@ -1560,6 +1615,8 @@
 				05ADDCC82F83BEEA001F2DA9 /* 3_drag.swift in Sources */,
 				0551B6752F8963170084A2CB /* 8_TextFieldInLists.swift in Sources */,
 				05ADDCC92F83BEEA001F2DA9 /* 4_magnify.swift in Sources */,
+				0535841C2F8E2E3C000BD2C1 /* SwiftChartsTopic.swift in Sources */,
+				053584242F8E2F13000BD2C1 /* 4_Pie&DonutCharts.swift in Sources */,
 				05ADDCCA2F83BEEA001F2DA9 /* 6_simultaneous.swift in Sources */,
 				0572B0D82F8ABB920037331F /* 4_Keyframe.swift in Sources */,
 				057064012F82296300B2512D /* 1_HStack&VStack.swift in Sources */,
@@ -1616,6 +1673,7 @@
 				0546F0CC2F817C5F0062C81B /* 3_TextTruncation.swift in Sources */,
 				05685BB12F6AAF1A004643FF /* TopicRegistry.swift in Sources */,
 				058C47A92F84381F00B95325 /* 2_Resizable.swift in Sources */,
+				053584202F8E2E98000BD2C1 /* 2_BarCharts.swift in Sources */,
 				05AED1152F80E5A400E3C2BE /* 1_ForEachBasics.swift in Sources */,
 				051C4A772F7D14B50003C63A /* 2_statePlain.swift in Sources */,
 				05D8243B2F6B3BFD00A81A2F /* 5_invertedMask.swift in Sources */,
@@ -1660,6 +1718,7 @@
 				054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */,
 				05C01A4A2F88B0D1008E0717 /* 6_matchedGeometryEffect.swift in Sources */,
 				0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */,
+				053584342F8E3604000BD2C1 /* 12_Real-WorldPatterns.swift in Sources */,
 				055545682F7276DB006086F5 /* 7_fullScreenCover.swift in Sources */,
 				059D826D2F8B95330078221B /* 8_SDPatterns&Pitfalls.swift in Sources */,
 				0513DBB12F8E22C400882172 /* TipComponents.swift in Sources */,
@@ -1690,6 +1749,7 @@
 				0572B0DE2F8ABC940037331F /* 7_CustomAnimatableData.swift in Sources */,
 				054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */,
 				05E507042F8AD09900817190 /* 1_@StateFundamentals.swift in Sources */,
+				053584262F8E2F3F000BD2C1 /* 5_Point&ScatterCharts.swift in Sources */,
 				05AED1212F80E75700E3C2BE /* 7_RowCustomization.swift in Sources */,
 				058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */,
 				05D7DA682F8E071C009BF94A /* 5_Events&Parameters.swift in Sources */,
