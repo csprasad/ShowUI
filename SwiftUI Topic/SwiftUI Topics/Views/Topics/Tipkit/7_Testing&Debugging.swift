@@ -77,7 +77,7 @@ struct TKTestingVisual: View {
                                     Text(row.name).font(.system(size: 11, weight: .semibold))
                                     Text(row.result).font(.system(size: 9)).foregroundStyle(.secondary)
                                 }
-                            }
+                            }.frame(maxWidth: .infinity, alignment: .leading)
                             .padding(8)
                             .background(row.pass ? Color(hex: "#E1F5EE") : Color(hex: "#FCEBEB"))
                             .clipShape(RoundedRectangle(cornerRadius: 7))
@@ -209,7 +209,7 @@ func testTipEligibility() async throws {
                 Text(issue).font(.system(size: 11, weight: .semibold))
                 Text("→ \(fix)").font(.system(size: 10)).foregroundStyle(.secondary)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(Color(.systemFill)).clipShape(RoundedRectangle(cornerRadius: 7))
     }
 }

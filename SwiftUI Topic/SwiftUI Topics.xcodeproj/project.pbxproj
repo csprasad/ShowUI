@@ -175,7 +175,6 @@
 		0572B0E02F8ABD2A0037331F /* 8_AnimationPatterns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0572B0DF2F8ABD250037331F /* 8_AnimationPatterns.swift */; };
 		058836652F82CF660041B682 /* 7_ViewThatFits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836642F82CF610041B682 /* 7_ViewThatFits.swift */; };
 		058836672F82CFFB0041B682 /* 8_LayoutPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058836662F82CFF30041B682 /* 8_LayoutPriority.swift */; };
-		058B91682F8FD64B008CC367 /* Tip-Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058B91672F8FD644008CC367 /* Tip-Test.swift */; };
 		058C47A52F8437AE00B95325 /* ImagesTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A42F8437AD00B95325 /* ImagesTopic.swift */; };
 		058C47A72F8437E900B95325 /* 1_ImageBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A62F8437E400B95325 /* 1_ImageBasics.swift */; };
 		058C47A92F84381F00B95325 /* 2_Resizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 058C47A82F84381A00B95325 /* 2_Resizable.swift */; };
@@ -494,7 +493,6 @@
 		0572B0DF2F8ABD250037331F /* 8_AnimationPatterns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_AnimationPatterns.swift; sourceTree = "<group>"; };
 		058836642F82CF610041B682 /* 7_ViewThatFits.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_ViewThatFits.swift; sourceTree = "<group>"; };
 		058836662F82CFF30041B682 /* 8_LayoutPriority.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_LayoutPriority.swift; sourceTree = "<group>"; };
-		058B91672F8FD644008CC367 /* Tip-Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tip-Test.swift"; sourceTree = "<group>"; };
 		058C47A42F8437AD00B95325 /* ImagesTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTopic.swift; sourceTree = "<group>"; };
 		058C47A62F8437E400B95325 /* 1_ImageBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1_ImageBasics.swift; sourceTree = "<group>"; };
 		058C47A82F84381A00B95325 /* 2_Resizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2_Resizable.swift; sourceTree = "<group>"; };
@@ -1140,7 +1138,6 @@
 		05D7DA5C2F8E059C009BF94A /* Tipkit */ = {
 			isa = PBXGroup;
 			children = (
-				058B91672F8FD644008CC367 /* Tip-Test.swift */,
 				05D7DA5D2F8E05B1009BF94A /* TipkitTopic.swift */,
 				0513DBB02F8E22BF00882172 /* TipComponents.swift */,
 				05D7DA5F2F8E05DD009BF94A /* 1_TipKitFundamentals.swift */,
@@ -1593,7 +1590,6 @@
 				0504644A2F8A6C230092A145 /* 6_CustomTabBar.swift in Sources */,
 				0551B66B2F8961B10084A2CB /* 3_KeyboardTypes.swift in Sources */,
 				05E507122F8AD30B00817190 /* 8_Patterns&Pitfalls.swift in Sources */,
-				058B91682F8FD64B008CC367 /* Tip-Test.swift in Sources */,
 				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,

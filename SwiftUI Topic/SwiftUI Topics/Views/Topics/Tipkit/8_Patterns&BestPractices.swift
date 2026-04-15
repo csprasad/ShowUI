@@ -198,7 +198,7 @@ Step3Tip.step2Completed = true  // unlocks step 3
                 Text(tip).font(.system(size: 11, weight: .semibold)).foregroundStyle(Color.tkAmber)
                 Text(unlock).font(.system(size: 9)).foregroundStyle(.secondary)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(Color.tkAmberLight.opacity(0.5)).clipShape(RoundedRectangle(cornerRadius: 8))
     }
 
@@ -210,7 +210,7 @@ Step3Tip.step2Completed = true  // unlocks step 3
                 Text(title).font(.system(size: 11, weight: .semibold))
                 Text(desc).font(.system(size: 10)).foregroundStyle(.secondary)
             }
-        }
+        }.frame(maxWidth: .infinity, alignment: .leading)
         .padding(8).background(good ? Color(hex: "#E1F5EE") : Color(hex: "#FCEBEB"))
         .clipShape(RoundedRectangle(cornerRadius: 8))
     }

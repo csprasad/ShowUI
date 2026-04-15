@@ -11,10 +11,6 @@
 
 import SwiftUI
 
-#Preview {
-    TKCustomisationVisual()
-}
-
 // MARK: - LESSON 6: Tip Customisation
 struct TKCustomisationVisual: View {
     @State private var selectedDemo   = 0
