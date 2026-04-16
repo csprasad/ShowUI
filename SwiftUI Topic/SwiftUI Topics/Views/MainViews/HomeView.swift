@@ -19,10 +19,12 @@ struct HomeView: View {
 
     private var filteredTopics: [any TopicProtocol] {
         allTopics.filter { topic in
-            let matchesTag = (selectedTag == "All" || topic.tag == selectedTag)
-            let matchesSearch = searchText.isEmpty ||
-                                topic.title.localizedCaseInsensitiveContains(searchText)
-            return matchesTag && matchesSearch
+            // If searching, search EVERYTHING (Global)
+            if !searchText.isEmpty {
+                return topic.title.localizedCaseInsensitiveContains(searchText)
+            }
+            // Otherwise, respect the tag
+            return selectedTag == "All" || topic.tag == selectedTag
         }
     }
 

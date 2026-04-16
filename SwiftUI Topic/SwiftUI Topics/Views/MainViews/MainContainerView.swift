@@ -15,13 +15,30 @@ enum TabItem {
     case home, settings, filter, search
 }
 
+#Preview {
+    MainContainerView()
+}
+
 struct MainContainerView: View {
     @State private var selectedTab: TabItem = .home
     @State private var searchText: String = ""
     @State private var selectedTag: String = "All"
     
+    // THIS PART: Intercept the tab tap, acting only filter in filter other have "All" tag
+    private var tabSelection: Binding<TabItem> {
+        Binding(
+            get: { self.selectedTab },
+            set: { newValue in
+                if newValue == .home || newValue == .search {
+                    self.selectedTag = "All"
+                }
+                self.selectedTab = newValue
+            }
+        )
+    }
+    
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: tabSelection) {
             // --- Home Tab ---
             Tab("Home", systemImage: "house.fill", value: .home) {
                 topicBrowser()
