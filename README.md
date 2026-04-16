@@ -10,7 +10,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 
 <table>
   <tr>
-    <td width="25%"><img src="images/collections.png" width="100%"/></td>
+    <td width="25%"><img src="gifs/home.gif" width="100%"/></td>
     <td width="25%"><img src="gifs/concurrency.gif" width="100%"/></td>
     <td width="25%"><img src="gifs/animation.gif" width="100%"/></td>
     <td width="25%"><img src="gifs/sfSymbol.gif" width="100%"/></td>
