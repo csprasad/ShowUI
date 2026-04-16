@@ -93,6 +93,9 @@
 		0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */; };
 		0546F0D02F817D840062C81B /* 5_DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CF2F817D830062C81B /* 5_DynamicType.swift */; };
 		0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */; };
+		054C16EF2F90CECB000FD39F /* FilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C16EE2F90CEC4000FD39F /* FilterChip.swift */; };
+		054C16F32F90FE01000FD39F /* MainContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C16F22F90FE00000FD39F /* MainContainerView.swift */; };
+		054C16F52F9115A0000FD39F /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C16F42F91159B000FD39F /* View+Ext.swift */; };
 		054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DD2F88A43300F7E172 /* 7_Canvas.swift */; };
 		054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */; };
 		054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */; };
@@ -424,6 +427,9 @@
 		0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_TextAdvanced.swift; sourceTree = "<group>"; };
 		0546F0CF2F817D830062C81B /* 5_DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_DynamicType.swift; sourceTree = "<group>"; };
 		0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_TextPrivacy.swift; sourceTree = "<group>"; };
+		054C16EE2F90CEC4000FD39F /* FilterChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChip.swift; sourceTree = "<group>"; };
+		054C16F22F90FE00000FD39F /* MainContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerView.swift; sourceTree = "<group>"; };
+		054C16F42F91159B000FD39F /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		054D98DD2F88A43300F7E172 /* 7_Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_Canvas.swift; sourceTree = "<group>"; };
 		054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ComposingShapesVisual.swift; sourceTree = "<group>"; };
 		054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTopic.swift; sourceTree = "<group>"; };
@@ -757,6 +763,7 @@
 		051FDFB82F4732330013F19E /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				054C16F42F91159B000FD39F /* View+Ext.swift */,
 				05FBC4BC2F87AA830033F0C3 /* String+Ex.swift */,
 				051FDFB92F47323B0013F19E /* Color+Hex.swift */,
 			);
@@ -924,6 +931,7 @@
 		05685BAC2F6AACC9004643FF /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				054C16F22F90FE00000FD39F /* MainContainerView.swift */,
 				05685BB42F6AAF98004643FF /* HomeView.swift */,
 				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
 				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
@@ -934,6 +942,7 @@
 		05685BAD2F6AACE6004643FF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				054C16EE2F90CEC4000FD39F /* FilterChip.swift */,
 				055885212F842745004779A1 /* TopicCard.swift */,
 				0558851F2F842586004779A1 /* VisualCard.swift */,
 				0558851D2F84256E004779A1 /* CalloutBox.swift */,
@@ -1481,6 +1490,7 @@
 				0551B6712F8962AA0084A2CB /* 6_InlineValidation.swift in Sources */,
 				050464482F8A6BE50092A145 /* 5_TabwithNavigationStack.swift in Sources */,
 				0511919F2F6FFB0B0089F2FF /* 1_AnimBasics.swift in Sources */,
+				054C16F32F90FE01000FD39F /* MainContainerView.swift in Sources */,
 				05AB11DC2F8A150000C6A5C4 /* 6_SliderPatterns.swift in Sources */,
 				05685BA72F6A954C004643FF /* 6_TaskGroup.swift in Sources */,
 				05D8242F2F6B312000A81A2F /* 1_maskIntro.swift in Sources */,
@@ -1515,6 +1525,7 @@
 				0570640B2F822B7B00B2512D /* 6_Padding&Offset.swift in Sources */,
 				051499B42F715F1F00EE4E83 /* 8_accessibility.swift in Sources */,
 				05C01A402F88AF6D008E0717 /* 1_GeometryReaderBasics.swift in Sources */,
+				054C16F52F9115A0000FD39F /* View+Ext.swift in Sources */,
 				05C4906D2F8BF5EE003EAD0B /* 9_FetchDescriptor.swift in Sources */,
 				051191902F6FE2800089F2FF /* 8_ContentTransition.swift in Sources */,
 				053584302F8E357B000BD2C1 /* 10_ScrollingCharts.swift in Sources */,
@@ -1649,6 +1660,7 @@
 				05E507122F8AD30B00817190 /* 8_Patterns&Pitfalls.swift in Sources */,
 				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
+				054C16EF2F90CECB000FD39F /* FilterChip.swift in Sources */,
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,
 				0551B6652F8960FB0084A2CB /* TextFieldDeepDiveTopic.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
@@ -1899,7 +1911,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1933,7 +1945,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 18;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

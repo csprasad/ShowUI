@@ -10,24 +10,38 @@
 ///
 
 import SwiftUI
-import SwiftUI
 
 struct HomeView: View {
-    private let topics = TopicRegistry.all
+    @Binding var selectedTag: String
+    @Binding var searchText: String
+    
+    private let allTopics = TopicRegistry.all
 
-    var body: some View {
-        NavigationStack {
-            ScrollView {
-                VStack(spacing: 0) {
-                    header
-                    topicGrid
-                }
+    private var filteredTopics: [any TopicProtocol] {
+        allTopics.filter { topic in
+            // If searching, search EVERYTHING (Global)
+            if !searchText.isEmpty {
+                return topic.title.localizedCaseInsensitiveContains(searchText)
             }
-            .background(Color(.systemGroupedBackground))
-            .navigationBarHidden(true)
+            // Otherwise, respect the tag
+            return selectedTag == "All" || topic.tag == selectedTag
         }
     }
 
+    var body: some View {
+        ScrollView {
+            VStack(spacing: 0) {
+                header
+                if filteredTopics.isEmpty {
+                    emptyStateView
+                } else {
+                    topicGrid
+                }
+            }
+            .padding(.top, 20)
+        }
+    }
+    
     // MARK: - Header
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
@@ -40,7 +54,6 @@ struct HomeView: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.horizontal, 20)
-        .padding(.top, 30)
         .padding(.bottom, 28)
     }
 
@@ -53,8 +66,8 @@ struct HomeView: View {
             ],
             spacing: 12
         ) {
-            ForEach(topics, id: \.id) { topic in
-                NavigationLink(destination: TopicDetailView(topic: topic)) {
+            ForEach(filteredTopics, id: \.id) { topic in
+                NavigationLink(destination: TopicDetailView(topic: topic).hideTabBarInDetail()) {
                     TopicCard(topic: topic)
                 }
                 .buttonStyle(.plain)
@@ -62,5 +75,11 @@ struct HomeView: View {
         }
         .padding(.horizontal, 20)
         .padding(.bottom, 40)
+    }
+    
+    // MARK: - Empty State
+    private var emptyStateView: some View {
+        ContentUnavailableView.search(text: searchText)
+            .padding(.top, 40)
     }
 }

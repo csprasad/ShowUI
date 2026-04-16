@@ -89,4 +89,10 @@ struct TopicRegistry {
         
         // 💡 Rule: Always keep a trailing comma on the last item to prevent diff-noise.
     ]
+    
+    // Add this here
+    static var availableTags: [String] {
+        let tags = all.map { $0.tag }
+        return ["All"] + Array(Set(tags)).sorted()
+    }
 }

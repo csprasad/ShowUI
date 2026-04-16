@@ -26,7 +26,7 @@ struct SwiftUI_TopicsApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            MainContainerView()
         }
     }
 }
