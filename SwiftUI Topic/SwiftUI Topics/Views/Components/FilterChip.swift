@@ -22,8 +22,8 @@ struct FilterChip: View {
             Text(text)
                 .font(.system(size: 14, weight: .bold, design: .rounded))
                 .padding(.horizontal, 16)
-                .padding(.vertical, 8)
-                .background(isSelected ? Color.primary : Color.primary.opacity(0.05))
+                .padding(.vertical, 12)
+                .background(isSelected ? Color.black : Color.primary.opacity(0.05))
                 .foregroundColor(isSelected ? Color(.systemBackground) : .primary)
                 .clipShape(Capsule())
         }
