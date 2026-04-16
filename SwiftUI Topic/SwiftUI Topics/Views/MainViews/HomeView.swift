@@ -65,7 +65,7 @@ struct HomeView: View {
             spacing: 12
         ) {
             ForEach(filteredTopics, id: \.id) { topic in
-                NavigationLink(destination: TopicDetailView(topic: topic)) {
+                NavigationLink(destination: TopicDetailView(topic: topic).hideTabBarInDetail()) {
                     TopicCard(topic: topic)
                 }
                 .buttonStyle(.plain)

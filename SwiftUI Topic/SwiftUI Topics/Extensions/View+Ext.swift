@@ -42,3 +42,12 @@ extension View {
         }
     }
 }
+
+
+// MARK: - Hide Tab bar in details screens
+extension View {
+    func hideTabBarInDetail() -> some View {
+        self.toolbarVisibility(.hidden, for: .tabBar)
+            .toolbarVisibility(.visible, for: .navigationBar) // Bring back nav bar for detail back buttons
+    }
+}
