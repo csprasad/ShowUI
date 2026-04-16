@@ -93,6 +93,8 @@
 		0546F0CE2F817C700062C81B /* 4_TextAdvanced.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */; };
 		0546F0D02F817D840062C81B /* 5_DynamicType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0CF2F817D830062C81B /* 5_DynamicType.swift */; };
 		0546F0D22F817D9D0062C81B /* 6_TextPrivacy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */; };
+		054C16EF2F90CECB000FD39F /* FilterChip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C16EE2F90CEC4000FD39F /* FilterChip.swift */; };
+		054C16F12F90CFA2000FD39F /* TopicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054C16F02F90CF9E000FD39F /* TopicViewModel.swift */; };
 		054D98DE2F88A43700F7E172 /* 7_Canvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DD2F88A43300F7E172 /* 7_Canvas.swift */; };
 		054D98E02F88A49400F7E172 /* 8_ComposingShapesVisual.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */; };
 		054ED8CE2F7118D4003BA047 /* SFSymbolsTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */; };
@@ -424,6 +426,8 @@
 		0546F0CD2F817C6F0062C81B /* 4_TextAdvanced.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 4_TextAdvanced.swift; sourceTree = "<group>"; };
 		0546F0CF2F817D830062C81B /* 5_DynamicType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 5_DynamicType.swift; sourceTree = "<group>"; };
 		0546F0D12F817D9C0062C81B /* 6_TextPrivacy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 6_TextPrivacy.swift; sourceTree = "<group>"; };
+		054C16EE2F90CEC4000FD39F /* FilterChip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterChip.swift; sourceTree = "<group>"; };
+		054C16F02F90CF9E000FD39F /* TopicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicViewModel.swift; sourceTree = "<group>"; };
 		054D98DD2F88A43300F7E172 /* 7_Canvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 7_Canvas.swift; sourceTree = "<group>"; };
 		054D98DF2F88A49100F7E172 /* 8_ComposingShapesVisual.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 8_ComposingShapesVisual.swift; sourceTree = "<group>"; };
 		054ED8CD2F7118D2003BA047 /* SFSymbolsTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SFSymbolsTopic.swift; sourceTree = "<group>"; };
@@ -924,6 +928,7 @@
 		05685BAC2F6AACC9004643FF /* MainViews */ = {
 			isa = PBXGroup;
 			children = (
+				054C16F02F90CF9E000FD39F /* TopicViewModel.swift */,
 				05685BB42F6AAF98004643FF /* HomeView.swift */,
 				05685BB62F6AAFD1004643FF /* TopicDetailView.swift */,
 				05685B992F6A8F9D004643FF /* LessonDetailView.swift */,
@@ -934,6 +939,7 @@
 		05685BAD2F6AACE6004643FF /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				054C16EE2F90CEC4000FD39F /* FilterChip.swift */,
 				055885212F842745004779A1 /* TopicCard.swift */,
 				0558851F2F842586004779A1 /* VisualCard.swift */,
 				0558851D2F84256E004779A1 /* CalloutBox.swift */,
@@ -1534,6 +1540,7 @@
 				0572B0D22F8ABADC0037331F /* 1_AnimationTypes.swift in Sources */,
 				05AB11D22F8A130F00C6A5C4 /* 1_ToggleDeepDive.swift in Sources */,
 				054ED8D02F71194B003BA047 /* 1_renderingmodes.swift in Sources */,
+				054C16F12F90CFA2000FD39F /* TopicViewModel.swift in Sources */,
 				0511919D2F6FEAE20089F2FF /* 10_CustomTransition.swift in Sources */,
 				059A0EBB2F86E993002325BA /* 3_ScrollTargetBehavior.swift in Sources */,
 				0563753E2F71C092001E7148 /* ButtonsTopic.swift in Sources */,
@@ -1649,6 +1656,7 @@
 				05E507122F8AD30B00817190 /* 8_Patterns&Pitfalls.swift in Sources */,
 				059A0EC32F86EA83002325BA /* 7_safeAreaInset.swift in Sources */,
 				05B1497F2F7F8C3D00F00B04 /* 5_navigationBar.swift in Sources */,
+				054C16EF2F90CECB000FD39F /* FilterChip.swift in Sources */,
 				051C4A862F7D171C0003C63A /* 7_stateObjectVSObservedObject.swift in Sources */,
 				0551B6652F8960FB0084A2CB /* TextFieldDeepDiveTopic.swift in Sources */,
 				05685BC42F6AB71C004643FF /* 3_keyboardavoidance.swift in Sources */,
