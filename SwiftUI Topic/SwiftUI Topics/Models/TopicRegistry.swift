@@ -42,6 +42,7 @@ struct TopicRegistry {
         ConcurrencyTopic(),
         ColorsGradientsTopic(),
         ControlsDeepDiveTopic(),
+        CombineBasicsTopic(),
         
         // --- E ---
         EnvironmentDependenciesTopic(),

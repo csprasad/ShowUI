@@ -15,10 +15,6 @@ enum TabItem {
     case home, settings, filter, search
 }
 
-#Preview {
-    MainContainerView()
-}
-
 struct MainContainerView: View {
     @State private var selectedTab: TabItem = .home
     @State private var searchText: String = ""

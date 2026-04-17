@@ -39,6 +39,7 @@ ShowUI is an interactive learning app for iOS developers. Every concept has its 
 | **Colors & Gradients** | 8 | Color system, gradients, materials, opacity and dynamic color |
 | **Concurrency** | 8 | Race conditions you can trigger, actors with a lock animation, live task cancellation |
 | **Controls Deep Dive** | 8 | Toggle, Picker, Slider, Stepper controls - styles, customisation and real-world patterns |
+| **Combine** | 12 | Publishers, subscribers, operators, schedulers, SwiftUI integration and real-world patterns |
 | **Environment & Dependencies** | 8 | EnvironmentValues, custom keys, @Observable injection, scene storage, preference keys and DI patterns |
 | **Forms & SettingsUI** | 8 | Form, Section, Picker, Toggle, Slider and validation patterns |
 | **Gestures** | 8 | Tap, drag, pinch, rotate and composing complex interactions |
